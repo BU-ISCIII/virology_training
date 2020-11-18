@@ -13,7 +13,7 @@ During this training we will following these steps:
 ## Register/Login Galaxy
 First of all, you have to create a user (or login into your user if you already have one) in the [Galaxy website](https://usegalaxy.org/) by clicking in the button indicated in the image:
 
-![galaxy_login](docs/images/galaxy_login.png)
+![galaxy_login](../docs/images/galaxy_login.png)
 
 Once you are registered we can start with the analysis workflow.
 
@@ -23,30 +23,30 @@ Before starting with any analysis we have to upload de data we want to analyze i
 ### Uploading data from your local files
 In order to do upload files from our local machine to Galaxy, we have to click on the button shown in the image (_Download from URL or upload files from disk_)
 
-![upload_data](docs/images/upload_data.png)
+![upload_data](../docs/images/upload_data.png)
 
 Then, in the "_Regular_" tab we have to choose "_Choose local files_" and select the files we want to upload, both R1 and R2 at the same time.
 
-![upload_local_files](docs/images/upload_local_files.png)
+![upload_local_files](../docs/images/upload_local_files.png)
 
 Once selected we just have to click in start button and files will start lo upload (this will take a while).
 
-![upload_start](docs/images/upload_start.png)
+![upload_start](../docs/images/upload_start.png)
 
 Once files are uploaded we can close the window clicking on "_close_" button. Both files will appear in the right panel.
 
 ### Upload data from SRA/SRR ID
 Another way to upload data to galaxy is to give a SRR/SRA ID. To do this, first of all you have to select "_Get Data_", then more options will be displayed, among which we have to choose "_Faster Download and Extract Reads in FASTQ format from NCBI SRA_". In the central panel, new options will appear, where we have to introduce de SRR ID "_SRR13018820_" in "_Accession_", then we have to select "_Advanced options_" and choose "_--split-files_" to write reads into different files. Finally click on "_Execute_" button to start downloading data.
 
-![sra_download](docs/images/sra_download.png)
+![sra_download](../docs/images/sra_download.png)
 
 A message like this one should appear if everything went properly:
 
-![running_message](docs/images/running_message.png)
+![running_message](../docs/images/running_message.png)
 
 Now we can see all the samples we have in our history:
 
-<img src="docs/images/raw_samples.png" alt="raw_samples" width="200"/>
+<img src="../docs/images/raw_samples.png" alt="raw_samples" width="200"/>
 
 ## Quality
 
@@ -55,28 +55,28 @@ Once we have the raw data, an important step is to analyze the quality of the re
 
 In the panel we will have to select the fastq files R1 and R2 for both samples. To do this, in the "_Short read data from your current history_" header, we will click on "_Multiple datasets_"
 
-![fastqc](docs/images/fastqc.png)
+![fastqc](../docs/images/fastqc.png)
 
 and then in the new window select from our jobs the ones of the samples we want:
 
-![fastqc_samples](docs/images/fastqc_samples.png)
+![fastqc_samples](../docs/images/fastqc_samples.png)
 
 This program will generate a message like this one, were we can read that, each .fastq file is going to generate two different jobs, one for the Raw Data and another one for the .HTML report.
 
-![fastqc_message](docs/images/fastqc_message.png)
+![fastqc_message](../docs/images/fastqc_message.png)
 
 ### FastQC results visualization
 To visualize the information coming from FastQC we just have to select the job of interest. In this case we are interested in the "_Web page results_" so for the sample we want to see the results we have to click in the _eye_ to visualize galaxy results:
 
-![fastqc_results](docs/images/fastqc_results.png)
+![fastqc_results](../docs/images/fastqc_results.png)
 
 This report gives different type of information about the sequencing quality of the reads. Clicking in the arrows in the bottom right/left corners of the page we can hide/show the side panels.
 
-![bottom_arrows_1](docs/images/bottom_arrows_1.png)
+![bottom_arrows_1](../docs/images/bottom_arrows_1.png)
 
 So the central panel with the results we want to visualize will bee better seen.
 
-![bottom_arrows_2](docs/images/bottom_arrows_2.png)
+![bottom_arrows_2](../docs/images/bottom_arrows_2.png)
 
 ## Trimming
 
@@ -104,10 +104,10 @@ Once we have check the quality of our reads, it's important to trim low quality 
 
 Finally, click on "_Execute_"
 
-![fastp1](docs/images/fastp1.png)
-![fastp2](docs/images/fastp2.png)
-![fastp3](docs/images/fastp3.png)
-![fastp4](docs/images/fastp4.png)
+![fastp1](../docs/images/fastp1.png)
+![fastp2](../docs/images/fastp2.png)
+![fastp3](../docs/images/fastp3.png)
+![fastp4](../docs/images/fastp4.png)
 
 A message like this one will appear, which means that 4 results will be generated:
   1. One with the R1 trimmed reads
@@ -115,21 +115,21 @@ A message like this one will appear, which means that 4 results will be generate
   3. Another one with the HTML results
   4. A last one with the JSON results
 
-![fastp_message](docs/images/fastp_message.png)
+![fastp_message](../docs/images/fastp_message.png)
 
 Finally, we will have to do the same process for the other sample from SRA, the only filed that you have to change is the Input1 and Input2 field:
 
-![fastp_srr](docs/images/fastp_srr.png)
+![fastp_srr](../docs/images/fastp_srr.png)
 
 ### Fastp results
 
 Once fastp analysis is done, you can see the results by clicking in the eye ("_View Data_") in the fatp HTML results. We will see a report like this one:
 
-![fastp_results](docs/images/fastp_results.png)
+![fastp_results](../docs/images/fastp_results.png)
 
 This report can be downloaded by clicking in the results name ("_fastp on data 2 and data 1: HTML report_") and then in "_Download_".
 
-![fastp_download](docs/images/fastp_download.png)
+![fastp_download](../docs/images/fastp_download.png)
 
 This will download a .zip folder that contains the .html report, that can be visualize in your computer using any browser (such as Google Chrome) and interactively scroll around the results.
 
@@ -156,7 +156,7 @@ _https://github.com/nf-core/test-datasets/raw/viralrecon/genome/NC_045512.2/GCF_
 
 So you have to copy the URL direction, and do then select "_Download from web or upload from disk_", the select "_Paste/Fetch data_" and in the new window that appears you should paste the URL above and finally select "_Start_". Now the fasta file of the reference is download.
 
-![reference_genome_download](docs/images/reference_genome_download.png)
+![reference_genome_download](../docs/images/reference_genome_download.png)
 
 ### Mapping reads with reference genome (Bowtie2)
 
@@ -173,17 +173,17 @@ Now we can start with the main mapping process. The first thing we have to do is
 9. Save the bowtie2 mapping statistics to the history > Yes
 10. Execute
 
-![bowtie1](docs/images/bowtie1.png)
-![bowtie2](docs/images/bowtie2.png)
-![bowtie3](docs/images/bowtie3.png)
+![bowtie1](../docs/images/bowtie1.png)
+![bowtie2](../docs/images/bowtie2.png)
+![bowtie3](../docs/images/bowtie3.png)
 
 We will see a message like this one:
 
-![bowtie_message](docs/images/bowtie_message.png)
+![bowtie_message](../docs/images/bowtie_message.png)
 
 Now we will do the same for the SRR sample:
 
-![bowtie_sample2](docs/images/bowtie_sample2.png)
+![bowtie_sample2](../docs/images/bowtie_sample2.png)
 
 ### Mapping results:
 
