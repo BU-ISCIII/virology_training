@@ -1,24 +1,29 @@
-# SARS-Cov2_training
-This repository contains all the information necessary to follow the training to analyze SARS-Cov2 data with Galaxy.
+# SARS-CoV-2 training with galaxy
+
+In this report you will find all the information necessary to follow the steps to analyze SARS-CoV-2 data with Galaxy.
 
 ## Training overview
 During this training we will following these steps:
-* [Register/Login Galaxy](#registerlogingalaxy): Register or login into Galaxy website.
+* [Register/Login](#register/login): Register or login into Galaxy website.
 * [Data](#data): Upload data for the analysis.
 * [Quality](#quality): Analysis of the quality of the raw reads.
 * [Trimming](#trimming): Quality trimming using fastp
 * [Mapping](#mapping): Mapping reads to reference genome with Bowtie2
 * [Stats](#stats): Mapping statistics with samtools and picard.
 
-## Register/Login Galaxy
+## Register/Login
+
 First of all, you have to create a user (or login into your user if you already have one) in the [Galaxy website](https://usegalaxy.org/) by clicking in the button indicated in the image:
 
 ![galaxy_login](../docs/images/galaxy_login.png)
 
+You can do this analysis without creating a user, but your history will be saved into your user so you can access later at home.
+
 Once you are registered we can start with the analysis workflow.
 
 ## Data
-Before starting with any analysis we have to upload de data we want to analyze into galaxy. The are three different ways to upload data to Galaxy, from which we will explain you two of them.
+
+Before starting with any analysis we have to upload de data we want to analyze into galaxy. The are three different ways to upload data to Galaxy, from which we will explain you some of them along this training.
 
 ### Uploading data from your local files
 In order to do upload files from our local machine to Galaxy, we have to click on the button shown in the image (_Download from URL or upload files from disk_)
@@ -35,19 +40,6 @@ Once selected we just have to click in start button and files will start lo uplo
 
 Once files are uploaded we can close the window clicking on "_close_" button. Both files will appear in the right panel.
 
-### Upload data from SRA/SRR ID
-Another way to upload data to galaxy is to give a SRR/SRA ID. To do this, first of all you have to select "_Get Data_", then more options will be displayed, among which we have to choose "_Faster Download and Extract Reads in FASTQ format from NCBI SRA_". In the central panel, new options will appear, where we have to introduce de SRR ID "_SRR13018820_" in "_Accession_", then we have to select "_Advanced options_" and choose "_--split-files_" to write reads into different files. Finally click on "_Execute_" button to start downloading data.
-
-![sra_download](../docs/images/sra_download.png)
-
-A message like this one should appear if everything went properly:
-
-![running_message](../docs/images/running_message.png)
-
-Now we can see all the samples we have in our history:
-
-<img src="../docs/images/raw_samples.png" alt="raw_samples" width="200"/>
-
 ## Quality
 
 ### Quality Analysis (FastQC)
@@ -60,6 +52,8 @@ In the panel we will have to select the fastq files R1 and R2 for both samples. 
 and then in the new window select from our jobs the ones of the samples we want:
 
 ![fastqc_samples](../docs/images/fastqc_samples.png)
+
+**This is for the case that you used two samples instead of one like in this training"***
 
 This program will generate a message like this one, were we can read that, each .fastq file is going to generate two different jobs, one for the Raw Data and another one for the .HTML report.
 
@@ -116,10 +110,6 @@ A message like this one will appear, which means that 4 results will be generate
   4. A last one with the JSON results
 
 ![fastp_message](../docs/images/fastp_message.png)
-
-Finally, we will have to do the same process for the other sample from SRA, the only filed that you have to change is the Input1 and Input2 field:
-
-![fastp_srr](../docs/images/fastp_srr.png)
 
 ### Fastp results
 
@@ -180,10 +170,6 @@ Now we can start with the main mapping process. The first thing we have to do is
 We will see a message like this one:
 
 ![bowtie_message](../docs/images/bowtie_message.png)
-
-Now we will do the same for the SRR sample:
-
-![bowtie_sample2](../docs/images/bowtie_sample2.png)
 
 ### Mapping results:
 
