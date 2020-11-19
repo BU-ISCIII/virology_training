@@ -177,8 +177,13 @@ We will see a message like this one:
 
 ### Mapping results:
 
-Now we can see the mapping results for the samples.
+Now we can see the mapping results for the samples. The bowtie2 resulting file is a .bam file, which is not easy to read by humans. This .bam file can be downloaded by clicking in the alignment file and then into download. Then, the resulting .gz file will contain the alignment .bam file that can be introduced in a software such as [IGV](http://software.broadinstitute.org/software/igv/) with the reference genome fasta file.
 
+![bowtie2_bam](../docs/images/bowtie2_bam.png)
+
+In our case, the file that can be visualize is the statistics file, which contains information such as the percentage of reads that aligned.
+
+![bowtie2_results](../docs/images/bowtie2_results.png)
 
 ## Stats
 
