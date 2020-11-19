@@ -72,6 +72,8 @@ So the central panel with the results we want to visualize will bee better seen.
 
 ![bottom_arrows_2](../docs/images/bottom_arrows_2.png)
 
+**_For more information about FastQC output visit [FastQC website](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/3%20Analysis%20Modules/)_**
+
 ## Trimming
 
 ### Quality trimming (Fastp)
@@ -133,6 +135,8 @@ Among the most relevant results, you have the:
   - After filtering: Plots after filtering
     - After filtering: read1: quality: Plot with the evolution of R1 quality over read position. Usually it decays in the last nucleotides.
     - After filtering: read2: quality: Same plot for R2.
+
+**_For more information about FastQC output visit [Fastp github](https://github.com/OpenGene/fastp)_**
 
 ## Mapping
 
