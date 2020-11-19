@@ -21,6 +21,8 @@ You can do this analysis without creating a user, but your history will be saved
 
 Once you are registered we can start with the analysis workflow.
 
+**_From now on, each job we run in Galaxy will have a unique number for identifying each process. This numbers can differ depending on the number of samples and the times you run or delete any process. This training's snapshots were taken using two samples and some process were deleted for any reason, so numbers MAY DIFFER._**
+
 ## Data
 
 Before starting with any analysis we have to upload de data we want to analyze into galaxy. The are three different ways to upload data to Galaxy, from which we will explain you some of them along this training.
