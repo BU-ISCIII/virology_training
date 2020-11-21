@@ -10,6 +10,7 @@ During this training we will following these steps:
 * [Trimming](#trimming): Quality trimming using fastp
 * [Mapping](#mapping): Mapping reads to reference genome with Bowtie2
 * [Stats](#stats): Mapping statistics with samtools and picard.
+* [Amplicons](#amplicons): Preprocessing steps mandatory for amplicon sequencing data.
 
 ## Register/Login
 
@@ -240,12 +241,16 @@ So in the results table you can see that the "Mean Coverage" is around 200, whic
 
 ## Amplicons
 
-After mapping
+After mapping the reads to the reference genome, we are interested in removing the sequences of the amplicon primers. To do that you will use a program called iVar, and you will need a bed file with the positions of those amplicon primers.
 
-### Download amplicon data
+### Download amplicon bed file
 
-
+First you will download the bed file of the amplicon primers, which contains the positions in the reference genome of each of the amplicon primers. You have to click in "_Download from URL or upload files from disk_", then select "_Paste/Fetch data_" and then paste this URL in the window:
 https://raw.githubusercontent.com/nf-core/test-datasets/viralrecon/genome/NC_045512.2/amplicon/nCoV-2019.artic.V3.primer.fasta
+
+Finally, press "_Start_".
+
+![primer_fasta_download](../docs/images/primer_fasta_download.png)
 
 ### Trim amplicon sequences
 
