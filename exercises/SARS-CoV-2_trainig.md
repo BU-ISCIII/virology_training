@@ -226,6 +226,18 @@ This process will generate one output file per .bam alignment file selected as i
 
 ![picard_wgsmetrics_message](../docs/images/picard_wgsmetrics_message.png)
 
+### Picard results
+
+Picard results consist in quite long files, so the best is to download those results and visualize them in your computer. Yo you have to click in the CollectWgsMetrics job you want to download, and then click in the save button:
+
+![download_picard](../docs/images/download_picard.png)
+
+Then you just have to open the file with Excell in your computer, and you will see a file with different columns with information about the percentage of the reference genome that is covered by the reads at a specific depth or the mean depth of coverage of the reference genome.
+
+![picard_results](../docs/images/picard_results.png)
+
+So in the results table you can see that the "Mean Coverage" is around 200, which means that each position in the reference genome is supported by 200 reads, by mean. The "PCT 10X" represents the percentage of the reference genome that is sequence with a 10X depth, which represents the percentage of the reference genome that is at least sequenced 10 times (76,99%).
+
 ## Amplicons
 
 After mapping
