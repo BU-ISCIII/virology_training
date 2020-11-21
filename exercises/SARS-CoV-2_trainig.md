@@ -163,7 +163,7 @@ Now we can start with the main mapping process. The first thing we have to do is
 5. asta/Q file #2: **fastp on data 2 and data 1: Read 2 output**
 6. Will you select a reference genome from your history or use a built-in index? > Use a genome from the history and create index
   - **This is very important because we haven't previously created the SARS-Cov2 genome index, si bowtie 2 will generate it automatically.**
-7. Select reference genome > https://github.com/nf-core/test-datasets/raw/viralrecon/genome /NC_045512.2/GCF_009858895.2_ASM985889v3_genomic.200409.fna.gz
+7. Select reference genome > https://github.com/nf-core/test-datasets/raw/viralrecon/genome/NC_045512.2/GCF_009858895.2_ASM985889v3_genomic.200409.fna.gz
   - It's important to select the file we downloaded from URL.
 8. Do you want to use presets? > Very sensitive local
 9. Save the bowtie2 mapping statistics to the history > Yes
@@ -197,8 +197,34 @@ The first program is Samtools, from which we will use the module samtools flagst
 
 ![samtools_flagstat_1](../docs/images/samtools_flagstat_1.png)
 
+### Samtools results
+
+The results of the samtools program gives information about the number and percentage of reads that mapped with the reference genome.
+
+![samtools_results](../docs/images/samtools_results.png)
+
 ### Picard CollectWgsMetrics
 
+Another program that gives statistical information about the mapping process is Picard. To run this program you just have to search "_Collect Wgs Metrics_" and then select "_CollectWgsMetrics compute metrics for evaluating of whole genome sequencing experiments_".
+
+![picard_wgsmetrics1](../docs/images/picard_wgsmetrics1.png)
+
+In "_Select SAM/BAM dataset or dataset collection_" you can select more than one .bam alignment file by clicking in the folder icon "_Browse dataset_"(4).
+
+![picard_wgsmetrics_select2](../docs/images/picard_wgsmetrics_select2.png)
+
+The you have to change the following parameters:
+6. Load reference genome from > History
+7. Select the fasta file we uploaded with the reference genome (https://github.com/nf-core/test-datasets/raw/viralrecon/genome/NC_045512.2GCF_009858895.2_ASM985889v3_genomic.200409.fna.gz).
+8. Treat bases with coverage exceeding this value as if they had coverage at this value = 1000000
+9. Select validation stringency > Lenient
+10. Execute.
+
+![picard_wgsmetrics2](../docs/images/picard_wgsmetrics2.png)
+
+This process will generate one output file per .bam alignment file selected as input.
+
+![picard_wgsmetrics_message](../docs/images/picard_wgsmetrics_message.png)
 
 ## Amplicons
 
