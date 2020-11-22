@@ -286,6 +286,11 @@ The first step in variant calling is generated a pileup file. For that you just 
 10. Minimum base quality for a base to be considered = 20
 11. Execute
 
+![samtools_mpileup1](../docs/images/samtools_mpileup1.png)
+![samtools_mpileup2](../docs/images/samtools_mpileup2.png)
+![samtools_mpileup3](../docs/images/samtools_mpileup3.png)
+
+### VarScan
 
 FORMAT/AD / (FORMAT/AD + FORMAT/RD) >= 0.75
 
