@@ -416,3 +416,9 @@ The resulting file is the consensus genome generated previously but now only con
 You can download this fasta file and use it to upload it to any public repository such as [ENA]() or [GiSaid](). Also you can use it to perform phylogenetic trees or whatever else you want to do with the SARS-CoV-2 consensus fasta file.
 
 ![bedtools_maskfasta_download](../docs/images/bedtools_maskfasta_download.png)
+
+## All results
+
+If you have any problem following this training and you want to visualize the resulting file you can access them through this URL:
+
+https://usegalaxy.org/u/svarona/h/sarscov-2training
