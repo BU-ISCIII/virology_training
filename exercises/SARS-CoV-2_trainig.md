@@ -386,7 +386,7 @@ This process will generate a BED file where each genomic position range of the r
 
 ### Regions filtering
 
-From this resulting file from betdools genomecoverage we are going to select those regions with a coverage lower than 10X. Writing in the search bar "_awk_" and selecting "_Text reformatting with awk_", we are going to change:
+From this resulting file from betdools genomecoverage you are going to select those regions with a coverage lower than 10X. Writing in the search bar "_awk_" and selecting "_Text reformatting with awk_", you are going to change:
 
 3. File to process > Bedtools genome coverage file with the coverage regions
 4. AWK Program = $4 < 10
@@ -399,6 +399,20 @@ The resulting file is exactly the same as the one in Bedtools genomecoverage but
 
 ![awk_result](../docs/images/awk_result.png)
 
+### Masking the consensus genome
 
+Now that you have the consensus genome and the regions with a sequencing depth lower than 10X, you are going to "mask" those regions in the consensus genome replacing the nucleotides in those regions with "N"s. You have to search for "_bedtools maskfasta_", select "_bedtools MaskFastaBed use intervals to mask sequences from a FASTA file_" and then select the following parameters:
 
-History: https://usegalaxy.org/u/svarona/h/unnamed-history
+3. BED/bedGraph/GFF/VCF/EncodePeak file > Select the BED file resulting from AWK text filter.
+4. FASTA file > Select the consensus genome fasta file generated with Bcftools consensus.
+5. Execute
+
+![bedtools_maskfasta](../docs/images/bedtools_maskfasta.png)
+
+The resulting file is the consensus genome generated previously but now only contains Ns instead of A, T, G or C in the regions with less than 10X depth of coverage
+
+![bedtools_maskfasta_result](../docs/images/bedtools_maskfasta_result.png)
+
+You can download this fasta file and use it to upload it to any public repository such as [ENA]() or [GiSaid](). Also you can use it to perform phylogenetic trees or whatever else you want to do with the SARS-CoV-2 consensus fasta file.
+
+![bedtools_maskfasta_download](../docs/images/bedtools_maskfasta_download.png)
