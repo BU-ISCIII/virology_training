@@ -309,7 +309,7 @@ VarScan results consist in a VCF file containing all the variants found between 
 
 This variants have only passed a filter for the minimum quality if the variant, which we set as 20, but we need to filter these variants more.
 
-### Variant Filtering
+### Variant Filtering with Bcftools
 
 To filter the variants called by VarScan you will use a program called bcftools. You have to search for "_bcftools filter_", then select "_bcftools filter Apply fixed-threshold filters_" and then select the following parameters:
 3. VCF/BCF Data > VCF file from VarScan
