@@ -11,6 +11,7 @@ During this training we will following these steps:
 * [Mapping](#mapping): Mapping reads to reference genome with Bowtie2
 * [Stats](#stats): Mapping statistics with samtools and picard.
 * [Amplicons](#amplicons): Preprocessing steps mandatory for amplicon sequencing data.
+* [Variants](#variants): Variant calling and filtering.
 
 ## Register/Login
 
@@ -246,7 +247,7 @@ After mapping the reads to the reference genome, we are interested in removing t
 ### Download amplicon bed file
 
 First you will download the bed file of the amplicon primers, which contains the positions in the reference genome of each of the amplicon primers. You have to click in "_Download from URL or upload files from disk_", then select "_Paste/Fetch data_" and then paste this URL in the window:
-https://raw.githubusercontent.com/nf-core/test-datasets/viralrecon/genome/NC_045512.2/amplicon/nCoV-2019.artic.V3.primer.fasta
+https://raw.githubusercontent.com/nf-core/test-datasets/viralrecon/genome/NC_045512.2/amplicon/nCoV-2019.artic.V3.scheme.bed
 
 Finally, press "_Start_".
 
@@ -254,9 +255,20 @@ Finally, press "_Start_".
 
 ### Trim amplicon sequences
 
+Once you have the bed file, you just have to search for "_ivar trim_" in the search bar and select "_ivar trim Trim reads in aligned BAM_". Then follow these steps:
 
+3. Bam file > Select the aligment bam file generated with Bowtie2.
+4. BED file with primer sequences and positions > Select the bed file you just upload.
+5. Minimum length of read to retain after trimming = 20
+6. Include reads with no primers > Yes.
 
-## VarScan
+![ivar_trim1](../docs/images/ivar_trim1.png)
+
+### iVar results
+
+The resulting file from iVar will be a new BAM file where amplicon primer positions will be removed, so there's no result to visualize.
+
+## Variants
 
 FORMAT/AD / (FORMAT/AD + FORMAT/RD) >= 0.75
 
