@@ -270,6 +270,23 @@ The resulting file from iVar will be a new BAM file where amplicon primer positi
 
 ## Variants
 
+Once we have the alingment statistics and files with amplicon primers trimmed, we can start with the variant calling process.
+
+### Mpileup
+
+The first step in variant calling is generated a pileup file. For that you just have to search for "_mpileup_" in the search bar and select "_samtools mpileup multi-way pileup of variants_". Then select the following parameters:
+3. Choose the source for the reference genome > Use a genome from the history.
+4. BAM file(s) > Select the ivar bam file
+5. Using reference genome > Select the reference fasta file.
+- Set advanced options > Advanced
+6. Disable read-pair overlap detection > Yes
+7. Do not discard anomalous read pairs > Yes
+8. Disable BAQ (per-Base Alignment Quality), see below > Yes
+9. max per-file depth; avoids excessive memory usage = 0
+10. Minimum base quality for a base to be considered = 20
+11. Execute
+
+
 FORMAT/AD / (FORMAT/AD + FORMAT/RD) >= 0.75
 
 
