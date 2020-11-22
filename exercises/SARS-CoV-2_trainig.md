@@ -359,4 +359,7 @@ The first step consist in including the called variants into the reference genom
 
 This will just generate a fasta file identical to the reference one, except for those nucleotides that are variants from the VCF file.
 
+![bcftools_consensus_results](../docs/images/bcftools_consensus_results.png)
+
+
 History: https://usegalaxy.org/u/svarona/h/unnamed-history
