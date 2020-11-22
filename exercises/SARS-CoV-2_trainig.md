@@ -13,6 +13,7 @@ During this training we will following these steps:
 * [Amplicons](#amplicons): Preprocessing steps mandatory for amplicon sequencing data.
 * [Variants](#variants): Variant calling and filtering.
 
+
 ## Register/Login
 
 First of all, you have to create a user (or login into your user if you already have one) in the [Galaxy website](https://usegalaxy.org/) by clicking in the button indicated in the image:
@@ -179,7 +180,7 @@ We will see a message like this one:
 
 ![bowtie_message](../docs/images/bowtie_message.png)
 
-### Mapping results:
+### Mapping results
 
 Now we can see the mapping results for the samples. The bowtie2 resulting file is a .bam file, which is not easy to read by humans. This .bam file can be downloaded by clicking in the alignment file and then into download. Then, the resulting .gz file will contain the alignment .bam file that can be introduced in a software such as [IGV](http://software.broadinstitute.org/software/igv/) with the reference genome fasta file.
 
@@ -326,7 +327,23 @@ The main difference between the VCF file from VarScan and the VCF from Bcftools 
 
 ![bcftools_filter_results](../docs/images/bcftools_filter_results.png)
 
-## SnpEff
+### Annotation with SnpEff
 
+Once we have the variants called, it's interesting to annotate those variants, for which you will use SnpEff. Search for "_snpeff_" in the searh bar and select "_SnpEff eff: annotate variants for SARS-CoV-2_", then change the following parameters:
+3. Sequence changes (SNPs, MNPs, InDels) > Select Bcftools filter output VCF.
+4. Create CSV report, useful for downstream analysis (-csvStats) > Yes
+
+![snpeff](../docs/images/snpeff.png)
+
+### SnpEff results
+
+The SnpEff gives three different results, from which the most interesting ones are:
+1. Snpeff eff: Which is a VCF file with the annotation results. It is a very similar file to the ones we saw before for VarScan and Bcftools but with the last column different, containing relevant information about that variant.
+
+![snpeff_results1](../docs/images/snpeff_results1.png)
+
+2. Snpeff eff CSV stats: This file is a CSV file that contains statistics about the variant annotation process, such as the percentage of variants annotated, the percentage of variants that are MISSENSE or SILENT, the percentage that have HIGH, MODERATE or LOW effect, and so on.
+
+![snpeff_results2](../docs/images/snpeff_results2.png)
 
 History: https://usegalaxy.org/u/svarona/h/unnamed-history
