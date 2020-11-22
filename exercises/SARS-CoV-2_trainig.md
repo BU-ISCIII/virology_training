@@ -311,15 +311,14 @@ This variants have only passed a filter for the minimum quality if the variant, 
 
 ### Variant Filtering
 
-
-FORMAT/AD / (FORMAT/AD + FORMAT/RD) >= 0.75
-
+To filter the variants called by VarScan you will use a program called bcftools. You have to search for "_bcftools filter_", then select "_bcftools filter Apply fixed-threshold filters_" and then select the following parameters:
+3. VCF/BCF Data > VCF file from VarScan
+4. Restrict to > Select this to display more options:
+  5. Include -> Write: **FORMAT/AD / (FORMAT/AD + FORMAT/RD) >= 0.8**
+    - This is to select only those variants with an allele frequency higher than 80% which are the ones that can be considered as valid for the consensus genome.
+6. output_type > Uncompressed VCF
 
 ## SnpEff
-
-https://github.com/nf-core/test-datasets/blob/viralrecon/genome/NC_045512.2/GCF_009858895.2_ASM985889v3_genomic.200409.gff.gz?raw=true
-
-
 
 
 History: https://usegalaxy.org/u/svarona/h/unnamed-history
