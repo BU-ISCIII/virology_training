@@ -217,6 +217,7 @@ In "_Select SAM/BAM dataset or dataset collection_" you can select more than one
 ![picard_wgsmetrics_select2](../docs/images/picard_wgsmetrics_select2.png)
 
 The you have to change the following parameters:
+
 6. Load reference genome from > History
 7. Select the fasta file we uploaded with the reference genome (https://github.com/nf-core/test-datasets/raw/viralrecon/genome/NC_045512.2GCF_009858895.2_ASM985889v3_genomic.200409.fna.gz).
 8. Treat bases with coverage exceeding this value as if they had coverage at this value = 1000000
@@ -276,6 +277,7 @@ Once we have the alingment statistics and files with amplicon primers trimmed, w
 ### Mpileup
 
 The first step in variant calling is generated a pileup file. For that you just have to search for "_mpileup_" in the search bar and select "_samtools mpileup multi-way pileup of variants_". Then select the following parameters:
+
 3. Choose the source for the reference genome > Use a genome from the history.
 4. BAM file(s) > Select the ivar bam file
 5. Using reference genome > Select the reference fasta file.
@@ -313,6 +315,7 @@ This variants have only passed a filter for the minimum quality if the variant, 
 ### Variant Filtering with Bcftools
 
 To filter the variants called by VarScan you will use a program called bcftools. You have to search for "_bcftools filter_", then select "_bcftools filter Apply fixed-threshold filters_" and then select the following parameters:
+
 3. VCF/BCF Data > VCF file from VarScan
 4. Restrict to > Select this to display more options:
   5. Include -> Write: **FORMAT/AD / (FORMAT/AD + FORMAT/RD) >= 0.8**
@@ -330,6 +333,7 @@ The main difference between the VCF file from VarScan and the VCF from Bcftools 
 ### Annotation with SnpEff
 
 Once we have the variants called, it's interesting to annotate those variants, for which you will use SnpEff. Search for "_snpeff_" in the searh bar and select "_SnpEff eff: annotate variants for SARS-CoV-2_", then change the following parameters:
+
 3. Sequence changes (SNPs, MNPs, InDels) > Select Bcftools filter output VCF.
 4. Create CSV report, useful for downstream analysis (-csvStats) > Yes
 
@@ -338,6 +342,7 @@ Once we have the variants called, it's interesting to annotate those variants, f
 ### SnpEff results
 
 The SnpEff gives three different results, from which the most interesting ones are:
+
 1. Snpeff eff: Which is a VCF file with the annotation results. It is a very similar file to the ones we saw before for VarScan and Bcftools but with the last column different, containing relevant information about that variant.
 
 ![snpeff_results1](../docs/images/snpeff_results1.png)
@@ -352,6 +357,7 @@ Once we have the most relevant variants that can be considered to include in the
 ### Bcftools consensus
 
 The first step consist in including the called variants into the reference genome, for which you will search for "_bcftools consensus_" in the search bar and then select "_bcftools consensus Create consensus sequence by applying VCF variants to a reference fasta file_". In this module you have to select:
+
 3. VCF/BCF Data > VCF resulting from bcftools filter.
 4. Reference genome > Fasta file uploaded at the begining.
 
@@ -360,6 +366,39 @@ The first step consist in including the called variants into the reference genom
 This will just generate a fasta file identical to the reference one, except for those nucleotides that are variants from the VCF file.
 
 ![bcftools_consensus_results](../docs/images/bcftools_consensus_results.png)
+
+### Genome coverage calculation
+
+At this point, we have the consensus viral genome, but we know that we have filtered the variants based on the coverage, selecting only those that had a coverage depth higher than 10X. So we cannot ensure that the consensus genome doesn't have any variant that we have filter in those regions with a coverage lower than 10X. So the next step is to determine which regions of the reference genome have a coverage lower than 10X.
+
+To do that you will search for "_bedtools genomecov_" in the search bar and select "_bedtools Genome Coverage compute the coverage over an entire genome_", the you will have to select the following files:
+
+3. Input type > BAM
+  4. BAM file > Alignment file from bowtie2
+5. Output type > BedGraph coverage file
+6. Report regions with zero coverage > Yes
+
+![bedtools_genomecov](../docs/images/bedtools_genomecov.png)
+
+This process will generate a BED file where each genomic position range of the reference genome has the coverage calculated. In this example you can see that for the positions of the reference genome from the nucleotide 55 to 63 they have a coverage of 20X.
+
+![bedtools_genomecov_result](../docs/images/bedtools_genomecov_result.png)
+
+### Regions filtering
+
+From this resulting file from betdools genomecoverage we are going to select those regions with a coverage lower than 10X. Writing in the search bar "_awk_" and selecting "_Text reformatting with awk_", we are going to change:
+
+3. File to process > Bedtools genome coverage file with the coverage regions
+4. AWK Program = $4 < 10
+  - **This will filter all the lines (genomic regions) that have a value lower than 10 in the 4th column (coverage)**
+5. Execute
+
+![awk](../docs/images/awk.png)
+
+The resulting file is exactly the same as the one in Bedtools genomecoverage but only containing those lines with the genomic region coverage lower than 10X.
+
+![awk_result](../docs/images/awk_result.png)
+
 
 
 History: https://usegalaxy.org/u/svarona/h/unnamed-history
