@@ -318,6 +318,14 @@ To filter the variants called by VarScan you will use a program called bcftools.
     - This is to select only those variants with an allele frequency higher than 80% which are the ones that can be considered as valid for the consensus genome.
 6. output_type > Uncompressed VCF
 
+![bcftools_filter](../docs/images/bcftools_filter.png)
+
+### Bcftools filter results
+
+The main difference between the VCF file from VarScan and the VCF from Bcftools is that this last one is shorter because it will only contain those variants with an allele frequency higher than 80%.
+
+![bcftools_filter_results](../docs/images/bcftools_filter_results.png)
+
 ## SnpEff
 
 
