@@ -292,6 +292,26 @@ The first step in variant calling is generated a pileup file. For that you just 
 
 ### VarScan
 
+Now, with the mpileup file you can start the variant calling process. You will use a program called VarScan, so you have to search for "_varscan_" in the search bar and select "_VarScan for variant detection_". Then select the following parameters:
+
+3. Pileup dataset > Select the mpilup file generated in the previous process.
+4. Minimum read depth = 10
+5. Minimum supporting reads = 5
+6. Minimum base quality at a position to count a read = 20
+
+![varscan1](../docs/images/varscan1.png)
+
+### VarScan results
+
+VarScan results consist in a VCF file containing all the variants found between the reference and the sample. Each line represents a variant the columns give information about that variant, such as the position in the reference genome, the reference allele, the alternate allele, if that variant passed the filters, and so on.
+
+![varscan2_results](../docs/images/varscan2_results.png)
+
+This variants have only passed a filter for the minimum quality if the variant, which we set as 20, but we need to filter these variants more.
+
+### Variant Filtering
+
+
 FORMAT/AD / (FORMAT/AD + FORMAT/RD) >= 0.75
 
 
