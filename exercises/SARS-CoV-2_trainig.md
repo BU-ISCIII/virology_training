@@ -12,7 +12,7 @@ During this training we will following these steps:
 * [Stats](#stats): Mapping statistics with samtools and picard.
 * [Amplicons](#amplicons): Preprocessing steps mandatory for amplicon sequencing data.
 * [Variants](#variants): Variant calling and filtering.
-
+* [Consensus](#consensus): Consensus genome generation
 
 ## Register/Login
 
@@ -345,5 +345,18 @@ The SnpEff gives three different results, from which the most interesting ones a
 2. Snpeff eff CSV stats: This file is a CSV file that contains statistics about the variant annotation process, such as the percentage of variants annotated, the percentage of variants that are MISSENSE or SILENT, the percentage that have HIGH, MODERATE or LOW effect, and so on.
 
 ![snpeff_results2](../docs/images/snpeff_results2.png)
+
+## Consensus
+Once we have the most relevant variants that can be considered to include in the consensus genome, you can start with the consensus genome generation.
+
+### Bcftools consensus
+
+The first step consist in including the called variants into the reference genome, for which you will search for "_bcftools consensus_" in the search bar and then select "_bcftools consensus Create consensus sequence by applying VCF variants to a reference fasta file_". In this module you have to select:
+3. VCF/BCF Data > VCF resulting from bcftools filter.
+4. Reference genome > Fasta file uploaded at the begining.
+
+![bcftools_consensus](../docs/images/bcftools_consensus.png)
+
+This will just generate a fasta file identical to the reference one, except for those nucleotides that are variants from the VCF file.
 
 History: https://usegalaxy.org/u/svarona/h/unnamed-history
