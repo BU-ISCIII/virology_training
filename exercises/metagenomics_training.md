@@ -83,6 +83,17 @@ If we scroll down, we can see each contig in detail. There are also links to dow
 
 ## Kraken
 
+Now we are going to analyse the same sequenced data with a mappign approach, by using Kraken in [Galaxy](https://usegalaxy.org/). Kraken splits the reads into smaller fragments of lenght k called k-mers, and maps them against a database of reference genomes to find which genomes are in the sample.
+
+We can log into the webpage and upload our data in the same way we did in the previous execise:
+
+![kraken_data](../docs/images/kraken_data.png)
+
+Now we hav to find kraken by using the tool search bar at the top left of the screen, select our data and run paramenters, and execute:
+
+![kraken_parameters](../docs/images/kraken_parameters.png)
+
+
 
 ## Combined approach
 
