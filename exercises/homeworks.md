@@ -10,3 +10,5 @@ Another way to upload data to galaxy is to give a SRR/SRA ID. To do this, first 
 A message like this one should appear if everything went properly:
 
 ![running_message](../docs/images/running_message.png)
+
+## Now you have to follow the Galaxy training at home with the data you downloaded from SRA.
