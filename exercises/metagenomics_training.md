@@ -41,3 +41,24 @@ We will start by giving a name to our analysis and uploading the raw data. In ou
 
 ![virustap_data](../docs/images/virustap_data.png)
 
+The data can be downloaded [here](https://we.tl/t-jMLNdSmn2K).
+
+## Parameters/Steps
+
+The next step is to select the right paremeters for our analysis in each step of the pipeline we are going to run.
+
+![virustap_parameters](../docs/images/virustap_parameters.png)
+
+As you can see, the pipeline contains the following steps:
+
+- **Quality trimming and adapter removal**: The first step is the quality control. We will use `skewer` as trimming software and set the other values to trimm 5 at the 5' end, and everything at the 3' end that has lower than 14 quality. Then, ignore reads with less average quality than 15 and also shorter than 80bp.
+
+- **Read subtraction**: Then, we are going to remove the host. In this case, that's human. We are also only going to look for viruses, so we are going to also check to remove all non-viral reads. The software we will use for this step is `bwasw`, which is a mapper that we will use for matching (and removing) reads against the selected reference genomes.
+
+- **De novo assembly**: Now we are going to assemble the viral reads, by using `a5_miseq`. This will get us all the contigs of the different viruses in our sample.
+
+- **Homology search / read mapping**: Finally, we are going to blast the contigs to discover what are they, and which species they seem to belong to.
+
+Once we are finally happy with our analysis configuration, we can start the analysis:
+
+![virustap_run](../docs/images/virustap_run.png)
