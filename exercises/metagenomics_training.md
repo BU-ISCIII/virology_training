@@ -1,4 +1,4 @@
-# metagenomics training
+# Metagenomics training
 
 In this report you will find all the information necessary to follow the steps to run a basic metagenomics analysis.
 
@@ -77,9 +77,25 @@ The results look like this:
 
 At the beginning of the report we can see al the paremeters we previously selected, which is key to track your analysis and check if your analysis was correct. Then we have the QC results, and the number of reads filtered when mapping against each reference genome. Finally, we have the number of contigs assambled and their taxonomic analysis.
 
-![virustap_rcontigs](../docs/images/virustap_contigs.png)
+![virustap_contigs](../docs/images/virustap_contigs.png)
 
 If we scroll down, we can see each contig in detail. There are also links to download the sequence of the contig and the reference it blasted against.
 
 ## Kraken
 
+
+## Combined approach
+
+Until now we have analyse the same dataset with two different approaches: mapping and assembly. But are the results the same? Can we use only the one we like the most? It depends on your data, and what you are looking for.
+
+I am going to show you now and example combining both approaches in one pipeline, [Pikavirus](https://github.com/BU-ISCIII/PikaVirus).
+
+Here we have a set of metagenomic samples where we are going to try to identify any kind of pathogen, either virus, bacteria, or fungi. Pikavirus pipeline runs both mapping and assembly, and we found something really interesting with the viruses of some samples.
+
+One of these examples was Sample10, in which we had Human adenovirus. But, here is the problem, we had one and two species of Human adenovirus at the same time!
+
+![pikavirus_diagram](../docs/images/pikavirus_diagram.png)
+
+![pikavirus_results](../docs/images/pikavirus_results.png)
+
+This was caused because both Human adenovirus type 7 and Human adenovirus type 7 share a homolgy region. This, when mapping, can cause that only one species is detected. By combining the results of both methods, we can see that there are 3 contigs for Human adenovirus 2 and only one for Human adenovirus type 7, but this last one is larger., and the mapping is similar across all of them in both species.
