@@ -16,7 +16,7 @@ During this training we will following these steps:
 ## Mapping
 
 Mapping is a type of alignment that consist in placing a sequence inside a larger sequence. For example, it is used to determine the position of a read or contig in a reference genome.
-![mapping](https://en.wikipedia.org/wiki/Sequence_assembly#/media/File:Seqassemble.png)
+![mapping](https://software.broadinstitute.org/software/igv/sites/cancerinformatics.org.igv/files/images/del_multiple.jpg)
 
 This approach is useful when you have a reference genome for the same species of the organisms you are working with, it is faster than a de-novo assambly, and also allows variant discovery.
 
@@ -26,4 +26,10 @@ Assembling consist in reconstructing a representation of the original sequenced 
 ![assembling](https://i0.wp.com/thesequencingcenter.com/wp-content/uploads/2019/01/denovo_assembly.jpg?w=1000&ssl=1)
 
 This approach takes longer to compute, but it can discover new genomes.
+
+## Register/login
+
+In order to access VirusTAP, you first will need to log in or create a new academic account at [VirusTAP](https://gph.niid.go.jp/virustap/system_in):
+![virustap_login](../docs/images/virustap_login.png)
+
 
