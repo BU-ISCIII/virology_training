@@ -62,3 +62,24 @@ As you can see, the pipeline contains the following steps:
 Once we are finally happy with our analysis configuration, we can start the analysis:
 
 ![virustap_run](../docs/images/virustap_run.png)
+
+## Run/Results
+
+Once we are finally happy with our analysis configuration, we can start the analysis:
+
+![virustap_run](../docs/images/virustap_run.png)
+
+The server will add our analysis to the queue and it may not start automatically. Once it has completed, we will get an email with a link to the results, so it is important to check that option before submitting the job.
+
+The results look like this:
+
+![virustap_results](../docs/images/virustap_results.png)
+
+At the beginning of the report we can see al the paremeters we previously selected, which is key to track your analysis and check if your analysis was correct. Then we have the QC results, and the number of reads filtered when mapping against each reference genome. Finally, we have the number of contigs assambled and their taxonomic analysis.
+
+![virustap_rcontigs](../docs/images/virustap_contigs.png)
+
+If we scroll down, we can see each contig in detail. There are also links to download the sequence of the contig and the reference it blasted against.
+
+## Kraken
+
