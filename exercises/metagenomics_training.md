@@ -93,7 +93,7 @@ Now we have to find kraken by using the tool search bar at the top left of the s
 
 ![kraken_parameters](../docs/images/kraken_parameters.png)
 
-**Note:** This tool is not working at the time, so I have uploaded the results [here](https://we.tl/t-61NPMvEcqO). Also in this repo you can find the [kraken report](../docs/kraken_Rota.report) so you can explore it at home. I have not used only the virus database, but all, so you can see all the organisms in the sample at once.
+**Note:** This tool is not working at the time, so I have uploaded the results [here](https://drive.google.com/drive/folders/1TAtjCV-QLvLDT_NXK877OpVr5ER917Hm?usp=sharing). Also in this repo you can find the [kraken report](../docs/kraken_Rota.report) so you can explore it at home. I have not used only the virus database, but all, so you can see all the organisms in the sample at once.
 
 The report produced by kraken contains the taxonomy of each read in the samples. This means it is going to be a huge text file wuite hard to read by a human, so we will use a bioinformatics software, krona, to create an interactive graph to visualise it. This software runs in command line in unix-like machines, so we can not run it here today and I will just provide you with the results: [krona graphs](../docs/kraken_Rota.report.krona.html).
 
