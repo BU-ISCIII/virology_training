@@ -14,6 +14,12 @@ During this training we will following these steps:
 
 ## Conda
 In case you haven't install conda yet, follow the intructions in [this link](https://docs.conda.io/en/latest/miniconda.html)
+To run the pipeline properly it's important that you have set up all the channels needed for this pipeline. This can be done running:
+```
+conda config --add channels defaults
+conda config --add channels bioconda
+conda config --add channels conda-forge
+```
 
 ## Nextflow
 [Nextflow](https://www.nextflow.io/) is a bioinformatics workflow manager that enables the development of portable and reproducible workflows. It supports deploying workflows on a variety of execution platforms including local, HPC schedulers, AWS Batch, Google Cloud Life Sciences, and Kubernetes. Additionally, it provides support for manage your workflow dependencies through built-in support for Conda, Docker, Singularity, and Modules.
@@ -48,7 +54,7 @@ y
 
 Test if it's correctly installed:
 ```
-nextflow --version
+nextflow -v
 ```
 
 ## Viralrecon
@@ -82,6 +88,11 @@ Moving to another branch:
 git checkout dev
 ```
 
+Leave repo's folder:
+```
+cd ..
+```
+
 Now you have your repo (viralrecon) installed and the program to run it (Nextflow), the next step is to run the pipeline.
 
 
@@ -89,4 +100,19 @@ Now you have your repo (viralrecon) installed and the program to run it (Nextflo
 To run the pipeline you have to type in your terminal:
 
 ```
+nextflow run Repositories/viralrecon/main.nf -profile conda,test -resume
 ```
+With this command line you are going to run the default test dataset with all the default parameters. This data is a subset of amplicon based sequenced SARS-CoV2 samples. This means that during the pipeline the sequences/positions corresponding to the amplicon's primers are going to be removed.
+
+This is the pipeline overview:
+1. FastQC: Quality control
+2. Fastp: Quality+size trimming
+3. Mapping approach:
+	3.1. bowtie2: Mapping to the reference genome
+	3.2. ivar: Amplicon's adapter trimming by position
+	3.3. VarScan2: Variant calling
+	3.4. bcftools: Consensus generation
+4. Assembly approach:
+	4.1. cutadapt: Adapter trimming by sequence
+	4.2. MetaSpades: De Novo assebmly
+	4.3. ABACAS: Reference-based scaffold ordering
