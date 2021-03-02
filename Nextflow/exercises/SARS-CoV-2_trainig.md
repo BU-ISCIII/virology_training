@@ -1,4 +1,4 @@
-# SARS-CoV-2 training with galaxy
+# SARS-CoV-2 training with Nextflow
 
 In this report you will find all the information necessary to follow the steps to analyze SARS-CoV-2 data with Galaxy.
 
@@ -10,4 +10,42 @@ During this training we will following these steps:
 * [Pipeline](#pipeline): Running the pipeline with command line and main results.
 * [Statistics](#statistics): Parse resulting files to obtain statistics.
 * [Lineage](#Lineage): Lineage clasification with Pangolin
+
+
+## Nextflow
+[Nextflow](https://www.nextflow.io/) is a bioinformatics workflow manager that enables the development of portable and reproducible workflows. It supports deploying workflows on a variety of execution platforms including local, HPC schedulers, AWS Batch, Google Cloud Life Sciences, and Kubernetes. Additionally, it provides support for manage your workflow dependencies through built-in support for Conda, Docker, Singularity, and Modules.
+
+### Installation
+We will install Nextflow using conda running the following commands:
+
+Create an environment
+```
+conda create --name nextflow
+```
+
+proceed ([y]/n)?
+```
+y
+```
+
+Activate the environment:
+```
+conda activate nextflow
+```
+
+Install nextflow in the environment through bioconda channel:
+```
+conda install -c bioconda nextflow
+```
+
+proceed ([y]/n)?
+```
+y
+```
+
+Test if it's correctly installed:
+```
+nextflow --version
+```
+
 
