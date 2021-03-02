@@ -48,4 +48,31 @@ Test if it's correctly installed:
 nextflow --version
 ```
 
+## Viralrecon
+
+[viralrecon](https://github.com/nf-core/viralrecon) is a bioinformatics analysis pipeline used to perform assembly and intra-host/low-frequency variant calling for viral samples. The pipeline supports short-read Illumina sequencing data from both shotgun (e.g. sequencing directly from clinical samples) and enrichment-based library preparation methods (e.g. amplicon-based: ARTIC SARS-CoV-2 enrichment protocol; or probe-capture-based).
+
+The pipeline is built using Nextflow, a workflow tool to run tasks across multiple compute infrastructures in a very portable manner. It comes with Docker containers making installation trivial and results highly reproducible. Furthermore, automated continuous integration tests that run the pipeline on a full-sized dataset using AWS cloud ensure that the code is stable.
+
+
+### GitHub
+To download and run viralrecon locally first you have to learn a little bit about github in command line (git). If you need more information about how to manage GitHub repositories, read our [Wiki documentation](https://github.com/BU-ISCIII/BU-ISCIII/wiki/Github--gitflow). You need to follow these steps:
+
+Download the repo from github:
+:warning: Copy the viralrecon link below in the code, the one above won't work.
+```
+git clone git@github.com:BU-ISCIII/viralrecon.git
+```
+
+Moving inside the repo:
+```
+cd viralrecon
+```
+
+Moving to another branch:
+```
+git checkout dev
+```
+
+Now you have your repo (viralrecon) installed and the program to run it (Nextflow), the next step is to run the pipeline.
 
