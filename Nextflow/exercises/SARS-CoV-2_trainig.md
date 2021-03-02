@@ -4,6 +4,7 @@ In this report you will find all the information necessary to follow the steps t
 
 ## Training overview
 During this training we will following these steps:
+* [Conda](#conda): Installation
 * [Nextflow](#nexflow): Overview and installation
 * [Viralrecon](#viralrecon): Overview and download
 	* [Github](#github): Glance to main commands
@@ -11,6 +12,8 @@ During this training we will following these steps:
 * [Statistics](#statistics): Parse resulting files to obtain statistics.
 * [Lineage](#Lineage): Lineage clasification with Pangolin
 
+## Conda
+In case you haven't install conda yet, follow the intructions in [this link](https://docs.conda.io/en/latest/miniconda.html)
 
 ## Nextflow
 [Nextflow](https://www.nextflow.io/) is a bioinformatics workflow manager that enables the development of portable and reproducible workflows. It supports deploying workflows on a variety of execution platforms including local, HPC schedulers, AWS Batch, Google Cloud Life Sciences, and Kubernetes. Additionally, it provides support for manage your workflow dependencies through built-in support for Conda, Docker, Singularity, and Modules.
@@ -58,6 +61,11 @@ The pipeline is built using Nextflow, a workflow tool to run tasks across multip
 ### GitHub
 To download and run viralrecon locally first you have to learn a little bit about github in command line (git). If you need more information about how to manage GitHub repositories, read our [Wiki documentation](https://github.com/BU-ISCIII/BU-ISCIII/wiki/Github--gitflow). You need to follow these steps:
 
+In case you don't have git installed run:
+```
+sudo apt install git-all
+```
+
 Download the repo from github:
 :warning: Copy the viralrecon link below in the code, the one above won't work.
 ```
@@ -76,3 +84,9 @@ git checkout dev
 
 Now you have your repo (viralrecon) installed and the program to run it (Nextflow), the next step is to run the pipeline.
 
+
+## Pipeline
+To run the pipeline you have to type in your terminal:
+
+```
+```
