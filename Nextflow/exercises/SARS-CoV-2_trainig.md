@@ -9,6 +9,7 @@ During this training we will following these steps:
 * [Viralrecon](#viralrecon): Overview and download
 	* [Github](#github): Glance to main commands
 * [Pipeline](#pipeline): Running the pipeline with command line and main results.
+	* [Results](#results): Most important results.
 * [Statistics](#statistics): Parse resulting files to obtain statistics.
 * [Lineage](#Lineage): Lineage clasification with Pangolin
 
@@ -102,11 +103,11 @@ This is the pipeline overview:
 1. FastQC: Quality control
 2. Fastp: Quality+size trimming
 3. Mapping approach:
-	3.1. bowtie2: Mapping to the reference genome
-	3.2. ivar: Amplicon's adapter trimming by position
-	3.3. VarScan2: Variant calling
-	3.4. bcftools: Consensus generation
+	1. bowtie2: Mapping to the reference genome
+	2. ivar: Amplicon's adapter trimming by position
+	3. VarScan2: Variant calling
+	4. bcftools: Consensus generation
 4. Assembly approach:
-	4.1. cutadapt: Adapter trimming by sequence
-	4.2. MetaSpades: De Novo assebmly
-	4.3. ABACAS: Reference-based scaffold ordering
+	1. cutadapt: Adapter trimming by sequence
+	2. MetaSpades: De Novo assebmly
+	3. ABACAS: Reference-based scaffold ordering
