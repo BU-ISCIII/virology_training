@@ -1,0 +1,208 @@
+'ASSEMBLY: BCFTools (MetaSPAdes)':
+  stats:
+    SAMPLE1_PE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/metaspades/bcftools/SAMPLE1_PE.bcftools_stats.txt
+    SAMPLE2_PE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/metaspades/bcftools/SAMPLE2_PE.bcftools_stats.txt
+'ASSEMBLY: BCFTools (SPAdes)':
+  stats:
+    SAMPLE1_PE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/spades/bcftools/SAMPLE1_PE.bcftools_stats.txt
+    SAMPLE2_PE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/spades/bcftools/SAMPLE2_PE.bcftools_stats.txt
+    SAMPLE3_SE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/spades/bcftools/SAMPLE3_SE.bcftools_stats.txt
+'ASSEMBLY: BCFTools (Unicycler)':
+  stats:
+    SAMPLE1_PE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/unicycler/bcftools/SAMPLE1_PE.bcftools_stats.txt
+    SAMPLE2_PE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/unicycler/bcftools/SAMPLE2_PE.bcftools_stats.txt
+    SAMPLE3_SE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/unicycler/bcftools/SAMPLE3_SE.bcftools_stats.txt
+'ASSEMBLY: BCFTools (minia)':
+  stats:
+    SAMPLE1_PE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/minia/bcftools/SAMPLE1_PE.bcftools_stats.txt
+    SAMPLE2_PE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/minia/bcftools/SAMPLE2_PE.bcftools_stats.txt
+    SAMPLE3_SE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/minia/bcftools/SAMPLE3_SE.bcftools_stats.txt
+'ASSEMBLY: Cutadapt (primer trimming)':
+  all_sections:
+    SAMPLE1_PE_2: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/cutadapt/log/SAMPLE1_PE.cutadapt.log
+    SAMPLE2_PE_2: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/cutadapt/log/SAMPLE2_PE.cutadapt.log
+    SAMPLE3_SE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/cutadapt/log/SAMPLE3_SE.cutadapt.log
+'ASSEMBLY: FastQC (primer trimming)':
+  all_sections:
+    SAMPLE1_PE_1: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/cutadapt/fastqc/SAMPLE1_PE_1.ptrim_fastqc.zip
+    SAMPLE1_PE_2: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/cutadapt/fastqc/SAMPLE1_PE_2.ptrim_fastqc.zip
+    SAMPLE2_PE_1: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/cutadapt/fastqc/SAMPLE2_PE_1.ptrim_fastqc.zip
+    SAMPLE2_PE_2: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/cutadapt/fastqc/SAMPLE2_PE_2.ptrim_fastqc.zip
+    SAMPLE3_SE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/cutadapt/fastqc/SAMPLE3_SE.ptrim_fastqc.zip
+'ASSEMBLY: QUAST (MetaSPAdes)':
+  all_sections:
+    SAMPLE1_PE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/metaspades/quast/report.tsv
+    SAMPLE2_PE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/metaspades/quast/report.tsv
+'ASSEMBLY: QUAST (SPAdes)':
+  all_sections:
+    SAMPLE1_PE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/spades/quast/report.tsv
+    SAMPLE2_PE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/spades/quast/report.tsv
+    SAMPLE3_SE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/spades/quast/report.tsv
+'ASSEMBLY: QUAST (Unicycler)':
+  all_sections:
+    SAMPLE1_PE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/unicycler/quast/report.tsv
+    SAMPLE2_PE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/unicycler/quast/report.tsv
+    SAMPLE3_SE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/unicycler/quast/report.tsv
+'ASSEMBLY: QUAST (minia)':
+  all_sections:
+    SAMPLE1_PE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/minia/quast/report.tsv
+    SAMPLE2_PE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/minia/quast/report.tsv
+    SAMPLE3_SE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/minia/quast/report.tsv
+'ASSEMBLY: SnpEff (MetaSPAdes)':
+  all_sections:
+    SAMPLE1_PE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/metaspades/snpeff/SAMPLE1_PE.snpEff.csv
+    SAMPLE2_PE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/metaspades/snpeff/SAMPLE2_PE.snpEff.csv
+'ASSEMBLY: SnpEff (SPAdes)':
+  all_sections:
+    SAMPLE1_PE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/spades/snpeff/SAMPLE1_PE.snpEff.csv
+    SAMPLE2_PE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/spades/snpeff/SAMPLE2_PE.snpEff.csv
+    SAMPLE3_SE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/spades/snpeff/SAMPLE3_SE.snpEff.csv
+'ASSEMBLY: SnpEff (Unicycler)':
+  all_sections:
+    SAMPLE1_PE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/unicycler/snpeff/SAMPLE1_PE.snpEff.csv
+    SAMPLE2_PE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/unicycler/snpeff/SAMPLE2_PE.snpEff.csv
+    SAMPLE3_SE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/unicycler/snpeff/SAMPLE3_SE.snpEff.csv
+'ASSEMBLY: SnpEff (minia)':
+  all_sections:
+    SAMPLE1_PE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/minia/snpeff/SAMPLE1_PE.snpEff.csv
+    SAMPLE2_PE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/minia/snpeff/SAMPLE2_PE.snpEff.csv
+    SAMPLE3_SE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/minia/snpeff/SAMPLE3_SE.snpEff.csv
+'PREPROCESS: FastQC (adapter trimming)':
+  all_sections:
+    SAMPLE1_PE_1: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/fastp/fastqc/SAMPLE1_PE_1.trim_fastqc.zip
+    SAMPLE1_PE_2: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/fastp/fastqc/SAMPLE1_PE_2.trim_fastqc.zip
+    SAMPLE2_PE_1: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/fastp/fastqc/SAMPLE2_PE_1.trim_fastqc.zip
+    SAMPLE2_PE_2: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/fastp/fastqc/SAMPLE2_PE_2.trim_fastqc.zip
+    SAMPLE3_SE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/fastp/fastqc/SAMPLE3_SE.trim_fastqc.zip
+'PREPROCESS: FastQC (raw reads)':
+  all_sections:
+    SAMPLE1_PE_1: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/fastqc/SAMPLE1_PE_1.merged_fastqc.zip
+    SAMPLE1_PE_2: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/fastqc/SAMPLE1_PE_2.merged_fastqc.zip
+    SAMPLE2_PE_1: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/fastqc/SAMPLE2_PE_1.merged_fastqc.zip
+    SAMPLE2_PE_2: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/fastqc/SAMPLE2_PE_2.merged_fastqc.zip
+    SAMPLE3_SE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/fastqc/SAMPLE3_SE.merged_fastqc.zip
+'PREPROCESS: fastp (adapter trimming)':
+  all_sections:
+    SAMPLE1_PE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/fastp/log/SAMPLE1_PE.fastp.json
+    SAMPLE2_PE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/fastp/log/SAMPLE2_PE.fastp.json
+    SAMPLE3_SE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/fastp/log/SAMPLE3_SE.fastp.json
+'VARIANTS: BCFTools (BCFTools)':
+  stats:
+    SAMPLE1_PE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/bcftools/variants/bcftools/SAMPLE1_PE.bcftools_stats.txt
+    SAMPLE2_PE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/bcftools/variants/bcftools/SAMPLE2_PE.bcftools_stats.txt
+    SAMPLE3_SE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/bcftools/variants/bcftools/SAMPLE3_SE.bcftools_stats.txt
+'VARIANTS: BCFTools (VarScan 2; high freq)':
+  stats:
+    SAMPLE1_PE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/varscan2/bcftools/highfreq/SAMPLE1_PE.AF0.75.bcftools_stats.txt
+    SAMPLE2_PE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/varscan2/bcftools/highfreq/SAMPLE2_PE.AF0.75.bcftools_stats.txt
+    SAMPLE3_SE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/varscan2/bcftools/highfreq/SAMPLE3_SE.AF0.75.bcftools_stats.txt
+'VARIANTS: BCFTools (iVar; high freq)':
+  stats:
+    SAMPLE1_PE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/ivar/variants/bcftools/highfreq/SAMPLE1_PE.AF0.75.bcftools_stats.txt
+    SAMPLE2_PE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/ivar/variants/bcftools/highfreq/SAMPLE2_PE.AF0.75.bcftools_stats.txt
+    SAMPLE3_SE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/ivar/variants/bcftools/highfreq/SAMPLE3_SE.AF0.75.bcftools_stats.txt
+'VARIANTS: Bowtie 2':
+  all_sections:
+    SAMPLE1_PE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/bowtie2/log/SAMPLE1_PE.bowtie2.log
+    SAMPLE2_PE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/bowtie2/log/SAMPLE2_PE.bowtie2.log
+    SAMPLE3_SE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/bowtie2/log/SAMPLE3_SE.bowtie2.log
+'VARIANTS: Picard Metrics':
+  AlignmentSummaryMetrics:
+    SAMPLE1_PE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/picard/metrics/SAMPLE1_PE.trim.mkD.CollectMultipleMetrics.alignment_summary_metrics
+    SAMPLE2_PE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/picard/metrics/SAMPLE2_PE.trim.mkD.CollectMultipleMetrics.alignment_summary_metrics
+    SAMPLE3_SE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/picard/metrics/SAMPLE3_SE.trim.mkD.CollectMultipleMetrics.alignment_summary_metrics
+  DuplicationMetrics:
+    SAMPLE1_PE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/picard/metrics/SAMPLE1_PE.trim.mkD.MarkDuplicates.metrics.txt
+    SAMPLE2_PE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/picard/metrics/SAMPLE2_PE.trim.mkD.MarkDuplicates.metrics.txt
+    SAMPLE3_SE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/picard/metrics/SAMPLE3_SE.trim.mkD.MarkDuplicates.metrics.txt
+  InsertSizeMetrics:
+    SAMPLE1_PE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/picard/metrics/SAMPLE1_PE.trim.mkD.CollectMultipleMetrics.insert_size_metrics
+    SAMPLE2_PE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/picard/metrics/SAMPLE2_PE.trim.mkD.CollectMultipleMetrics.insert_size_metrics
+  WgsMetrics:
+    SAMPLE1_PE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/picard/metrics/SAMPLE1_PE.trim.mkD.CollectWgsMetrics.coverage_metrics
+    SAMPLE2_PE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/picard/metrics/SAMPLE2_PE.trim.mkD.CollectWgsMetrics.coverage_metrics
+    SAMPLE3_SE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/picard/metrics/SAMPLE3_SE.trim.mkD.CollectWgsMetrics.coverage_metrics
+'VARIANTS: QUAST (BCFTools)':
+  all_sections:
+    SAMPLE1_PE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/bcftools/consensus/quast/report.tsv
+    SAMPLE2_PE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/bcftools/consensus/quast/report.tsv
+    SAMPLE3_SE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/bcftools/consensus/quast/report.tsv
+'VARIANTS: QUAST (VarScan 2; high freq)':
+  all_sections:
+    SAMPLE1_PE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/varscan2/quast/highfreq/report.tsv
+    SAMPLE2_PE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/varscan2/quast/highfreq/report.tsv
+    SAMPLE3_SE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/varscan2/quast/highfreq/report.tsv
+'VARIANTS: QUAST (iVar; high freq)':
+  all_sections:
+    SAMPLE1_PE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/ivar/consensus/quast/highfreq/report.tsv
+    SAMPLE2_PE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/ivar/consensus/quast/highfreq/report.tsv
+    SAMPLE3_SE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/ivar/consensus/quast/highfreq/report.tsv
+'VARIANTS: SAMTools (MarkDuplicates)':
+  flagstat:
+    SAMPLE1_PE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/picard/markdup/SAMPLE1_PE.trim.mkD.sorted.bam.flagstat
+    SAMPLE2_PE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/picard/markdup/SAMPLE2_PE.trim.mkD.sorted.bam.flagstat
+    SAMPLE3_SE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/picard/markdup/SAMPLE3_SE.trim.mkD.sorted.bam.flagstat
+  idxstats:
+    SAMPLE1_PE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/picard/markdup/SAMPLE1_PE.trim.mkD.sorted.bam.idxstats
+    SAMPLE2_PE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/picard/markdup/SAMPLE2_PE.trim.mkD.sorted.bam.idxstats
+    SAMPLE3_SE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/picard/markdup/SAMPLE3_SE.trim.mkD.sorted.bam.idxstats
+  stats:
+    SAMPLE1_PE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/picard/markdup/SAMPLE1_PE.trim.mkD.sorted.bam.stats
+    SAMPLE2_PE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/picard/markdup/SAMPLE2_PE.trim.mkD.sorted.bam.stats
+    SAMPLE3_SE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/picard/markdup/SAMPLE3_SE.trim.mkD.sorted.bam.stats
+'VARIANTS: SAMTools (iVar)':
+  flagstat:
+    SAMPLE1_PE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/ivar/trim/flagstat/SAMPLE1_PE.trim.sorted.bam.flagstat
+    SAMPLE2_PE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/ivar/trim/flagstat/SAMPLE2_PE.trim.sorted.bam.flagstat
+    SAMPLE3_SE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/ivar/trim/flagstat/SAMPLE3_SE.trim.sorted.bam.flagstat
+  idxstats:
+    SAMPLE1_PE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/ivar/trim/flagstat/SAMPLE1_PE.trim.sorted.bam.idxstats
+    SAMPLE2_PE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/ivar/trim/flagstat/SAMPLE2_PE.trim.sorted.bam.idxstats
+    SAMPLE3_SE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/ivar/trim/flagstat/SAMPLE3_SE.trim.sorted.bam.idxstats
+  stats:
+    SAMPLE1_PE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/ivar/trim/flagstat/SAMPLE1_PE.trim.sorted.bam.stats
+    SAMPLE2_PE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/ivar/trim/flagstat/SAMPLE2_PE.trim.sorted.bam.stats
+    SAMPLE3_SE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/ivar/trim/flagstat/SAMPLE3_SE.trim.sorted.bam.stats
+'VARIANTS: SAMTools (raw)':
+  flagstat:
+    SAMPLE1_PE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/bowtie2/flagstat/SAMPLE1_PE.sorted.bam.flagstat
+    SAMPLE2_PE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/bowtie2/flagstat/SAMPLE2_PE.sorted.bam.flagstat
+    SAMPLE3_SE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/bowtie2/flagstat/SAMPLE3_SE.sorted.bam.flagstat
+  idxstats:
+    SAMPLE1_PE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/bowtie2/flagstat/SAMPLE1_PE.sorted.bam.idxstats
+    SAMPLE2_PE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/bowtie2/flagstat/SAMPLE2_PE.sorted.bam.idxstats
+    SAMPLE3_SE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/bowtie2/flagstat/SAMPLE3_SE.sorted.bam.idxstats
+  stats:
+    SAMPLE1_PE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/bowtie2/flagstat/SAMPLE1_PE.sorted.bam.stats
+    SAMPLE2_PE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/bowtie2/flagstat/SAMPLE2_PE.sorted.bam.stats
+    SAMPLE3_SE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/bowtie2/flagstat/SAMPLE3_SE.sorted.bam.stats
+'VARIANTS: SnpEff (BCFTools)':
+  all_sections:
+    SAMPLE1_PE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/bcftools/variants/snpeff/SAMPLE1_PE.snpEff.csv
+    SAMPLE2_PE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/bcftools/variants/snpeff/SAMPLE2_PE.snpEff.csv
+    SAMPLE3_SE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/bcftools/variants/snpeff/SAMPLE3_SE.snpEff.csv
+'VARIANTS: SnpEff (VarScan 2; high freq)':
+  all_sections:
+    SAMPLE1_PE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/varscan2/snpeff/highfreq/SAMPLE1_PE.AF0.75.snpEff.csv
+    SAMPLE2_PE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/varscan2/snpeff/highfreq/SAMPLE2_PE.AF0.75.snpEff.csv
+    SAMPLE3_SE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/varscan2/snpeff/highfreq/SAMPLE3_SE.AF0.75.snpEff.csv
+'VARIANTS: SnpEff (iVar; high freq)':
+  all_sections:
+    SAMPLE1_PE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/ivar/variants/snpeff/highfreq/SAMPLE1_PE.AF0.75.snpEff.csv
+    SAMPLE2_PE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/ivar/variants/snpeff/highfreq/SAMPLE2_PE.AF0.75.snpEff.csv
+    SAMPLE3_SE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/ivar/variants/snpeff/highfreq/SAMPLE3_SE.AF0.75.snpEff.csv
+'VARIANTS: VarScan 2':
+  mpileup2cns:
+    SAMPLE1_PE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/varscan2/counts/lowfreq/SAMPLE1_PE.varscan2.log
+    SAMPLE2_PE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/varscan2/counts/lowfreq/SAMPLE2_PE.varscan2.log
+    SAMPLE3_SE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/varscan2/counts/lowfreq/SAMPLE3_SE.varscan2.log
+'VARIANTS: iVar trim':
+  trimming:
+    SAMPLE1_PE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/ivar/trim/log/SAMPLE1_PE.trim.ivar.log
+    SAMPLE2_PE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/ivar/trim/log/SAMPLE2_PE.trim.ivar.log
+    SAMPLE3_SE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/ivar/trim/log/SAMPLE3_SE.trim.ivar.log
+'VARIANTS: mosdepth':
+  genome_results:
+    SAMPLE1_PE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/mosdepth/genome/SAMPLE1_PE.trim.mkD.genome.mosdepth.global.dist.txt
+    SAMPLE2_PE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/mosdepth/genome/SAMPLE2_PE.trim.mkD.genome.mosdepth.global.dist.txt
+    SAMPLE3_SE: /home/s.varona/virology_training_test/work/88/08ca7a0b20cefeaf9707d482f9ebe1/mosdepth/genome/SAMPLE3_SE.trim.mkD.genome.mosdepth.global.dist.txt

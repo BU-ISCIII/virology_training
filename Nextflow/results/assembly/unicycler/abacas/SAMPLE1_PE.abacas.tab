@@ -1,0 +1,13 @@
+ID   NC_045512.2
+FT   contig          complement(1..8580)
+FT                   /systematic_id="2"
+FT                   /method="mummer"
+FT                   /Contig_coverage="100.00"
+FT                   /Percent_identity="99.98"
+FT                   /colour="3"
+FT   contig          8859..29705
+FT                   /systematic_id="1"
+FT                   /method="mummer"
+FT                   /Contig_coverage="100.00"
+FT                   /Percent_identity="99.98"
+FT                   /colour="4"

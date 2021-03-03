@@ -1,0 +1,54 @@
+All statistics are based on contigs of size >= 500 bp, unless otherwise noted (e.g., "# contigs (>= 0 bp)" and "Total length (>= 0 bp)" include all contigs).
+
+Assembly                     SAMPLE3_SE.AF0.75.consensus  SAMPLE1_PE.AF0.75.consensus  SAMPLE2_PE.AF0.75.consensus
+# contigs (>= 0 bp)          1                            1                            1                          
+# contigs (>= 1000 bp)       1                            1                            1                          
+# contigs (>= 5000 bp)       1                            1                            1                          
+# contigs (>= 10000 bp)      1                            1                            1                          
+# contigs (>= 25000 bp)      1                            1                            1                          
+# contigs (>= 50000 bp)      0                            0                            0                          
+Total length (>= 0 bp)       29782                        29782                        29649                      
+Total length (>= 1000 bp)    29782                        29782                        29649                      
+Total length (>= 5000 bp)    29782                        29782                        29649                      
+Total length (>= 10000 bp)   29782                        29782                        29649                      
+Total length (>= 25000 bp)   29782                        29782                        29649                      
+Total length (>= 50000 bp)   0                            0                            0                          
+# contigs                    1                            1                            1                          
+Largest contig               29782                        29782                        29649                      
+Total length                 29782                        29782                        29649                      
+Reference length             29903                        29903                        29903                      
+GC (%)                       37.88                        37.94                        38.20                      
+Reference GC (%)             37.97                        37.97                        37.97                      
+N50                          29782                        29782                        29649                      
+NG50                         29782                        29782                        29649                      
+N75                          29782                        29782                        29649                      
+NG75                         29782                        29782                        29649                      
+L50                          1                            1                            1                          
+LG50                         1                            1                            1                          
+L75                          1                            1                            1                          
+LG75                         1                            1                            1                          
+# misassemblies              0                            0                            0                          
+# misassembled contigs       0                            0                            0                          
+Misassembled contigs length  0                            0                            0                          
+# local misassemblies        0                            0                            0                          
+# scaffold gap ext. mis.     0                            0                            0                          
+# scaffold gap loc. mis.     8                            2                            10                         
+# unaligned mis. contigs     0                            0                            0                          
+# unaligned contigs          0 + 0 part                   0 + 0 part                   0 + 0 part                 
+Unaligned length             0                            0                            0                          
+Genome fraction (%)          88.891                       97.606                       85.700                     
+Duplication ratio            1.120                        1.020                        1.157                      
+# N's per 100 kbp            11527.10                     2478.01                      14364.73                   
+# mismatches per 100 kbp     0.00                         20.56                        23.41                      
+# indels per 100 kbp         0.00                         0.00                         0.00                       
+# genomic features           14 + 12 part                 23 + 7 part                  10 + 14 part               
+Largest alignment            26581                        29187                        25627                      
+Total aligned length         26581                        29187                        25627                      
+NA50                         26581                        29187                        25627                      
+NGA50                        26581                        29187                        25627                      
+NA75                         26581                        29187                        25627                      
+NGA75                        26581                        29187                        25627                      
+LA50                         1                            1                            1                          
+LGA50                        1                            1                            1                          
+LA75                         1                            1                            1                          
+LGA75                        1                            1                            1                          

@@ -1,0 +1,947 @@
+LOCUS       SAMPLE3_SE_1            3807 bp    DNA     linear       02-MAR-2021
+DEFINITION  --species species strain strain.
+ACCESSION   
+VERSION
+KEYWORDS    .
+SOURCE      --species species
+  ORGANISM  --species species
+            Unclassified.
+COMMENT     Annotated using prokka 1.14.6 from
+            https://github.com/tseemann/prokka.
+FEATURES             Location/Qualifiers
+     source          1..3807
+                     /organism="--species species"
+                     /mol_type="genomic DNA"
+                     /strain="strain"
+     gene            complement(1345..1584)
+                     /locus_tag="SAMPLE3_SE_00001"
+     CDS             complement(1345..1584)
+                     /locus_tag="SAMPLE3_SE_00001"
+                     /inference="ab initio prediction:Prodigal:002006"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="hypothetical protein"
+                     /protein_id="BU-ISCIII:SAMPLE3_SE_00001"
+                     /translation="MEYFKKVVIKTFGTFSNNTCMVTTYVSASTWNPIGTLVMATNIR
+                     EHTASKGNSATTLTKNGFQARFIMVFGKTMLRSYF"
+     gene            complement(2244..2705)
+                     /locus_tag="SAMPLE3_SE_00002"
+     CDS             complement(2244..2705)
+                     /locus_tag="SAMPLE3_SE_00002"
+                     /inference="ab initio prediction:Prodigal:002006"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="hypothetical protein"
+                     /protein_id="BU-ISCIII:SAMPLE3_SE_00002"
+                     /translation="MSSPKVTFVGAPPLSVKVLFVTIILGARAQYFSVSLISSNISPL
+                     IQTGVPTNGASTASLVGCSNGCKSPVFKTTSSVNTSVGSVSPSKKIISFGAFRGMSRP
+                     VSSLDLTHFLYNPFECVTNVSPKFKALSLAPPIMIESAHKAKNLFTSLKNV"
+     gene            3008..3160
+                     /locus_tag="SAMPLE3_SE_00003"
+     CDS             3008..3160
+                     /locus_tag="SAMPLE3_SE_00003"
+                     /inference="ab initio prediction:Prodigal:002006"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="hypothetical protein"
+                     /protein_id="BU-ISCIII:SAMPLE3_SE_00003"
+                     /translation="MKKKVIVKKKSLSHQLNMSMVLKMITKVNLWNLVPLLLLFNLKK
+                     SKKKIG"
+ORIGIN      
+        1 tctcttgtag atctgttctc taaacgaact ttaaaatctg tgtggctgtc actcggctgc
+       61 atgcttagtg cactcacgca gtataattaa taactaatta ctgtcgttga caggacacga
+      121 gtaactcgtc tatcttctgc aggctgctta cggtttcgtc cgtgttgcag ccgatcatca
+      181 gcacatctag gtttcgtccg ggtgtgaccg aaaggtaaga tggagagcct tgtccctggt
+      241 ttcaacgaga aaacacacgt ccaactcagt ttgcctgttt tacaggttcg cgacgtgctc
+      301 gtacgtggct ttggagactc cgtggaggag gtcttatcag aggcacgtca acatcttaaa
+      361 gatggcactt gtggcttagt agaagttgaa aaaggcgttt tgcctcaact tgaacagccc
+      421 tatgtgttca tcaaacgttc ggatgctcga actgcacctc atggtcatgt tatggttgag
+      481 ctggtagcag aactcgaagg cattcagtac ggtcgtagtg gtgagacact tggtgtcctt
+      541 gtccctcatg tgggcgaaat accagtggct taccgcaagg ttcttcttcg taagaacggt
+      601 aataaaggag ctggtggcca tagttacggc gccgatctaa agtcatttga cttaggcgac
+      661 gagcttggca ctgatcctta tgaagatttt caagaaaact ggaacactaa acatagcagt
+      721 ggtgttaccc gtgaactcat gcgtgagctt aacggagggg catacactcg ctatgtcgat
+      781 aacaacttct gtggccctga tggctaccct cttgagtgca ttaaagacct tctagcacgt
+      841 gctggtaaag cttcatgcac tttgtccgaa caactggact ttattgacac taagaggggt
+      901 gtatactgct gccgtgaaca tgagcatgaa attgcttggt acacggaacg ttctgaaaag
+      961 agctatgaat tgcagacacc ttttgaaatt aaattggcaa agaaatttga caccttcaat
+     1021 ggggaatgtc caaattttgt atttccctta aattccataa tcaagactat tcaaccaagg
+     1081 gttgaaaaga aaaagcttga tggctttatg ggtagaattc gatctgtcta tccagttgcg
+     1141 tcaccaaatg aatgcaacca aatgtgcctt tcaactctca tgaagtgtga tcattgtggt
+     1201 gaaacttcat ggcagacggg cgattttgtt aaagccactt gcgaattttg tggcactgag
+     1261 aatttgacta aagaaggtgc cactacttgt ggttacttac cccaaaatgc tgttgttaaa
+     1321 atttattgtc cagcatgtca caattcagaa gtaggacctg agcatagtct tgccgaatac
+     1381 cataatgaat ctggcttgaa aaccattctt cgtaagggtg gtcgcactat tgcctttgga
+     1441 ggctgtgtgt tctcttatgt tggttgccat aacaagtgtg cctattgggt tccacgtgct
+     1501 agcgctaaca taggttgtaa ccatacaggt gttgttggag aaggttccga aggtcttaat
+     1561 gacaaccttc ttgaaatact ccaaaaagag aaagtcaaca tcaatattgt tggtgacttt
+     1621 aaacttaatg aagagatcgc cattattttg gcatcttttt ctgcttccac aagtgctttt
+     1681 gtggaaactg tgaaaggttt ggattataaa gcattcaaac aaattgttga atcctgtggt
+     1741 aattttaaag ttacaaaagg aaaagctaaa aaaggtgcct ggaatattgg tgaacagaaa
+     1801 tcaatactga gtcctcttta tgcatttgca tcagaggctg ctcgtgttgt acgatcaatt
+     1861 ttctcccgca ctcttgaaac tgctcaaaat tctgtgcgtg ttttacagaa ggccgctata
+     1921 acaatactag atggaatttc acagtattca ctgagactca ttgatgctat gatgttcaca
+     1981 tctgatttgg ctactaacaa tctagttgta atggcctaca ttacaggtgg tgttgttcag
+     2041 ttgacttcgc agtggctaac taacatcttt ggcactgttt atgaaaaact caaacccgtc
+     2101 cttgattggc ttgaagagaa gtttaaggaa ggtgtagagt ttcttagaga cggttgggaa
+     2161 attgttaaat ttatctcaac ctgtgcttgt gaaattgtcg gtggacaaat tgtcacctgt
+     2221 gcaaaggaaa ttaaggagag tgttcagaca ttctttaagc ttgtaaataa atttttggct
+     2281 ttgtgtgctg actctatcat tattggtgga gctaaactta aagccttgaa tttaggtgaa
+     2341 acatttgtca cgcactcaaa gggattgtac agaaagtgtg ttaaatccag agaagaaact
+     2401 ggcctactca tgcctctaaa agccccaaaa gaaattatct tcttagaggg agaaacactt
+     2461 cccacagaag tgttaacaga ggaagttgtc ttgaaaactg gtgatttaca accattagaa
+     2521 caacctacta gtgaagctgt tgaagctcca ttggttggta caccagtttg tattaacggg
+     2581 cttatgttgc tcgaaatcaa agacacagaa aagtactgtg cccttgcacc taatatgatg
+     2641 gtaacaaaca ataccttcac actcaaaggc ggtgcaccaa caaaggttac ttttggtgat
+     2701 gacactgtga tagaagtgca aggttacaag agtgtgaata tcacttttga acttgatgaa
+     2761 aggattgata aagtacttaa tgagaagtgc tctgcctata cagttgaact cggtacagaa
+     2821 gtaaatgagt tcgcctgtgt tgtggcagat gctgtcataa aaactttgca accagtatct
+     2881 gaattactta caccactggg cattgattta gatgagtgga gtatggctac atactactta
+     2941 tttgatgagt ctggtgagtt taaattggct tcacatatgt attgttcttt ttaccctcca
+     3001 gatgaggatg aagaagaagg tgattgtgaa gaagaagagt ttgagccatc aactcaatat
+     3061 gagtatggta ctgaagatga ttaccaaggt aaacctttgg aatttggtgc cacttctgct
+     3121 gctcttcaac ctgaagaaga gcaagaagaa gattggttag atgatgatag tcaacaaact
+     3181 gttggtcaac aagacggcag tgaggacaat cagacaacta ctattcaaac aattgttgag
+     3241 gttcaacctc aattagagat ggaacttaca ccagttgttc agactattga agtgaatagt
+     3301 tttagtggtt atttaaaact tactgacaat gtatacatta aaaatgcaga cattgtggaa
+     3361 gaagctaaaa aggtaaaacc aacagtggtt gttaatgcag ccaatgttta ccttaaacat
+     3421 ggaggaggtg ttgcaggagc cttaaataag gctactaaca atgccatgca agttgaatct
+     3481 gatgattaca tagctactaa tggaccactt aaagtgggtg gtagttgtgt tttaagcgga
+     3541 cacaatcttg ctaaacactg tcttcatgtt gtcggcccaa atgttaacaa aggtgaagac
+     3601 attcaacttc ttaagagtgc ttatgaaaat tttaatcagc acgaagttct acttgcacca
+     3661 ttattatcag ctggtatttt tggtgctgac cctatacatt ctttaagagt ttgtgtagat
+     3721 actgttcgca caaatgtcta cttagctgtc tttgataaaa atctctatga caaacttgtt
+     3781 tcaagctttt tggaaatgaa gagtgaa
+//
+LOCUS       SAMPLE3_SE_2             216 bp    DNA     linear       02-MAR-2021
+DEFINITION  --species species strain strain.
+ACCESSION   
+VERSION
+KEYWORDS    .
+SOURCE      --species species
+  ORGANISM  --species species
+            Unclassified.
+COMMENT     Annotated using prokka 1.14.6 from
+            https://github.com/tseemann/prokka.
+FEATURES             Location/Qualifiers
+     source          1..216
+                     /organism="--species species"
+                     /mol_type="genomic DNA"
+                     /strain="strain"
+ORIGIN      
+        1 gtggacatgt caatgacata tggacaacag tttggtccaa cttatttgga tggagctgat
+       61 gttactaaaa taaaacctca taattcacat gaaggtaaaa cattttatgt tttacctaat
+      121 gatgacactc tacgtgttga ggcttttgag tactaccaca caactgatcc tagttttctg
+      181 ggtaggtaca tgtcagcatt aaatcacact aaaaag
+//
+LOCUS       SAMPLE3_SE_3            8200 bp    DNA     linear       02-MAR-2021
+DEFINITION  --species species strain strain.
+ACCESSION   
+VERSION
+KEYWORDS    .
+SOURCE      --species species
+  ORGANISM  --species species
+            Unclassified.
+COMMENT     Annotated using prokka 1.14.6 from
+            https://github.com/tseemann/prokka.
+FEATURES             Location/Qualifiers
+     source          1..8200
+                     /organism="--species species"
+                     /mol_type="genomic DNA"
+                     /strain="strain"
+     gene            21..4595
+                     /locus_tag="SAMPLE3_SE_00004"
+     CDS             21..4595
+                     /locus_tag="SAMPLE3_SE_00004"
+                     /inference="ab initio prediction:Prodigal:002006"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="hypothetical protein"
+                     /protein_id="BU-ISCIII:SAMPLE3_SE_00004"
+                     /translation="MHFLPRVFSAVGNICYTPSKLIEYTDFATSACVLAAECTIFKDA
+                     SGKPVPYCYDTNVLEGSVAYESLRPDTRYVLMDGSIIQFPNTYLEGSVRVVTTFDSEY
+                     CRHGTCERSEAGVCVSTSGRWVLNNDYYRSLPGVFCGVDAVNLLTNMFTPLIQPIGAL
+                     DISASIVAGGIVAIVVTCLAYYFMRFRRAFGEYSHVVAFNTLLFLMSFTVLCLTPVYS
+                     FLPGVYSVIYLYLTFYLTNDVSFLAHIQWMVMFTPLVPFWITIAYIICISTKHFYWFF
+                     SNYLKRRVVFNGVSFSTFEEAALCTFLLNKEMYLKLRSDVLLPLTQYNRYLALYNKYK
+                     YFSGAMDTTSYREAACCHLAKALNDFSNSGSDVLYQPPQTSITSAVLQSGFRKMAFPS
+                     GKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLV
+                     QAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVY
+                     QCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGP
+                     FVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPL
+                     TQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQC
+                     SGVTFQSAVKRTIKGTHHWLLLTILTSLLVLVQSTQWSLFFFLYENAFLPFAMGIIAM
+                     SAFAMMFVKHKHAFLCLFLLPSLATVAYFNMVYMPASWVMRIMTWLDMVDTSLSGFKL
+                     KDCVMYASAVVLLILMTARTVYDDGARRVWTLMNVLTLVYKVYYGNALDQAISMWALI
+                     ISVTSNYSGVVTTVMFLARGIVFMCVEYCPIFFITGNTLQCIMLVYCFLGYFCTCYFG
+                     LFCLLNRYFRLTLGVYDYLVSTQEFRYMNSQGLLPPKNSIDAFKLNIKLLGVGGKPCI
+                     KVATVQSKMSDVKCTSVVLLSVLQQLRVESSSKLWAQCVQLHNDILLAKDTTEAFEKM
+                     VSLLSVLLSMQGAVDINKLCEEMLDNRATLQAIASEFSSLPSYAAFATAQEAYEQAVA
+                     NGDSEVVLKKLKKSLNVAKSEFDRDAAMQRKLEKMADQAMTQMYKQARSEDKRAKVTS
+                     AMQTMLFTMLRKLDNDALNNIINNARDGCVPLNIIPLTTAAKLMVVIPDYNTYKNTCD
+                     GTTFTYASALWEIQQVVDADSKIVQLSEISMDNSPNLAWPLIVTALRANSAVKLQNNE
+                     LSPVALRQMSCAAGTTQTACTDDNALAYYNTTKGGRFVLALLSDLQDLKWARFPKSDG
+                     TGTIYTELEPPCRFVTDTPKGPKVKYLYFIKGLNNLNRGMVLGSLAATVRLQAGNATE
+                     VPANSTVLSFCAFAVDAAKAYKDYLASGGQPITNCVKMLCTHTGTGQAITVTPEANMD
+                     QESFGGASCCLYCRCHIDHPNPKGFCDLKGKYVQIPTTCANDPVGFTLKNTVCTVCGM
+                     WKGYGCSCDQLREPMLQSADAQSFLNGFAV"
+ORIGIN      
+        1 gcacaactaa tggtgacttt ttgcatttct tacctagagt ttttagtgca gttggtaaca
+       61 tctgttacac accatcaaaa cttatagagt acactgactt tgcaacatca gcttgtgttt
+      121 tggctgctga atgtacaatt tttaaagatg cttctggtaa gccagtacca tattgttatg
+      181 ataccaatgt actagaaggt tctgttgctt atgaaagttt acgccctgac acacgttatg
+      241 tgctcatgga tggctctatt attcaatttc ctaacaccta ccttgaaggt tctgttagag
+      301 tggtaacaac ttttgattct gagtactgta ggcacggcac ttgtgaaaga tcagaagctg
+      361 gtgtttgtgt atctactagt ggtagatggg tacttaacaa tgattattac agatctttac
+      421 caggagtttt ctgtggtgta gatgctgtaa atttacttac taatatgttt acaccactaa
+      481 ttcaacctat tggtgctttg gacatatcag catctatagt agctggtggt attgtagcta
+      541 tcgtagtaac atgccttgcc tactatttta tgaggtttag aagagctttt ggtgaataca
+      601 gtcatgtagt tgcctttaat actttactat tccttatgtc attcactgta ctctgtttaa
+      661 caccagttta ctcattctta cctggtgttt attctgttat ttacttgtac ttgacatttt
+      721 atcttactaa tgatgtttct tttttagcac atattcagtg gatggttatg ttcacacctt
+      781 tagtaccttt ctggataaca attgcttata tcatttgtat ttccacaaag catttctatt
+      841 ggttctttag taattaccta aagagacgtg tagtctttaa tggtgtttcc tttagtactt
+      901 ttgaagaagc tgcgctgtgc acctttttgt taaataaaga aatgtatcta aagttgcgta
+      961 gtgatgtgct attacctctt acgcaatata atagatactt agctctttat aataagtaca
+     1021 agtattttag tggagcaatg gatacaacta gctacagaga agctgcttgt tgtcatctcg
+     1081 caaaggctct caatgacttc agtaactcag gttctgatgt tctttaccaa ccaccacaaa
+     1141 cctctatcac ctcagctgtt ttgcagagtg gttttagaaa aatggcattc ccatctggta
+     1201 aagttgaggg ttgtatggta caagtaactt gtggtacaac tacacttaac ggtctttggc
+     1261 ttgatgacgt agtttactgt ccaagacatg tgatctgcac ctctgaagac atgcttaacc
+     1321 ctaattatga agatttactc attcgtaagt ctaatcataa tttcttggta caggctggta
+     1381 atgttcaact cagggttatt ggacattcta tgcaaaattg tgtacttaag cttaaggttg
+     1441 atacagccaa tcctaagaca cctaagtata agtttgttcg cattcaacca ggacagactt
+     1501 tttcagtgtt agcttgttac aatggttcac catctggtgt ttaccaatgt gctatgaggc
+     1561 ccaatttcac tattaagggt tcattcctta atggttcatg tggtagtgtt ggttttaaca
+     1621 tagattatga ctgtgtctct ttttgttaca tgcaccatat ggaattacca actggagttc
+     1681 atgctggcac agacttagaa ggtaactttt atggaccttt tgttgacagg caaacagcac
+     1741 aagcagctgg tacggacaca actattacag ttaatgtttt agcttggttg tacgctgctg
+     1801 ttataaatgg agacaggtgg tttctcaatc gatttaccac aactcttaat gactttaacc
+     1861 ttgtggctat gaagtacaat tatgaacctc taacacaaga ccatgttgac atactaggac
+     1921 ctctttctgc tcaaactgga attgccgttt tagatatgtg tgcttcatta aaagaattac
+     1981 tgcaaaatgg tatgaatgga cgtaccatat tgggtagtgc tttattagaa gatgaattta
+     2041 caccttttga tgttgttaga caatgctcag gtgttacttt ccaaagtgca gtgaaaagaa
+     2101 caatcaaggg tacacaccac tggttgttac tcacaatttt gacttcactt ttagttttag
+     2161 tccagagtac tcaatggtct ttgttctttt ttttgtatga aaatgccttt ttaccttttg
+     2221 ctatgggtat tattgctatg tctgcttttg caatgatgtt tgtcaaacat aagcatgcat
+     2281 ttctctgttt gtttttgtta ccttctcttg ccactgtagc ttattttaat atggtctata
+     2341 tgcctgctag ttgggtgatg cgtattatga catggttgga tatggttgat actagtttgt
+     2401 ctggttttaa gctaaaagac tgtgttatgt atgcatcagc tgtagtgtta ctaatcctta
+     2461 tgacagcaag aactgtgtat gatgatggtg ctaggagagt gtggacactt atgaatgtct
+     2521 tgacactcgt ttataaagtt tattatggta atgctttaga tcaagccatt tccatgtggg
+     2581 ctcttataat ctctgttact tctaactact caggtgtagt tacaactgtc atgtttttgg
+     2641 ccagaggtat tgtttttatg tgtgttgagt attgccctat tttcttcata actggtaata
+     2701 cacttcagtg tataatgcta gtttattgtt tcttaggcta tttttgtact tgttactttg
+     2761 gcctcttttg tttactcaac cgctacttta gactgactct tggtgtttat gattacttag
+     2821 tttctacaca agagtttaga tatatgaatt cacagggact actcccaccc aagaatagca
+     2881 tagatgcctt caaactcaac attaaattgt tgggtgttgg tggcaaacct tgtatcaaag
+     2941 tagccactgt acagtctaaa atgtcagatg taaagtgcac atcagtagtc ttactctcag
+     3001 ttttgcaaca actcagagta gaatcatcat ctaaattgtg ggctcaatgt gtccagttac
+     3061 acaatgacat tctcttagct aaagatacta ctgaagcctt tgaaaaaatg gtttcactac
+     3121 tttctgtttt gctttccatg cagggtgctg tagacataaa caagctttgt gaagaaatgc
+     3181 tggacaacag ggcaacctta caagctatag cctcagagtt tagttccctt ccatcatatg
+     3241 cagcttttgc tactgctcaa gaagcttatg agcaggctgt tgctaatggt gattctgaag
+     3301 ttgttcttaa aaagttgaag aagtctttga atgtggctaa atctgaattt gaccgtgatg
+     3361 cagccatgca acgtaagttg gaaaagatgg ctgatcaagc tatgacccaa atgtataaac
+     3421 aggctagatc tgaggacaag agggcaaaag ttactagtgc tatgcagaca atgcttttca
+     3481 ctatgcttag aaagttggat aatgatgcac tcaacaacat tatcaacaat gcaagagatg
+     3541 gttgtgttcc cttgaacata atacctctta caacagcagc caaactaatg gttgtcatac
+     3601 cagactataa cacatataaa aatacgtgtg atggtacaac atttacttat gcatcagcat
+     3661 tgtgggaaat ccaacaggtt gtagatgcag atagtaaaat tgttcaactt agtgaaatta
+     3721 gtatggacaa ttcacctaat ttagcatggc ctcttattgt aacagcttta agggccaatt
+     3781 ctgctgtcaa attacagaat aatgagctta gtcctgttgc actacgacag atgtcttgtg
+     3841 ctgccggtac tacacaaact gcttgcactg atgacaatgc gttagcttac tacaacacaa
+     3901 caaagggagg taggtttgta cttgcactgt tatccgattt acaggatttg aaatgggcta
+     3961 gattccctaa gagtgatgga actggtacta tctatacaga actggaacca ccttgtaggt
+     4021 ttgttacaga cacacctaaa ggtcctaaag tgaagtattt atactttatt aaaggattaa
+     4081 acaacctaaa tagaggtatg gtacttggta gtttagctgc cacagtacgt ctacaagctg
+     4141 gtaatgcaac agaagtgcct gccaattcaa ctgtattatc tttctgtgct tttgctgtag
+     4201 atgctgctaa agcttacaaa gattatctag ctagtggggg acaaccaatc actaattgtg
+     4261 ttaagatgtt gtgtacacac actggtactg gtcaggcaat aacagttaca ccggaagcca
+     4321 atatggatca agaatccttt ggtggtgcat cgtgttgtct gtactgccgt tgccacatag
+     4381 atcatccaaa tcctaaagga ttttgtgact taaaaggtaa gtatgtacaa atacctacaa
+     4441 cttgtgctaa tgaccctgtg ggttttacac ttaaaaacac agtctgtacc gtctgcggta
+     4501 tgtggaaagg ttatggctgt agttgtgatc aactccgcga acccatgctt cagtcagctg
+     4561 atgcacaatc gtttttaaac gggtttgcgg tgtaagtgca gcccgtctta caccgtgcgg
+     4621 cacaggcact agtactgatg tcgtatacag ggcttttgac atctacaatg ataaagtagc
+     4681 tggttttgct aaattcctaa aaactaattg ttgtcgcttc caagaaaagg acgaagatga
+     4741 caatttaatt gattcttact ttgtagttaa gagacacact ttctctaact accaacatga
+     4801 agaaacaatt tataatttac ttaaggattg tccagctgtt gctaaacatg acttctttaa
+     4861 gtttagaata gacggtgaca tggtaccaca tatatcacgt caacgtctta ctaaatacac
+     4921 aatggcagac ctcgtctatg ctttaaggca ttttgatgaa ggtaattgtg acacattaaa
+     4981 agaaatactt gtcacataca attgttgtga tgatgattat ttcaataaaa aggactggta
+     5041 tgattttgta gaaaacccag atatattacg cgtatacgcc aacttaggtg aacgtgtacg
+     5101 ccaagctttg ttaaaaacag tacaattctg tgatgccatg cgaaatgctg gtattgttgg
+     5161 tgtactgaca ttagataatc aagatctcaa tggtaactgg tatgatttcg gtgatttcat
+     5221 acaaaccacg ccaggtagtg gagttcctgt tgtagattct tattattcat tgttaatgcc
+     5281 tatattaacc ttgaccaggg ctttaactgc agagtcacat gttgacactg acttaacaaa
+     5341 gccttacatt aagtgggatt tgttaaaata tgacttcacg gaagagaggt taaaactctt
+     5401 tgaccgttat tttaaatatt gggatcagac ataccaccca aattgtgtta actgtttgga
+     5461 tgacagatgc attctgcatt gtgcaaactt taatgtttta ttctctacag tgttcccacc
+     5521 tacaagtttt ggaccactag tgagaaaaat atttgttgat ggtgttccat ttgtagtttc
+     5581 aactggatac cacttcagag agctaggtgt tgtacataat caggatgtaa acttacatag
+     5641 ctctagactt agttttaagg aattacttgt gtatgctgct gaccctgcta tgcacgctgc
+     5701 ttctggtaat ctattactag ataaacgcac tacgtgcttt tcagtagctg cacttactaa
+     5761 caatgttgct tttcaaactg tcaaacccgg taattttaac aaagacttct atgactttgc
+     5821 tgtgtctaag ggtttcttta aggaaggaag ttctgttgaa ttaaaacact tcttctttgc
+     5881 tcaggatggt aatgctgcta tcagcgatta tgactactat cgttataatc taccaacaat
+     5941 gtgtgatatc agacaactac tatttgtagt tgaagttgtt gataagtact ttgattgtta
+     6001 cgatggtggc tgtattaatg ctaaccaagt catcgtcaac aacctagaca aatcagctgg
+     6061 ttttccattt aataaatggg gtaaggctag actttattat gattcaatga gttatgagga
+     6121 tcaagatgca cttttcgcat atacaaaacg taatgtcatc cctactataa ctcaaatgaa
+     6181 tcttaagtat gccattagtg caaagaatag agctcgcacc gtagctggtg tctctatctg
+     6241 tagtactatg accaatagac agtttcatca aaaattattg aaatcaatag ccgccactag
+     6301 aggagctact gtagtaattg gaacaagcaa attctatggt ggttggcaca acatgttaaa
+     6361 aactgtttat agtgatgtag aaaaccctca ccttatgggt tgggattatc ctaaatgtga
+     6421 tagagccatg cctaacatgc ttagaattat ggcctcactt gttcttgctc gcaaacatac
+     6481 aacgtgttgt agcttgtcac accgtttcta tagattagct aatgagtgtg ctcaagtatt
+     6541 gagtgaaatg gtcatgtgtg gcggttcact atatgttaaa ccaggtggaa cctcatcagg
+     6601 agatgccaca actgcttatg ctaatagtgt ttttaacatt tgtcaagctg tcacggccaa
+     6661 tgttaatgca cttttatcta ctgatggtaa caaaattgcc gataagtatg tccgcaattt
+     6721 acaacacaga ctttatgagt gtctctatag aaatagagat gttgacacag actttgtgaa
+     6781 tgagttttac gcatatttgc gtaaacattt ctcaatgatg atactctctg acgatgctgt
+     6841 tgtgtgtttc aatagcactt atgcatctca aggtctagtg gctagcataa agaactttaa
+     6901 gtcagttctt tattatcaaa acaatgtttt tatgtctgaa gcaaaatgtt ggactgagac
+     6961 tgaccttact aaaggacctc atgaattttg ctctcaacat acaatgctag ttaaacaggg
+     7021 tgatgattat gtgtaccttc cttacccaga tccatcaaga atcctagggg ccggctgttt
+     7081 tgtagatgat atcgtaaaaa cagatggtac acttatgatt gaacggttcg tgtctttagc
+     7141 tatagatgct tacccactta ctaaacatcc taatcaggag tatgctgatg tctttcattt
+     7201 gtacttacaa tacataagaa agctacatga tgagttaaca ggacacatgt tagacatgta
+     7261 ttctgttatg cttactaatg ataacacttc aaggtattgg gaacctgagt tttatgaggc
+     7321 tatgtacaca ccgcatacag tcttacaggc tgttggggct tgtgttcttt gcaattcaca
+     7381 gacttcatta agatgtggtg cttgcatacg tagaccattc ttatgttgta aatgctgtta
+     7441 cgaccatgtc atatcaacat cacataaatt agtcttgtct gttaatccgt atgtttgcaa
+     7501 tgctccaggt tgtgatgtca cagatgtgac tcaactttac ttaggaggta tgagctatta
+     7561 ttgtaaatca cataaaccac ccattagttt tccattgtgt gctaatggac aagtttttgg
+     7621 tttatataaa aatacatgtg ttggtagcga taatgttact gactttaatg caattgcaac
+     7681 atgtgactgg acaaatgctg gtgattacat tttagctaac acctgtactg aaagactcaa
+     7741 gctttttgca gcagaaacgc tcaaagctac tgaggagaca tttaaactgt cttatggtat
+     7801 tgctactgta cgtgaagtgc tgtctgacag agaattacat ctttcatggg aagttggtaa
+     7861 acctagacca ccacttaacc gaaattatgt ctttactggt tatcgtgtaa ctaaaaacag
+     7921 taaagtacaa ataggagagt acacctttga aaaaggtgac tatggtgatg ctgttgttta
+     7981 ccgaggtaca acaacttaca aattaaatgt tggtgattat tttgtgctga catcacatac
+     8041 agtaatgcca ttaagtgcac ctacactagt gccacaagag cactatgtta gaattactgg
+     8101 cttataccca acactcaata tctcagatga gttttctagc aatgttgcaa attatcaaaa
+     8161 ggttggtatg caaaagtatt ctacactcca gggaccacct
+//
+LOCUS       SAMPLE3_SE_4             691 bp    DNA     linear       02-MAR-2021
+DEFINITION  --species species strain strain.
+ACCESSION   
+VERSION
+KEYWORDS    .
+SOURCE      --species species
+  ORGANISM  --species species
+            Unclassified.
+COMMENT     Annotated using prokka 1.14.6 from
+            https://github.com/tseemann/prokka.
+FEATURES             Location/Qualifiers
+     source          1..691
+                     /organism="--species species"
+                     /mol_type="genomic DNA"
+                     /strain="strain"
+ORIGIN      
+        1 ccagcaactg tttgtggacc taaaaagtct actaatttgg ttaaaaacaa atgtgtcaat
+       61 ttcaacttca atggtttaac aggcacaggt gttcttactg agtctaacaa aaagtttctg
+      121 cctttccaac aatttggcag agacattgct gacactactg atgctgtccg tgatccacag
+      181 acacttgaga ttcttgacat tacaccatgt tcttttggtg gtgtcagtgt tataacacca
+      241 ggaacaaata cttctaacca ggttgctgtt ctttatcagg atgttaactg cacagaagtc
+      301 cctgttgcta ttcatgcaga tcaacttact cctacttggc gtgtttattc tacaggttct
+      361 aatgtttttc aaacacgtgc aggctgttta ataggggctg aacatgtcaa caactcatat
+      421 gagtgtgaca tacccattgg tgcaggtata tgcgctagtt atcagactca gactaattct
+      481 cctcggcggg cacgtagtgt agctagtcaa tccatcattg cctacactat gtcacttggt
+      541 gcagaaaatt cagttgctta ctctaataac tctattgcca tacccacaaa ttttactatt
+      601 agtgttacca cagaaattct accagtgtct atgaccaaga catcagtaga ttgtacaatg
+      661 tacatttgtg gtgattcaac tgaatgcagc a
+//
+LOCUS       SAMPLE3_SE_5            2997 bp    DNA     linear       02-MAR-2021
+DEFINITION  --species species strain strain.
+ACCESSION   
+VERSION
+KEYWORDS    .
+SOURCE      --species species
+  ORGANISM  --species species
+            Unclassified.
+COMMENT     Annotated using prokka 1.14.6 from
+            https://github.com/tseemann/prokka.
+FEATURES             Location/Qualifiers
+     source          1..2997
+                     /organism="--species species"
+                     /mol_type="genomic DNA"
+                     /strain="strain"
+     gene            89..298
+                     /locus_tag="SAMPLE3_SE_00005"
+     CDS             89..298
+                     /locus_tag="SAMPLE3_SE_00005"
+                     /inference="ab initio prediction:Prodigal:002006"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="hypothetical protein"
+                     /protein_id="BU-ISCIII:SAMPLE3_SE_00005"
+                     /translation="MSD*CDNLRHSTTSLVSTSESTNPCRAAEIKVDKTLSKDTFFAS
+                     SASAVATSVLSFSIGTLKVDENVLT"
+     gene            1006..1110
+                     /locus_tag="SAMPLE3_SE_00006"
+     CDS             1006..1110
+                     /locus_tag="SAMPLE3_SE_00006"
+                     /inference="ab initio prediction:Prodigal:002006"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="hypothetical protein"
+                     /protein_id="BU-ISCIII:SAMPLE3_SE_00006"
+                     /translation="MYCKIAEKQLHDCSQSKYIEKPSEKNICQKPLCN"
+     gene            1853..2155
+                     /locus_tag="SAMPLE3_SE_00007"
+     CDS             1853..2155
+                     /locus_tag="SAMPLE3_SE_00007"
+                     /inference="ab initio prediction:Prodigal:002006"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="hypothetical protein"
+                     /protein_id="BU-ISCIII:SAMPLE3_SE_00007"
+                     /translation="MSPTTSVVFTLHSRTSFCMVGFSTTSSETGFRSSQARLSIPCAS
+                     SDFSTSNEFDVSTGFVLQRQRIHQVFGLYVALLVALLTCQTIGLCNNLAPFLKEGV"
+ORIGIN      
+        1 aatacaagca ccaaggtcac ggggtgtcat gttttcaact ttgttatagg tgagcatata
+       61 gttattacaa ctatcgccag taacttctat gtcagattga tgtgacaatt taagacattc
+      121 aacaacatct ttagtttcta catctgaatc aacaaaccct tgccgagctg ctgaaataaa
+      181 agtagataag acattgtcta aggacacatt ctttgcaagt tcagcttctg cagttgcaac
+      241 tagtgttttg agtttttcca ttggtacgtt aaaagttgat gaaaacgtat taacgtaagc
+      301 atcaaacatt ttaactgcaa cttccgcact atcaccaaca tcagacacta atgcctgatc
+      361 tagtaacagt ataggttgac acataagctg actgtagtaa acagacgctg attttgcaga
+      421 tgattcttca cattttgatt taccatcaaa aactataaca ttaataggca atgaaccttt
+      481 agtgttatta gctctcaggt tgtctaagtt aacaaaatga gagagagaat gtctttcata
+      541 agtcttttga ccagctttat caaagtaaag atggatggaa ccattcttca ctgtaacact
+      601 atcaacgatg taagaagact ggtcagtagg atttattggt cttttaaact gtagtgacaa
+      661 gtctctcgca acttcatcac taataaatgt actaccagca cagaatgtat cacaattaac
+      721 acaattccaa ttgtgtagtt tgcaaaagcc tttacctcca ttagcataga cataaaagga
+      781 ccttctaaca ccattaacaa tagttgtaca ttcgactctt gttgctctat tacgtttgta
+      841 acacatcata caagttgatg aattacaacc gtctacaaca tgcacataac ttttccatac
+      901 ataataaaat gatgcaaaga agatgtacat tctaaccata gctgaaatcg gggccatttg
+      961 tacaagatta attattaacc acataagcca agaattacta ataaaatgta ctgcaaaata
+     1021 gctgaaaaac aattgcatga ttgcagccaa tccaagtaca tagaaaaacc tagtgaaaag
+     1081 aatatatgcc aaaaaccact ctgcaactaa gccaaaagca gttaaatccc atttaaaaga
+     1141 tgaaatggta atttgtatag tttctaaaga aggataggtg tctaaagaat ctaaaccact
+     1201 aagacaaaca ctacaaggta tagaaccagt acagtaggtt gcaatagtga cattagtaga
+     1261 gttcaaatag ccttctctgt aaccagtaca gtaagaaggc atgcctaaat tagacattaa
+     1321 aacacctaaa gcagcggttg agtagattaa agaacctagg caaacactta atagtaaaaa
+     1381 ccaaattata atatttatca gtttagaaaa attaggtgac ttcaaataat taaatgaagc
+     1441 ctctagacaa aatttaccga cactcttaac agtattcttt gctatagtag tcggcataga
+     1501 tgctttaatt ctagaatttg tacttctagt aaaagtacac aattgtagca ataaagtaaa
+     1561 gaaataaggc atataattag tacaaacacg gtttaaacac cgtgtaacta tgttagtagt
+     1621 tgtactaaca actttgttaa gaaaaggctt agcataatta gctatagtat cccaagggac
+     1681 actattaaca gcagctaaac catgagtagc aagggttttc aaacctaata ctctagataa
+     1741 ttcattaggt ttcttaatag taagactaga attgtctaca taagcagcca ttagatctgt
+     1801 gtggccaacc tcttctgtaa tttttaaact attatttgct ggtttaagta taatgtctcc
+     1861 tacaacttcg gtagttttca cattacactc aagaacgtct ttctgtatgg taggattttc
+     1921 cactacttct tcagagactg gttttagatc ttcgcaggca agattatcca ttccctgcgc
+     1981 gtcctctgac ttcagtacat caaacgaatt tgatgtttca actggttttg tgctccaaag
+     2041 acaacgtata caccaggtat ttggtttata cgtggcttta ttagttgcat tgttaacatg
+     2101 ccaaacaata ggtttatgta acaatttagc tcctttctta aaagagggtg tgtagtgttt
+     2161 ataatcaata gccaccacat caccatttaa gtcagggaaa aatgtaactt taagctctct
+     2221 tgaagcaggt ttcttataac cagttaactg gtttaaatca tcagcaaatt tgatattatc
+     2281 acatacaaac ttaaaattat cgaagcttgc gtttggatat ggttggtttg gtacaagatc
+     2341 aattggttgc tctgtgaaat aagaattgtc tttcttataa taattgtcca acttagggtc
+     2401 aatttctgta caaacaacac catccaattt ataagtaact ggttttatgg ttgttgtgta
+     2461 actgttttct ttgtagaaaa catccgtaat aggacctttg tattctgagg actttgtaag
+     2521 taaagcaccg tctatgcaat acaaagtttc tttagaagtt atatgtttat agtgaccaca
+     2581 ctggtaatta ccagtgtact cactagcaca agtaaatgta ccatgcttaa gttcatactg
+     2641 agcaggtggt gctgacatca taacaaaagg tgactcctgt tgtactagat attttgtagc
+     2701 ttgtttacca cacgtacaag gtatctgaac acctttctta aattgttcat aagaaagtgt
+     2761 gcccatgtac ataacagctt ctacaccctt aagggttgtc tgctgttgtc cacaagtttt
+     2821 acacaccacg ttcaagactc ttttgcaaga atctaaattg gcatgttgaa acaagtaact
+     2881 cattgtttct ctaacatcac ctaactcacc tactgtctta ttacagtagg ctaagataag
+     2941 tgcacaaaag ttagcagctt caccagccct tgctctgtaa taagcatctt gtagagc
+//
+LOCUS       SAMPLE3_SE_6            1909 bp    DNA     linear       02-MAR-2021
+DEFINITION  --species species strain strain.
+ACCESSION   
+VERSION
+KEYWORDS    .
+SOURCE      --species species
+  ORGANISM  --species species
+            Unclassified.
+COMMENT     Annotated using prokka 1.14.6 from
+            https://github.com/tseemann/prokka.
+FEATURES             Location/Qualifiers
+     source          1..1909
+                     /organism="--species species"
+                     /mol_type="genomic DNA"
+                     /strain="strain"
+     gene            110..475
+                     /locus_tag="SAMPLE3_SE_00008"
+     CDS             110..475
+                     /locus_tag="SAMPLE3_SE_00008"
+                     /inference="ab initio prediction:Prodigal:002006"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="hypothetical protein"
+                     /protein_id="BU-ISCIII:SAMPLE3_SE_00008"
+                     /translation="MKFLVFLGIITTVAAFHQECSLQSCTQHQPYVVDDPCPIHFYSK
+                     WYIRVGARKSAPLIELCVDEAGSKSPIQYIDIGNYTVSCLPFTINCQEPKLGSLVVRC
+                     SFYEDFLEYHDVRVVLDFI"
+     gene            490..1749
+                     /locus_tag="SAMPLE3_SE_00009"
+     CDS             490..1749
+                     /locus_tag="SAMPLE3_SE_00009"
+                     /inference="ab initio prediction:Prodigal:002006"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="hypothetical protein"
+                     /protein_id="BU-ISCIII:SAMPLE3_SE_00009"
+                     /translation="MSDNGPQNQRNAPRITFGGPSDSTGSNQNGERSGARSKQRRPQG
+                     LPNNTASWFTALTQHGKEDLKFPRGQGVPINTNSSPDDQIGYYRRATRRIRGGDGKMK
+                     DLSPRWYFYYLGTGPEAGLPYGANKDGIIWVATEGALNTPKDHIGTRNPANNAAIVLQ
+                     LPQGTTLPKGFYAEGSRGGSQASSRSSSRSRNSSRNSTPGSSRGTSPARMAGNGGDAA
+                     LALLLLDRLNQLESKMSGKGQQQQGQTVTKKSAAEASKKPRQKRTATKAYNVTQAFGR
+                     RGPEQTQGNFGDQELIRQGTDYKHWPQIAQFAPSASAFFGMSRIGMEVTPSGTWLTYT
+                     GAIKLDDKDPNFKDQVILLNKHIDAYKTFPPTEPKKDKKKKADETQALPQRQKKQQTV
+                     TLLPAADLDDFSKQLQQSMSSADSTQA"
+ORIGIN      
+        1 tttgtgcttt ttagcctttc tgctattcct tgttttaatt atgcttatta tcttttggtt
+       61 ctcacttgaa ctgcaagatc ataatgaaac ttgtcacgcc taaacgaaca tgaaatttct
+      121 tgttttctta ggaatcatca caactgtagc tgcatttcac caagaatgta gtttacagtc
+      181 atgtactcaa catcaaccat atgtagttga tgacccgtgt cctattcact tctattctaa
+      241 atggtatatt agagtaggag ctagaaaatc agcaccttta attgaattgt gcgtggatga
+      301 ggctggttct aaatcaccca ttcagtacat cgatatcggt aattatacag tttcctgttt
+      361 accttttaca attaattgcc aggaacctaa attgggtagt cttgtagtgc gttgttcgtt
+      421 ctatgaagac tttttagagt atcatgacgt tcgtgttgtt ttagatttca tctaaacgaa
+      481 caaactaaaa tgtctgataa tggaccccaa aatcagcgaa atgcaccccg cattacgttt
+      541 ggtggaccct cagattcaac tggcagtaac cagaatggag aacgcagtgg ggcgcgatca
+      601 aaacaacgtc ggccccaagg tttacccaat aatactgcgt cttggttcac cgctctcact
+      661 caacatggca aggaagacct taaattccct cgaggacaag gcgttccaat taacaccaat
+      721 agcagtccag atgaccaaat tggctactac cgaagagcta ccagacgaat tcgtggtggt
+      781 gacggtaaaa tgaaagatct cagtccaaga tggtatttct actacctagg aactgggcca
+      841 gaagctggac ttccctatgg tgctaacaaa gacggcatca tatgggttgc aactgaggga
+      901 gccttgaata caccaaaaga tcacattggc acccgcaatc ctgctaacaa tgctgcaatc
+      961 gtgctacaac ttcctcaagg aacaacattg ccaaaaggct tctacgcaga agggagcaga
+     1021 ggcggcagtc aagcctcttc tcgttcctca tcacgtagtc gcaacagttc aagaaattca
+     1081 actccaggca gcagtagggg aacttctcct gctagaatgg ctggcaatgg cggtgatgct
+     1141 gctcttgctt tgctgctgct tgacagattg aaccagcttg agagcaaaat gtctggtaaa
+     1201 ggccaacaac aacaaggcca aactgtcact aagaaatctg ctgctgaggc ttctaagaag
+     1261 cctcggcaaa aacgtactgc cactaaagca tacaatgtaa cacaagcttt cggcagacgt
+     1321 ggtccagaac aaacccaagg aaattttggg gaccaggaac taatcagaca aggaactgat
+     1381 tacaaacatt ggccgcaaat tgcacaattt gcccccagcg cttcagcgtt cttcggaatg
+     1441 tcgcgcattg gcatggaagt cacaccttcg ggaacgtggt tgacctacac aggtgccatc
+     1501 aaattggatg acaaagatcc aaatttcaaa gatcaagtca ttttgctgaa taagcatatt
+     1561 gacgcataca aaacattccc accaacagag cctaaaaagg acaaaaagaa gaaggctgat
+     1621 gaaactcaag ccttaccgca gagacagaag aaacagcaaa ctgtgactct tcttcctgct
+     1681 gcagatttgg atgatttctc caaacaattg caacaatcca tgagcagtgc tgactcaact
+     1741 caggcctaaa ctcatgcaga ccacacaagg cagatgggct atataaacgt tttcgctttt
+     1801 ccgtttacga tatatagtct actcttgtgc agaatgaatt ctcgtaacta catagcacaa
+     1861 gtagatgtag ttaactttaa tctcacatag caatctttaa tcagtgtgt
+//
+LOCUS       SAMPLE3_SE_7            1687 bp    DNA     linear       02-MAR-2021
+DEFINITION  --species species strain strain.
+ACCESSION   
+VERSION
+KEYWORDS    .
+SOURCE      --species species
+  ORGANISM  --species species
+            Unclassified.
+COMMENT     Annotated using prokka 1.14.6 from
+            https://github.com/tseemann/prokka.
+FEATURES             Location/Qualifiers
+     source          1..1687
+                     /organism="--species species"
+                     /mol_type="genomic DNA"
+                     /strain="strain"
+     gene            complement(147..332)
+                     /locus_tag="SAMPLE3_SE_00010"
+     CDS             complement(147..332)
+                     /locus_tag="SAMPLE3_SE_00010"
+                     /inference="ab initio prediction:Prodigal:002006"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="hypothetical protein"
+                     /protein_id="BU-ISCIII:SAMPLE3_SE_00010"
+                     /translation="MFHLVDFQVTIAEILLIIMRTFKVSIWNLDYIINLIIKNLSKSL
+                     TENKYSQLDEEQPMEID"
+     gene            complement(343..1011)
+                     /locus_tag="SAMPLE3_SE_00011"
+     CDS             complement(343..1011)
+                     /locus_tag="SAMPLE3_SE_00011"
+                     /inference="ab initio prediction:Prodigal:002006"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="hypothetical protein"
+                     /protein_id="BU-ISCIII:SAMPLE3_SE_00011"
+                     /translation="MADSNGTITVEELKKLLEQWNLVIGFLFLTWICLLQFAYANRNR
+                     FLYIIKLIFLWLLWPVTLACFVLAAVYRINWITGGIAIAMACLVGLMWLSYFIASFRL
+                     FARTRSMWSFNPETNILLNVPLHGTILTRPLLESELVIGAVILRGHLRIAGHHLGRCD
+                     IKDLPKEITVATSRTLSYYKLGASQRVAGDSGFAAYSRYRIGNYKLNTDHSSSSDNIA
+                     LLVQ"
+     gene            complement(1062..1289)
+                     /locus_tag="SAMPLE3_SE_00012"
+     CDS             complement(1062..1289)
+                     /locus_tag="SAMPLE3_SE_00012"
+                     /inference="ab initio prediction:Prodigal:002006"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="hypothetical protein"
+                     /protein_id="BU-ISCIII:SAMPLE3_SE_00012"
+                     /translation="MYSFVSEETGTLIVNSVLLFLAFVVFLLVTLAILTALRLCAYCC
+                     NIVNVSLVKPSFYVYSRVKNLNSSRVPDLLV"
+ORIGIN      
+        1 tgaaatggtg aattgccctc gtatgttcca gaagagcaag gttcttttaa aagtactgtt
+       61 gtacctctaa cacactcttg gtagtgataa agctcacaag tagcgagtgt tatcagtgcc
+      121 aagaaaagaa taattttcat gttcgtttaa tcaatctcca ttggttgctc ttcatctaat
+      181 tgagaatatt tattctcagt tagtgactta gataaatttt taattatgag gtttatgatg
+      241 taatcaagat tccaaatgga aactttaaaa gtcctcataa taattagtaa tatctctgct
+      301 atagtaacct gaaagtcaac gagatgaaac atctgttgtc acttactgta caagcaaagc
+      361 aatattgtca ctgctactgg aatggtctgt gtttaattta tagttgccaa tcctgtagcg
+      421 actgtatgca gcaaaacctg agtcacctgc tacacgctgc gaagctccca atttgtaata
+      481 agaaagcgtt cgtgatgtag caacagtgat ttctttaggc aggtccttga tgtcacagcg
+      541 tcctagatgg tgtccagcaa tacgaagatg tccacgaagg atcacagctc cgattacgag
+      601 ttcactttct agaagcggtc tggtcagaat agtgccatgg agtggcacgt tgagaagaat
+      661 gttagtttct ggattgaatg accacatgga acgcgtacgc gcaaacagtc tgaaagaagc
+      721 aatgaagtag ctgagccaca tcaagcctac aagacaagcc attgcgatag caattccacc
+      781 ggtgatccaa tttattctgt aaacagcagc aagcacaaaa caagctaaag ttactggcca
+      841 taacagccag aggaaaatta acttaattat atacaaaaac ctattcctgt tggcataggc
+      901 aaattgtaga agacaaatcc atgtaaggaa taggaaacct attactaggt tccattgttc
+      961 aaggagcttt ttaagctctt caacggtaat agtaccgttg gaatctgcca tggctaaaat
+     1021 taaagttcca aacagaaaaa ctaatataat atttagttcg tttagaccag aagatcagga
+     1081 actctagaag aattcagatt tttaacacga gagtaaacgt aaaaagaagg ttttacaaga
+     1141 ctcacgttaa caatattgca gcagtacgca cacaatcgaa gcgcagtaag gatggctagt
+     1201 gtaactagca agaataccac gaaagcaaga aaaagaagta cgctattaac tattaacgta
+     1261 cctgtctctt ccgaaacgaa tgagtacata agttcgtact catcagcttg tgcttacaaa
+     1321 ggcacgctag tagtcgtcgt cggttcatca taaattggtt ccattactgg attaacaact
+     1381 ccggatgaac cgtcgattgt gtgaatttgg acatgttctt caggctcatc aacaatttta
+     1441 ttgtagatga agaaggtaac atgttcaaca ccagtgtctg tactcaattg agttgagtac
+     1501 agctggtaat agtctgaagt gaagtaactg tgtaatacaa cacagtcttt tactccagat
+     1561 tcccattttt cagtataacc accaatctgg tagtcatgtt cagaaatagg acttgttgtg
+     1621 ccatcacctg aagtaatgac aattgaagaa gttacactat tgtaaggtat acaatagtcg
+     1681 taacaat
+//
+LOCUS       SAMPLE3_SE_8            1853 bp    DNA     linear       02-MAR-2021
+DEFINITION  --species species strain strain.
+ACCESSION   
+VERSION
+KEYWORDS    .
+SOURCE      --species species
+  ORGANISM  --species species
+            Unclassified.
+COMMENT     Annotated using prokka 1.14.6 from
+            https://github.com/tseemann/prokka.
+FEATURES             Location/Qualifiers
+     source          1..1853
+                     /organism="--species species"
+                     /mol_type="genomic DNA"
+                     /strain="strain"
+     gene            complement(565..834)
+                     /locus_tag="SAMPLE3_SE_00013"
+     CDS             complement(565..834)
+                     /locus_tag="SAMPLE3_SE_00013"
+                     /inference="ab initio prediction:Prodigal:002006"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="hypothetical protein"
+                     /protein_id="BU-ISCIII:SAMPLE3_SE_00013"
+                     /translation="MNCVFTASPINVTPLRLACLGPTDGCKPLTLPSVIRTPLRAFLN
+                     KST*PSTLPSKKTVSGAQIVSVGFLAMSVIEQTPIVDICAGASLL"
+     gene            complement(1528..1722)
+                     /locus_tag="SAMPLE3_SE_00014"
+     CDS             complement(1528..1722)
+                     /locus_tag="SAMPLE3_SE_00014"
+                     /inference="ab initio prediction:Prodigal:002006"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="hypothetical protein"
+                     /protein_id="BU-ISCIII:SAMPLE3_SE_00014"
+                     /translation="MRSHLLAVCTVAQSPIKVESASETKSLRSESTSSVPVGNHCLKT
+                     AVPGATPLSEPAPKCITLIL"
+ORIGIN      
+        1 ccacacacca gcttttgata aaagtgcttt tgttaattta aaacaattac catttttcta
+       61 ttactctgac agtccatgtg agtctcatgg aaaacaagta gtgtcagata tagattatgt
+      121 accactaaag tctgctacgt gtataacacg ttgcaattta ggtggtgctg tctgtagaca
+      181 tcatgctaat gagtacagat tgtatctcga tgcttataac atgatgatct cagctggctt
+      241 tagcttgtgg gtttacaaac aatttgatac ttataacctc tggaacactt ttacaagact
+      301 tcagagttta gaaaatgtgg cttttaatgt tgtaaataag ggacactttg atggacaaca
+      361 gggtgaagta ccagtttcta tcattaataa cactgtttac acaaaagttg atggtgttga
+      421 tgtagaattg tttgaaaata aaacaacatt acctgttaat gtagcatttg agctttgggc
+      481 taagcgcaac attaaaccag taccagaggt gaaaatactc aataatttgg gtgtggacat
+      541 tgctgctaat actgtgatct gggactacaa aagagatgct ccagcacata tatctactat
+      601 tggtgtttgt tctatgactg acatagccaa gaaaccaact gaaacgattt gtgcaccact
+      661 cactgtcttt tttgatggta gagttgatgg tcaagtagac ttatttagaa atgcccgtaa
+      721 tggtgttctt attacagaag gtagtgttaa aggtttacaa ccatctgtag gtcccaaaca
+      781 agctagtctt aatggagtca cattaattgg agaagccgta aaaacacagt tcaattatta
+      841 taagaaagtt gatggtgttg tccaacaatt acctgaaact tactttactc agagtagaaa
+      901 tttacaagaa tttaaaccca ggagtcaaat ggaaattgat ttcttagaat tggctatgga
+      961 tgaattcatt gaacggtata aattagaagg ctatgccttc gaacatatcg tttatggaga
+     1021 ttttagtcat agtcagttag gtggtttaca tctactgatt ggactagcta aacgttttaa
+     1081 ggaatcacct tttgaattag aagattttat tcctatggac agtacagtta aaaactattt
+     1141 cataacagat gcgcaaacag gttcatctaa gtgtgtgtgt tctgttattg atttattact
+     1201 tgatgatttt gttgaaataa taaaatccca agatttatct gtagtttcta aggttgtcaa
+     1261 agtgactatt gactatacag aaatttcatt tatgctttgg tgtaaagatg gccatgtaga
+     1321 aacattttac ccaaaattac aatctagtca agcgtggcaa ccgggtgttg ctatgcctaa
+     1381 tctttacaaa atgcaaagaa tgctattaga aaagtgtgac cttcaaaatt atggtgatag
+     1441 tgcaacatta cctaaaggca taatgatgaa tgtcgcaaaa tatactcaac tgtgtcaata
+     1501 tttaaacaca ttaacattag ctgtacccta taatatgaga gttatacatt ttggtgctgg
+     1561 ttctgataaa ggagttgcac caggtacagc tgttttaaga cagtggttgc ctacgggtac
+     1621 gctgcttgtc gattcagatc ttaatgactt tgtctctgat gcagattcaa ctttgattgg
+     1681 tgattgtgca actgtacata cagctaataa atgggatctc attattagtg atatgtacga
+     1741 ccctaagact aaaaatgtta caaaagaaaa tgactctaaa gagggttttt tcacttacat
+     1801 ttgtgggttt atacaacaaa agctagctct tggaggttcc gtggctataa aga
+//
+LOCUS       SAMPLE3_SE_9             396 bp    DNA     linear       02-MAR-2021
+DEFINITION  --species species strain strain.
+ACCESSION   
+VERSION
+KEYWORDS    .
+SOURCE      --species species
+  ORGANISM  --species species
+            Unclassified.
+COMMENT     Annotated using prokka 1.14.6 from
+            https://github.com/tseemann/prokka.
+FEATURES             Location/Qualifiers
+     source          1..396
+                     /organism="--species species"
+                     /mol_type="genomic DNA"
+                     /strain="strain"
+ORIGIN      
+        1 catccagatt ctgccactct tgttagtgac attgacatca ctttcttaaa gaaagatgct
+       61 ccatatatag tgggtgatgt tgttcaagag ggtgttttaa ctgctgtggt tatacctact
+      121 aaaaaggctg gtggcactac tgaaatgcta gcgaaagctt tgagaaaagt gccaacagac
+      181 aattatataa ccacttaccc gggtcagggt ttaaatggtt acactgtaga ggaggcaaag
+      241 acagtgctta aaaagtgtaa aagtgccttt tacattctac catctattat ctctaatgag
+      301 aagcaagaaa ttcttggaac tgtttcttgg aatttgcgag aaatgcttgc acatgcagaa
+      361 gaaacacgca aattaatgcc tgtctgtgtg gaaact
+//
+LOCUS       SAMPLE3_SE_10           1552 bp    DNA     linear       02-MAR-2021
+DEFINITION  --species species strain strain.
+ACCESSION   
+VERSION
+KEYWORDS    .
+SOURCE      --species species
+  ORGANISM  --species species
+            Unclassified.
+COMMENT     Annotated using prokka 1.14.6 from
+            https://github.com/tseemann/prokka.
+FEATURES             Location/Qualifiers
+     source          1..1552
+                     /organism="--species species"
+                     /mol_type="genomic DNA"
+                     /strain="strain"
+     gene            complement(290..1507)
+                     /locus_tag="SAMPLE3_SE_00015"
+     CDS             complement(290..1507)
+                     /locus_tag="SAMPLE3_SE_00015"
+                     /inference="ab initio prediction:Prodigal:002006"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="hypothetical protein"
+                     /protein_id="BU-ISCIII:SAMPLE3_SE_00015"
+                     /translation="MIAQYTSALLAGTITSGWTFGAGAALQIPFAMQMAYRFNGIGVT
+                     QNVLYENQKLIANQFNSAIGKIQDSLSSTASALGKLQDVVNQNAQALNTLVKQLSSNF
+                     GAISSVLNDILSRLDKVEAEVQIDRLITGRLQSLQTYVTQQLIRAAEIRASANLAATK
+                     MSECVLGQSKRVDFCGKGYHLMSFPQSAPHGVVFLHVTYVPAQEKNFTTAPAICHDGK
+                     AHFPREGVFVSNGTHWFVTQRNFYEPQIITTDNTFVSGNCDVVIGIVNNTVYDPLQPE
+                     LDSFKEELDKYFKNHTSPDVDLGDISGINASVVNIQKEIDRLNEVAKNLNESLIDLQE
+                     LGKYEQYIKWPWYIWLGFIAGLIAIVMVTIMLCCMTSCCSCLKGCCSCGSCCKFDEDD
+                     SEPVLKGVKLHYT"
+ORIGIN      
+        1 aggtgtgagt aaactgttac aaacaacaac agcaagttgc aaacaaagtg aacacccttg
+       61 gagagtgcta gttgccatct ctttttgagg gttatgattt tggaagcgct ctgaaaaaca
+      121 gcaagaagtg caacgccaac aataagccat ccgaaaggga gtgaggcttg tatcggtatc
+      181 gttgcagtag cgcgaacaaa atctgaagga gtagcatcct tgatttcacc ttgcttcaaa
+      241 gttacagttc caattgtgaa gattctcata aacaaatcca taagttcgtt tatgtgtaat
+      301 gtaatttgac tcctttgagc actggctcag agtcgtcttc atcaaatttg cagcaggatc
+      361 cacaagaaca acagcccttg agacaactac agcaactggt catacagcaa agcataattg
+      421 tcaccattac tatggcaatc aagccagcta taaaacctag ccaaatgtac catggccatt
+      481 ttatatactg ctcatacttt ccaagttctt ggagatcgat gagagattca tttaaattct
+      541 tggcaacctc attgaggcgg tcaatttctt tttgaatgtt tacaactgaa gcattaatgc
+      601 cagagatgtc acctaaatca acatctggtg atgtatgatt cttaaaatat ttatctaact
+      661 cctccttgaa tgagtctaat tcaggttgca aaggatcata aactgtgttg ttgacaattc
+      721 ctattacaac atcacagtta ccagacacaa atgtgttgtc tgtagtaatg atttgtggtt
+      781 cataaaaatt cctttgtgtt acaaaccagt gtgtgccatt tgaaacaaag acaccttcac
+      841 gaggaaagtg tgcttttcca tcatgacaaa tggcaggagc agttgtgaag ttcttttctt
+      901 gtgcagggac ataagtcaca tgcaagaaga ctacaccatg aggtgctgac tgagggaagg
+      961 acataagatg atagcccttt ccacaaaaat caactctttt tgattgtcca agtacacact
+     1021 ctgacatttt agtagcagca agattagcag aagctctgat ttctgcagct ctaattaatt
+     1081 gttgagtcac atatgtctgc aaactttgaa gtctgcctgt gatcaaccta tcaatttgca
+     1141 cttcagcctc aactttgtca agacgtgaaa ggatatcatt taaaacactt gaaattgcac
+     1201 caaaattgga gctaagttgt ttaacaagcg tgtttaaagc ttgtgcattt tggttgacca
+     1261 catcttgaag ttttccaagt gcacttgctg tggaagaaag tgagtcttga attttgccaa
+     1321 tagcactatt aaattggttg gcaatcaatt tttggttctc atagagaaca ttctgtgtaa
+     1381 ctccaatacc attaaaccta taagccattt gcatagcaaa tggtatttgt aatgcagcac
+     1441 ctgcaccaaa ggtccaacca gaagtgattg tacccgctaa cagtgcagaa gtgtattgag
+     1501 caatcatttc atctgtgagc aaaggtggtc cctggagtgt agaatacttt tg
+//
+LOCUS       SAMPLE3_SE_11            748 bp    DNA     linear       02-MAR-2021
+DEFINITION  --species species strain strain.
+ACCESSION   
+VERSION
+KEYWORDS    .
+SOURCE      --species species
+  ORGANISM  --species species
+            Unclassified.
+COMMENT     Annotated using prokka 1.14.6 from
+            https://github.com/tseemann/prokka.
+FEATURES             Location/Qualifiers
+     source          1..748
+                     /organism="--species species"
+                     /mol_type="genomic DNA"
+                     /strain="strain"
+ORIGIN      
+        1 cagcttatta tgtgggttat cttcaaccta ggacttttct attaaaatat aatgaaaatg
+       61 gaaccattac agatgctgta gactgtgcac ttgaccctct ctcagaaaca aagtgtacgt
+      121 tgaaatcctt cactgtagaa aaaggaatct atcaaacttc taactttaga gtccaaccaa
+      181 cagaatctat tgttagattt cctaatatta caaacttgtg cccttttggt gaagttttta
+      241 acgccaccag atttgcatct gtttatgctt ggaacaggaa gagaatcagc aactgtgttg
+      301 ctgattattc tgtcctatat aattccgcat cattttccac ttttaagtgt tatggagtgt
+      361 ctcctactaa attaaatgat ctctgcttta ctaatgtcta tgcagattca tttgtaatta
+      421 gaggtgatga agtcagacaa atcgctccag ggcaaactgg aaagattgct gattataatt
+      481 ataaattacc agatgatttt acaggctgcg ttatagcttg gaattctaac aatcttgatt
+      541 ctaaggttgg tggtaattat aattacctgt atagattgtt taggaagtct aatctcaaac
+      601 cttttgagag agatatttca actgaaatct atcaggccgg tagcacacct tgtaatggtg
+      661 ttgaaggttt taattgttac tttcctttac aatcatatgg tttccaaccc actaatggtg
+      721 ttggttacca accatacaga gtagtagt
+//
+LOCUS       SAMPLE3_SE_12           2239 bp    DNA     linear       02-MAR-2021
+DEFINITION  --species species strain strain.
+ACCESSION   
+VERSION
+KEYWORDS    .
+SOURCE      --species species
+  ORGANISM  --species species
+            Unclassified.
+COMMENT     Annotated using prokka 1.14.6 from
+            https://github.com/tseemann/prokka.
+FEATURES             Location/Qualifiers
+     source          1..2239
+                     /organism="--species species"
+                     /mol_type="genomic DNA"
+                     /strain="strain"
+ORIGIN      
+        1 acaaactgcc accatcacaa ccaggcaagt taaggttaga tagcactcta gtgtcaaatc
+       61 tacaaacaat ggaattagca ggatatctat cgacattgca attccaaaat aggcatacac
+      121 catctgtgaa tttgtcagaa tgtgtggcat aagaatagaa taattcttct attttataag
+      181 ctttgtcact acaaggctgt gcatcataga acttccattc tacatcagct tgaggtacac
+      241 acttaatagc tttagggtta ccaatgtcgt gaagaactgg gaatttgtct gctaataatg
+      301 cagctttaac aaccatgtgt tgaacctttc tacaagccgc attaatcttc agttcatcac
+      361 caattatagg atattcaata gtccagtcaa cacgcttaac aaagcactcg tggacagcta
+      421 gacacctagt catgattgca tcacaactag ctacatgtgc attaccatgg acttgacaat
+      481 acagatcatg gttgctttgt aggttacctg taaaacccca ttgttgaaca tcaatcataa
+      541 acggattata gacgtaatca aatccaatag aatgatgcca acaggcataa gtgtctgaag
+      601 cagtggaaaa gcatgtggca cgtctatcac atagacaaca ggtgcgctca ggtcctattt
+      661 tcacaaaata cttcatagat gtcaactcaa agccatgtgc ccataagaca aatacgactc
+      721 tgtcagagag atttttaagt gtgtcactta acatttgtac aatctttata cgcactacat
+      781 tccaaggaag tcctttgtac ataagtggta tgaggtgttt aaattgatct ccaggcggtg
+      841 gtttagcact aactctggaa aaatctgtat tattaggtgt atcaacataa cctgtaggta
+      901 cagcaactag gttaacacct gtagaaaaac ctagctgtaa aggtaaattg gtaccaacag
+      961 cttctctagt agcatgacac ccctcgacat cgaagccaat ccatgcacgt acatgtctta
+     1021 tagcttcttc gcgggtgata aacatgttag ggtaaccatt aacttgataa ttcattttaa
+     1081 aacccatcat agagatgagt cttctatagg tcatgtcctt aggtatgcca ggtatgtcaa
+     1141 cacataaacc ttcagttttg aatttagtgt caacactgag gtgtgtaggt gcctgtgtag
+     1201 gatgtaaccc agtgattacc ttactacaat ctttaaagag tcctgttaca ttttcagctt
+     1261 gtaaagttgc cacattccta cgtggaattt caagacttgt aaattgcaac ttgtcataaa
+     1321 ggtctctatc agacattatg caaagtatgc ctacttttgc tctggtaata gcaacattaa
+     1381 atctgtttac attacaagag tgagctgttt cagtggtttg agtgaatatg acatagtcat
+     1441 attctgagcc ctgtgatgaa tcaacagttt gagttggtag tcccaaaatc tttgaggcta
+     1501 cagcattctg tgaattataa ggtgaaataa agacagcttt tctccaagca gggttacgtg
+     1561 taaggaattc tcttaccacg cctatttgtg gcctgttaat tgcagatgaa acatcatgcg
+     1621 tgataacacc cttataaaac attttaaagc attgagctga tttgtcttta tgtgctttaa
+     1681 gcttattatc ataaaccaaa gcactcacag tgtcaacaat ttcagcagga caacgccgac
+     1741 aagttccgag gaacatgtct ggacctatag ttttcataag tctacacact gaattgaaat
+     1801 attctggttc tagtgtgccc ttagttagca atgtgcgtgg tgcaggtaat tgagcagggt
+     1861 cgccaatgta cacatagtgc ttagcacgta atctggcatt gacaacactc aaatcataat
+     1921 ttgtggccat tgaaatttca tcaaagacaa ctatatctgc tgtcgtctca ggcaatgcat
+     1981 ttacagtaca aaagacatac tgttctaatg ttgaattcac tttgaattta tcaaaacact
+     2041 ctacacgagc acgtgcaggt ataattctac tacatttatc tataggcaaa tattttaatg
+     2101 ccttctcaca tagtgcatca acagcggcat gagagcaagc tgtatacact atgcgagcag
+     2161 aagggtagta gagagctagg ccaatagcaa aatgactctt accagtacca ggtggtccct
+     2221 ggagtgtaga atacttttg
+//
+LOCUS       SAMPLE3_SE_13            381 bp    DNA     linear       02-MAR-2021
+DEFINITION  --species species strain strain.
+ACCESSION   
+VERSION
+KEYWORDS    .
+SOURCE      --species species
+  ORGANISM  --species species
+            Unclassified.
+COMMENT     Annotated using prokka 1.14.6 from
+            https://github.com/tseemann/prokka.
+FEATURES             Location/Qualifiers
+     source          1..381
+                     /organism="--species species"
+                     /mol_type="genomic DNA"
+                     /strain="strain"
+ORIGIN      
+        1 cacaacttgc gtgtggaggt taatgttgtc tactgttgta aacaccttaa tagtcctcac
+       61 ttctctcaaa gaaagaagtg tcttaagatt gtcaaaggtg ataacttcac catctaggtg
+      121 gaatgtggta ggattactag tgtaatatac acttttatca cctctcttaa gaaattctat
+      181 acctagttgt gtagattgtc cagaatagga ccaatcttta taggaaccag caagtgagat
+      241 ggtttcaata aaatgttctt caggtgtttt agaagaagaa gtaagataac cattatacgc
+      301 tgtaacagca tcaggtgaag aaacagaaac tgtagctggc actttgagag atctcatata
+      361 ccgagcagct tcttccaaat t
+//
+LOCUS       SAMPLE3_SE_14            630 bp    DNA     linear       02-MAR-2021
+DEFINITION  --species species strain strain.
+ACCESSION   
+VERSION
+KEYWORDS    .
+SOURCE      --species species
+  ORGANISM  --species species
+            Unclassified.
+COMMENT     Annotated using prokka 1.14.6 from
+            https://github.com/tseemann/prokka.
+FEATURES             Location/Qualifiers
+     source          1..630
+                     /organism="--species species"
+                     /mol_type="genomic DNA"
+                     /strain="strain"
+ORIGIN      
+        1 caccagctgt ccaacctgaa gaagaatcac caggagtcaa ataacttcta tgtaaagcaa
+       61 gtaaagtttg aaacctagtg atgttaatac ctattggcaa atctaccaat ggttctaaag
+      121 ccgaaaaacc ctgagggaga tcacgcacta aattaatagg cgtgtgctta gaatatattt
+      181 taaaataacc atcaatattc ttaaacacaa attccctaag atttttgaaa ttaccctgtt
+      241 ttccttcaag gtccataaga aaaggctgag agacatattc aaaagtgcaa ttattcgcac
+      301 tagaataaac tctgaactca ctttccatcc aacttttgtt gtttttgtgg taataaacac
+      361 ccaaaaatgg atcattacaa aattgaaatt cacagacttt aataacaaca ttagtagcgt
+      421 tattaacaat aagtagggac tgggtcttcg aatctaaagt agtaccaaaa atccagcctc
+      481 ttattatgtt agacttctca gtggaagcaa aataaacacc atcattaaat ggtaggacag
+      541 ggttatcaaa cctcttagta ccattggtcc cagagacatg tatagcatgg aaccaagtaa
+      601 cattggaaaa gaaaggtaag aacaagtcct
+//
+LOCUS       SAMPLE3_SE_15            202 bp    DNA     linear       02-MAR-2021
+DEFINITION  --species species strain strain.
+ACCESSION   
+VERSION
+KEYWORDS    .
+SOURCE      --species species
+  ORGANISM  --species species
+            Unclassified.
+COMMENT     Annotated using prokka 1.14.6 from
+            https://github.com/tseemann/prokka.
+FEATURES             Location/Qualifiers
+     source          1..202
+                     /organism="--species species"
+                     /mol_type="genomic DNA"
+                     /strain="strain"
+ORIGIN      
+        1 tttgagtgtg aagcaaagtg ttataaacac tattgccgca acaataagaa aaattggaga
+       61 gtaaagttct tgaacttcct cttgtctgat gaacagttta ggtgaaactg atctggcacg
+      121 taactgatag acgtgtttta cgccgtcagg acaagcaaaa gcaaattgag tgctaaagca
+      181 agtcagtgca aatttgttat ca
+//
+LOCUS       SAMPLE3_SE_16            211 bp    DNA     linear       02-MAR-2021
+DEFINITION  --species species strain strain.
+ACCESSION   
+VERSION
+KEYWORDS    .
+SOURCE      --species species
+  ORGANISM  --species species
+            Unclassified.
+COMMENT     Annotated using prokka 1.14.6 from
+            https://github.com/tseemann/prokka.
+FEATURES             Location/Qualifiers
+     source          1..211
+                     /organism="--species species"
+                     /mol_type="genomic DNA"
+                     /strain="strain"
+ORIGIN      
+        1 gaatagctgt tgaacaagac aaaaacaccc aagaagtttt tgcacaagtc aaacaaattt
+       61 acaaaacacc accaattaaa gattttggtg gttttaattt ttcacaaata ttaccagatc
+      121 catcaaaacc aagcaagagg tcatttattg aagatctact tttcaacaaa gtgacacttg
+      181 cagatgctgg cttcatcaaa caatatggtg a
+//

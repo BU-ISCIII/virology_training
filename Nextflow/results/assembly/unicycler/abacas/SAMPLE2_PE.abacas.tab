@@ -1,0 +1,31 @@
+ID   NC_045512.2
+FT   contig          complement(1..3761)
+FT                   /systematic_id="3"
+FT                   /method="mummer"
+FT                   /Contig_coverage="99.97"
+FT                   /Percent_identity="100.00"
+FT                   /colour="3"
+FT   contig          complement(3894..5455)
+FT                   /systematic_id="5"
+FT                   /method="mummer"
+FT                   /Contig_coverage="100.00"
+FT                   /Percent_identity="100.00"
+FT                   /colour="3"
+FT   contig          8922..19205
+FT                   /systematic_id="1"
+FT                   /method="mummer"
+FT                   /Contig_coverage="100.00"
+FT                   /Percent_identity="99.98"
+FT                   /colour="4"
+FT   contig          19351..25581
+FT                   /systematic_id="2"
+FT                   /method="mummer"
+FT                   /Contig_coverage="100.00"
+FT                   /Percent_identity="99.97"
+FT                   /colour="4"
+FT   contig          25936..29688
+FT                   /systematic_id="4"
+FT                   /method="mummer"
+FT                   /Contig_coverage="98.56"
+FT                   /Percent_identity="99.84"
+FT                   /colour="4"

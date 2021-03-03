@@ -1,0 +1,8 @@
+/home/s.varona/virology_training_test/work/51/4cc6c035409b3645fd91c9fc3be3c8/GCF_009858895.2_ASM985889v3_genomic.200409.fna /home/s.varona/virology_training_test/work/51/4cc6c035409b3645fd91c9fc3be3c8/SAMPLE1_PE.scaffolds.fa
+NUCMER
+>NC_045512.2 1 29903 20847
+8952 29798 1 20847 4 4 0
+0
+>NC_045512.2 2 29903 8580
+94 8673 8580 1 2 2 0
+0

@@ -1,0 +1,15 @@
+SAMPLE1_PE:
+  mapped_reads: 48045
+  reads_outside_primer_region: 3370
+  reads_too_short_after_trimming: 23
+  trimmed_reads: 44672
+SAMPLE2_PE:
+  mapped_reads: 37979
+  reads_outside_primer_region: 1455
+  reads_too_short_after_trimming: 33
+  trimmed_reads: 36521
+SAMPLE3_SE:
+  mapped_reads: 46278
+  reads_outside_primer_region: 2543
+  reads_too_short_after_trimming: 213
+  trimmed_reads: 43723

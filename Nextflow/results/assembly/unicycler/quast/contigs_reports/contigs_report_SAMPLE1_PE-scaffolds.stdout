@@ -1,0 +1,49 @@
+Aligning contigs to reference...
+	Aligning contigs to the reference
+Filtering alignments...
+Parsing coords...
+Loading reference...
+	Loaded [NC_045512.2]
+	Total Regions: 1
+	Total Region Length: 29903
+Analyzing contigs...
+CONTIG: 1 (20847bp)
+Best alignment score: 20842.8 (LEN: 20847, IDY: 99.98), Total number of alignments: 1
+		One align captures most of this contig: 8952 29798 | 1 20847 | 20847 20847 | 99.98 | NC_045512.2 1
+
+CONTIG: 2 (8580bp)
+Best alignment score: 8578.3 (LEN: 8580, IDY: 99.98), Total number of alignments: 1
+		One align captures most of this contig: 94 8673 | 8580 1 | 8580 8580 | 99.98 | NC_045512.2 2
+
+Analyzing coverage...
+Writing SNPs into /home/s.varona/virology_training_test/work/46/bc244e6a4c13bad99a5eafd6d41998/quast/contigs_reports/minimap_output/SAMPLE1_PE-scaffolds.used_snps.gz
+
+Analysis is finished!
+Founded SNPs were written into /home/s.varona/virology_training_test/work/46/bc244e6a4c13bad99a5eafd6d41998/quast/contigs_reports/minimap_output/SAMPLE1_PE-scaffolds.used_snps.gz
+
+Results:
+	Local Misassemblies: 0
+	Misassemblies: 0
+		Relocations: 0
+		Translocations: 0
+		Inversions: 0
+	Scaffold gap extensive misassemblies: 0
+	Scaffold gap local misassemblies: 0
+	Misassembled Contigs: 0
+	Misassembled Contig Bases: 0
+	Misassemblies Inter-Contig Overlap: 0
+Unaligned Contigs: 0 + 0 part
+Half Unaligned Contigs with Misassemblies: 0
+Unaligned Contig Bases: 0
+
+Ambiguously Mapped Contigs: 0
+Total Bases in Ambiguously Mapped Contigs: 0
+Extra Bases in Ambiguously Mapped Contigs: 0
+Note that --allow-ambiguity option was set to "one" and only first alignment per each of these contigs was used.
+
+	Covered Bases: 29427
+
+	SNPs: 6
+	Insertions: 0
+	Deletions: 0
+
