@@ -56,7 +56,7 @@ nextflow -v
 
 [viralrecon](https://github.com/nf-core/viralrecon) is a bioinformatics analysis pipeline used to perform assembly and intra-host/low-frequency variant calling for viral samples. The pipeline supports short-read Illumina sequencing data from both shotgun (e.g. sequencing directly from clinical samples) and enrichment-based library preparation methods (e.g. amplicon-based: ARTIC SARS-CoV-2 enrichment protocol; or probe-capture-based).
 
-The pipeline is built using Nextflow, a workflow tool to run tasks across multiple compute infrastructures in a very portable manner. It comes with Docker containers making installation trivial and results highly reproducible. Furthermore, automated continuous integration tests that run the pipeline on a full-sized dataset using AWS cloud ensure that the code is stable.
+The pipeline is built using Nextflow, a workflow tool to run tasks across multiple compute infrastructures in a very portable manner. It comes with Docker containers making installation trivial and results highly reproducible. Furthermore, automated continuous integration tests that run the pipeline on a full-sized data set using AWS cloud ensure that the code is stable.
 
 
 ### GitHub
@@ -90,14 +90,13 @@ cd ..
 
 Now you have your repo (viralrecon) installed and the program to run it (Nextflow), the next step is to run the pipeline.
 
-
 ## Pipeline
 To run the pipeline you have to type in your terminal:
 
 ```
 nextflow run Repositories/viralrecon/main.nf -profile conda,test -resume
 ```
-With this command line you are going to run the default test dataset with all the default parameters. This data is a subset of amplicon based sequenced SARS-CoV2 samples. This means that during the pipeline the sequences/positions corresponding to the amplicon's primers are going to be removed.
+With this command line you are going to run the default test data set with all the default parameters. This data is a subset of amplicon based sequenced SARS-CoV2 samples. This means that during the pipeline the sequences/positions corresponding to the amplicon's primers are going to be removed.
 
 This is the pipeline overview:
 1. FastQC: Quality control
@@ -111,3 +110,21 @@ This is the pipeline overview:
 	1. cutadapt: Adapter trimming by sequence
 	2. MetaSpades: De Novo assebmly
 	3. ABACAS: Reference-based scaffold ordering
+
+### Results
+Now we are going to see the most important results of the pipeline. In case you were not able to run the pipeline, you can see the [results in this folder](../results/).
+
+One of the most interesting results is the [MultiQC report](../results/multiqc/multiqc_report.html). In this report you have an overview of all the steps of the pipeline and their results.
+
+The first results consist in a summary of both approaches performed by viralrecon (mapping and assembly). It gives different statistical measures such as *the number of input reads*, *the number of reads remaining after trimming*, *the percentage of mapped reads* and more.
+
+![multiqc](../docs/images/multiqc_1.png)
+
+You can interactively move across the report to see more results, such as the number of variants called by VarScan2 for each sample in a barplot.
+
+![varscan2](../docs/images/varscan2.png)
+
+
+Also, another interesting result is the one showed by [PlasmidID](https://github.com/BU-ISCIII/plasmidID) in [a circos plot](../results/assembly/metaspades/plasmidid/SAMPLE1_PE/images/SAMPLE1_PE_NC_045512.2.png). In the *de novo* asssembly approach, the resulting scaffolds assemblies are plotted against the reference SARS-CoV2 genome from Wuhan. In this case we can see that the whole reference genome is covered and represented by the contigs 1 and 2 from the assembly fasta.
+
+![plasmid](../results/assembly/metaspades/plasmidid/SAMPLE1_PE/images/SAMPLE1_PE_NC_045512.2.png)
