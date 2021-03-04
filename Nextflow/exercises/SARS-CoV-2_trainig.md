@@ -11,10 +11,10 @@ During this training we will following these steps:
 * [Pipeline](#pipeline): Running the pipeline with command line and main results.
 	* [Results](#results): Most important results.
 * [Statistics](#statistics): Parse resulting files to obtain statistics.
-* [Lineage](#Lineage): Lineage clasification with Pangolin
+* [Lineage](#Lineage): Lineage classification with Pangolin
 
 ## Conda
-In case you haven't install conda yet, follow the intructions in [this link](https://docs.conda.io/en/latest/miniconda.html)
+In case you haven't install conda yet, follow the instructions in [this link](https://docs.conda.io/en/latest/miniconda.html)
 
 ## Nextflow
 [Nextflow](https://www.nextflow.io/) is a bioinformatics workflow manager that enables the development of portable and reproducible workflows. It supports deploying workflows on a variety of execution platforms including local, HPC schedulers, AWS Batch, Google Cloud Life Sciences, and Kubernetes. Additionally, it provides support for manage your workflow dependencies through built-in support for Conda, Docker, Singularity, and Modules.
@@ -250,7 +250,7 @@ And for the percentage of reference genome covered at least with a depth of 10X:
 percentage_10x=$(cat samples_id.txt | while read in; do head -n8 results/variants/bam/picard_metrics/${in}.trim.mkD.CollectWgsMetrics.coverage_metrics | tail -n1 | cut -f16; done)
 ```
 
-###Variants
+### Variants
 Now we are going to have a look to the variant calling results. They are stored in the `results/variants/varscan2/`. The files that have a "AF0."
 
 Now we are going to paste all the columns in variables generated above and put them at the end of the file with the header.
