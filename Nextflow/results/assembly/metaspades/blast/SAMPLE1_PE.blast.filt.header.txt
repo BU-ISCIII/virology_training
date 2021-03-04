@@ -1,3 +1,0 @@
-stitle	qaccver	saccver	pident	length	mismatch	gapopen	qstart	qend	sstart	send	evalue	bitscore	slen	qlen	qcovs	%cgAligned	%refCovered
-Severe acute respiratory syndrome coronavirus 2 isolate Wuhan-Hu-1, complete genome	NODE_1_length_20973_cov_392.636820	NC_045512.2	99.981	20951	4	0	23	20973	29839	8889	0.0	38668	29903	20973	99	0.998951	0.700632
-Severe acute respiratory syndrome coronavirus 2 isolate Wuhan-Hu-1, complete genome	NODE_2_length_8704_cov_363.700428	NC_045512.2	99.965	8614	3	0	44	8657	67	8680	0.0	15891	29903	8704	100	0.98966	0.288065

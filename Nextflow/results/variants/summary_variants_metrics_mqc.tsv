@@ -1,4 +1,0 @@
-Sample	# Input reads	# Trimmed reads (fastp)	% Mapped reads (viral)	# Trimmed reads (iVar)	# Duplicate reads	# Reads after MarkDuplicates	Insert size mean	Insert size std dev	Coverage mean	Coverage std dev	% Coverage > 10x	# High conf SNPs (VarScan 2)	# High conf INDELs (VarScan 2)	# High conf SNPs (iVar)	# High conf INDELs (iVar)	# High conf SNPs (BCFTools)	# High conf INDELs (BCFTools)	# Missense variants (VarScan 2)	# Missense variants (iVar)	# Missense variants (BCFTools)	# Ns per 100kb consensus (VarScan 2)	# Ns per 100kb consensus (iVar)	# Ns per 100kb consensus (BCFTools)
-SAMPLE1_PE	55442	48270	99.53	48022	39544	48022	503.688698	204.174947	57.641708	29.82482	0.960171	6	0	6	0	6	0	2	2	2	2193.76	2478.01	2193.76
-SAMPLE2_PE	42962	38404	98.89	37946	33321	37946	439.248471	126.07945	30.101261	20.890692	0.83724	6	0	6	0	5	0	5	5	4	10497.27	14364.73	10497.27
-SAMPLE3_SE	49202	46659	99.18	46065	42263	46065	NA	NA	0.0	0.0	0.0	0	0	0	0	5	0	NA	NA	4	3100.02	11527.1	3100.02
