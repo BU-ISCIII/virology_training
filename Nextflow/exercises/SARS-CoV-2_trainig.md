@@ -98,6 +98,25 @@ nextflow run <path_to_viralrecon_repo>/main.nf -profile conda,test max_allele_fr
 ```
 With this command line you are going to run the default test data set with all the default parameters. This data is a subset of amplicon based sequenced SARS-CoV2 samples. This means that during the pipeline the sequences/positions corresponding to the amplicon's primers are going to be removed.
 
+:warning: In case you get the following error:
+```
+Command error:
+  /home/s.varona/virology_master_test/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/bowtie2-align-s: error while loading shared libraries: libtbb.so.2: cannot open shared object file: No such file or directory
+  (ERR): Description of arguments failed!
+  Exiting now ...
+```
+
+You will have to run:
+```
+sudo apt-get update
+sudo apt-get install libtbb2
+```
+
+And then run nextflow command again:
+```
+nextflow run <path_to_viralrecon_repo>/main.nf -profile conda,test max_allele_freq = 0.80 -resume
+```
+
 This is the pipeline overview:
 1. FastQC: Quality control
 2. Fastp: Quality+size trimming
