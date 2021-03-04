@@ -70,7 +70,7 @@ sudo apt install git-all
 Download the repo from github:
 :warning: Copy the viralrecon link below in the code, the one above won't work.
 ```
-git clone git@github.com:BU-ISCIII/viralrecon.git
+git clone https://github.com/BU-ISCIII/viralrecon.git
 ```
 
 Moving inside the repo:
