@@ -1,0 +1,52 @@
+Assembly	SAMPLE3_SE.AF0.75.consensus.masked	SAMPLE1_PE.AF0.75.consensus.masked	SAMPLE2_PE.AF0.75.consensus.masked
+# contigs (>= 0 bp)	1	1	1
+# contigs (>= 1000 bp)	1	1	1
+# contigs (>= 5000 bp)	1	1	1
+# contigs (>= 10000 bp)	1	1	1
+# contigs (>= 25000 bp)	1	1	1
+# contigs (>= 50000 bp)	0	0	0
+Total length (>= 0 bp)	29903	29903	29903
+Total length (>= 1000 bp)	29903	29903	29903
+Total length (>= 5000 bp)	29903	29903	29903
+Total length (>= 10000 bp)	29903	29903	29903
+Total length (>= 25000 bp)	29903	29903	29903
+Total length (>= 50000 bp)	0	0	0
+# contigs	1	1	1
+Largest contig	29903	29903	29903
+Total length	29903	29903	29903
+Reference length	29903	29903	29903
+GC (%)	37.98	37.95	38.12
+Reference GC (%)	37.97	37.97	37.97
+N50	29903	29903	29903
+NG50	29903	29903	29903
+N75	29903	29903	29903
+NG75	29903	29903	29903
+L50	1	1	1
+LG50	1	1	1
+L75	1	1	1
+LG75	1	1	1
+# misassemblies	0	0	0
+# misassembled contigs	0	0	0
+Misassembled contigs length	0	0	0
+# local misassemblies	0	0	0
+# scaffold gap ext. mis.	0	0	0
+# scaffold gap loc. mis.	2	1	9
+# unaligned mis. contigs	0	0	0
+# unaligned contigs	0 + 0 part	0 + 0 part	0 + 0 part
+Unaligned length	0	0	0
+Genome fraction (%)	97.432	98.094	89.804
+Duplication ratio	1.026	1.019	1.114
+# N's per 100 kbp	3100.02	2193.76	10497.27
+# mismatches per 100 kbp	0.00	20.45	22.34
+# indels per 100 kbp	0.00	0.00	0.00
+# genomic features	23 + 7 part	23 + 7 part	14 + 14 part
+Largest alignment	29135	29333	26854
+Total aligned length	29135	29333	26854
+NA50	29135	29333	26854
+NGA50	29135	29333	26854
+NA75	29135	29333	26854
+NGA75	29135	29333	26854
+LA50	1	1	1
+LGA50	1	1	1
+LA75	1	1	1
+LGA75	1	1	1

@@ -1,0 +1,9 @@
+ 99.78	19160	19160	U	0	unclassified
+  0.22	42	0	R	1	root
+  0.22	42	0	R1	131567	  cellular organisms
+  0.22	42	0	D	2	    Bacteria
+  0.22	42	0	P	1224	      Proteobacteria
+  0.22	42	0	C	1236	        Gammaproteobacteria
+  0.22	42	0	O	135622	          Alteromonadales
+  0.22	42	0	F	267890	            Shewanellaceae
+  0.22	42	42	G	22	              Shewanella

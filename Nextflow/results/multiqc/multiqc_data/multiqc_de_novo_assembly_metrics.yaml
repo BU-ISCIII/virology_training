@@ -1,0 +1,96 @@
+SAMPLE1_PE:
+  '# Contigs (SPAdes)': 4.0
+  '# Contigs (Unicycler)': 2.0
+  '# Contigs (metaSPAdes)': 7.0
+  '# Contigs (minia)': 11.0
+  '# INDELs (SPAdes)': 0.0
+  '# INDELs (Unicycler)': 0.0
+  '# INDELs (metaSPAdes)': 0.0
+  '# INDELs (minia)': 0.0
+  '# Input reads': 55442.0
+  '# Missense variants (SPAdes)': 2.0
+  '# Missense variants (Unicycler)': 2.0
+  '# Missense variants (metaSPAdes)': 3.0
+  '# Missense variants (minia)': 2.0
+  '# SNPs (SPAdes)': 6.0
+  '# SNPs (Unicycler)': 6.0
+  '# SNPs (metaSPAdes)': 7.0
+  '# SNPs (minia)': 6.0
+  '# Trimmed reads (Cutadapt)': 48270.0
+  '% Genome fraction (SPAdes)': 98.983
+  '% Genome fraction (Unicycler)': 98.408
+  '% Genome fraction (metaSPAdes)': 98.87
+  '% Genome fraction (minia)': 92.676
+  '% Non-host reads (Kraken 2)': 99.96
+  Largest contig (SPAdes): 21005.0
+  Largest contig (Unicycler): 20847.0
+  Largest contig (metaSPAdes): 20973.0
+  Largest contig (minia): 10409.0
+  N50 (SPAdes): 21005.0
+  N50 (Unicycler): 20847.0
+  N50 (metaSPAdes): 20973.0
+  N50 (minia): 3993.0
+SAMPLE2_PE:
+  '# Contigs (SPAdes)': 13.0
+  '# Contigs (Unicycler)': 5.0
+  '# Contigs (metaSPAdes)': 27.0
+  '# Contigs (minia)': 22.0
+  '# INDELs (SPAdes)': 1.0
+  '# INDELs (Unicycler)': 1.0
+  '# INDELs (metaSPAdes)': 1.0
+  '# INDELs (minia)': 0.0
+  '# Input reads': 42962.0
+  '# Missense variants (SPAdes)': 7.0
+  '# Missense variants (Unicycler)': 7.0
+  '# Missense variants (metaSPAdes)': 7.0
+  '# Missense variants (minia)': 5.0
+  '# SNPs (SPAdes)': 10.0
+  '# SNPs (Unicycler)': 9.0
+  '# SNPs (metaSPAdes)': 10.0
+  '# SNPs (minia)': 6.0
+  '# Trimmed reads (Cutadapt)': 38404.0
+  '% Genome fraction (SPAdes)': 98.064
+  '% Genome fraction (Unicycler)': 85.399
+  '% Genome fraction (metaSPAdes)': 98.151
+  '% Genome fraction (minia)': 79.092
+  '% Non-host reads (Kraken 2)': 99.78
+  Largest contig (SPAdes): 10482.0
+  Largest contig (Unicycler): 10284.0
+  Largest contig (metaSPAdes): 10441.0
+  Largest contig (minia): 3319.0
+  N50 (SPAdes): 4107.0
+  N50 (Unicycler): 6231.0
+  N50 (metaSPAdes): 4738.0
+  N50 (minia): 1631.0
+SAMPLE3_SE:
+  '# Contigs (SPAdes)': 4.0
+  '# Contigs (Unicycler)': 2.0
+  '# Contigs (metaSPAdes)': NA
+  '# Contigs (minia)': 17.0
+  '# INDELs (SPAdes)': 0.0
+  '# INDELs (Unicycler)': 0.0
+  '# INDELs (metaSPAdes)': NA
+  '# INDELs (minia)': 0.0
+  '# Input reads': 49202.0
+  '# Missense variants (SPAdes)': 2.0
+  '# Missense variants (Unicycler)': 2.0
+  '# Missense variants (metaSPAdes)': NA
+  '# Missense variants (minia)': 1.0
+  '# SNPs (SPAdes)': 4.0
+  '# SNPs (Unicycler)': 4.0
+  '# SNPs (metaSPAdes)': NA
+  '# SNPs (minia)': 3.0
+  '# Trimmed reads (Cutadapt)': 46659.0
+  '% Genome fraction (SPAdes)': 98.95
+  '% Genome fraction (Unicycler)': 98.405
+  '% Genome fraction (metaSPAdes)': NA
+  '% Genome fraction (minia)': 87.814
+  '% Non-host reads (Kraken 2)': 99.9
+  Largest contig (SPAdes): 25568.0
+  Largest contig (Unicycler): 25442.0
+  Largest contig (metaSPAdes): NA
+  Largest contig (minia): 8200.0
+  N50 (SPAdes): 25568.0
+  N50 (Unicycler): 25442.0
+  N50 (metaSPAdes): NA
+  N50 (minia): 2997.0

@@ -1,0 +1,21 @@
+S1	E1	S2	E2	Reference	Contig	IDY	Ambiguous	Best_group
+55	3826	55	3826	NC_045512.2	SAMPLE2_PE	100.0		True
+fake: scaffold gap size wrong estimation (local)
+4078	4428	4078	4428	NC_045512.2	SAMPLE2_PE	100.0		True
+fake: scaffold gap size wrong estimation (local)
+4659	4995	4659	4995	NC_045512.2	SAMPLE2_PE	100.0		True
+fake: scaffold gap size wrong estimation (local)
+5345	8547	5345	8547	NC_045512.2	SAMPLE2_PE	100.0		True
+fake: scaffold gap size wrong estimation (local)
+8914	19275	8914	19275	NC_045512.2	SAMPLE2_PE	99.98		True
+fake: scaffold gap size wrong estimation (local)
+19571	21146	19571	21146	NC_045512.2	SAMPLE2_PE	100.0		True
+fake: scaffold gap size wrong estimation (local)
+21552	23814	21552	23814	NC_045512.2	SAMPLE2_PE	100.0		True
+fake: scaffold gap size wrong estimation (local)
+24101	25646	24101	25646	NC_045512.2	SAMPLE2_PE	100.0		True
+fake: scaffold gap size wrong estimation (local)
+25925	27511	25925	27511	NC_045512.2	SAMPLE2_PE	99.94		True
+fake: scaffold gap size wrong estimation (local)
+27809	29665	27809	29665	NC_045512.2	SAMPLE2_PE	99.84		True
+CONTIG	SAMPLE2_PE	29903	correct

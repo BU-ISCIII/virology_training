@@ -1,0 +1,35 @@
+SAMPLE1_PE:
+  overall_alignment_rate: 99.53
+  paired_aligned_discord_one: 3322
+  paired_aligned_mate_multi: 111
+  paired_aligned_mate_multi_halved: 55.5
+  paired_aligned_mate_none: 225
+  paired_aligned_mate_none_halved: 112.5
+  paired_aligned_mate_one: 112
+  paired_aligned_mate_one_halved: 56.0
+  paired_aligned_multi: 187
+  paired_aligned_none: 3546
+  paired_aligned_one: 20402
+  paired_total: 24135
+  total_reads: 24135
+SAMPLE2_PE:
+  overall_alignment_rate: 98.89
+  paired_aligned_discord_one: 1248
+  paired_aligned_mate_multi: 21
+  paired_aligned_mate_multi_halved: 10.5
+  paired_aligned_mate_none: 425
+  paired_aligned_mate_none_halved: 212.5
+  paired_aligned_mate_one: 22
+  paired_aligned_mate_one_halved: 11.0
+  paired_aligned_multi: 89
+  paired_aligned_none: 1482
+  paired_aligned_one: 17631
+  paired_total: 19202
+  total_reads: 19202
+SAMPLE3_SE:
+  overall_alignment_rate: 99.18
+  total_reads: 46659
+  unpaired_aligned_multi: 536
+  unpaired_aligned_none: 381
+  unpaired_aligned_one: 45742
+  unpaired_total: 46659
