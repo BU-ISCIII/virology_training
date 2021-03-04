@@ -94,7 +94,7 @@ Now you have your repo (viralrecon) installed and the program to run it (Nextflo
 To run the pipeline you have to type in your terminal:
 
 ```
-nextflow run Repositories/viralrecon/main.nf -profile conda,test max_allele_freq = 0.80 -resume
+nextflow run <path_to_viralrecon_repo>/main.nf -profile conda,test max_allele_freq = 0.80 -resume
 ```
 With this command line you are going to run the default test data set with all the default parameters. This data is a subset of amplicon based sequenced SARS-CoV2 samples. This means that during the pipeline the sequences/positions corresponding to the amplicon's primers are going to be removed.
 
