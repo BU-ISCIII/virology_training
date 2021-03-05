@@ -96,7 +96,7 @@ To run the pipeline you have to type in your terminal:
 ```
 nextflow run <path_to_viralrecon_repo>/main.nf -profile conda,test max_allele_freq = 0.80 -resume
 ```
-With this command line you are going to run the default test data set with all the default parameters. This data is a subset of amplicon based sequenced SARS-CoV2 samples. This means that during the pipeline the sequences/positions corresponding to the amplicon's primers are going to be removed.
+With this command line you are going to run the default test data set with all the default parameters, unless the max_allele_freq which we are going to set to 0.80, which means that we will select only those variants with a minimum allele frequency of 80% to be included in the consensus. This data is a subset of amplicon based sequenced SARS-CoV2 samples. This means that during the pipeline the sequences/positions corresponding to the amplicon's primers are going to be removed.
 
 :warning: In case you get the following error:
 ```
@@ -270,16 +270,52 @@ percentage_10x=$(cat samples_id.txt | while read in; do head -n8 results/variant
 ```
 
 ### Variants
-Now we are going to have a look to the variant calling results. They are stored in the `results/variants/varscan2/`. The files that have a "AF0."
+Now we are going to have a look to the variant calling results. They are stored in the `results/variants/varscan2/`. The files that have a "AF0.8" are the ones filtered by allele frequency and therefore the variants included in the consensus genome. Let's have a look to the VCF files:
 
+```
+zcat results/variants/varscan2/SAMPLE1_PE.AF0.8.vcf.gz | grep -v '^#'
+```
+The .VCF file's columns are:
+1. The reference genome chromosome, only one in this case.
+2. The position of the variant.
+3. Variant ID (usually it's always a dot)
+4. The reference allele
+5. The variant allele
+6. Variant quality (usually it's always a dot)
+7. If the variant passed the filters (PASSED)
+8. Some information about the variant depth, the times wild type allele was called, if it's heterozygous or homozygous...
+9. The acronyms of the information in the next column.
+10. The values of the previously indicated values:
+	- Genotype
+	- Genotype Quality
+	- Raw Read Depth (>10)
+	- Quality Read Depth of bases with Phred score >= 20 (>10)
+	- Depth of reference-supporting bases
+	- Depth of variant-supporting bases
+	- Variant allele frequency (>80%)
+	- P-value from Fisher's Exact Test
+	- Average quality of reference-supporting bases
+	- Average quality of variant-supporting bases
+	- Depth of reference-supporting bases on forward strand
+	- Depth of reference-supporting bases on reverse strand
+	- Depth of variant-supporting bases on forward strand
+	- Depth of variant-supporting bases on reverse strand
+
+So, to count the number of variants for the table it is as easy as counting the number of lines in the file:
+
+```
+number_variants=$(cat samples_id.txt | while read in; do zcat results/variants/varscan2/${in}.AF0.8.vcf.gz | grep -v '^#' | wc -l; done)
+```
+
+### Create the table
 Now we are going to paste all the columns in variables generated above and put them at the end of the file with the header.
 ```
-paste <(echo -e "$metadata_content\n") <(cat samples_id.txt) <(echo -e "$total_reads\n") <(echo -e "$host_R1\n") <(echo -e "$host_R2\n") <(echo -e "$percentage_read_host\n") <(echo -e "$mapped_reads\n") <(echo -e "$percentage_mapped_reads\n") <(echo -e "$unmapped_reads") <(echo -e "$percentage_unmapped_reads") <(echo -e "$mean_dp") <(echo -e "$percentage_10x") --delimiters '\t'
+paste <(echo -e "$metadata_content\n") <(cat samples_id.txt) <(echo -e "$total_reads\n") <(echo -e "$host_R1\n") <(echo -e "$host_R2\n") <(echo -e "$percentage_read_host\n") <(echo -e "$mapped_reads\n") <(echo -e "$percentage_mapped_reads\n") <(echo -e "$unmapped_reads") <(echo -e "$percentage_unmapped_reads") <(echo -e "$mean_dp") <(echo -e "$percentage_10x") <(echo -e "$number_variants") --delimiters '\t'
 ```
 
 Or, all together, without variables:
 
 ```
-paste <(echo -e "$(cat ./samples_id.txt | xargs -I % echo -e "Human\tNC_045512.2")\n") <(cat samples_id.txt) <(echo -e "$(cat samples_id.txt | while read in; do cat results/variants/bam/samtools_stats/${in}.sorted.bam.flagstat | grep '+ 0 in total' | tr ' ' '\t' | cut -f1; done)") <(echo -e "$(cat samples_id.txt | while read in; do cat results/assembly/kraken2/${in}.kraken2.report.txt | tail -n1 | cut -f3; done)") <(echo -e "$(cat samples_id.txt | while read in; do cat results/assembly/kraken2/${in}.kraken2.report.txt | tail -n1 | cut -f3; done | awk '{print $1*2}')") <(echo -e "$(cat samples_id.txt | while read in; do cat results/assembly/kraken2/${in}.kraken2.report.txt | tail -n1 | cut -f1; done)") <(echo "$(cat samples_id.txt | while read in; do cat results/variants/bam/samtools_stats/${in}.sorted.bam.flagstat | grep '+ 0 mapped' | tr ' ' '\t' | cut -f1; done)") <(echo "$(cat samples_id.txt | while read in; do cat results/variants/bam/samtools_stats/${in}.sorted.bam.flagstat | grep '+ 0 mapped' | tr '(' '\t' | cut -f2 | tr '%' '\t' | cut -f1; done)") <(echo -e "$(paste <(echo "$(cat samples_id.txt | while read in; do cat results/variants/bam/samtools_stats/${in}.sorted.bam.flagstat | grep '+ 0 in total' | tr ' ' '\t' | cut -f1; done)") <(echo "$(cat samples_id.txt | while read in; do cat results/assembly/kraken2/${in}.kraken2.report.txt | tail -n1 | cut -f3; done | awk '{print $1*2}')") <(echo "$(cat samples_id.txt | while read in; do cat results/variants/bam/samtools_stats/${in}.sorted.bam.flagstat | grep '+ 0 mapped' | tr ' ' '\t' | cut -f1; done)") | awk '{print $1-($2+$3)}')") <(echo -e "$(paste <(echo "$(cat samples_id.txt | while read in; do cat results/variants/bam/samtools_stats/${in}.sorted.bam.flagstat | grep '+ 0 in total' | tr ' ' '\t' | cut -f1; done)") <(echo "$(paste <(echo "$(cat samples_id.txt | while read in; do cat results/variants/bam/samtools_stats/${in}.sorted.bam.flagstat | grep '+ 0 in total' | tr ' ' '\t' | cut -f1; done)") <(echo "$(cat samples_id.txt | while read in; do cat results/assembly/kraken2/${in}.kraken2.report.txt | tail -n1 | cut -f3; done | awk '{print $1*2}')") <(echo "$(cat samples_id.txt | while read in; do cat results/variants/bam/samtools_stats/${in}.sorted.bam.flagstat | grep '+ 0 mapped' | tr ' ' '\t' | cut -f1; done)") | awk '{print $1-($2+$3)}')") | awk '{print $2*100/$1}')") <(echo -e "$(cat samples_id.txt | while read in; do head -n8 results/variants/bam/picard_metrics/${in}.trim.mkD.CollectWgsMetrics.coverage_metrics | tail -n1 | cut -f2; done)") <(echo -e "$(cat samples_id.txt | while read in; do head -n8 results/variants/bam/picard_metrics/${in}.trim.mkD.CollectWgsMetrics.coverage_metrics | tail -n1 | cut -f16; done)")
+paste <(echo -e "$(cat ./samples_id.txt | xargs -I % echo -e "Human\tNC_045512.2")\n") <(cat samples_id.txt) <(echo -e "$(cat samples_id.txt | while read in; do cat results/variants/bam/samtools_stats/${in}.sorted.bam.flagstat | grep '+ 0 in total' | tr ' ' '\t' | cut -f1; done)") <(echo -e "$(cat samples_id.txt | while read in; do cat results/assembly/kraken2/${in}.kraken2.report.txt | tail -n1 | cut -f3; done)") <(echo -e "$(cat samples_id.txt | while read in; do cat results/assembly/kraken2/${in}.kraken2.report.txt | tail -n1 | cut -f3; done | awk '{print $1*2}')") <(echo -e "$(cat samples_id.txt | while read in; do cat results/assembly/kraken2/${in}.kraken2.report.txt | tail -n1 | cut -f1; done)") <(echo "$(cat samples_id.txt | while read in; do cat results/variants/bam/samtools_stats/${in}.sorted.bam.flagstat | grep '+ 0 mapped' | tr ' ' '\t' | cut -f1; done)") <(echo "$(cat samples_id.txt | while read in; do cat results/variants/bam/samtools_stats/${in}.sorted.bam.flagstat | grep '+ 0 mapped' | tr '(' '\t' | cut -f2 | tr '%' '\t' | cut -f1; done)") <(echo -e "$(paste <(echo "$(cat samples_id.txt | while read in; do cat results/variants/bam/samtools_stats/${in}.sorted.bam.flagstat | grep '+ 0 in total' | tr ' ' '\t' | cut -f1; done)") <(echo "$(cat samples_id.txt | while read in; do cat results/assembly/kraken2/${in}.kraken2.report.txt | tail -n1 | cut -f3; done | awk '{print $1*2}')") <(echo "$(cat samples_id.txt | while read in; do cat results/variants/bam/samtools_stats/${in}.sorted.bam.flagstat | grep '+ 0 mapped' | tr ' ' '\t' | cut -f1; done)") | awk '{print $1-($2+$3)}')") <(echo -e "$(paste <(echo "$(cat samples_id.txt | while read in; do cat results/variants/bam/samtools_stats/${in}.sorted.bam.flagstat | grep '+ 0 in total' | tr ' ' '\t' | cut -f1; done)") <(echo "$(paste <(echo "$(cat samples_id.txt | while read in; do cat results/variants/bam/samtools_stats/${in}.sorted.bam.flagstat | grep '+ 0 in total' | tr ' ' '\t' | cut -f1; done)") <(echo "$(cat samples_id.txt | while read in; do cat results/assembly/kraken2/${in}.kraken2.report.txt | tail -n1 | cut -f3; done | awk '{print $1*2}')") <(echo "$(cat samples_id.txt | while read in; do cat results/variants/bam/samtools_stats/${in}.sorted.bam.flagstat | grep '+ 0 mapped' | tr ' ' '\t' | cut -f1; done)") | awk '{print $1-($2+$3)}')") | awk '{print $2*100/$1}')") <(echo -e "$(cat samples_id.txt | while read in; do head -n8 results/variants/bam/picard_metrics/${in}.trim.mkD.CollectWgsMetrics.coverage_metrics | tail -n1 | cut -f2; done)") <(echo -e "$(cat samples_id.txt | while read in; do head -n8 results/variants/bam/picard_metrics/${in}.trim.mkD.CollectWgsMetrics.coverage_metrics | tail -n1 | cut -f16; done)") <(echo -e "$(cat samples_id.txt | while read in; do zcat results/variants/varscan2/${in}.AF0.8.vcf.gz | grep -v '^#' | wc -l; done)")
 --delimiters '\t'
 ```
