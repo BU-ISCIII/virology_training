@@ -393,7 +393,7 @@ cd ..
 
 Now we need to concatenate de consensus files in a single fasta file like this:
 ```
-cat results/variants/varscan2/consensus/*.AF0.80.consensus.masked.fa >> consensus_masked.fasta
+cat results/variants/varscan2/consensus/*.AF0.8.consensus.masked.fa >> consensus_masked.fasta
 ```
 
 And now we can run pangolin:
