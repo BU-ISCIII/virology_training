@@ -317,15 +317,64 @@ As you can see the first columns are very similar to the ones from VarScan2, but
 missense_variant=$(cat samples_id.txt | while read in; do grep 'missense_variant' results/variants/varscan2/snpeff/${in}.AF0.8.snpSift.table.txt | wc -l; done)
 ```
 
+### Percentage masking
+Finally, we will count the number of Ns in the consensus genome. This is, the number of nucleotides that were masked due to low coverage. We will have to run [this python script](./percentageNs.py) for which you need to install Biopython and SeqIO in case you haven't yet:
+
+```
+pip install biopython
+```
+Then create the script or copy them from [here](./percentageNs.py)
+
+```
+nano percentageNs.py
+```
+And paste:
+```
+from Bio import SeqIO
+import os
+import argparse
+
+parser = argparse.ArgumentParser(description='Count %Ns')
+parser.add_argument('input_dir', type=str, help='Input dir masked files')
+parser.add_argument('output_file', type=str, help='Output file for Ns count')
+args = parser.parse_args()
+
+out_handle = open(args.output_file,"w")
+
+for f in os.listdir(args.input_dir):
+    if f.endswith('.masked.fa'):
+        ffpath=os.path.join(args.input_dir,f)
+        for record in SeqIO.parse(ffpath, "fasta"):
+            n_count = record.seq.count("N") + record.seq.count("n")
+            out_handle.write("%s\t%0.2f\n" % (record.id, n_count*100.0/len(record)))
+
+out_handle.close()
+```
+
+Then run:
+```
+python ./percentageNs.py results/variants/varscan2/consensus/ %Ns.tab
+```
+
+In the file %Ns.tab you will see a file with two columns: One with the sample name and other one with the percentage of Ns for each sample.
+
+```
+cat %Ns.tab
+```
+
+Now we will include these values in our table like this:
+```
+percentage_ns=$(cat samples_id.txt | while read in; do grep ${in} %Ns.tab | cut -f2 ; done)
+```
+
 ### Create the table
 Now we are going to paste all the columns in variables generated above and put them at the end of the file with the header.
 ```
-paste <(echo -e "$metadata_content\n") <(cat samples_id.txt) <(echo -e "$total_reads\n") <(echo -e "$host_R1\n") <(echo -e "$host_R2\n") <(echo -e "$percentage_read_host\n") <(echo -e "$mapped_reads\n") <(echo -e "$percentage_mapped_reads\n") <(echo -e "$unmapped_reads") <(echo -e "$percentage_unmapped_reads") <(echo -e "$mean_dp") <(echo -e "$percentage_10x") <(echo -e "$number_variants") <(echo -e "missense_variant") --delimiters '\t'
+paste <(echo -e "$metadata_content\n") <(cat samples_id.txt) <(echo -e "$total_reads\n") <(echo -e "$host_R1\n") <(echo -e "$host_R2\n") <(echo -e "$percentage_read_host\n") <(echo -e "$mapped_reads\n") <(echo -e "$percentage_mapped_reads\n") <(echo -e "$unmapped_reads") <(echo -e "$percentage_unmapped_reads") <(echo -e "$mean_dp") <(echo -e "$percentage_10x") <(echo -e "$number_variants") <(echo -e "$missense_variant") <(echo -e "$percentage_ns") --delimiters '\t' >> summary_table.tab
 ```
 
 Or, all together, without variables:
 
 ```
-paste <(echo -e "$(cat ./samples_id.txt | xargs -I % echo -e "Human\tNC_045512.2")\n") <(cat samples_id.txt) <(echo -e "$(cat samples_id.txt | while read in; do cat results/variants/bam/samtools_stats/${in}.sorted.bam.flagstat | grep '+ 0 in total' | tr ' ' '\t' | cut -f1; done)") <(echo -e "$(cat samples_id.txt | while read in; do cat results/assembly/kraken2/${in}.kraken2.report.txt | tail -n1 | cut -f3; done)") <(echo -e "$(cat samples_id.txt | while read in; do cat results/assembly/kraken2/${in}.kraken2.report.txt | tail -n1 | cut -f3; done | awk '{print $1*2}')") <(echo -e "$(cat samples_id.txt | while read in; do cat results/assembly/kraken2/${in}.kraken2.report.txt | tail -n1 | cut -f1; done)") <(echo "$(cat samples_id.txt | while read in; do cat results/variants/bam/samtools_stats/${in}.sorted.bam.flagstat | grep '+ 0 mapped' | tr ' ' '\t' | cut -f1; done)") <(echo "$(cat samples_id.txt | while read in; do cat results/variants/bam/samtools_stats/${in}.sorted.bam.flagstat | grep '+ 0 mapped' | tr '(' '\t' | cut -f2 | tr '%' '\t' | cut -f1; done)") <(echo -e "$(paste <(echo "$(cat samples_id.txt | while read in; do cat results/variants/bam/samtools_stats/${in}.sorted.bam.flagstat | grep '+ 0 in total' | tr ' ' '\t' | cut -f1; done)") <(echo "$(cat samples_id.txt | while read in; do cat results/assembly/kraken2/${in}.kraken2.report.txt | tail -n1 | cut -f3; done | awk '{print $1*2}')") <(echo "$(cat samples_id.txt | while read in; do cat results/variants/bam/samtools_stats/${in}.sorted.bam.flagstat | grep '+ 0 mapped' | tr ' ' '\t' | cut -f1; done)") | awk '{print $1-($2+$3)}')") <(echo -e "$(paste <(echo "$(cat samples_id.txt | while read in; do cat results/variants/bam/samtools_stats/${in}.sorted.bam.flagstat | grep '+ 0 in total' | tr ' ' '\t' | cut -f1; done)") <(echo "$(paste <(echo "$(cat samples_id.txt | while read in; do cat results/variants/bam/samtools_stats/${in}.sorted.bam.flagstat | grep '+ 0 in total' | tr ' ' '\t' | cut -f1; done)") <(echo "$(cat samples_id.txt | while read in; do cat results/assembly/kraken2/${in}.kraken2.report.txt | tail -n1 | cut -f3; done | awk '{print $1*2}')") <(echo "$(cat samples_id.txt | while read in; do cat results/variants/bam/samtools_stats/${in}.sorted.bam.flagstat | grep '+ 0 mapped' | tr ' ' '\t' | cut -f1; done)") | awk '{print $1-($2+$3)}')") | awk '{print $2*100/$1}')") <(echo -e "$(cat samples_id.txt | while read in; do head -n8 results/variants/bam/picard_metrics/${in}.trim.mkD.CollectWgsMetrics.coverage_metrics | tail -n1 | cut -f2; done)") <(echo -e "$(cat samples_id.txt | while read in; do head -n8 results/variants/bam/picard_metrics/${in}.trim.mkD.CollectWgsMetrics.coverage_metrics | tail -n1 | cut -f16; done)") <(echo -e "$(cat samples_id.txt | while read in; do zcat results/variants/varscan2/${in}.AF0.8.vcf.gz | grep -v '^#' | wc -l; done)") <(echo -e "$(cat samples_id.txt | while read in; do grep 'missense_variant' results/variants/varscan2/snpeff/${in}.AF0.8.snpSift.table.txt | wc -l; done)")
---delimiters '\t'
+paste <(echo -e "$(cat ./samples_id.txt | xargs -I % echo -e "Human\tNC_045512.2")\n") <(cat samples_id.txt) <(echo -e "$(cat samples_id.txt | while read in; do cat results/variants/bam/samtools_stats/${in}.sorted.bam.flagstat | grep '+ 0 in total' | tr ' ' '\t' | cut -f1; done)") <(echo -e "$(cat samples_id.txt | while read in; do cat results/assembly/kraken2/${in}.kraken2.report.txt | tail -n1 | cut -f3; done)") <(echo -e "$(cat samples_id.txt | while read in; do cat results/assembly/kraken2/${in}.kraken2.report.txt | tail -n1 | cut -f3; done | awk '{print $1*2}')") <(echo -e "$(cat samples_id.txt | while read in; do cat results/assembly/kraken2/${in}.kraken2.report.txt | tail -n1 | cut -f1; done)") <(echo "$(cat samples_id.txt | while read in; do cat results/variants/bam/samtools_stats/${in}.sorted.bam.flagstat | grep '+ 0 mapped' | tr ' ' '\t' | cut -f1; done)") <(echo "$(cat samples_id.txt | while read in; do cat results/variants/bam/samtools_stats/${in}.sorted.bam.flagstat | grep '+ 0 mapped' | tr '(' '\t' | cut -f2 | tr '%' '\t' | cut -f1; done)") <(echo -e "$(paste <(echo "$(cat samples_id.txt | while read in; do cat results/variants/bam/samtools_stats/${in}.sorted.bam.flagstat | grep '+ 0 in total' | tr ' ' '\t' | cut -f1; done)") <(echo "$(cat samples_id.txt | while read in; do cat results/assembly/kraken2/${in}.kraken2.report.txt | tail -n1 | cut -f3; done | awk '{print $1*2}')") <(echo "$(cat samples_id.txt | while read in; do cat results/variants/bam/samtools_stats/${in}.sorted.bam.flagstat | grep '+ 0 mapped' | tr ' ' '\t' | cut -f1; done)") | awk '{print $1-($2+$3)}')") <(echo -e "$(paste <(echo "$(cat samples_id.txt | while read in; do cat results/variants/bam/samtools_stats/${in}.sorted.bam.flagstat | grep '+ 0 in total' | tr ' ' '\t' | cut -f1; done)") <(echo "$(paste <(echo "$(cat samples_id.txt | while read in; do cat results/variants/bam/samtools_stats/${in}.sorted.bam.flagstat | grep '+ 0 in total' | tr ' ' '\t' | cut -f1; done)") <(echo "$(cat samples_id.txt | while read in; do cat results/assembly/kraken2/${in}.kraken2.report.txt | tail -n1 | cut -f3; done | awk '{print $1*2}')") <(echo "$(cat samples_id.txt | while read in; do cat results/variants/bam/samtools_stats/${in}.sorted.bam.flagstat | grep '+ 0 mapped' | tr ' ' '\t' | cut -f1; done)") | awk '{print $1-($2+$3)}')") | awk '{print $2*100/$1}')") <(echo -e "$(cat samples_id.txt | while read in; do head -n8 results/variants/bam/picard_metrics/${in}.trim.mkD.CollectWgsMetrics.coverage_metrics | tail -n1 | cut -f2; done)") <(echo -e "$(cat samples_id.txt | while read in; do head -n8 results/variants/bam/picard_metrics/${in}.trim.mkD.CollectWgsMetrics.coverage_metrics | tail -n1 | cut -f16; done)") <(echo -e "$(cat samples_id.txt | while read in; do zcat results/variants/varscan2/${in}.AF0.8.vcf.gz | grep -v '^#' | wc -l; done)") <(echo -e "$(cat samples_id.txt | while read in; do grep 'missense_variant' results/variants/varscan2/snpeff/${in}.AF0.8.snpSift.table.txt | wc -l; done)") <(echo -e "$(cat samples_id.txt | while read in; do grep ${in} %Ns.tab | cut -f2 ; done)") --delimiters '\t' >> summary_table.tab
 ```
