@@ -401,4 +401,4 @@ And now we can run pangolin:
 pangolin consensus_masked.fasta
 ```
 
-This process will create a file called `lineage_report.csv` with the lineage classification of each sample.
+This process will create a file called [`lineage_report.csv`](results/lineage_report.csv) with the lineage classification of each sample.
