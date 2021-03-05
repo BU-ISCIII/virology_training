@@ -64,7 +64,8 @@ To download and run viralrecon locally first you have to learn a little bit abou
 
 In case you don't have git installed run:
 ```
-sudo apt install git
+sudo apt update
+sudo apt install git libtbb2
 ```
 
 Download the repo from github:
@@ -93,28 +94,9 @@ Now you have your repo (viralrecon) installed and the program to run it (Nextflo
 To run the pipeline you have to type in your terminal:
 
 ```
-nextflow run <path_to_viralrecon_repo>/main.nf -profile conda,test max_allele_freq = 0.80 -resume
+nextflow run <path_to_viralrecon_repo>/main.nf -profile conda,test max_allele_freq = 0.80 --skip-markduplicates -resume
 ```
 With this command line you are going to run the default test data set with all the default parameters, unless the max_allele_freq which we are going to set to 0.80, which means that we will select only those variants with a minimum allele frequency of 80% to be included in the consensus. This data is a subset of amplicon based sequenced SARS-CoV2 samples. This means that during the pipeline the sequences/positions corresponding to the amplicon's primers are going to be removed.
-
-:warning: In case you get the following error:
-```
-Command error:
-  /home/s.varona/virology_master_test/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/bowtie2-align-s: error while loading shared libraries: libtbb.so.2: cannot open shared object file: No such file or directory
-  (ERR): Description of arguments failed!
-  Exiting now ...
-```
-
-You will have to run:
-```
-sudo apt-get update
-sudo apt-get install libtbb2
-```
-
-And then run nextflow command again:
-```
-nextflow run <path_to_viralrecon_repo>/main.nf -profile conda,test max_allele_freq = 0.80 -resume
-```
 
 This is the pipeline overview:
 1. FastQC: Quality control
