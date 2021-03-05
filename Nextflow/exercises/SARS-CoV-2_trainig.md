@@ -64,7 +64,7 @@ To download and run viralrecon locally first you have to learn a little bit abou
 
 In case you don't have git installed run:
 ```
-sudo apt install git-all
+sudo apt install git
 ```
 
 Download the repo from github:
