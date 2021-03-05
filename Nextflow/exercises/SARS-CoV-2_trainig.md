@@ -378,3 +378,27 @@ Or, all together, without variables:
 ```
 paste <(echo -e "$(cat ./samples_id.txt | xargs -I % echo -e "Human\tNC_045512.2")\n") <(cat samples_id.txt) <(echo -e "$(cat samples_id.txt | while read in; do cat results/variants/bam/samtools_stats/${in}.sorted.bam.flagstat | grep '+ 0 in total' | tr ' ' '\t' | cut -f1; done)") <(echo -e "$(cat samples_id.txt | while read in; do cat results/assembly/kraken2/${in}.kraken2.report.txt | tail -n1 | cut -f3; done)") <(echo -e "$(cat samples_id.txt | while read in; do cat results/assembly/kraken2/${in}.kraken2.report.txt | tail -n1 | cut -f3; done | awk '{print $1*2}')") <(echo -e "$(cat samples_id.txt | while read in; do cat results/assembly/kraken2/${in}.kraken2.report.txt | tail -n1 | cut -f1; done)") <(echo "$(cat samples_id.txt | while read in; do cat results/variants/bam/samtools_stats/${in}.sorted.bam.flagstat | grep '+ 0 mapped' | tr ' ' '\t' | cut -f1; done)") <(echo "$(cat samples_id.txt | while read in; do cat results/variants/bam/samtools_stats/${in}.sorted.bam.flagstat | grep '+ 0 mapped' | tr '(' '\t' | cut -f2 | tr '%' '\t' | cut -f1; done)") <(echo -e "$(paste <(echo "$(cat samples_id.txt | while read in; do cat results/variants/bam/samtools_stats/${in}.sorted.bam.flagstat | grep '+ 0 in total' | tr ' ' '\t' | cut -f1; done)") <(echo "$(cat samples_id.txt | while read in; do cat results/assembly/kraken2/${in}.kraken2.report.txt | tail -n1 | cut -f3; done | awk '{print $1*2}')") <(echo "$(cat samples_id.txt | while read in; do cat results/variants/bam/samtools_stats/${in}.sorted.bam.flagstat | grep '+ 0 mapped' | tr ' ' '\t' | cut -f1; done)") | awk '{print $1-($2+$3)}')") <(echo -e "$(paste <(echo "$(cat samples_id.txt | while read in; do cat results/variants/bam/samtools_stats/${in}.sorted.bam.flagstat | grep '+ 0 in total' | tr ' ' '\t' | cut -f1; done)") <(echo "$(paste <(echo "$(cat samples_id.txt | while read in; do cat results/variants/bam/samtools_stats/${in}.sorted.bam.flagstat | grep '+ 0 in total' | tr ' ' '\t' | cut -f1; done)") <(echo "$(cat samples_id.txt | while read in; do cat results/assembly/kraken2/${in}.kraken2.report.txt | tail -n1 | cut -f3; done | awk '{print $1*2}')") <(echo "$(cat samples_id.txt | while read in; do cat results/variants/bam/samtools_stats/${in}.sorted.bam.flagstat | grep '+ 0 mapped' | tr ' ' '\t' | cut -f1; done)") | awk '{print $1-($2+$3)}')") | awk '{print $2*100/$1}')") <(echo -e "$(cat samples_id.txt | while read in; do head -n8 results/variants/bam/picard_metrics/${in}.trim.mkD.CollectWgsMetrics.coverage_metrics | tail -n1 | cut -f2; done)") <(echo -e "$(cat samples_id.txt | while read in; do head -n8 results/variants/bam/picard_metrics/${in}.trim.mkD.CollectWgsMetrics.coverage_metrics | tail -n1 | cut -f16; done)") <(echo -e "$(cat samples_id.txt | while read in; do zcat results/variants/varscan2/${in}.AF0.8.vcf.gz | grep -v '^#' | wc -l; done)") <(echo -e "$(cat samples_id.txt | while read in; do grep 'missense_variant' results/variants/varscan2/snpeff/${in}.AF0.8.snpSift.table.txt | wc -l; done)") <(echo -e "$(cat samples_id.txt | while read in; do grep ${in} %Ns.tab | cut -f2 ; done)") --delimiters '\t' >> summary_table.tab
 ```
+
+## Lineage
+Now that we know which samples have less than 50% of Ns, we can use those consensus genomes to determine the lineage of the genomes. For this we will use a program called [Pangolin](https://github.com/cov-lineages/pangolin). We will create a new conda environment for this.
+```
+conda deactivate
+git clone https://github.com/cov-lineages/pangolin.git
+cd pangolin
+conda env create -f environment.yml
+conda activate pangolin
+python setup.py install
+cd ..
+```
+
+Now we need to concatenate de consensus files in a single fasta file like this:
+```
+cat results/variants/varscan2/consensus/*.AF0.80.consensus.masked.fa >> consensus_masked.fasta
+```
+
+And now we can run pangolin:
+```
+pangolin consensus_masked.fasta
+```
+
+This process will create a file called `lineage_report.csv` with the lineage classification of each sample.
