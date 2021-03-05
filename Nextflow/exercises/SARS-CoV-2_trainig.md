@@ -5,7 +5,7 @@ In this report you will find all the information necessary to follow the steps t
 ## Training overview
 During this training we will following these steps:
 * [Conda](#conda): Installation
-* [Nextflow](#nexflow): Overview and installation
+* [Nextflow](#nextflow): Overview and installation
 * [Viralrecon](#viralrecon): Overview and download
 	* [Github](#github): Glance to main commands
 * [Pipeline](#pipeline): Running the pipeline with command line and main results.
