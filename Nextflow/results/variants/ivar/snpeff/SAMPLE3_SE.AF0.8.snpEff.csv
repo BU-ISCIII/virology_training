@@ -1,0 +1,99 @@
+
+# Summary table 
+
+Name , Value
+Genome , GCF_009858895.2_ASM985889v3_genomic.200409 
+Date , 2021-03-04 23:01
+SnpEff_version , SnpEff 5.0 (build 2020-08-09 21:23), by Pablo Cingolani
+Command_line_arguments , SnpEff  GCF_009858895.2_ASM985889v3_genomic.200409 SAMPLE3_SE.AF0.8.vcf.gz -csvStats SAMPLE3_SE.AF0.8.snpEff.csv 
+Warnings , 0 
+Number_of_lines_in_input_file, 0
+Number_of_variants_before_filter, 0
+Number_of_not_variants , 0
+Number_of_variants_processed , 0
+Number_of_known_variants (i.e. non-empty ID) , 0, 0% 
+Number_of_effects , 0 
+Genome_total_length ,29903 
+Genome_effective_length ,0 
+Change_rate , 0 
+
+# Change rate by chromosome
+
+Chromosome , Length , Changes , Change_rate 
+
+# Variantss by type
+
+Type , Count , Percent 
+
+# Effects by impact
+
+Type , Count , Percent 
+
+# Effects by functional class
+
+Type , Count , Percent 
+
+Missense_Silent_ratio, 0
+
+# Count by effects
+
+Type , Count , Percent 
+
+# Count by genomic region
+
+Type , Count , Percent 
+
+# Quality 
+
+
+# InDel lengths
+
+
+# Base changes
+
+base  , A  , C  , G  , T 
+ A  , 0  , 0  , 0  , 0 
+ C  , 0  , 0  , 0  , 0 
+ G  , 0  , 0  , 0  , 0 
+ T  , 0  , 0  , 0  , 0 
+
+# Ts/Tv summary
+
+Transitions , 0
+Transversions , 0
+Ts_Tv_ratio , 0
+
+# Ts/Tv : All variants
+
+No results available (empty input?)
+
+# Ts/Tv : Known variants
+
+No results available (empty input?)
+
+# Allele frequency
+
+# Allele frequency : All variants
+
+Values , 
+Count , 
+
+# Allele Count
+
+Values , 
+Count , 
+
+# Hom/Het table
+
+
+
+# Codon change table
+	
+codons 
+
+# Amino acid change table
+
+aa 
+
+# Chromosome change table
+

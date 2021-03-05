@@ -1,0 +1,12 @@
+# The following table is formatted as tab separated values. 
+#GeneName	GeneId	TranscriptId	BioType	variants_impact_HIGH	variants_impact_LOW	variants_impact_MODERATE	variants_impact_MODIFIER	variants_effect_downstream_gene_variant	variants_effect_missense_variant	variants_effect_stop_lost	variants_effect_synonymous_variant	variants_effect_upstream_gene_variant
+E	gene-GU280_gp04	TRANSCRIPT_gene-GU280_gp04	protein_coding	0	0	0	1	0	0	0	0	1
+M	gene-GU280_gp05	TRANSCRIPT_gene-GU280_gp05	protein_coding	0	0	0	1	0	0	0	0	1
+N	gene-GU280_gp10	TRANSCRIPT_gene-GU280_gp10	protein_coding	0	0	0	1	0	0	0	0	1
+ORF1ab	gene-GU280_gp01	TRANSCRIPT_gene-GU280_gp01	protein_coding	1	3	0	2	1	0	1	3	1
+ORF3a	gene-GU280_gp03	TRANSCRIPT_gene-GU280_gp03	protein_coding	0	0	0	1	0	0	0	0	1
+ORF6	gene-GU280_gp06	TRANSCRIPT_gene-GU280_gp06	protein_coding	0	0	0	1	0	0	0	0	1
+ORF7a	gene-GU280_gp07	TRANSCRIPT_gene-GU280_gp07	protein_coding	0	0	0	1	0	0	0	0	1
+ORF7b	gene-GU280_gp08	TRANSCRIPT_gene-GU280_gp08	protein_coding	0	0	0	1	0	0	0	0	1
+ORF8	gene-GU280_gp09	TRANSCRIPT_gene-GU280_gp09	protein_coding	0	0	0	1	0	0	0	0	1
+S	gene-GU280_gp02	TRANSCRIPT_gene-GU280_gp02	protein_coding	0	0	1	1	0	1	0	0	1

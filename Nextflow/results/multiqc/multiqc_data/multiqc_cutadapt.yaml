@@ -1,0 +1,26 @@
+SAMPLE1_PE_2:
+  bp_processed: 14363465
+  bp_written: 14171979
+  pairs_processed: 24135
+  pairs_too_short: 0
+  pairs_written: 24135
+  percent_trimmed: 1.3331462846882698
+  r1_with_adapters: 10092
+  r2_with_adapters: 9863
+SAMPLE2_PE_2:
+  bp_processed: 11431354
+  bp_written: 11290725
+  pairs_processed: 19202
+  pairs_too_short: 0
+  pairs_written: 19202
+  percent_trimmed: 1.2302042260260684
+  r1_with_adapters: 7598
+  r2_with_adapters: 7481
+SAMPLE3_SE:
+  bp_processed: 13923021
+  bp_written: 13738774
+  percent_trimmed: 1.3233263097139623
+  r_processed: 46659
+  r_too_short: 0
+  r_with_adapters: 18941
+  r_written: 46659

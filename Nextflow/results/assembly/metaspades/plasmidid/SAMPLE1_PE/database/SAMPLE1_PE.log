@@ -1,0 +1,124 @@
+[22:19:01] This is prokka 1.14.6
+[22:19:01] Written by Torsten Seemann <torsten.seemann@gmail.com>
+[22:19:01] Homepage is https://github.com/tseemann/prokka
+[22:19:01] Local time is Thu Mar  4 22:19:01 2021
+[22:19:01] You are svarona
+[22:19:01] Operating system is linux
+[22:19:01] You have BioPerl 1.007002
+[22:19:01] System has 12 cores.
+[22:19:01] Will use maximum of 1 cores.
+[22:19:01] Annotating as >>> Bacteria <<<
+[22:19:01] Enabling options to ensure Genbank/ENA/DDJB submission compliance.
+[22:19:01] Re-using existing --outdir ./NO_GROUP/SAMPLE1_PE/database
+[22:19:01] Using filename prefix: SAMPLE1_PE.XXX
+[22:19:01] Setting HMMER_NCPU=1
+[22:19:01] Writing log to: ./NO_GROUP/SAMPLE1_PE/database/SAMPLE1_PE.log
+[22:19:01] Command: /home/svarona/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/prokka --force --outdir ./NO_GROUP/SAMPLE1_PE/database --prefix SAMPLE1_PE --addgenes --kingdom Bacteria --genus --species --usegenus --centre BU-ISCIII --locustag SAMPLE1_PE --compliant --cpus 1 ./NO_GROUP/SAMPLE1_PE/kmer/database.filtered_0.95_term.0.5.representative.fasta
+[22:19:01] Appending to PATH: /home/svarona/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin
+[22:19:01] Looking for 'aragorn' - found /home/svarona/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/aragorn
+[22:19:01] Determined aragorn version is 001002 from 'ARAGORN v1.2.38 Dean Laslett'
+[22:19:01] Looking for 'barrnap' - found /home/svarona/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/barrnap
+[22:19:01] Determined barrnap version is 000009 from 'barrnap 0.9'
+[22:19:01] Looking for 'blastp' - found /home/svarona/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/blastp
+[22:19:01] Determined blastp version is 002010 from 'blastp: 2.10.1+'
+[22:19:01] Looking for 'cmpress' - found /home/svarona/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/cmpress
+[22:19:01] Determined cmpress version is 001001 from '# INFERNAL 1.1.3 (Nov 2019)'
+[22:19:01] Looking for 'cmscan' - found /home/svarona/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/cmscan
+[22:19:01] Determined cmscan version is 001001 from '# INFERNAL 1.1.3 (Nov 2019)'
+[22:19:01] Looking for 'egrep' - found /usr/bin/egrep
+[22:19:01] Looking for 'find' - found /usr/bin/find
+[22:19:01] Looking for 'grep' - found /usr/bin/grep
+[22:19:01] Looking for 'hmmpress' - found /home/svarona/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/hmmpress
+[22:19:01] Determined hmmpress version is 003003 from '# HMMER 3.3.2 (Nov 2020); http://hmmer.org/'
+[22:19:01] Looking for 'hmmscan' - found /home/svarona/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/hmmscan
+[22:19:01] Determined hmmscan version is 003003 from '# HMMER 3.3.2 (Nov 2020); http://hmmer.org/'
+[22:19:01] Looking for 'java' - found /home/svarona/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/java
+[22:19:01] Looking for 'makeblastdb' - found /home/svarona/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/makeblastdb
+[22:19:01] Determined makeblastdb version is 002010 from 'makeblastdb: 2.10.1+'
+[22:19:01] Looking for 'minced' - found /home/svarona/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/minced
+[22:19:01] Determined minced version is 004002 from 'minced 0.4.2'
+[22:19:01] Looking for 'parallel' - found /home/svarona/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/parallel
+[22:19:01] Determined parallel version is 20210222 from 'GNU parallel 20210222'
+[22:19:01] Looking for 'prodigal' - found /home/svarona/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/prodigal
+[22:19:01] Determined prodigal version is 002006 from 'Prodigal V2.6.3: February, 2016'
+[22:19:01] Looking for 'prokka-genbank_to_fasta_db' - found /home/svarona/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/prokka-genbank_to_fasta_db
+[22:19:01] Looking for 'sed' - found /home/svarona/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/sed
+[22:19:01] Looking for 'tbl2asn' - found /home/svarona/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/tbl2asn
+[22:19:01] Determined tbl2asn version is 025007 from 'tbl2asn 25.7   arguments:'
+[22:19:01] Using genetic code table 11.
+[22:19:01] Loading and checking input file: ./NO_GROUP/SAMPLE1_PE/kmer/database.filtered_0.95_term.0.5.representative.fasta
+[22:19:01] Wrote 1 contigs totalling 29903 bp.
+[22:19:01] Predicting tRNAs and tmRNAs
+[22:19:01] Running: aragorn -l -gc11  -w \.\/NO_GROUP\/SAMPLE1_PE\/database\/SAMPLE1_PE\.fna
+[22:19:01] Found 0 tRNAs
+[22:19:01] Predicting Ribosomal RNAs
+[22:19:01] Running Barrnap with 1 threads
+[22:19:01] Found 0 rRNAs
+[22:19:01] Skipping ncRNA search, enable with --rfam if desired.
+[22:19:01] Total of 0 tRNA + rRNA features
+[22:19:01] Searching for CRISPR repeats
+[22:19:02] Found 0 CRISPRs
+[22:19:02] Predicting coding sequences
+[22:19:02] Contigs total 29903 bp, so using meta mode
+[22:19:02] Running: prodigal -i \.\/NO_GROUP\/SAMPLE1_PE\/database\/SAMPLE1_PE\.fna -c -m -g 11 -p meta -f sco -q
+[22:19:02] Found 9 CDS
+[22:19:02] Connecting features back to sequences
+[22:19:02] Skipping genus-specific proteins as can't see /home/svarona/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/db/--species
+[22:19:02] Annotating CDS, please be patient.
+[22:19:02] Will use 1 CPUs for similarity searching.
+[22:19:02] There are still 9 unannotated CDS left (started with 9)
+[22:19:02] Will use blast to search against /home/svarona/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/db/kingdom/Bacteria/IS with 1 CPUs
+[22:19:02] Running: cat \.\/NO_GROUP\/SAMPLE1_PE\/database\/SAMPLE1_PE\.IS\.tmp\.28789\.faa | parallel --gnu --plain -j 1 --block 4764 --recstart '>' --pipe blastp -query - -db /home/svarona/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/db/kingdom/Bacteria/IS -evalue 1e-30 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no > \.\/NO_GROUP\/SAMPLE1_PE\/database\/SAMPLE1_PE\.IS\.tmp\.28789\.blast 2> /dev/null
+[22:19:03] Deleting unwanted file: ./NO_GROUP/SAMPLE1_PE/database/SAMPLE1_PE.IS.tmp.28789.faa
+[22:19:03] Deleting unwanted file: ./NO_GROUP/SAMPLE1_PE/database/SAMPLE1_PE.IS.tmp.28789.blast
+[22:19:03] There are still 9 unannotated CDS left (started with 9)
+[22:19:03] Will use blast to search against /home/svarona/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/db/kingdom/Bacteria/AMR with 1 CPUs
+[22:19:03] Running: cat \.\/NO_GROUP\/SAMPLE1_PE\/database\/SAMPLE1_PE\.AMR\.tmp\.28789\.faa | parallel --gnu --plain -j 1 --block 4764 --recstart '>' --pipe blastp -query - -db /home/svarona/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/db/kingdom/Bacteria/AMR -evalue 9.99999999999999e-301 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no > \.\/NO_GROUP\/SAMPLE1_PE\/database\/SAMPLE1_PE\.AMR\.tmp\.28789\.blast 2> /dev/null
+[22:19:03] Deleting unwanted file: ./NO_GROUP/SAMPLE1_PE/database/SAMPLE1_PE.AMR.tmp.28789.faa
+[22:19:03] Deleting unwanted file: ./NO_GROUP/SAMPLE1_PE/database/SAMPLE1_PE.AMR.tmp.28789.blast
+[22:19:03] There are still 9 unannotated CDS left (started with 9)
+[22:19:03] Will use blast to search against /home/svarona/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/db/kingdom/Bacteria/sprot with 1 CPUs
+[22:19:03] Running: cat \.\/NO_GROUP\/SAMPLE1_PE\/database\/SAMPLE1_PE\.sprot\.tmp\.28789\.faa | parallel --gnu --plain -j 1 --block 4764 --recstart '>' --pipe blastp -query - -db /home/svarona/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/db/kingdom/Bacteria/sprot -evalue 1e-09 -qcov_hsp_perc 80 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no > \.\/NO_GROUP\/SAMPLE1_PE\/database\/SAMPLE1_PE\.sprot\.tmp\.28789\.blast 2> /dev/null
+[22:19:05] Deleting unwanted file: ./NO_GROUP/SAMPLE1_PE/database/SAMPLE1_PE.sprot.tmp.28789.faa
+[22:19:05] Deleting unwanted file: ./NO_GROUP/SAMPLE1_PE/database/SAMPLE1_PE.sprot.tmp.28789.blast
+[22:19:05] There are still 9 unannotated CDS left (started with 9)
+[22:19:05] Will use hmmer3 to search against /home/svarona/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/db/hmm/HAMAP.hmm with 1 CPUs
+[22:19:05] Running: cat \.\/NO_GROUP\/SAMPLE1_PE\/database\/SAMPLE1_PE\.HAMAP\.hmm\.tmp\.28789\.faa | parallel --gnu --plain -j 1 --block 4764 --recstart '>' --pipe hmmscan --noali --notextw --acc -E 1e-09 --cpu 1 /home/svarona/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/db/hmm/HAMAP.hmm /dev/stdin > \.\/NO_GROUP\/SAMPLE1_PE\/database\/SAMPLE1_PE\.HAMAP\.hmm\.tmp\.28789\.hmmer3 2> /dev/null
+[22:19:09] Deleting unwanted file: ./NO_GROUP/SAMPLE1_PE/database/SAMPLE1_PE.HAMAP.hmm.tmp.28789.faa
+[22:19:09] Deleting unwanted file: ./NO_GROUP/SAMPLE1_PE/database/SAMPLE1_PE.HAMAP.hmm.tmp.28789.hmmer3
+[22:19:09] Labelling remaining 8 proteins as 'hypothetical protein'
+[22:19:09] Found 1 unique /gene codes.
+[22:19:09] Fixed 0 colliding /gene names.
+[22:19:09] Adding /locus_tag identifiers
+[22:19:09] Assigned 9 locus_tags to CDS and RNA features.
+[22:19:09] Writing outputs to ./NO_GROUP/SAMPLE1_PE/database/
+[22:19:09] Generating annotation statistics file
+[22:19:09] Generating Genbank and Sequin files
+[22:19:09] Running: tbl2asn -V b -a r10k -l paired-ends -M n -N 1 -y 'Annotated using prokka 1.14.6 from https://github.com/tseemann/prokka' -Z \.\/NO_GROUP\/SAMPLE1_PE\/database\/SAMPLE1_PE\.err -i \.\/NO_GROUP\/SAMPLE1_PE\/database\/SAMPLE1_PE\.fsa 2> /dev/null
+[22:19:09] Deleting unwanted file: ./NO_GROUP/SAMPLE1_PE/database/errorsummary.val
+[22:19:09] Deleting unwanted file: ./NO_GROUP/SAMPLE1_PE/database/SAMPLE1_PE.dr
+[22:19:09] Deleting unwanted file: ./NO_GROUP/SAMPLE1_PE/database/SAMPLE1_PE.fixedproducts
+[22:19:09] Deleting unwanted file: ./NO_GROUP/SAMPLE1_PE/database/SAMPLE1_PE.ecn
+[22:19:09] Deleting unwanted file: ./NO_GROUP/SAMPLE1_PE/database/SAMPLE1_PE.val
+[22:19:09] Repairing broken .GBK output that tbl2asn produces...
+[22:19:09] Running: sed 's/COORDINATES: profile/COORDINATES:profile/' < \.\/NO_GROUP\/SAMPLE1_PE\/database\/SAMPLE1_PE\.gbf > \.\/NO_GROUP\/SAMPLE1_PE\/database\/SAMPLE1_PE\.gbk
+[22:19:09] Deleting unwanted file: ./NO_GROUP/SAMPLE1_PE/database/SAMPLE1_PE.gbf
+[22:19:09] Output files:
+[22:19:09] ./NO_GROUP/SAMPLE1_PE/database/SAMPLE1_PE.err
+[22:19:09] ./NO_GROUP/SAMPLE1_PE/database/SAMPLE1_PE.faa
+[22:19:09] ./NO_GROUP/SAMPLE1_PE/database/SAMPLE1_PE.ffn
+[22:19:09] ./NO_GROUP/SAMPLE1_PE/database/SAMPLE1_PE.fna
+[22:19:09] ./NO_GROUP/SAMPLE1_PE/database/SAMPLE1_PE.fsa
+[22:19:09] ./NO_GROUP/SAMPLE1_PE/database/SAMPLE1_PE.gbk
+[22:19:09] ./NO_GROUP/SAMPLE1_PE/database/SAMPLE1_PE.gff
+[22:19:09] ./NO_GROUP/SAMPLE1_PE/database/SAMPLE1_PE.log
+[22:19:09] ./NO_GROUP/SAMPLE1_PE/database/SAMPLE1_PE.sqn
+[22:19:09] ./NO_GROUP/SAMPLE1_PE/database/SAMPLE1_PE.tbl
+[22:19:09] ./NO_GROUP/SAMPLE1_PE/database/SAMPLE1_PE.tsv
+[22:19:09] ./NO_GROUP/SAMPLE1_PE/database/SAMPLE1_PE.txt
+[22:19:09] Annotation finished successfully.
+[22:19:09] Walltime used: 0.13 minutes
+[22:19:09] If you use this result please cite the Prokka paper:
+[22:19:09] Seemann T (2014) Prokka: rapid prokaryotic genome annotation. Bioinformatics. 30(14):2068-9.
+[22:19:09] Type 'prokka --citation' for more details.
+[22:19:09] Thank you, come again.

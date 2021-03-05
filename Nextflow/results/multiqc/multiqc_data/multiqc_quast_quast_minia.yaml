@@ -1,0 +1,162 @@
+SAMPLE1_PE:
+  '# N''s per 100 kbp': 0.0
+  '# contigs': 7.0
+  '# contigs (>= 0 bp)': 11.0
+  '# contigs (>= 1000 bp)': 7.0
+  '# contigs (>= 10000 bp)': 1.0
+  '# contigs (>= 25000 bp)': 0.0
+  '# contigs (>= 5000 bp)': 1.0
+  '# contigs (>= 50000 bp)': 0.0
+  '# genomic features': 20.0
+  '# genomic features_partial': 10.0
+  '# indels per 100 kbp': 0.0
+  '# local misassemblies': 0.0
+  '# misassembled contigs': 0.0
+  '# misassemblies': 0.0
+  '# mismatches per 100 kbp': 21.65
+  '# scaffold gap ext. mis.': 0.0
+  '# scaffold gap loc. mis.': 0.0
+  '# unaligned contigs': 0.0
+  '# unaligned contigs_partial': 0.0
+  '# unaligned mis. contigs': 0.0
+  Duplication ratio: 1.0
+  GC (%): 38.01
+  Genome fraction (%): 92.676
+  L50: 2.0
+  L75: 4.0
+  LA50: 2.0
+  LA75: 4.0
+  LG50: 3.0
+  LG75: 5.0
+  LGA50: 3.0
+  LGA75: 5.0
+  Largest alignment: 10409.0
+  Largest contig: 10409.0
+  Misassembled contigs length: 0.0
+  N50: 3993.0
+  N75: 3317.0
+  NA50: 3993.0
+  NA75: 3317.0
+  NG50: 3807.0
+  NG75: 2551.0
+  NGA50: 3807.0
+  NGA75: 2551.0
+  Reference GC (%): 37.97
+  Reference length: 29903.0
+  Total aligned length: 27715.0
+  Total length: 27715.0
+  Total length (>= 0 bp): 28740.0
+  Total length (>= 1000 bp): 27715.0
+  Total length (>= 10000 bp): 10409.0
+  Total length (>= 25000 bp): 0.0
+  Total length (>= 5000 bp): 10409.0
+  Total length (>= 50000 bp): 0.0
+  Unaligned length: 0.0
+SAMPLE2_PE:
+  '# N''s per 100 kbp': 0.0
+  '# contigs': 16.0
+  '# contigs (>= 0 bp)': 22.0
+  '# contigs (>= 1000 bp)': 10.0
+  '# contigs (>= 10000 bp)': 0.0
+  '# contigs (>= 25000 bp)': 0.0
+  '# contigs (>= 5000 bp)': 0.0
+  '# contigs (>= 50000 bp)': 0.0
+  '# genomic features': 10.0
+  '# genomic features_partial': 16.0
+  '# indels per 100 kbp': 0.0
+  '# local misassemblies': 0.0
+  '# misassembled contigs': 0.0
+  '# misassemblies': 0.0
+  '# mismatches per 100 kbp': 25.37
+  '# scaffold gap ext. mis.': 0.0
+  '# scaffold gap loc. mis.': 0.0
+  '# unaligned contigs': 0.0
+  '# unaligned contigs_partial': 0.0
+  '# unaligned mis. contigs': 0.0
+  Duplication ratio: 1.001
+  GC (%): 38.5
+  Genome fraction (%): 79.092
+  L50: 5.0
+  L75: 9.0
+  LA50: 5.0
+  LA75: 9.0
+  LG50: 7.0
+  LG75: 15.0
+  LGA50: 7.0
+  LGA75: 15.0
+  Largest alignment: 3319.0
+  Largest contig: 3319.0
+  Misassembled contigs length: 0.0
+  N50: 1631.0
+  N75: 1325.0
+  NA50: 1631.0
+  NA75: 1325.0
+  NG50: 1594.0
+  NG75: 631.0
+  NGA50: 1594.0
+  NGA75: 631.0
+  Reference GC (%): 37.97
+  Reference length: 29903.0
+  Total aligned length: 23675.0
+  Total length: 23675.0
+  Total length (>= 0 bp): 25497.0
+  Total length (>= 1000 bp): 19509.0
+  Total length (>= 10000 bp): 0.0
+  Total length (>= 25000 bp): 0.0
+  Total length (>= 5000 bp): 0.0
+  Total length (>= 50000 bp): 0.0
+  Unaligned length: 0.0
+SAMPLE3_SE:
+  '# N''s per 100 kbp': 0.0
+  '# contigs': 11.0
+  '# contigs (>= 0 bp)': 17.0
+  '# contigs (>= 1000 bp)': 8.0
+  '# contigs (>= 10000 bp)': 0.0
+  '# contigs (>= 25000 bp)': 0.0
+  '# contigs (>= 5000 bp)': 1.0
+  '# contigs (>= 50000 bp)': 0.0
+  '# genomic features': 16.0
+  '# genomic features_partial': 14.0
+  '# indels per 100 kbp': 0.0
+  '# local misassemblies': 0.0
+  '# misassembled contigs': 0.0
+  '# misassemblies': 0.0
+  '# mismatches per 100 kbp': 15.23
+  '# scaffold gap ext. mis.': 0.0
+  '# scaffold gap loc. mis.': 0.0
+  '# unaligned contigs': 0.0
+  '# unaligned contigs_partial': 0.0
+  '# unaligned mis. contigs': 0.0
+  Duplication ratio: 1.002
+  GC (%): 38.22
+  Genome fraction (%): 87.814
+  L50: 3.0
+  L75: 6.0
+  LA50: 3.0
+  LA75: 6.0
+  LG50: 3.0
+  LG75: 7.0
+  LGA50: 3.0
+  LGA75: 7.0
+  Largest alignment: 8200.0
+  Largest contig: 8200.0
+  Misassembled contigs length: 0.0
+  N50: 2997.0
+  N75: 1853.0
+  NA50: 2997.0
+  NA75: 1853.0
+  NG50: 2997.0
+  NG75: 1687.0
+  NGA50: 2997.0
+  NGA75: 1687.0
+  Reference GC (%): 37.97
+  Reference length: 29903.0
+  Total aligned length: 26289.0
+  Total length: 26313.0
+  Total length (>= 0 bp): 27908.0
+  Total length (>= 1000 bp): 24244.0
+  Total length (>= 10000 bp): 0.0
+  Total length (>= 25000 bp): 0.0
+  Total length (>= 5000 bp): 8200.0
+  Total length (>= 50000 bp): 0.0
+  Unaligned length: 0.0

@@ -1,0 +1,13 @@
+Got the following sample list: 
+SAMPLE2_PE
+Only variants will be reported
+Min coverage:	10
+Min reads2:	5
+Min var freq:	0.25
+Min avg qual:	20
+P-value thresh:	0.99
+Reading input from SAMPLE2_PE.trim.mkD.mpileup
+29236 bases in pileup file
+7 variant positions (7 SNP, 0 indel)
+0 were failed by the strand-filter
+7 variant positions reported (7 SNP, 0 indel)

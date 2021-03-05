@@ -1,0 +1,5 @@
+Severe acute respiratory syndrome coronavirus 2 isolate Wuhan-Hu-1, complete genome	NODE_1_length_20973_cov_392.636820	NC_045512.2	99.981	20951	4	0	23	20973	29839	8889	0.0	38668	29903	20973	99
+Severe acute respiratory syndrome coronavirus 2 isolate Wuhan-Hu-1, complete genome	NODE_2_length_8704_cov_363.700428	NC_045512.2	99.965	8614	3	0	44	8657	67	8680	0.0	15891	29903	8704	100
+Severe acute respiratory syndrome coronavirus 2 isolate Wuhan-Hu-1, complete genome	NODE_2_length_8704_cov_363.700428	NC_045512.2	100.000	54	0	0	8651	8704	12936	12989	1.14e-22	100	29903	8704	100
+Severe acute respiratory syndrome coronavirus 2 isolate Wuhan-Hu-1, complete genome	NODE_2_length_8704_cov_363.700428	NC_045512.2	100.000	54	0	0	1	54	25339	25392	1.14e-22	100	29903	8704	100
+Severe acute respiratory syndrome coronavirus 2 isolate Wuhan-Hu-1, complete genome	NODE_6_length_379_cov_1.490741	NC_045512.2	100.000	29	0	0	1	29	6168	6196	3.78e-10	54.7	29903	379	8

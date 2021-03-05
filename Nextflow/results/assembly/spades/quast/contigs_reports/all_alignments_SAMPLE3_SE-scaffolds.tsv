@@ -1,0 +1,8 @@
+S1	E1	S2	E2	Reference	Contig	IDY	Ambiguous	Best_group
+31	8673	1	8643	NC_045512.2	NODE_1_length_25568_cov_259.339452	99.99		True
+local misassembly [linear representation of circular genome]
+12936	29834	8644	25542	NC_045512.2	NODE_1_length_25568_cov_259.339452	99.99		True
+CONTIG	NODE_1_length_25568_cov_259.339452	25568	correct
+CONTIG	NODE_2_length_5513_cov_4.136836	5513	unaligned
+8889	13062	1	4174	NC_045512.2	NODE_3_length_4174_cov_192.911292	99.98		True
+CONTIG	NODE_3_length_4174_cov_192.911292	4174	correct
