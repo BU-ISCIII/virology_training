@@ -1,0 +1,17 @@
+Genomic features of type "ANY" loaded: 32
+reference chromosomes:
+	NC_045512.2 (total length: 29903 bp, total length without N's: 29903 bp, maximal covered length: 27713 bp)
+
+total genome size: 29903
+
+gap min size: 50
+partial gene/operon min size: 100
+
+
+
+assembly                 | genome    | duplication | gaps      | genes     | partial   | operons   | partial   |
+                         | fraction  | ratio       | number    |           | genes     |           | operons   |
+========================================================================================================================
+SAMPLE3_SE_k31_scaffolds | 87.814    | 1.002       | 7         | 16        | 14        | -         | -         |
+SAMPLE1_PE_k31_scaffolds | 92.676    | 1.000       | 4         | 20        | 10        | -         | -         |
+SAMPLE2_PE_k31_scaffolds | 79.092    | 1.001       | 13        | 10        | 16        | -         | -         |

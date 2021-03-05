@@ -1,0 +1,155 @@
+/home/svarona/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/quast.py --output-dir quast -r GCF_009858895.2_ASM985889v3_genomic.200409.fna --features GCF_009858895.2_ASM985889v3_genomic.200409.gff --threads 2 SAMPLE3_SE.k31.scaffolds.fa SAMPLE1_PE.k31.scaffolds.fa SAMPLE2_PE.k31.scaffolds.fa
+
+Version: 5.0.2
+
+System information:
+  OS: Linux-4.4.0-19041-Microsoft-x86_64-with-debian-bullseye-sid (linux_64)
+  Python version: 3.6.11
+  CPUs number: 12
+
+Started: 2021-03-04 22:20:54
+
+Logging to /home/svarona/work/a2/34beced503d941be95be038ed865d2/quast/quast.log
+
+CWD: /home/svarona/work/a2/34beced503d941be95be038ed865d2
+Main parameters: 
+  MODE: default, threads: 2, minimum contig length: 500, minimum alignment length: 65, \
+  ambiguity: one, threshold for extensive misassembly size: 1000
+
+Reference:
+  /home/svarona/work/a2/34beced503d941be95be038ed865d2/GCF_009858895.2_ASM985889v3_genomic.200409.fna ==> GCF_009858895.2_ASM985889v3_genomic.200409
+
+Contigs:
+  Pre-processing...
+  1  SAMPLE3_SE.k31.scaffolds.fa ==> SAMPLE3_SE.k31.scaffolds
+  2  SAMPLE1_PE.k31.scaffolds.fa ==> SAMPLE1_PE.k31.scaffolds
+  3  SAMPLE2_PE.k31.scaffolds.fa ==> SAMPLE2_PE.k31.scaffolds
+
+2021-03-04 22:20:57
+Running Basic statistics processor...
+  Reference genome:
+    GCF_009858895.2_ASM985889v3_genomic.200409.fna, length = 29903, num fragments = 1, GC % = 37.97
+  Contig files: 
+    1  SAMPLE3_SE.k31.scaffolds
+    2  SAMPLE1_PE.k31.scaffolds
+    3  SAMPLE2_PE.k31.scaffolds
+  Calculating N50 and L50...
+    1  SAMPLE3_SE.k31.scaffolds, N50 = 2997, L50 = 3, Total length = 26313, GC % = 38.22, # N's per 100 kbp =  0.00
+    2  SAMPLE1_PE.k31.scaffolds, N50 = 3993, L50 = 2, Total length = 27715, GC % = 38.01, # N's per 100 kbp =  0.00
+    3  SAMPLE2_PE.k31.scaffolds, N50 = 1631, L50 = 5, Total length = 23675, GC % = 38.50, # N's per 100 kbp =  0.00
+  Drawing Nx plot...
+    saved to /home/svarona/work/a2/34beced503d941be95be038ed865d2/quast/basic_stats/Nx_plot.pdf
+  Drawing NGx plot...
+    saved to /home/svarona/work/a2/34beced503d941be95be038ed865d2/quast/basic_stats/NGx_plot.pdf
+  Drawing cumulative plot...
+    saved to /home/svarona/work/a2/34beced503d941be95be038ed865d2/quast/basic_stats/cumulative_plot.pdf
+  Drawing GC content plot...
+    saved to /home/svarona/work/a2/34beced503d941be95be038ed865d2/quast/basic_stats/GC_content_plot.pdf
+  Drawing SAMPLE3_SE.k31.scaffolds GC content plot...
+    saved to /home/svarona/work/a2/34beced503d941be95be038ed865d2/quast/basic_stats/SAMPLE3_SE.k31.scaffolds_GC_content_plot.pdf
+  Drawing SAMPLE1_PE.k31.scaffolds GC content plot...
+    saved to /home/svarona/work/a2/34beced503d941be95be038ed865d2/quast/basic_stats/SAMPLE1_PE.k31.scaffolds_GC_content_plot.pdf
+  Drawing SAMPLE2_PE.k31.scaffolds GC content plot...
+    saved to /home/svarona/work/a2/34beced503d941be95be038ed865d2/quast/basic_stats/SAMPLE2_PE.k31.scaffolds_GC_content_plot.pdf
+Done.
+
+2021-03-04 22:21:00
+Running Contig analyzer...
+  1  SAMPLE3_SE.k31.scaffolds
+  2  SAMPLE1_PE.k31.scaffolds
+  1  Logging to files /home/svarona/work/a2/34beced503d941be95be038ed865d2/quast/contigs_reports/contigs_report_SAMPLE3_SE-k31-scaffolds.stdout and contigs_report_SAMPLE3_SE-k31-scaffolds.stderr...
+  2  Logging to files /home/svarona/work/a2/34beced503d941be95be038ed865d2/quast/contigs_reports/contigs_report_SAMPLE1_PE-k31-scaffolds.stdout and contigs_report_SAMPLE1_PE-k31-scaffolds.stderr...
+  1  Aligning contigs to the reference
+  2  Aligning contigs to the reference
+  2  /home/svarona/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/minimap2 \
+     -c -x asm5 -B5 -O4,16 --no-long-join -r 85 -N 50 -s 65 -z 200 --mask-level 0.9 \
+     --min-occ 200 -g 2500 --score-N 2 --cs -t 1 quast/quast_corrected_input/GCF_009858895.2_ASM985889v3_genomic.200409.fna \
+     quast/quast_corrected_input/SAMPLE1_PE_k31_scaffolds.fa > quast/contigs_reports/minimap_output/SAMPLE1_PE-k31-scaffolds.coords_tmp \
+     2>> quast/contigs_reports/contigs_report_SAMPLE1_PE-k31-scaffolds.stderr
+  1  /home/svarona/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/minimap2 \
+     -c -x asm5 -B5 -O4,16 --no-long-join -r 85 -N 50 -s 65 -z 200 --mask-level 0.9 \
+     --min-occ 200 -g 2500 --score-N 2 --cs -t 1 quast/quast_corrected_input/GCF_009858895.2_ASM985889v3_genomic.200409.fna \
+     quast/quast_corrected_input/SAMPLE3_SE_k31_scaffolds.fa > quast/contigs_reports/minimap_output/SAMPLE3_SE-k31-scaffolds.coords_tmp \
+     2>> quast/contigs_reports/contigs_report_SAMPLE3_SE-k31-scaffolds.stderr
+  2  Analysis is finished.
+
+  1  Analysis is finished.
+
+  3  SAMPLE2_PE.k31.scaffolds
+  3  Logging to files /home/svarona/work/a2/34beced503d941be95be038ed865d2/quast/contigs_reports/contigs_report_SAMPLE2_PE-k31-scaffolds.stdout and contigs_report_SAMPLE2_PE-k31-scaffolds.stderr...
+  3  Aligning contigs to the reference
+  3  /home/svarona/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/minimap2 \
+     -c -x asm5 -B5 -O4,16 --no-long-join -r 85 -N 50 -s 65 -z 200 --mask-level 0.9 \
+     --min-occ 200 -g 2500 --score-N 2 --cs -t 1 quast/quast_corrected_input/GCF_009858895.2_ASM985889v3_genomic.200409.fna \
+     quast/quast_corrected_input/SAMPLE2_PE_k31_scaffolds.fa > quast/contigs_reports/minimap_output/SAMPLE2_PE-k31-scaffolds.coords_tmp \
+     2>> quast/contigs_reports/contigs_report_SAMPLE2_PE-k31-scaffolds.stderr
+  3  Analysis is finished.
+
+  Creating total report...
+    saved to /home/svarona/work/a2/34beced503d941be95be038ed865d2/quast/contigs_reports/misassemblies_report.txt, misassemblies_report.tsv, and misassemblies_report.tex
+  Transposed version of total report...
+    saved to /home/svarona/work/a2/34beced503d941be95be038ed865d2/quast/contigs_reports/transposed_report_misassemblies.txt, transposed_report_misassemblies.tsv, and transposed_report_misassemblies.tex
+  Creating total report...
+    saved to /home/svarona/work/a2/34beced503d941be95be038ed865d2/quast/contigs_reports/unaligned_report.txt, unaligned_report.tsv, and unaligned_report.tex
+  Drawing misassemblies by types plot...
+    saved to /home/svarona/work/a2/34beced503d941be95be038ed865d2/quast/contigs_reports/misassemblies_plot.pdf
+  Drawing misassemblies FRCurve plot...
+    saved to /home/svarona/work/a2/34beced503d941be95be038ed865d2/quast/contigs_reports/misassemblies_frcurve_plot.pdf
+Done.
+
+2021-03-04 22:21:00
+Running NA-NGA calculation...
+  1  SAMPLE3_SE.k31.scaffolds, Largest alignment = 8200, NA50 = 2997, NGA50 = 2997, LA50 = 3, LGA50 = 3
+  2  SAMPLE1_PE.k31.scaffolds, Largest alignment = 10409, NA50 = 3993, NGA50 = 3807, LA50 = 2, LGA50 = 3
+  3  SAMPLE2_PE.k31.scaffolds, Largest alignment = 3319, NA50 = 1631, NGA50 = 1594, LA50 = 5, LGA50 = 7
+  Drawing cumulative plot...
+    saved to /home/svarona/work/a2/34beced503d941be95be038ed865d2/quast/aligned_stats/cumulative_plot.pdf
+  Drawing NAx plot...
+    saved to /home/svarona/work/a2/34beced503d941be95be038ed865d2/quast/aligned_stats/NAx_plot.pdf
+  Drawing NGAx plot...
+    saved to /home/svarona/work/a2/34beced503d941be95be038ed865d2/quast/aligned_stats/NGAx_plot.pdf
+Done.
+
+2021-03-04 22:21:01
+Running Genome analyzer...
+  NOTICE: No file with operons were provided. Use the -O option if you want to specify it.
+  Loaded 32 genomic features of type "ANY"
+  1  SAMPLE3_SE.k31.scaffolds
+  2  SAMPLE1_PE.k31.scaffolds
+  2  Analysis is finished.
+  1  Analysis is finished.
+  3  SAMPLE2_PE.k31.scaffolds
+  3  Analysis is finished.
+  Drawing genomic features cumulative plot...
+    saved to /home/svarona/work/a2/34beced503d941be95be038ed865d2/quast/genome_stats/features_cumulative_plot.pdf
+  Drawing genomic features FRCurve plot...
+    saved to /home/svarona/work/a2/34beced503d941be95be038ed865d2/quast/genome_stats/features_frcurve_plot.pdf
+  Drawing # complete genomic features histogram...
+    saved to /home/svarona/work/a2/34beced503d941be95be038ed865d2/quast/genome_stats/complete_features_histogram.pdf
+  Drawing Genome fraction, % histogram...
+    saved to /home/svarona/work/a2/34beced503d941be95be038ed865d2/quast/genome_stats/genome_fraction_histogram.pdf
+Done.
+
+NOTICE: Genes are not predicted by default. Use --gene-finding or --glimmer option to enable it.
+
+2021-03-04 22:21:03
+Creating large visual summaries...
+This may take a while: press Ctrl-C to skip this step..
+  1 of 2: Creating Icarus viewers...
+  2 of 2: Creating PDF with all tables and plots...
+Done
+
+2021-03-04 22:21:06
+RESULTS:
+  Text versions of total report are saved to /home/svarona/work/a2/34beced503d941be95be038ed865d2/quast/report.txt, report.tsv, and report.tex
+  Text versions of transposed total report are saved to /home/svarona/work/a2/34beced503d941be95be038ed865d2/quast/transposed_report.txt, transposed_report.tsv, and transposed_report.tex
+  HTML version (interactive tables and plots) is saved to /home/svarona/work/a2/34beced503d941be95be038ed865d2/quast/report.html
+  PDF version (tables and plots) is saved to /home/svarona/work/a2/34beced503d941be95be038ed865d2/quast/report.pdf
+  Icarus (contig browser) is saved to /home/svarona/work/a2/34beced503d941be95be038ed865d2/quast/icarus.html
+  Log is saved to /home/svarona/work/a2/34beced503d941be95be038ed865d2/quast/quast.log
+
+Finished: 2021-03-04 22:21:07
+Elapsed time: 0:00:12.695136
+NOTICEs: 2; WARNINGs: 0; non-fatal ERRORs: 0
+
+Thank you for using QUAST!

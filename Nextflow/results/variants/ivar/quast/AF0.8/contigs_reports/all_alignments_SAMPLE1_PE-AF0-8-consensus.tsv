@@ -1,0 +1,7 @@
+S1	E1	S2	E2	Reference	Contig	IDY	Ambiguous	Best_group
+55	5240	1	5186	NC_045512.2	SAMPLE1_PE	99.96		True
+fake: scaffold gap size wrong estimation (local)
+5345	8593	5291	8539	NC_045512.2	SAMPLE1_PE	100.0		True
+fake: scaffold gap size wrong estimation (local)
+8914	29665	8860	29611	NC_045512.2	SAMPLE1_PE	99.98		True
+CONTIG	SAMPLE1_PE	29782	correct

@@ -1,0 +1,133 @@
+
+    <!doctype html>
+
+    <html lang="en">
+    
+    <style type="text/css">
+    
+    body {
+        font: normal 20px "Courier New", Arial, sans-serif;
+        padding: auto;
+        margin: auto;
+    }
+    img {
+        display: block;
+        max-width: 350px;
+        height: auto;
+    }
+    
+    .summary{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    
+    .numeric-values {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    
+    .numeric-values div {
+        flex-grow: 1;
+    }
+    
+    .neutral {
+        background-color: lightgray;
+    }
+    
+    .likely {
+        background-color: limegreen;
+    }
+    
+    .unlikely {
+        background-color: sandybrown;
+    }
+    
+    .unprobable {
+        background-color: brown;
+    }
+    
+    header {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-end;
+        font-size: 2.7em;
+    }
+    
+    table {
+        position: relative;
+        border-collapse: collapse; 
+    }
+    
+    header img {
+        width: 70px;
+    }
+    
+    th {
+        font-size: 1.3em;
+        background-color: skyblue;
+        position: sticky;
+        top: 0;
+    }
+
+    tr td {
+        font-size: 1.1em;
+        text-align: center;
+    }
+    
+    footer {
+        height: 3em;
+        padding: 1;
+    }
+    
+    tr:nth-child(even) {background-color: snow;}
+    tr:hover {background-color:azure;}
+
+    </style>
+    
+    <head>
+      <meta charset="utf-8">
+
+      <title>PlasmidID Report</title>
+      <meta name="description" content="https://github.com/BU-ISCIII/plasmidID">
+      <meta name="author" content="pedroscampoy@gmail.com">
+
+      <link rel="stylesheet" href="css/styles.css?v=1.0">
+      <link rel="shortcut icon" type="image/png" href="https://raw.github.com/BU-ISCIII/plasmidID/master/img/plasmidID_logo.png">
+
+    </head>
+
+    <body>
+      <header>
+         <img src="https://raw.github.com/BU-ISCIII/plasmidID/master/img/plasmidID_logo.png"' alt="header-image">
+         PlasmidID REPORT
+      </header>
+      <div>
+      <table>
+<thead>
+<tr><th>id         </th><th >  length</th><th>species            </th><th>description                                                                 </th><th>contig_name  </th><th>SAMPLE3_SE                                                                                                                                                                                                                                                                                                                                                                                                                                                         </th></tr>
+</thead>
+<tbody>
+<tr><td>NC_045512.2</td><td >   29903</td><td><i>Severe acute</i></td><td>acute respiratory syndrome coronavirus 2 isolate Wuhan-Hu-1, complete genome</td><td>[1, 2]       </td><td><div class=summary>
+<div class=numeric-values>
+<div class="percentage neutral">MAPPING %<br>X</div>
+<div class="complete likely">ALIGN FR<br>0.98</div>
+</div>
+<a href=file:///home/svarona/work/0c/44e54756a6540d35475a08c1f5cd74/NO_GROUP/SAMPLE3_SE/images/SAMPLE3_SE_NC_045512.2.png target="_blank">
+<img src=file:///home/svarona/work/0c/44e54756a6540d35475a08c1f5cd74/NO_GROUP/SAMPLE3_SE/images/SAMPLE3_SE_NC_045512.2.png alt="NC_045512.2">
+</a>
+</div></td></tr>
+</tbody>
+</table>
+      </div>
+      <footer>
+          More information at <a href="https://github.com/BU-ISCIII/plasmidID" target="_blank"> https://github.com/BU-ISCIII/plasmidID </a>
+          <br>
+          Author: pedroscampoy@gmail.com (BU-ISCIII)
+      </footer>
+    </body>
+    </html>
+    
+    
+    

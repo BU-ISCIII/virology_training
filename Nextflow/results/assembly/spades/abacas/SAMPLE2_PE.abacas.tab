@@ -1,0 +1,40 @@
+ID   NC_045512.2
+FT   contig          complement(1..3823)
+FT                   /systematic_id="NODE_5_length_3823_cov_218.151786"
+FT                   /method="mummer"
+FT                   /Contig_coverage="100.00"
+FT                   /Percent_identity="100.00"
+FT                   /colour="3"
+FT   contig          complement(3893..5454)
+FT                   /systematic_id="NODE_7_length_1562_cov_146.044405"
+FT                   /method="mummer"
+FT                   /Contig_coverage="100.00"
+FT                   /Percent_identity="100.00"
+FT                   /Overlapping="YES"
+FT                   /colour="5"
+FT   contig          5554..8730
+FT                   /systematic_id="NODE_6_length_3177_cov_259.184590"
+FT                   /method="mummer"
+FT                   /Contig_coverage="100.00"
+FT                   /Percent_identity="100.00"
+FT                   /colour="4"
+FT   contig          8957..19438
+FT                   /systematic_id="NODE_1_length_10482_cov_227.257943"
+FT                   /method="mummer"
+FT                   /Contig_coverage="99.35"
+FT                   /Percent_identity="99.98"
+FT                   /Overlapping="YES"
+FT                   /colour="5"
+FT   contig          19538..25894
+FT                   /systematic_id="NODE_2_length_6357_cov_149.285714"
+FT                   /method="mummer"
+FT                   /Contig_coverage="100.00"
+FT                   /Percent_identity="99.95"
+FT                   /Overlapping="YES"
+FT                   /colour="5"
+FT   contig          25994..30100
+FT                   /systematic_id="NODE_3_length_4107_cov_249.464322"
+FT                   /method="mummer"
+FT                   /Contig_coverage="97.15"
+FT                   /Percent_identity="99.85"
+FT                   /colour="4"
