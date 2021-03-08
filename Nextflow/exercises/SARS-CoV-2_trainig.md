@@ -247,7 +247,7 @@ mean_dp=$(cat samples_id.txt | while read in; do head -n8 results/variants/bam/p
 ```
 And for the percentage of reference genome covered at least with a depth of 10X:
 ```
-percentage_10x=$(cat samples_id.txt | while read in; do head -n8 results/variants/bam/picard_metrics/${in}.trim.mkD.CollectWgsMetrics.coverage_metrics | tail -n1 | cut -f16; done)
+percentage_10x=$(cat samples_id.txt | while read in; do head -n8 results/variants/bam/picard_metrics/${in}.trim.CollectWgsMetrics.coverage_metrics | tail -n1 | cut -f16; done)
 ```
 
 ### Variants
