@@ -39,7 +39,7 @@ conda activate nextflow
 
 Install nextflow in the environment through bioconda channel:
 ```
-conda install -c bioconda nextflow
+conda install -c bioconda nextflow==20.10.0
 ```
 
 proceed ([y]/n)?
