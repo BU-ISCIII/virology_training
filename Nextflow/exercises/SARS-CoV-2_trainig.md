@@ -243,7 +243,7 @@ You can see in the first 10 lines a variety of stats about the mapping between t
 
 So to obtain the mean depth of coverage, from the 8th line, we will keep the second column.
 ```
-mean_dp=$(cat samples_id.txt | while read in; do head -n8 results/variants/bam/picard_metrics/${in}.trim.mkD.CollectWgsMetrics.coverage_metrics | tail -n1 | cut -f2; done)
+mean_dp=$(cat samples_id.txt | while read in; do head -n8 results/variants/bam/picard_metrics/${in}.trim.CollectWgsMetrics.coverage_metrics | tail -n1 | cut -f2; done)
 ```
 And for the percentage of reference genome covered at least with a depth of 10X:
 ```
