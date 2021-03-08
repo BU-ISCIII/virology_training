@@ -23,14 +23,14 @@ SAMPLE2_PE:
   min_reads2: 5
   min_var_freq: 0.25
   p_val_threshold: 0.99
-  variant_indels: 0
+  variant_indels: 1
   variant_indels_failed: 0
-  variant_reported_indels: 0
+  variant_reported_indels: 1
   variant_reported_snps: 7
-  variant_reported_total: 7
+  variant_reported_total: 8
   variant_snps: 7
   variant_snps_failed: 0
-  variant_total: 7
+  variant_total: 8
   variant_total_failed: 0
 SAMPLE3_SE:
   bases_in_pileup: 29530
@@ -43,9 +43,9 @@ SAMPLE3_SE:
   variant_indels: 0
   variant_indels_failed: 0
   variant_reported_indels: 0
-  variant_reported_snps: 38
-  variant_reported_total: 38
-  variant_snps: 38
+  variant_reported_snps: 151
+  variant_reported_total: 151
+  variant_snps: 151
   variant_snps_failed: 0
-  variant_total: 38
+  variant_total: 151
   variant_total_failed: 0

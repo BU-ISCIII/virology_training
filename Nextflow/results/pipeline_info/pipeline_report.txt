@@ -7,7 +7,7 @@
   nf-core/viralrecon v1.2.0dev
 ----------------------------------------------------
 
-Run Name: shrivelled_engelbart
+Run Name: hopeful_rubens
 
 ####################################################
 ## nf-core/viralrecon completed successfully!     ##
@@ -15,16 +15,16 @@ Run Name: shrivelled_engelbart
 
 
 
-The workflow was completed at 2021-03-05T01:10:39.673+01:00 (duration: 3h 6m 16s)
+The workflow was completed at 2021-03-08T15:36:17.429328+01:00 (duration: 12m 31s)
 
 The command used to launch the workflow was as follows:
 
-  nextflow run viralrecon/main.nf -profile conda,test --max_allele_freq 0.80 -resume
+  nextflow run viralrecon/main.nf -profile conda,test --skip_markduplicates --max_allele_freq 0.80 --assemblers metaspades --callers varscan2 -resume
 
 
 Pipeline Configuration:
 -----------------------
- - Run Name: shrivelled_engelbart
+ - Run Name: hopeful_rubens
  - Samplesheet: https://raw.githubusercontent.com/nf-core/test-datasets/viralrecon/samplesheet/samplesheet_test_amplicon.csv
  - Protocol: amplicon
  - Amplicon Fasta File: https://raw.githubusercontent.com/nf-core/test-datasets/viralrecon/genome/NC_045512.2/amplicon/nCoV-2019.artic.V1.primer.fasta
@@ -38,7 +38,7 @@ Pipeline Configuration:
  - Fastp Qual Phred: 30
  - Fastp Unqual % Limit: 10
  - Fastp Min Trim Length: 50
- - Variant Calling Tools: varscan2,ivar,bcftools
+ - Variant Calling Tools: varscan2
  - Min Mapped Reads: 1000
  - iVar Trim Min Len: 20
  - iVar Trim Min Qual: 20
@@ -49,22 +49,23 @@ Pipeline Configuration:
  - Min Allele Freq: 0.25
  - Max Allele Freq: 0.8
  - Varscan2 Strand Filter: Yes
+ - Skip MarkDuplicates: Yes
  - Host Kraken2 DB: https://raw.githubusercontent.com/nf-core/test-datasets/viralrecon/genome/kraken2/kraken2_hs22.tar.gz
  - Host Kraken2 Name: human
- - Assembly Tools: spades,metaspades,unicycler,minia
+ - Assembly Tools: metaspades
  - Minia Kmer Size: 31
  - Max Resources: 6 GB memory, 2 cpus, 2d time per job
  - Output dir: ./results
  - Publish dir mode: copy
- - Launch dir: /home/svarona
- - Working dir: /home/svarona/work
- - Script dir: /home/svarona/viralrecon
- - User: svarona
+ - Launch dir: /home/smonzon/test_training_viralrecon
+ - Working dir: /home/smonzon/test_training_viralrecon/work
+ - Script dir: /home/smonzon/test_training_viralrecon/viralrecon
+ - User: smonzon
  - Config Profile: conda,test
  - Config Description: Minimal test dataset to check pipeline function
- - Date Started: 2021-03-04T22:04:23.315+01:00
- - Date Completed: 2021-03-05T01:10:39.673+01:00
- - Pipeline script file path: /home/svarona/viralrecon/main.nf
+ - Date Started: 2021-03-08T15:23:45.981420+01:00
+ - Date Completed: 2021-03-08T15:36:17.429328+01:00
+ - Pipeline script file path: /home/smonzon/test_training_viralrecon/viralrecon/main.nf
  - Pipeline script hash ID: 106035effd96892e3c6c5e69c494d502
  - Nextflow Version: 20.10.0
  - Nextflow Build: 5430

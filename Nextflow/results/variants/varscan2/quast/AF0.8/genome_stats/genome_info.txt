@@ -13,5 +13,5 @@ assembly                 | genome    | duplication | gaps      | genes     | par
                          | fraction  | ratio       | number    |           | genes     |           | operons   |
 ========================================================================================================================
 SAMPLE3_SE_AF0_8_consens | 97.432    | 1.026       | 4         | 23        | 7         | -         | -         |
-SAMPLE1_PE_AF0_8_consens | 98.094    | 1.019       | 3         | 23        | 7         | -         | -         |
 SAMPLE2_PE_AF0_8_consens | 89.804    | 1.114       | 11        | 14        | 14        | -         | -         |
+SAMPLE1_PE_AF0_8_consens | 98.094    | 1.019       | 3         | 23        | 7         | -         | -         |

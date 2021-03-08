@@ -19,10 +19,10 @@ Best alignment score: 20752.0 (LEN: 20752, IDY: 100.00), Total number of alignme
 			Real Alignment 3: 8914 29665 | 8914 29665 | 20752 20752 | 100.0 | NC_045512.2 SAMPLE3_SE
 
 Analyzing coverage...
-Writing SNPs into /home/svarona/work/8d/c22c265cd2bf21c401249f3fc79a9c/AF0.8/contigs_reports/minimap_output/SAMPLE3_SE-AF0-8-consensus-masked.used_snps.gz
+Writing SNPs into /home/smonzon/test_training_viralrecon/work/3c/28637caa5e83812cda9916c47476a2/AF0.8/contigs_reports/minimap_output/SAMPLE3_SE-AF0-8-consensus-masked.used_snps.gz
 
 Analysis is finished!
-Founded SNPs were written into /home/svarona/work/8d/c22c265cd2bf21c401249f3fc79a9c/AF0.8/contigs_reports/minimap_output/SAMPLE3_SE-AF0-8-consensus-masked.used_snps.gz
+Founded SNPs were written into /home/smonzon/test_training_viralrecon/work/3c/28637caa5e83812cda9916c47476a2/AF0.8/contigs_reports/minimap_output/SAMPLE3_SE-AF0-8-consensus-masked.used_snps.gz
 
 Results:
 	Local Misassemblies: 0

@@ -1,4 +1,0 @@
-Assembly	# misassemblies	  # contig misassemblies	    # c. relocations	    # c. translocations	    # c. inversions	  # scaffold misassemblies	    # s. relocations	    # s. translocations	    # s. inversions	# misassembled contigs	Misassembled contigs length	# local misassemblies	# scaffold gap ext. mis.	# scaffold gap loc. mis.	# unaligned mis. contigs	# mismatches	# indels	    # indels (<= 5 bp)	    # indels (> 5 bp)	Indels length
-SAMPLE3_SE.consensus.masked	0	0	0	0	0	0	0	0	0	0	0	0	0	2	0	5	0	0	0	0
-SAMPLE1_PE.consensus.masked	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	6	0	0	0	0
-SAMPLE2_PE.consensus.masked	0	0	0	0	0	0	0	0	0	0	0	0	0	9	0	5	0	0	0	0

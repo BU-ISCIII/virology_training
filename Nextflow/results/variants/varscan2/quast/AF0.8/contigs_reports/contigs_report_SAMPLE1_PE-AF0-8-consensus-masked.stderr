@@ -1,10 +1,10 @@
-[M::mm_idx_gen::0.002*6.95] collected minimizers
-[M::mm_idx_gen::0.003*4.62] sorted minimizers
-[M::main::0.003*4.58] loaded/built the index for 1 target sequence(s)
-[M::mm_mapopt_update::0.004*4.40] mid_occ = 200
+[M::mm_idx_gen::0.002*1.81] collected minimizers
+[M::mm_idx_gen::0.004*1.54] sorted minimizers
+[M::main::0.004*1.54] loaded/built the index for 1 target sequence(s)
+[M::mm_mapopt_update::0.004*1.51] mid_occ = 200
 [M::mm_idx_stat] kmer size: 19; skip: 19; is_hpc: 0; #seq: 1
-[M::mm_idx_stat::0.004*4.11] distinct minimizers: 3006 (100.00% are singletons); average occurrences: 1.000; average spacing: 9.948
-[M::worker_pipeline::0.009*1.71] mapped 1 sequences
+[M::mm_idx_stat::0.004*1.48] distinct minimizers: 3006 (100.00% are singletons); average occurrences: 1.000; average spacing: 9.948
+[M::worker_pipeline::0.014*1.14] mapped 1 sequences
 [M::main] Version: 2.17-r941
-[M::main] CMD: /home/svarona/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/minimap2 -c -x asm5 -B5 -O4,16 --no-long-join -r 85 -N 50 -s 65 -z 200 --mask-level 0.9 --min-occ 200 -g 2500 --score-N 2 --cs -t 1 /home/svarona/work/8d/c22c265cd2bf21c401249f3fc79a9c/AF0.8/quast_corrected_input/GCF_009858895.2_ASM985889v3_genomic.200409.fna /home/svarona/work/8d/c22c265cd2bf21c401249f3fc79a9c/AF0.8/quast_corrected_input/SAMPLE1_PE_AF0_8_consensus_masked.fa
-[M::main] Real time: 0.010 sec; CPU: 0.016 sec; Peak RSS: 0.003 GB
+[M::main] CMD: /home/smonzon/test_training_viralrecon/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/minimap2 -c -x asm5 -B5 -O4,16 --no-long-join -r 85 -N 50 -s 65 -z 200 --mask-level 0.9 --min-occ 200 -g 2500 --score-N 2 --cs -t 1 /home/smonzon/test_training_viralrecon/work/3c/28637caa5e83812cda9916c47476a2/AF0.8/quast_corrected_input/GCF_009858895.2_ASM985889v3_genomic.200409.fna /home/smonzon/test_training_viralrecon/work/3c/28637caa5e83812cda9916c47476a2/AF0.8/quast_corrected_input/SAMPLE1_PE_AF0_8_consensus_masked.fa
+[M::main] Real time: 0.015 sec; CPU: 0.017 sec; Peak RSS: 0.056 GB

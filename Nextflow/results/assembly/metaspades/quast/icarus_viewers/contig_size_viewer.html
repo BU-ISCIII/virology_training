@@ -2516,22 +2516,16 @@ var assemblies_len = {};
 var assemblies_contigs = {};
 var assemblies_misassemblies = {};
 var assemblies_n50 = {};
-assemblies_links["SAMPLE1_PE.scaffolds"] = "../contigs_reports/contigs_report_SAMPLE1_PE-scaffolds.stdout";
 assemblies_links["SAMPLE2_PE.scaffolds"] = "../contigs_reports/contigs_report_SAMPLE2_PE-scaffolds.stdout";
-assemblies_len["SAMPLE1_PE.scaffolds"] = 35151;
-assemblies_contigs["SAMPLE1_PE.scaffolds"] = 3;
-assemblies_n50["SAMPLE1_PE.scaffolds"] = "20973";
+assemblies_links["SAMPLE1_PE.scaffolds"] = "../contigs_reports/contigs_report_SAMPLE1_PE-scaffolds.stdout";
 assemblies_len["SAMPLE2_PE.scaffolds"] = 34939;
 assemblies_contigs["SAMPLE2_PE.scaffolds"] = 9;
 assemblies_n50["SAMPLE2_PE.scaffolds"] = "4738";
+assemblies_len["SAMPLE1_PE.scaffolds"] = 35151;
+assemblies_contigs["SAMPLE1_PE.scaffolds"] = 3;
+assemblies_n50["SAMPLE1_PE.scaffolds"] = "20973";
 var contig_data = {};
 var chromosome;
-contig_data["SAMPLE1_PE.scaffolds"] = [ 
-{name:"NODE_1_length_20973_cov_392.636820",size:20973, marks: "N50, NG50",contig_type: "correct",structure:[{contig:"NODE_1_length_20973_cov_392.636820",corr_start: 8889,corr_end: 29839,start:8889,end:29839,start_in_contig:20973,end_in_contig:23,size:20973,IDY:99.98,chr:"NC_045512.2"},]},
-{name:"NODE_2_length_8704_cov_363.700428",size:8704, marks: "N75, NG75",contig_type: "correct",structure:[{contig:"NODE_2_length_8704_cov_363.700428",corr_start: 67,corr_end: 8680,start:67,end:8680,start_in_contig:44,end_in_contig:8657,size:8704,IDY:99.97,chr:"NC_045512.2"},]},
-{name:"NODE_3_length_5474_cov_5.135818",size:5474,contig_type: "unaligned",structure:[]}];
-
-
 contig_data["SAMPLE2_PE.scaffolds"] = [ 
 {name:"NODE_1_length_10441_cov_333.542654",size:10441,contig_type: "correct",structure:[{contig:"NODE_1_length_10441_cov_333.542654",corr_start: 8889,corr_end: 19302,start:8889,end:19302,start_in_contig:2,end_in_contig:10415,size:10441,IDY:99.98,chr:"NC_045512.2"},]},
 {name:"NODE_2_length_6357_cov_220.316566",size:6357, marks: "NG50",contig_type: "correct",structure:[{contig:"NODE_2_length_6357_cov_220.316566",corr_start: 19317,corr_end: 25673,start:19317,end:25673,start_in_contig:1,end_in_contig:6357,size:6357,IDY:99.95,chr:"NC_045512.2"},]},
@@ -2542,6 +2536,12 @@ contig_data["SAMPLE2_PE.scaffolds"] = [
 {name:"NODE_7_length_971_cov_196.997817",size:971,contig_type: "correct",structure:[{contig:"NODE_7_length_971_cov_196.997817",corr_start: 2883,corr_end: 3853,start:2883,end:3853,start_in_contig:971,end_in_contig:1,size:971,IDY:100.0,chr:"NC_045512.2"},]},
 {name:"NODE_8_length_845_cov_3.384810",size:845,contig_type: "unaligned",structure:[]},
 {name:"NODE_9_length_517_cov_1.017316",size:517,contig_type: "unaligned",structure:[]}];
+
+
+contig_data["SAMPLE1_PE.scaffolds"] = [ 
+{name:"NODE_1_length_20973_cov_392.636820",size:20973, marks: "N50, NG50",contig_type: "correct",structure:[{contig:"NODE_1_length_20973_cov_392.636820",corr_start: 8889,corr_end: 29839,start:8889,end:29839,start_in_contig:20973,end_in_contig:23,size:20973,IDY:99.98,chr:"NC_045512.2"},]},
+{name:"NODE_2_length_8704_cov_363.700428",size:8704, marks: "N75, NG75",contig_type: "correct",structure:[{contig:"NODE_2_length_8704_cov_363.700428",corr_start: 67,corr_end: 8680,start:67,end:8680,start_in_contig:44,end_in_contig:8657,size:8704,IDY:99.97,chr:"NC_045512.2"},]},
+{name:"NODE_3_length_5474_cov_5.135818",size:5474,contig_type: "unaligned",structure:[]}];
 
 var contigLines = [];
 

@@ -1,4 +1,4 @@
-Assembly	SAMPLE3_SE.AF0.8.consensus.masked	SAMPLE1_PE.AF0.8.consensus.masked	SAMPLE2_PE.AF0.8.consensus.masked
+Assembly	SAMPLE3_SE.AF0.8.consensus.masked	SAMPLE2_PE.AF0.8.consensus.masked	SAMPLE1_PE.AF0.8.consensus.masked
 # misassemblies	0	0	0
   # contig misassemblies	0	0	0
     # c. relocations	0	0	0
@@ -12,7 +12,7 @@ Assembly	SAMPLE3_SE.AF0.8.consensus.masked	SAMPLE1_PE.AF0.8.consensus.masked	SAM
 Misassembled contigs length	0	0	0
 # local misassemblies	0	0	0
 # scaffold gap ext. mis.	0	0	0
-# scaffold gap loc. mis.	2	1	9
+# scaffold gap loc. mis.	2	9	1
 # unaligned mis. contigs	0	0	0
 # mismatches	0	6	6
 # indels	0	0	0

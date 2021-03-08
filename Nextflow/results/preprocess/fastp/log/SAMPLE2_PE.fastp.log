@@ -46,4 +46,4 @@ JSON report: SAMPLE2_PE.fastp.json
 HTML report: SAMPLE2_PE.fastp.html
 
 fastp --in1 SAMPLE2_PE_1.fastq.gz --in2 SAMPLE2_PE_2.fastq.gz --out1 SAMPLE2_PE_1.trim.fastq.gz --out2 SAMPLE2_PE_2.trim.fastq.gz --unpaired1 SAMPLE2_PE_1.fail.fastq.gz --unpaired2 SAMPLE2_PE_2.fail.fastq.gz --detect_adapter_for_pe --cut_front --cut_tail --cut_mean_quality 30 --qualified_quality_phred 30 --unqualified_percent_limit 10 --length_required 50 --trim_poly_x --thread 2 --json SAMPLE2_PE.fastp.json --html SAMPLE2_PE.fastp.html 
-fastp v0.20.1, time used: 4 seconds
+fastp v0.20.1, time used: 7 seconds

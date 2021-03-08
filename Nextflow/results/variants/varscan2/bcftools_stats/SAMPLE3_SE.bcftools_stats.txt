@@ -21,9 +21,9 @@ ID	0	SAMPLE3_SE.vcf.gz
 # 
 # SN	[2]id	[3]key	[4]value
 SN	0	number of samples:	1
-SN	0	number of records:	38
+SN	0	number of records:	151
 SN	0	number of no-ALTs:	0
-SN	0	number of SNPs:	38
+SN	0	number of SNPs:	151
 SN	0	number of MNPs:	0
 SN	0	number of indels:	0
 SN	0	number of others:	0
@@ -31,31 +31,31 @@ SN	0	number of multiallelic sites:	0
 SN	0	number of multiallelic SNP sites:	0
 # TSTV, transitions/transversions:
 # TSTV	[2]id	[3]ts	[4]tv	[5]ts/tv	[6]ts (1st ALT)	[7]tv (1st ALT)	[8]ts/tv (1st ALT)
-TSTV	0	19	19	1.00	19	19	1.00
+TSTV	0	56	95	0.59	56	95	0.59
 # SiS, Singleton stats:
 # SiS	[2]id	[3]allele count	[4]number of SNPs	[5]number of transitions	[6]number of transversions	[7]number of indels	[8]repeat-consistent	[9]repeat-inconsistent	[10]not applicable
-SiS	0	1	38	19	19	0	0	0	0
+SiS	0	1	151	56	95	0	0	0	0
 # AF, Stats by non-reference allele frequency:
 # AF	[2]id	[3]allele frequency	[4]number of SNPs	[5]number of transitions	[6]number of transversions	[7]number of indels	[8]repeat-consistent	[9]repeat-inconsistent	[10]not applicable
-AF	0	0.000000	38	19	19	0	0	0	0
+AF	0	0.000000	151	56	95	0	0	0	0
 # QUAL, Stats by quality:
 # QUAL	[2]id	[3]Quality	[4]number of SNPs	[5]number of transitions (1st ALT)	[6]number of transversions (1st ALT)	[7]number of indels
-QUAL	0	998	38	19	19	0
+QUAL	0	998	151	56	95	0
 # IDD, InDel distribution:
 # IDD	[2]id	[3]length (deletions negative)	[4]number of sites	[5]number of genotypes	[6]mean VAF
 # ST, Substitution types:
 # ST	[2]id	[3]type	[4]count
-ST	0	A>C	0
-ST	0	A>G	2
-ST	0	A>T	4
-ST	0	C>A	3
-ST	0	C>G	1
-ST	0	C>T	11
-ST	0	G>A	2
-ST	0	G>C	3
-ST	0	G>T	4
-ST	0	T>A	3
-ST	0	T>C	4
-ST	0	T>G	1
+ST	0	A>C	7
+ST	0	A>G	9
+ST	0	A>T	18
+ST	0	C>A	10
+ST	0	C>G	4
+ST	0	C>T	16
+ST	0	G>A	15
+ST	0	G>C	6
+ST	0	G>T	25
+ST	0	T>A	16
+ST	0	T>C	16
+ST	0	T>G	9
 # DP, Depth distribution
 # DP	[2]id	[3]bin	[4]number of genotypes	[5]fraction of genotypes (%)	[6]number of sites	[7]fraction of sites (%)

@@ -1,0 +1,8 @@
+2021-03-08 15:29:45,851:Namespace(distance=0.5, input_file='./NO_GROUP/SAMPLE2_PE/kmer/database.filtered_0.95_term.fasta', output=False, output_grouped=False)
+2021-03-08 15:29:45,852:Obtaining mash distance
+2021-03-08 15:29:45,882:[32mProgram mash successfully executed[0m
+2021-03-08 15:29:45,882:Obtaining cluster from distance
+2021-03-08 15:29:45,889:Calculating length
+2021-03-08 15:29:45,909:Filtering representative fasta
+2021-03-08 15:29:45,929:[35m1 sequences clustered into 1[0m
+2021-03-08 15:29:45,929:DONE

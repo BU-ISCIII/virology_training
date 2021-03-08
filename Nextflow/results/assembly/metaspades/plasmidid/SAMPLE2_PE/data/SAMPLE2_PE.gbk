@@ -1,4 +1,4 @@
-LOCUS       SAMPLE2_PE_1           10441 bp    DNA     linear       04-MAR-2021
+LOCUS       SAMPLE2_PE_1           10441 bp    DNA     linear       08-MAR-2021
 DEFINITION  --species species strain strain.
 ACCESSION   
 VERSION
@@ -237,7 +237,7 @@ ORIGIN
     10381 acttgcctgg ttgtgatggt ggcagtttgt atgtatgtag atatgtgtgt aggggtgtgt
     10441 g
 //
-LOCUS       SAMPLE2_PE_2            6357 bp    DNA     linear       04-MAR-2021
+LOCUS       SAMPLE2_PE_2            6357 bp    DNA     linear       08-MAR-2021
 DEFINITION  --species species strain strain.
 ACCESSION   
 VERSION
@@ -414,7 +414,7 @@ ORIGIN
      6241 ttttcagagc gcttccaaaa tcataaccct caaaaagaga tggcaactag cactctccaa
      6301 gggtgttcac tttgtttgca acttgctgtt gttgtttgta acagtttact cacacct
 //
-LOCUS       SAMPLE2_PE_3            4738 bp    DNA     linear       04-MAR-2021
+LOCUS       SAMPLE2_PE_3            4738 bp    DNA     linear       08-MAR-2021
 DEFINITION  --species species strain strain.
 ACCESSION   
 VERSION
@@ -542,7 +542,7 @@ ORIGIN
      4621 atgtcaatat aaagtaacaa gttttctgtg aggaacttag tttcttccag agttgttgta
      4681 acttcttcaa cacaagcttt gattttctta tcatcttgtt ttctctgttc aactgaag
 //
-LOCUS       SAMPLE2_PE_4            4070 bp    DNA     linear       04-MAR-2021
+LOCUS       SAMPLE2_PE_4            4070 bp    DNA     linear       08-MAR-2021
 DEFINITION  --species species strain strain.
 ACCESSION   
 VERSION
@@ -694,7 +694,7 @@ ORIGIN
      3961 acggattgtt cagtaacttg actcatgatt tcttacctat tagtggttga acagcatcgg
      4021 actcagatag taatccacgc tcttttaaaa tgtcaacaag agaatctcta
 //
-LOCUS       SAMPLE2_PE_5            4051 bp    DNA     linear       04-MAR-2021
+LOCUS       SAMPLE2_PE_5            4051 bp    DNA     linear       08-MAR-2021
 DEFINITION  --species species strain strain.
 ACCESSION   
 VERSION
@@ -845,7 +845,7 @@ ORIGIN
      3961 catagcacaa gtagatgtag ttaactttaa tctcacatag caatctttaa tcagtgtgta
      4021 acattagggg agatatctgc agagctccgg c
 //
-LOCUS       SAMPLE2_PE_6            2949 bp    DNA     linear       04-MAR-2021
+LOCUS       SAMPLE2_PE_6            2949 bp    DNA     linear       08-MAR-2021
 DEFINITION  --species species strain strain.
 ACCESSION   
 VERSION
@@ -935,7 +935,7 @@ ORIGIN
      2881 aaatgagttc gcctgtgttg tggcagatgc tgtcataaaa actttgcaac cagtatctga
      2941 attacttac
 //
-LOCUS       SAMPLE2_PE_7             971 bp    DNA     linear       04-MAR-2021
+LOCUS       SAMPLE2_PE_7             971 bp    DNA     linear       08-MAR-2021
 DEFINITION  --species species strain strain.
 ACCESSION   
 VERSION
@@ -969,7 +969,7 @@ ORIGIN
       901 atcaatgccc agtggtgtaa gtaattcaga tactggttgc aaagttttta tgacagcatc
       961 tgccacaaca c
 //
-LOCUS       SAMPLE2_PE_8             845 bp    DNA     linear       04-MAR-2021
+LOCUS       SAMPLE2_PE_8             845 bp    DNA     linear       08-MAR-2021
 DEFINITION  --species species strain strain.
 ACCESSION   
 VERSION
@@ -1012,7 +1012,7 @@ ORIGIN
       781 taatccaact taccaagctg ggttacgacg cgacgccgtt caaccagata ttgaagcaga
       841 acgca
 //
-LOCUS       SAMPLE2_PE_9             517 bp    DNA     linear       04-MAR-2021
+LOCUS       SAMPLE2_PE_9             517 bp    DNA     linear       08-MAR-2021
 DEFINITION  --species species strain strain.
 ACCESSION   
 VERSION
@@ -1038,7 +1038,7 @@ ORIGIN
       421 aggatctgcc atccaccgtg gagattctca gctctctttc ctctgaggtc agcagcagag
       481 atagcttctt ggggaatgat atctgcagag ctccggc
 //
-LOCUS       SAMPLE2_PE_10            462 bp    DNA     linear       04-MAR-2021
+LOCUS       SAMPLE2_PE_10            462 bp    DNA     linear       08-MAR-2021
 DEFINITION  --species species strain strain.
 ACCESSION   
 VERSION
@@ -1074,7 +1074,7 @@ ORIGIN
       361 catgctgata gtcatggtag gggtaatagt gttggagact gtggttgtac taatcataaa
       421 gtaatggtgg tagtgctaat ggttgtgatg gtggcagttt gt
 //
-LOCUS       SAMPLE2_PE_11            460 bp    DNA     linear       04-MAR-2021
+LOCUS       SAMPLE2_PE_11            460 bp    DNA     linear       08-MAR-2021
 DEFINITION  --species species strain strain.
 ACCESSION   
 VERSION
@@ -1099,7 +1099,7 @@ ORIGIN
       361 ttgcttgtaa gtttcctgtg ggggtcaagt caaataatac aaagtgaccc ttaaaacaag
       421 tgcttagtag agtgactgaa aaacacagga tcccaacact
 //
-LOCUS       SAMPLE2_PE_12            459 bp    DNA     linear       04-MAR-2021
+LOCUS       SAMPLE2_PE_12            459 bp    DNA     linear       08-MAR-2021
 DEFINITION  --species species strain strain.
 ACCESSION   
 VERSION
@@ -1124,7 +1124,7 @@ ORIGIN
       361 aacaattata ctttttctct gcctcttggt tgcaggttgg tacacctttt ataagccaaa
       421 gttgttgata ttgtggtggt gctggttctg ataaaggag
 //
-LOCUS       SAMPLE2_PE_13            422 bp    DNA     linear       04-MAR-2021
+LOCUS       SAMPLE2_PE_13            422 bp    DNA     linear       08-MAR-2021
 DEFINITION  --species species strain strain.
 ACCESSION   
 VERSION
@@ -1149,7 +1149,7 @@ ORIGIN
       361 actccatgaa caacacacac acgcacacac acagacgcac acacacactt agatgaacct
       421 gt
 //
-LOCUS       SAMPLE2_PE_14            415 bp    DNA     linear       04-MAR-2021
+LOCUS       SAMPLE2_PE_14            415 bp    DNA     linear       08-MAR-2021
 DEFINITION  --species species strain strain.
 ACCESSION   
 VERSION
@@ -1173,7 +1173,7 @@ ORIGIN
       301 atgattccag ccctcagcct ttgagctttc cagctgaggc cccagagagc agagacaaac
       361 caccccactg tgctctccct aaattcctga ccaacgatat ctgcagagct ccggc
 //
-LOCUS       SAMPLE2_PE_15            410 bp    DNA     linear       04-MAR-2021
+LOCUS       SAMPLE2_PE_15            410 bp    DNA     linear       08-MAR-2021
 DEFINITION  --species species strain strain.
 ACCESSION   
 VERSION
@@ -1197,7 +1197,7 @@ ORIGIN
       301 tgaggattag tgtcagctgt ggttttgagt atcagaaatc cacggatggt aaatgccagt
       361 caattctcct tgctctcctt ctgcttgggg gatatctgca gagctccggc
 //
-LOCUS       SAMPLE2_PE_16            398 bp    DNA     linear       04-MAR-2021
+LOCUS       SAMPLE2_PE_16            398 bp    DNA     linear       08-MAR-2021
 DEFINITION  --species species strain strain.
 ACCESSION   
 VERSION
@@ -1221,7 +1221,7 @@ ORIGIN
       301 ttgaggccag agcgggtagc attctggaaa gaggggacca gggtgcctgg ggaagaggcc
       361 gatgcataag gtcaacctga tatctgcaga gctccggc
 //
-LOCUS       SAMPLE2_PE_17            392 bp    DNA     linear       04-MAR-2021
+LOCUS       SAMPLE2_PE_17            392 bp    DNA     linear       08-MAR-2021
 DEFINITION  --species species strain strain.
 ACCESSION   
 VERSION
@@ -1245,7 +1245,7 @@ ORIGIN
       301 cattattata aacaaaatag ttctttattt ttaccaatat atgagtagtt atctaaccta
       361 aactacacac acacacactt agatgaacct gt
 //
-LOCUS       SAMPLE2_PE_18            390 bp    DNA     linear       04-MAR-2021
+LOCUS       SAMPLE2_PE_18            390 bp    DNA     linear       08-MAR-2021
 DEFINITION  --species species strain strain.
 ACCESSION   
 VERSION
@@ -1269,7 +1269,7 @@ ORIGIN
       301 tatcgtcttg agtctaggct tcctaggttc atcatggcac tgtgcttcct gcaatcttgc
       361 tacccaaccc gatatctgca gagctccggc
 //
-LOCUS       SAMPLE2_PE_19            388 bp    DNA     linear       04-MAR-2021
+LOCUS       SAMPLE2_PE_19            388 bp    DNA     linear       08-MAR-2021
 DEFINITION  --species species strain strain.
 ACCESSION   
 VERSION
@@ -1293,7 +1293,7 @@ ORIGIN
       301 tccttttatt tcttttatct accatctgcc acagtaactg aggtacttca actttactta
       361 atataagcca ccagctcctt tattaccg
 //
-LOCUS       SAMPLE2_PE_20            376 bp    DNA     linear       04-MAR-2021
+LOCUS       SAMPLE2_PE_20            376 bp    DNA     linear       08-MAR-2021
 DEFINITION  --species species strain strain.
 ACCESSION   
 VERSION
@@ -1317,7 +1317,7 @@ ORIGIN
       301 gaaagttagt aatgaaagca tcttgaatga cttttctact tatgaattca tttcttatat
       361 aaaacaattc cattgc
 //
-LOCUS       SAMPLE2_PE_21            371 bp    DNA     linear       04-MAR-2021
+LOCUS       SAMPLE2_PE_21            371 bp    DNA     linear       08-MAR-2021
 DEFINITION  --species species strain strain.
 ACCESSION   
 VERSION
@@ -1341,7 +1341,7 @@ ORIGIN
       301 tacaaaggaa atgagcctga aaaaatatct atagcttaat cgttaaatgt gcttttgctg
       361 tagatgctgc t
 //
-LOCUS       SAMPLE2_PE_22            371 bp    DNA     linear       04-MAR-2021
+LOCUS       SAMPLE2_PE_22            371 bp    DNA     linear       08-MAR-2021
 DEFINITION  --species species strain strain.
 ACCESSION   
 VERSION
@@ -1365,7 +1365,7 @@ ORIGIN
       301 gatgggtgtc tctgcatgtg ggtgtggaaa gaggcctgtg ggagactggt gtttgtgtat
       361 ctactagtgg t
 //
-LOCUS       SAMPLE2_PE_23            370 bp    DNA     linear       04-MAR-2021
+LOCUS       SAMPLE2_PE_23            370 bp    DNA     linear       08-MAR-2021
 DEFINITION  --species species strain strain.
 ACCESSION   
 VERSION
@@ -1389,7 +1389,7 @@ ORIGIN
       301 cccacgtaca ccagtgtgaa ctcacatgag cttagcactg tcccctcctt gatatctgca
       361 gagctccggc
 //
-LOCUS       SAMPLE2_PE_24            367 bp    DNA     linear       04-MAR-2021
+LOCUS       SAMPLE2_PE_24            367 bp    DNA     linear       08-MAR-2021
 DEFINITION  --species species strain strain.
 ACCESSION   
 VERSION
@@ -1413,7 +1413,7 @@ ORIGIN
       301 tttcttcgat tcttaatttt ttcattacta gttattctgg aggatgggat atctgcagag
       361 ctccggc
 //
-LOCUS       SAMPLE2_PE_25            362 bp    DNA     linear       04-MAR-2021
+LOCUS       SAMPLE2_PE_25            362 bp    DNA     linear       08-MAR-2021
 DEFINITION  --species species strain strain.
 ACCESSION   
 VERSION
