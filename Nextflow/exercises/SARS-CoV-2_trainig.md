@@ -302,6 +302,7 @@ missense_variant=$(cat samples_id.txt | while read in; do grep 'missense_variant
 Finally, we will count the number of Ns in the consensus genome. This is, the number of nucleotides that were masked due to low coverage. We will have to run [this python script](./percentageNs.py) for which you need to install Biopython and SeqIO in case you haven't yet:
 
 ```
+conda install pip
 pip install biopython
 ```
 Then create the script or copy them from [here](./percentageNs.py)
