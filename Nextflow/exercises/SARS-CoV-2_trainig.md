@@ -290,7 +290,7 @@ number_variants=$(cat samples_id.txt | while read in; do zcat results/variants/v
 
 From the total number of variants, to obtain the number of variants that are missense we will have to see the annotation files from SnpEff in `results/variants/varscan2/snpeff/`. To see one file:
 ```
-cat SAMPLE1_PE.AF0.8.snpSift.table.txt
+cat results/variants/varscan2/snpeff/SAMPLE1_PE.AF0.8.snpSift.table.txt
 ```
 
 As you can see the first columns are very similar to the ones from VarScan2, but in this case we have more information about the gene were the variant is located and some information about its effect. To count the number of missense variants we will:
