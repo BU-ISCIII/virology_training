@@ -94,7 +94,7 @@ Now you have your repo (viralrecon) installed and the program to run it (Nextflo
 To run the pipeline you have to type in your terminal:
 
 ```
-nextflow run viralrecon/main.nf -profile conda,test --skip-markduplicates --max_allele_freq = 0.80 --assemblers metaspades --callers varscan2 -resume
+nextflow run viralrecon/main.nf -profile conda,test --skip-markduplicates --max_allele_freq 0.80 --assemblers metaspades --callers varscan2 -resume
 ```
 With this command line you are going to run the default test data set with all the default parameters, unless the max_allele_freq which we are going to set to 0.80, which means that we will select only those variants with a minimum allele frequency of 80% to be included in the consensus. This data is a subset of amplicon based sequenced SARS-CoV2 samples. This means that during the pipeline the sequences/positions corresponding to the amplicon's primers are going to be removed.
 
