@@ -347,13 +347,7 @@ paste <(echo -e "$(cat ./samples_id.txt | xargs -I % echo -e "Human\tNC_045512.2
 ## Lineage
 Now that we know which samples have less than 50% of Ns, we can use those consensus genomes to determine the lineage of the genomes. For this we will use a program called [Pangolin](https://github.com/cov-lineages/pangolin). We will create a new conda environment for this.
 ```
-conda deactivate
-git clone https://github.com/cov-lineages/pangolin.git
-cd pangolin
-conda env create -f environment.yml
-conda activate pangolin
-python setup.py install
-cd ..
+conda install -c bioconda pangolin
 ```
 
 Now we need to concatenate de consensus files in a single fasta file like this:
