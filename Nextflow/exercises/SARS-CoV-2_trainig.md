@@ -51,6 +51,10 @@ Test if it's correctly installed:
 ```
 nextflow -v
 ```
+Output:
+```
+nextflow version 20.10.0.5430
+```
 
 ## Viralrecon
 
@@ -305,32 +309,11 @@ Finally, we will count the number of Ns in the consensus genome. This is, the nu
 conda install pip
 pip install biopython
 ```
-Then create the script or copy them from [here](./percentageNs.py)
+
+Download the script or copy it from [here](./percentageNs.py)
 
 ```
-nano percentageNs.py
-```
-And paste:
-```
-from Bio import SeqIO
-import os
-import argparse
-
-parser = argparse.ArgumentParser(description='Count %Ns')
-parser.add_argument('input_dir', type=str, help='Input dir masked files')
-parser.add_argument('output_file', type=str, help='Output file for Ns count')
-args = parser.parse_args()
-
-out_handle = open(args.output_file,"w")
-
-for f in os.listdir(args.input_dir):
-    if f.endswith('.masked.fa'):
-        ffpath=os.path.join(args.input_dir,f)
-        for record in SeqIO.parse(ffpath, "fasta"):
-            n_count = record.seq.count("N") + record.seq.count("n")
-            out_handle.write("%s\t%0.2f\n" % (record.id, n_count*100.0/len(record)))
-
-out_handle.close()
+wget https://raw.githubusercontent.com/BU-ISCIII/virology_training/main/Nextflow/exercises/percentageNs.py
 ```
 
 Then run:
