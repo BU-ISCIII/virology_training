@@ -2523,17 +2523,17 @@ var assemblies_contigs = {};
 var assemblies_misassemblies = {};
 var assemblies_n50 = {};
 assemblies_links["SAMPLE3_SE.AF0.8.consensus.masked"] = "../contigs_reports/contigs_report_SAMPLE3_SE-AF0-8-consensus-masked.stdout";
-assemblies_links["SAMPLE1_PE.AF0.8.consensus.masked"] = "../contigs_reports/contigs_report_SAMPLE1_PE-AF0-8-consensus-masked.stdout";
 assemblies_links["SAMPLE2_PE.AF0.8.consensus.masked"] = "../contigs_reports/contigs_report_SAMPLE2_PE-AF0-8-consensus-masked.stdout";
+assemblies_links["SAMPLE1_PE.AF0.8.consensus.masked"] = "../contigs_reports/contigs_report_SAMPLE1_PE-AF0-8-consensus-masked.stdout";
 assemblies_len["SAMPLE3_SE.AF0.8.consensus.masked"] = 29135;
 assemblies_contigs["SAMPLE3_SE.AF0.8.consensus.masked"] = 1;
 assemblies_misassemblies["SAMPLE3_SE.AF0.8.consensus.masked"] = "0+0";
-assemblies_len["SAMPLE1_PE.AF0.8.consensus.masked"] = 29333;
-assemblies_contigs["SAMPLE1_PE.AF0.8.consensus.masked"] = 1;
-assemblies_misassemblies["SAMPLE1_PE.AF0.8.consensus.masked"] = "0+0";
 assemblies_len["SAMPLE2_PE.AF0.8.consensus.masked"] = 26854;
 assemblies_contigs["SAMPLE2_PE.AF0.8.consensus.masked"] = 1;
 assemblies_misassemblies["SAMPLE2_PE.AF0.8.consensus.masked"] = "0+0";
+assemblies_len["SAMPLE1_PE.AF0.8.consensus.masked"] = 29333;
+assemblies_contigs["SAMPLE1_PE.AF0.8.consensus.masked"] = 1;
+assemblies_misassemblies["SAMPLE1_PE.AF0.8.consensus.masked"] = "0+0";
 chromosome = "NC_045512.2";
 var chrContigs = ["NC_045512.2"];
 var features_data = [];
@@ -2549,9 +2549,6 @@ contig_data["NC_045512.2"]["SAMPLE3_SE.AF0.8.consensus.masked"] = [
 {name:"SAMPLE3_SE",corr_start:55,corr_end:4460,start:55,end:4460,misassemblies:"",mis_ends:"",is_best:"True"},
 {name:"SAMPLE3_SE",corr_start:4659,corr_end:8635,start:4659,end:8635,misassemblies:"",mis_ends:"",is_best:"True"},
 {name:"SAMPLE3_SE",corr_start:8914,corr_end:29665,start:8914,end:29665,misassemblies:"",mis_ends:"",similar:"True",is_best:"True"}];
-contig_data["NC_045512.2"]["SAMPLE1_PE.AF0.8.consensus.masked"] = [ 
-{name:"SAMPLE1_PE",corr_start:55,corr_end:8635,start:55,end:8635,misassemblies:"",mis_ends:"",is_best:"True"},
-{name:"SAMPLE1_PE",corr_start:8914,corr_end:29665,start:8914,end:29665,misassemblies:"",mis_ends:"",similar:"True",is_best:"True"}];
 contig_data["NC_045512.2"]["SAMPLE2_PE.AF0.8.consensus.masked"] = [ 
 {name:"SAMPLE2_PE",corr_start:55,corr_end:3826,start:55,end:3826,misassemblies:"",mis_ends:"",is_best:"True"},
 {name:"SAMPLE2_PE",corr_start:4078,corr_end:4428,start:4078,end:4428,misassemblies:"",mis_ends:"",is_best:"True"},
@@ -2563,6 +2560,9 @@ contig_data["NC_045512.2"]["SAMPLE2_PE.AF0.8.consensus.masked"] = [
 {name:"SAMPLE2_PE",corr_start:24101,corr_end:25646,start:24101,end:25646,misassemblies:"",mis_ends:"",is_best:"True"},
 {name:"SAMPLE2_PE",corr_start:25925,corr_end:27511,start:25925,end:27511,misassemblies:"",mis_ends:"",is_best:"True"},
 {name:"SAMPLE2_PE",corr_start:27809,corr_end:29665,start:27809,end:29665,misassemblies:"",mis_ends:"",is_best:"True"}];
+contig_data["NC_045512.2"]["SAMPLE1_PE.AF0.8.consensus.masked"] = [ 
+{name:"SAMPLE1_PE",corr_start:55,corr_end:8635,start:55,end:8635,misassemblies:"",mis_ends:"",is_best:"True"},
+{name:"SAMPLE1_PE",corr_start:8914,corr_end:29665,start:8914,end:29665,misassemblies:"",mis_ends:"",similar:"True",is_best:"True"}];
 var gc_window_size = 100;
 var gc_data = {};
 var max_gc = {};
@@ -2583,14 +2583,6 @@ contig_structures["SAMPLE3_SE.AF0.8.consensus.masked"]["SAMPLE3_SE"] = [
 {corr_start: 4659,corr_end: 8635,start:4659,end:8635,start_in_contig:4659,end_in_contig:8635,IDY:100.0,chr: "0"},
 {contig_type: "M", mstype: "fake", msg: " scaffold gap size wrong estimation (local)"},
 {corr_start: 8914,corr_end: 29665,start:8914,end:29665,start_in_contig:8914,end_in_contig:29665,IDY:100.0,chr: "0"},
-];
-contig_lengths["SAMPLE1_PE.AF0.8.consensus.masked"] = {};
-contig_structures["SAMPLE1_PE.AF0.8.consensus.masked"] = {};
-contig_lengths["SAMPLE1_PE.AF0.8.consensus.masked"]["SAMPLE1_PE"] = 29903;
-contig_structures["SAMPLE1_PE.AF0.8.consensus.masked"]["SAMPLE1_PE"] = [ 
-{corr_start: 55,corr_end: 8635,start:55,end:8635,start_in_contig:55,end_in_contig:8635,IDY:99.98,chr: "0"},
-{contig_type: "M", mstype: "fake", msg: " scaffold gap size wrong estimation (local)"},
-{corr_start: 8914,corr_end: 29665,start:8914,end:29665,start_in_contig:8914,end_in_contig:29665,IDY:99.98,chr: "0"},
 ];
 contig_lengths["SAMPLE2_PE.AF0.8.consensus.masked"] = {};
 contig_structures["SAMPLE2_PE.AF0.8.consensus.masked"] = {};
@@ -2615,6 +2607,14 @@ contig_structures["SAMPLE2_PE.AF0.8.consensus.masked"]["SAMPLE2_PE"] = [
 {corr_start: 25925,corr_end: 27511,start:25925,end:27511,start_in_contig:25925,end_in_contig:27511,IDY:99.94,chr: "0"},
 {contig_type: "M", mstype: "fake", msg: " scaffold gap size wrong estimation (local)"},
 {corr_start: 27809,corr_end: 29665,start:27809,end:29665,start_in_contig:27809,end_in_contig:29665,IDY:99.84,chr: "0"},
+];
+contig_lengths["SAMPLE1_PE.AF0.8.consensus.masked"] = {};
+contig_structures["SAMPLE1_PE.AF0.8.consensus.masked"] = {};
+contig_lengths["SAMPLE1_PE.AF0.8.consensus.masked"]["SAMPLE1_PE"] = 29903;
+contig_structures["SAMPLE1_PE.AF0.8.consensus.masked"]["SAMPLE1_PE"] = [ 
+{corr_start: 55,corr_end: 8635,start:55,end:8635,start_in_contig:55,end_in_contig:8635,IDY:99.98,chr: "0"},
+{contig_type: "M", mstype: "fake", msg: " scaffold gap size wrong estimation (local)"},
+{corr_start: 8914,corr_end: 29665,start:8914,end:29665,start_in_contig:8914,end_in_contig:29665,IDY:99.98,chr: "0"},
 ];</script>
     <script type="text/javascript" name="d3.js">
         (function() {

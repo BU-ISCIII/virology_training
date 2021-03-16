@@ -1,30 +1,30 @@
-Assembly	SAMPLE1_PE.scaffolds	SAMPLE2_PE.scaffolds
-# contigs (>= 0 bp)	7	27
-# contigs (>= 1000 bp)	3	6
-# contigs (>= 5000 bp)	3	2
+Assembly	SAMPLE2_PE.scaffolds	SAMPLE1_PE.scaffolds
+# contigs (>= 0 bp)	27	7
+# contigs (>= 1000 bp)	6	3
+# contigs (>= 5000 bp)	2	3
 # contigs (>= 10000 bp)	1	1
 # contigs (>= 25000 bp)	0	0
 # contigs (>= 50000 bp)	0	0
-Total length (>= 0 bp)	36445	41598
-Total length (>= 1000 bp)	35151	32606
-Total length (>= 5000 bp)	35151	16798
-Total length (>= 10000 bp)	20973	10441
+Total length (>= 0 bp)	41598	36445
+Total length (>= 1000 bp)	32606	35151
+Total length (>= 5000 bp)	16798	35151
+Total length (>= 10000 bp)	10441	20973
 Total length (>= 25000 bp)	0	0
 Total length (>= 50000 bp)	0	0
-# contigs	3	9
-Largest contig	20973	10441
-Total length	35151	34939
+# contigs	9	3
+Largest contig	10441	20973
+Total length	34939	35151
 Reference length	29903	29903
-GC (%)	39.03	39.13
+GC (%)	39.13	39.03
 Reference GC (%)	37.97	37.97
-N50	20973	4738
-NG50	20973	6357
-N75	8704	4051
-NG75	8704	4070
-L50	1	3
-LG50	1	2
-L75	2	5
-LG75	2	4
+N50	4738	20973
+NG50	6357	20973
+N75	4051	8704
+NG75	4070	8704
+L50	3	1
+LG50	2	1
+L75	5	2
+LG75	4	2
 # misassemblies	0	0
 # misassembled contigs	0	0
 Misassembled contigs length	0	0
@@ -32,21 +32,21 @@ Misassembled contigs length	0	0
 # scaffold gap ext. mis.	0	0
 # scaffold gap loc. mis.	0	0
 # unaligned mis. contigs	0	0
-# unaligned contigs	1 + 0 part	3 + 0 part
-Unaligned length	5474	5432
-Genome fraction (%)	98.870	98.151
-Duplication ratio	1.004	1.005
+# unaligned contigs	3 + 0 part	1 + 0 part
+Unaligned length	5432	5474
+Genome fraction (%)	98.151	98.870
+Duplication ratio	1.005	1.004
 # N's per 100 kbp	0.00	0.00
-# mismatches per 100 kbp	23.68	34.07
-# indels per 100 kbp	0.00	3.41
-# genomic features	26 + 6 part	22 + 8 part
-Largest alignment	20951	10414
-Total aligned length	29565	29404
-NA50	20951	4738
-NGA50	20951	6357
-NA75	8614	2895
-NGA75	8614	4029
-LA50	1	3
-LGA50	1	2
-LA75	2	5
-LGA75	2	4
+# mismatches per 100 kbp	34.07	23.68
+# indels per 100 kbp	3.41	0.00
+# genomic features	22 + 8 part	26 + 6 part
+Largest alignment	10414	20951
+Total aligned length	29404	29565
+NA50	4738	20951
+NGA50	6357	20951
+NA75	2895	8614
+NGA75	4029	8614
+LA50	3	1
+LGA50	2	1
+LA75	5	2
+LGA75	4	2

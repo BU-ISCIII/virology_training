@@ -1,155 +1,155 @@
-/home/svarona/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/quast.py --output-dir AF0.8 -r GCF_009858895.2_ASM985889v3_genomic.200409.fna --features GCF_009858895.2_ASM985889v3_genomic.200409.gff --threads 2 SAMPLE3_SE.AF0.8.consensus.masked.fa SAMPLE1_PE.AF0.8.consensus.masked.fa SAMPLE2_PE.AF0.8.consensus.masked.fa
+/home/smonzon/test_training_viralrecon/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/quast.py --output-dir AF0.8 -r GCF_009858895.2_ASM985889v3_genomic.200409.fna --features GCF_009858895.2_ASM985889v3_genomic.200409.gff --threads 2 SAMPLE3_SE.AF0.8.consensus.masked.fa SAMPLE2_PE.AF0.8.consensus.masked.fa SAMPLE1_PE.AF0.8.consensus.masked.fa
 
 Version: 5.0.2
 
 System information:
-  OS: Linux-4.4.0-19041-Microsoft-x86_64-with-debian-bullseye-sid (linux_64)
+  OS: Linux-5.4.0-66-generic-x86_64-with-debian-buster-sid (linux_64)
   Python version: 3.6.11
-  CPUs number: 12
+  CPUs number: 8
 
-Started: 2021-03-04 23:03:35
+Started: 2021-03-08 15:31:44
 
-Logging to /home/svarona/work/8d/c22c265cd2bf21c401249f3fc79a9c/AF0.8/quast.log
+Logging to /home/smonzon/test_training_viralrecon/work/3c/28637caa5e83812cda9916c47476a2/AF0.8/quast.log
 
-CWD: /home/svarona/work/8d/c22c265cd2bf21c401249f3fc79a9c
+CWD: /home/smonzon/test_training_viralrecon/work/3c/28637caa5e83812cda9916c47476a2
 Main parameters: 
   MODE: default, threads: 2, minimum contig length: 500, minimum alignment length: 65, \
   ambiguity: one, threshold for extensive misassembly size: 1000
 
 Reference:
-  /home/svarona/work/8d/c22c265cd2bf21c401249f3fc79a9c/GCF_009858895.2_ASM985889v3_genomic.200409.fna ==> GCF_009858895.2_ASM985889v3_genomic.200409
+  /home/smonzon/test_training_viralrecon/work/3c/28637caa5e83812cda9916c47476a2/GCF_009858895.2_ASM985889v3_genomic.200409.fna ==> GCF_009858895.2_ASM985889v3_genomic.200409
 
 Contigs:
   Pre-processing...
   1  SAMPLE3_SE.AF0.8.consensus.masked.fa ==> SAMPLE3_SE.AF0.8.consensus.masked
-  2  SAMPLE1_PE.AF0.8.consensus.masked.fa ==> SAMPLE1_PE.AF0.8.consensus.masked
-  3  SAMPLE2_PE.AF0.8.consensus.masked.fa ==> SAMPLE2_PE.AF0.8.consensus.masked
+  2  SAMPLE2_PE.AF0.8.consensus.masked.fa ==> SAMPLE2_PE.AF0.8.consensus.masked
+  3  SAMPLE1_PE.AF0.8.consensus.masked.fa ==> SAMPLE1_PE.AF0.8.consensus.masked
 
-2021-03-04 23:03:36
+2021-03-08 15:31:45
 Running Basic statistics processor...
   Reference genome:
     GCF_009858895.2_ASM985889v3_genomic.200409.fna, length = 29903, num fragments = 1, GC % = 37.97
   Contig files: 
     1  SAMPLE3_SE.AF0.8.consensus.masked
-    2  SAMPLE1_PE.AF0.8.consensus.masked
-    3  SAMPLE2_PE.AF0.8.consensus.masked
+    2  SAMPLE2_PE.AF0.8.consensus.masked
+    3  SAMPLE1_PE.AF0.8.consensus.masked
   Calculating N50 and L50...
     1  SAMPLE3_SE.AF0.8.consensus.masked, N50 = 29903, L50 = 1, Total length = 29903, GC % = 37.98, # N's per 100 kbp =  3100.02
-    2  SAMPLE1_PE.AF0.8.consensus.masked, N50 = 29903, L50 = 1, Total length = 29903, GC % = 37.95, # N's per 100 kbp =  2193.76
-    3  SAMPLE2_PE.AF0.8.consensus.masked, N50 = 29903, L50 = 1, Total length = 29903, GC % = 38.12, # N's per 100 kbp =  10497.27
+    2  SAMPLE2_PE.AF0.8.consensus.masked, N50 = 29903, L50 = 1, Total length = 29903, GC % = 38.12, # N's per 100 kbp =  10497.27
+    3  SAMPLE1_PE.AF0.8.consensus.masked, N50 = 29903, L50 = 1, Total length = 29903, GC % = 37.95, # N's per 100 kbp =  2193.76
   Drawing Nx plot...
-    saved to /home/svarona/work/8d/c22c265cd2bf21c401249f3fc79a9c/AF0.8/basic_stats/Nx_plot.pdf
+    saved to /home/smonzon/test_training_viralrecon/work/3c/28637caa5e83812cda9916c47476a2/AF0.8/basic_stats/Nx_plot.pdf
   Drawing NGx plot...
-    saved to /home/svarona/work/8d/c22c265cd2bf21c401249f3fc79a9c/AF0.8/basic_stats/NGx_plot.pdf
+    saved to /home/smonzon/test_training_viralrecon/work/3c/28637caa5e83812cda9916c47476a2/AF0.8/basic_stats/NGx_plot.pdf
   Drawing cumulative plot...
-    saved to /home/svarona/work/8d/c22c265cd2bf21c401249f3fc79a9c/AF0.8/basic_stats/cumulative_plot.pdf
+    saved to /home/smonzon/test_training_viralrecon/work/3c/28637caa5e83812cda9916c47476a2/AF0.8/basic_stats/cumulative_plot.pdf
   Drawing GC content plot...
-    saved to /home/svarona/work/8d/c22c265cd2bf21c401249f3fc79a9c/AF0.8/basic_stats/GC_content_plot.pdf
+    saved to /home/smonzon/test_training_viralrecon/work/3c/28637caa5e83812cda9916c47476a2/AF0.8/basic_stats/GC_content_plot.pdf
   Drawing SAMPLE3_SE.AF0.8.consensus.masked GC content plot...
-    saved to /home/svarona/work/8d/c22c265cd2bf21c401249f3fc79a9c/AF0.8/basic_stats/SAMPLE3_SE.AF0.8.consensus.masked_GC_content_plot.pdf
-  Drawing SAMPLE1_PE.AF0.8.consensus.masked GC content plot...
-    saved to /home/svarona/work/8d/c22c265cd2bf21c401249f3fc79a9c/AF0.8/basic_stats/SAMPLE1_PE.AF0.8.consensus.masked_GC_content_plot.pdf
+    saved to /home/smonzon/test_training_viralrecon/work/3c/28637caa5e83812cda9916c47476a2/AF0.8/basic_stats/SAMPLE3_SE.AF0.8.consensus.masked_GC_content_plot.pdf
   Drawing SAMPLE2_PE.AF0.8.consensus.masked GC content plot...
-    saved to /home/svarona/work/8d/c22c265cd2bf21c401249f3fc79a9c/AF0.8/basic_stats/SAMPLE2_PE.AF0.8.consensus.masked_GC_content_plot.pdf
+    saved to /home/smonzon/test_training_viralrecon/work/3c/28637caa5e83812cda9916c47476a2/AF0.8/basic_stats/SAMPLE2_PE.AF0.8.consensus.masked_GC_content_plot.pdf
+  Drawing SAMPLE1_PE.AF0.8.consensus.masked GC content plot...
+    saved to /home/smonzon/test_training_viralrecon/work/3c/28637caa5e83812cda9916c47476a2/AF0.8/basic_stats/SAMPLE1_PE.AF0.8.consensus.masked_GC_content_plot.pdf
 Done.
 
-2021-03-04 23:03:38
+2021-03-08 15:31:47
 Running Contig analyzer...
   1  SAMPLE3_SE.AF0.8.consensus.masked
-  2  SAMPLE1_PE.AF0.8.consensus.masked
-  1  Logging to files /home/svarona/work/8d/c22c265cd2bf21c401249f3fc79a9c/AF0.8/contigs_reports/contigs_report_SAMPLE3_SE-AF0-8-consensus-masked.stdout and contigs_report_SAMPLE3_SE-AF0-8-consensus-masked.stderr...
-  2  Logging to files /home/svarona/work/8d/c22c265cd2bf21c401249f3fc79a9c/AF0.8/contigs_reports/contigs_report_SAMPLE1_PE-AF0-8-consensus-masked.stdout and contigs_report_SAMPLE1_PE-AF0-8-consensus-masked.stderr...
-  1  Aligning contigs to the reference
+  2  SAMPLE2_PE.AF0.8.consensus.masked
+  1  Logging to files /home/smonzon/test_training_viralrecon/work/3c/28637caa5e83812cda9916c47476a2/AF0.8/contigs_reports/contigs_report_SAMPLE3_SE-AF0-8-consensus-masked.stdout and contigs_report_SAMPLE3_SE-AF0-8-consensus-masked.stderr...
+  2  Logging to files /home/smonzon/test_training_viralrecon/work/3c/28637caa5e83812cda9916c47476a2/AF0.8/contigs_reports/contigs_report_SAMPLE2_PE-AF0-8-consensus-masked.stdout and contigs_report_SAMPLE2_PE-AF0-8-consensus-masked.stderr...
   2  Aligning contigs to the reference
-  1  /home/svarona/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/minimap2 \
-     -c -x asm5 -B5 -O4,16 --no-long-join -r 85 -N 50 -s 65 -z 200 --mask-level 0.9 \
-     --min-occ 200 -g 2500 --score-N 2 --cs -t 1 AF0.8/quast_corrected_input/GCF_009858895.2_ASM985889v3_genomic.200409.fna \
-     AF0.8/quast_corrected_input/SAMPLE3_SE_AF0_8_consensus_masked.fa > AF0.8/contigs_reports/minimap_output/SAMPLE3_SE-AF0-8-consensus-masked.coords_tmp \
-     2>> AF0.8/contigs_reports/contigs_report_SAMPLE3_SE-AF0-8-consensus-masked.stderr
-  2  /home/svarona/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/minimap2 \
-     -c -x asm5 -B5 -O4,16 --no-long-join -r 85 -N 50 -s 65 -z 200 --mask-level 0.9 \
-     --min-occ 200 -g 2500 --score-N 2 --cs -t 1 AF0.8/quast_corrected_input/GCF_009858895.2_ASM985889v3_genomic.200409.fna \
-     AF0.8/quast_corrected_input/SAMPLE1_PE_AF0_8_consensus_masked.fa > AF0.8/contigs_reports/minimap_output/SAMPLE1_PE-AF0-8-consensus-masked.coords_tmp \
-     2>> AF0.8/contigs_reports/contigs_report_SAMPLE1_PE-AF0-8-consensus-masked.stderr
-  2  Analysis is finished.
-
-  3  SAMPLE2_PE.AF0.8.consensus.masked
-  3  Logging to files /home/svarona/work/8d/c22c265cd2bf21c401249f3fc79a9c/AF0.8/contigs_reports/contigs_report_SAMPLE2_PE-AF0-8-consensus-masked.stdout and contigs_report_SAMPLE2_PE-AF0-8-consensus-masked.stderr...
-  3  Aligning contigs to the reference
-  1  Analysis is finished.
-
-  3  /home/svarona/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/minimap2 \
+  1  Aligning contigs to the reference
+  2  /home/smonzon/test_training_viralrecon/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/minimap2 \
      -c -x asm5 -B5 -O4,16 --no-long-join -r 85 -N 50 -s 65 -z 200 --mask-level 0.9 \
      --min-occ 200 -g 2500 --score-N 2 --cs -t 1 AF0.8/quast_corrected_input/GCF_009858895.2_ASM985889v3_genomic.200409.fna \
      AF0.8/quast_corrected_input/SAMPLE2_PE_AF0_8_consensus_masked.fa > AF0.8/contigs_reports/minimap_output/SAMPLE2_PE-AF0-8-consensus-masked.coords_tmp \
      2>> AF0.8/contigs_reports/contigs_report_SAMPLE2_PE-AF0-8-consensus-masked.stderr
+  1  /home/smonzon/test_training_viralrecon/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/minimap2 \
+     -c -x asm5 -B5 -O4,16 --no-long-join -r 85 -N 50 -s 65 -z 200 --mask-level 0.9 \
+     --min-occ 200 -g 2500 --score-N 2 --cs -t 1 AF0.8/quast_corrected_input/GCF_009858895.2_ASM985889v3_genomic.200409.fna \
+     AF0.8/quast_corrected_input/SAMPLE3_SE_AF0_8_consensus_masked.fa > AF0.8/contigs_reports/minimap_output/SAMPLE3_SE-AF0-8-consensus-masked.coords_tmp \
+     2>> AF0.8/contigs_reports/contigs_report_SAMPLE3_SE-AF0-8-consensus-masked.stderr
+  1  Analysis is finished.
+
+  3  SAMPLE1_PE.AF0.8.consensus.masked
+  3  Logging to files /home/smonzon/test_training_viralrecon/work/3c/28637caa5e83812cda9916c47476a2/AF0.8/contigs_reports/contigs_report_SAMPLE1_PE-AF0-8-consensus-masked.stdout and contigs_report_SAMPLE1_PE-AF0-8-consensus-masked.stderr...
+  3  Aligning contigs to the reference
+  2  Analysis is finished.
+
+  3  /home/smonzon/test_training_viralrecon/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/minimap2 \
+     -c -x asm5 -B5 -O4,16 --no-long-join -r 85 -N 50 -s 65 -z 200 --mask-level 0.9 \
+     --min-occ 200 -g 2500 --score-N 2 --cs -t 1 AF0.8/quast_corrected_input/GCF_009858895.2_ASM985889v3_genomic.200409.fna \
+     AF0.8/quast_corrected_input/SAMPLE1_PE_AF0_8_consensus_masked.fa > AF0.8/contigs_reports/minimap_output/SAMPLE1_PE-AF0-8-consensus-masked.coords_tmp \
+     2>> AF0.8/contigs_reports/contigs_report_SAMPLE1_PE-AF0-8-consensus-masked.stderr
   3  Analysis is finished.
 
   Creating total report...
-    saved to /home/svarona/work/8d/c22c265cd2bf21c401249f3fc79a9c/AF0.8/contigs_reports/misassemblies_report.txt, misassemblies_report.tsv, and misassemblies_report.tex
+    saved to /home/smonzon/test_training_viralrecon/work/3c/28637caa5e83812cda9916c47476a2/AF0.8/contigs_reports/misassemblies_report.txt, misassemblies_report.tsv, and misassemblies_report.tex
   Transposed version of total report...
-    saved to /home/svarona/work/8d/c22c265cd2bf21c401249f3fc79a9c/AF0.8/contigs_reports/transposed_report_misassemblies.txt, transposed_report_misassemblies.tsv, and transposed_report_misassemblies.tex
+    saved to /home/smonzon/test_training_viralrecon/work/3c/28637caa5e83812cda9916c47476a2/AF0.8/contigs_reports/transposed_report_misassemblies.txt, transposed_report_misassemblies.tsv, and transposed_report_misassemblies.tex
   Creating total report...
-    saved to /home/svarona/work/8d/c22c265cd2bf21c401249f3fc79a9c/AF0.8/contigs_reports/unaligned_report.txt, unaligned_report.tsv, and unaligned_report.tex
+    saved to /home/smonzon/test_training_viralrecon/work/3c/28637caa5e83812cda9916c47476a2/AF0.8/contigs_reports/unaligned_report.txt, unaligned_report.tsv, and unaligned_report.tex
   Drawing misassemblies by types plot...
-    saved to /home/svarona/work/8d/c22c265cd2bf21c401249f3fc79a9c/AF0.8/contigs_reports/misassemblies_plot.pdf
+    saved to /home/smonzon/test_training_viralrecon/work/3c/28637caa5e83812cda9916c47476a2/AF0.8/contigs_reports/misassemblies_plot.pdf
   Drawing misassemblies FRCurve plot...
-    saved to /home/svarona/work/8d/c22c265cd2bf21c401249f3fc79a9c/AF0.8/contigs_reports/misassemblies_frcurve_plot.pdf
+    saved to /home/smonzon/test_training_viralrecon/work/3c/28637caa5e83812cda9916c47476a2/AF0.8/contigs_reports/misassemblies_frcurve_plot.pdf
 Done.
 
-2021-03-04 23:03:38
+2021-03-08 15:31:48
 Running NA-NGA calculation...
   1  SAMPLE3_SE.AF0.8.consensus.masked, Largest alignment = 29135, NA50 = 29135, NGA50 = 29135, LA50 = 1, LGA50 = 1
-  2  SAMPLE1_PE.AF0.8.consensus.masked, Largest alignment = 29333, NA50 = 29333, NGA50 = 29333, LA50 = 1, LGA50 = 1
-  3  SAMPLE2_PE.AF0.8.consensus.masked, Largest alignment = 26854, NA50 = 26854, NGA50 = 26854, LA50 = 1, LGA50 = 1
+  2  SAMPLE2_PE.AF0.8.consensus.masked, Largest alignment = 26854, NA50 = 26854, NGA50 = 26854, LA50 = 1, LGA50 = 1
+  3  SAMPLE1_PE.AF0.8.consensus.masked, Largest alignment = 29333, NA50 = 29333, NGA50 = 29333, LA50 = 1, LGA50 = 1
   Drawing cumulative plot...
-    saved to /home/svarona/work/8d/c22c265cd2bf21c401249f3fc79a9c/AF0.8/aligned_stats/cumulative_plot.pdf
+    saved to /home/smonzon/test_training_viralrecon/work/3c/28637caa5e83812cda9916c47476a2/AF0.8/aligned_stats/cumulative_plot.pdf
   Drawing NAx plot...
-    saved to /home/svarona/work/8d/c22c265cd2bf21c401249f3fc79a9c/AF0.8/aligned_stats/NAx_plot.pdf
+    saved to /home/smonzon/test_training_viralrecon/work/3c/28637caa5e83812cda9916c47476a2/AF0.8/aligned_stats/NAx_plot.pdf
   Drawing NGAx plot...
-    saved to /home/svarona/work/8d/c22c265cd2bf21c401249f3fc79a9c/AF0.8/aligned_stats/NGAx_plot.pdf
+    saved to /home/smonzon/test_training_viralrecon/work/3c/28637caa5e83812cda9916c47476a2/AF0.8/aligned_stats/NGAx_plot.pdf
 Done.
 
-2021-03-04 23:03:39
+2021-03-08 15:31:49
 Running Genome analyzer...
   NOTICE: No file with operons were provided. Use the -O option if you want to specify it.
   Loaded 32 genomic features of type "ANY"
   1  SAMPLE3_SE.AF0.8.consensus.masked
-  2  SAMPLE1_PE.AF0.8.consensus.masked
-  2  Analysis is finished.
-  3  SAMPLE2_PE.AF0.8.consensus.masked
+  2  SAMPLE2_PE.AF0.8.consensus.masked
   1  Analysis is finished.
+  3  SAMPLE1_PE.AF0.8.consensus.masked
+  2  Analysis is finished.
   3  Analysis is finished.
   Drawing genomic features cumulative plot...
-    saved to /home/svarona/work/8d/c22c265cd2bf21c401249f3fc79a9c/AF0.8/genome_stats/features_cumulative_plot.pdf
+    saved to /home/smonzon/test_training_viralrecon/work/3c/28637caa5e83812cda9916c47476a2/AF0.8/genome_stats/features_cumulative_plot.pdf
   Drawing genomic features FRCurve plot...
-    saved to /home/svarona/work/8d/c22c265cd2bf21c401249f3fc79a9c/AF0.8/genome_stats/features_frcurve_plot.pdf
+    saved to /home/smonzon/test_training_viralrecon/work/3c/28637caa5e83812cda9916c47476a2/AF0.8/genome_stats/features_frcurve_plot.pdf
   Drawing # complete genomic features histogram...
-    saved to /home/svarona/work/8d/c22c265cd2bf21c401249f3fc79a9c/AF0.8/genome_stats/complete_features_histogram.pdf
+    saved to /home/smonzon/test_training_viralrecon/work/3c/28637caa5e83812cda9916c47476a2/AF0.8/genome_stats/complete_features_histogram.pdf
   Drawing Genome fraction, % histogram...
-    saved to /home/svarona/work/8d/c22c265cd2bf21c401249f3fc79a9c/AF0.8/genome_stats/genome_fraction_histogram.pdf
+    saved to /home/smonzon/test_training_viralrecon/work/3c/28637caa5e83812cda9916c47476a2/AF0.8/genome_stats/genome_fraction_histogram.pdf
 Done.
 
 NOTICE: Genes are not predicted by default. Use --gene-finding or --glimmer option to enable it.
 
-2021-03-04 23:03:40
+2021-03-08 15:31:50
 Creating large visual summaries...
 This may take a while: press Ctrl-C to skip this step..
   1 of 2: Creating Icarus viewers...
   2 of 2: Creating PDF with all tables and plots...
 Done
 
-2021-03-04 23:03:44
+2021-03-08 15:31:55
 RESULTS:
-  Text versions of total report are saved to /home/svarona/work/8d/c22c265cd2bf21c401249f3fc79a9c/AF0.8/report.txt, report.tsv, and report.tex
-  Text versions of transposed total report are saved to /home/svarona/work/8d/c22c265cd2bf21c401249f3fc79a9c/AF0.8/transposed_report.txt, transposed_report.tsv, and transposed_report.tex
-  HTML version (interactive tables and plots) is saved to /home/svarona/work/8d/c22c265cd2bf21c401249f3fc79a9c/AF0.8/report.html
-  PDF version (tables and plots) is saved to /home/svarona/work/8d/c22c265cd2bf21c401249f3fc79a9c/AF0.8/report.pdf
-  Icarus (contig browser) is saved to /home/svarona/work/8d/c22c265cd2bf21c401249f3fc79a9c/AF0.8/icarus.html
-  Log is saved to /home/svarona/work/8d/c22c265cd2bf21c401249f3fc79a9c/AF0.8/quast.log
+  Text versions of total report are saved to /home/smonzon/test_training_viralrecon/work/3c/28637caa5e83812cda9916c47476a2/AF0.8/report.txt, report.tsv, and report.tex
+  Text versions of transposed total report are saved to /home/smonzon/test_training_viralrecon/work/3c/28637caa5e83812cda9916c47476a2/AF0.8/transposed_report.txt, transposed_report.tsv, and transposed_report.tex
+  HTML version (interactive tables and plots) is saved to /home/smonzon/test_training_viralrecon/work/3c/28637caa5e83812cda9916c47476a2/AF0.8/report.html
+  PDF version (tables and plots) is saved to /home/smonzon/test_training_viralrecon/work/3c/28637caa5e83812cda9916c47476a2/AF0.8/report.pdf
+  Icarus (contig browser) is saved to /home/smonzon/test_training_viralrecon/work/3c/28637caa5e83812cda9916c47476a2/AF0.8/icarus.html
+  Log is saved to /home/smonzon/test_training_viralrecon/work/3c/28637caa5e83812cda9916c47476a2/AF0.8/quast.log
 
-Finished: 2021-03-04 23:03:44
-Elapsed time: 0:00:09.133679
+Finished: 2021-03-08 15:31:55
+Elapsed time: 0:00:11.357590
 NOTICEs: 2; WARNINGs: 0; non-fatal ERRORs: 0
 
 Thank you for using QUAST!

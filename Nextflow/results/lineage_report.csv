@@ -1,4 +1,0 @@
-taxon,lineage,probability,pangoLEARN_version,status,note
-SAMPLE1_PE,B.1,1.0,2021-02-21,passed_qc,
-SAMPLE2_PE,A.2,1.0,2021-02-21,passed_qc,
-SAMPLE3_SE,B,1.0,2021-02-21,passed_qc,

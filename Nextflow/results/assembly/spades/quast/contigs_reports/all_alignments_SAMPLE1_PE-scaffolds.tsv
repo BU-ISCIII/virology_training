@@ -1,6 +1,0 @@
-S1	E1	S2	E2	Reference	Contig	IDY	Ambiguous	Best_group
-8889	29837	21005	57	NC_045512.2	NODE_1_length_21005_cov_265.270955	99.98		True
-CONTIG	NODE_1_length_21005_cov_265.270955	21005	correct
-31	8680	8770	121	NC_045512.2	NODE_2_length_8770_cov_247.700798	99.98		True
-CONTIG	NODE_2_length_8770_cov_247.700798	8770	correct
-CONTIG	NODE_3_length_5474_cov_3.576211	5474	unaligned

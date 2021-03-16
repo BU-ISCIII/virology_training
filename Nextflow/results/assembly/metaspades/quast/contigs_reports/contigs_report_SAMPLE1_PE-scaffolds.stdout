@@ -22,10 +22,10 @@ CONTIG: NODE_3_length_5474_cov_5.135818 (5474bp)
 		Unaligned bases: 5474 (number of Ns: 0)
 
 Analyzing coverage...
-Writing SNPs into /home/svarona/work/5f/aad272074c0942f63059f068651f59/quast/contigs_reports/minimap_output/SAMPLE1_PE-scaffolds.used_snps.gz
+Writing SNPs into /home/smonzon/test_training_viralrecon/work/a5/d699d65e81a7ac1915a6c846136aa2/quast/contigs_reports/minimap_output/SAMPLE1_PE-scaffolds.used_snps.gz
 
 Analysis is finished!
-Founded SNPs were written into /home/svarona/work/5f/aad272074c0942f63059f068651f59/quast/contigs_reports/minimap_output/SAMPLE1_PE-scaffolds.used_snps.gz
+Founded SNPs were written into /home/smonzon/test_training_viralrecon/work/a5/d699d65e81a7ac1915a6c846136aa2/quast/contigs_reports/minimap_output/SAMPLE1_PE-scaffolds.used_snps.gz
 
 Results:
 	Local Misassemblies: 0

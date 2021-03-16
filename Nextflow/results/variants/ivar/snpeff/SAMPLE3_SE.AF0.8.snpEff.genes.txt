@@ -1,2 +1,0 @@
-# The following table is formatted as tab separated values. 
-#GeneName	GeneId	TranscriptId	BioType

@@ -3,7 +3,7 @@
 
 Name , Value
 Genome , GCF_009858895.2_ASM985889v3_genomic.200409 
-Date , 2021-03-04 23:02
+Date , 2021-03-08 15:31
 SnpEff_version , SnpEff 5.0 (build 2020-08-09 21:23), by Pablo Cingolani
 Command_line_arguments , SnpEff  GCF_009858895.2_ASM985889v3_genomic.200409 SAMPLE1_PE.AF0.8.vcf.gz -csvStats SAMPLE1_PE.AF0.8.snpEff.csv 
 Warnings , 6 

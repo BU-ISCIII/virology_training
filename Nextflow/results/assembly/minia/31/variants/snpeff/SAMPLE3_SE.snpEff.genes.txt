@@ -1,4 +1,0 @@
-# The following table is formatted as tab separated values. 
-#GeneName	GeneId	TranscriptId	BioType	variants_impact_HIGH	variants_impact_LOW	variants_impact_MODIFIER	variants_effect_stop_lost	variants_effect_synonymous_variant	variants_effect_upstream_gene_variant
-ORF1ab	gene-GU280_gp01	TRANSCRIPT_gene-GU280_gp01	protein_coding	1	3	0	1	3	0
-S	gene-GU280_gp02	TRANSCRIPT_gene-GU280_gp02	protein_coding	0	0	1	0	0	1

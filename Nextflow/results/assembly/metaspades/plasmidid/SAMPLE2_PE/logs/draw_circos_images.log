@@ -1,153 +1,153 @@
 
-#Executing /home/svarona/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/draw_circos_images.sh 
+#Executing /home/smonzon/test_training_viralrecon/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/draw_circos_images.sh 
 
-Creating individual config file for SAMPLE SAMPLE2_PE using FILE /home/svarona/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/config_files/OR.conf
+Creating individual config file for SAMPLE SAMPLE2_PE using FILE /home/smonzon/test_training_viralrecon/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/config_files/OR.conf
 DONE Creating config file for circos in SAMPLE SAMPLE2_PE
 Executing circos in SAMPLE SAMPLE2_PE
 Creating image for plasmid NC_045512.2 in sample SAMPLE2_PE
-debuggroup summary 0.14s welcome to circos v0.69-8 15 Jun 2019 on Perl 5.026002
-Use of uninitialized value $track_type in hash element at /home/svarona/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../lib/Circos.pm line 2402.
-Argument "ymdB" isn't numeric in numeric lt (<) at /home/svarona/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../lib/Circos.pm line 2598.
-Use of uninitialized value $track_type in hash element at /home/svarona/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../lib/Circos.pm line 2402.
-debuggroup summary 0.15s current working directory /home/svarona/work/52/9979ac6443be705a2c25c4f9e7e1ec
-debuggroup summary 0.15s command /home/svarona/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/circos -conf ./NO_GROUP/SAMPLE2_PE/images/SAMPLE2_PE_NC_045512.2_individual.circos.conf
-debuggroup summary 0.15s loading configuration from file ./NO_GROUP/SAMPLE2_PE/images/SAMPLE2_PE_NC_045512.2_individual.circos.conf
-debuggroup summary 0.15s found conf file ./NO_GROUP/SAMPLE2_PE/images/SAMPLE2_PE_NC_045512.2_individual.circos.conf
-debuggroup summary 0.24s debug will appear for these features: output,summary
-debuggroup summary 0.25s bitmap output image ./NO_GROUP/SAMPLE2_PE/images/SAMPLE2_PE_NC_045512.2.png
-debuggroup summary 0.25s parsing karyotype and organizing ideograms
-debuggroup summary 0.25s karyotype has 1 chromosomes of total size 29,904
-debuggroup summary 0.25s applying global and local scaling
-debuggroup summary 0.25s allocating image, colors and brushes
-debuggroup summary 1.24s drawing 1 ideograms of total size 29,904
-debuggroup summary 1.24s drawing highlights and ideograms
+debuggroup summary 0.23s welcome to circos v0.69-8 15 Jun 2019 on Perl 5.026002
+Use of uninitialized value $track_type in hash element at /home/smonzon/test_training_viralrecon/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../lib/Circos.pm line 2402.
+debuggroup summary 0.24s current working directory /home/smonzon/test_training_viralrecon/work/ab/8d0f28afb27ac39da6779ee58d49a0
+debuggroup summary 0.24s command /home/smonzon/test_training_viralrecon/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/circos -conf ./NO_GROUP/SAMPLE2_PE/images/SAMPLE2_PE_NC_045512.2_individual.circos.conf
+debuggroup summary 0.24s loading configuration from file ./NO_GROUP/SAMPLE2_PE/images/SAMPLE2_PE_NC_045512.2_individual.circos.conf
+debuggroup summary 0.24s found conf file ./NO_GROUP/SAMPLE2_PE/images/SAMPLE2_PE_NC_045512.2_individual.circos.conf
+debuggroup summary 0.44s debug will appear for these features: output,summary
+debuggroup summary 0.44s bitmap output image ./NO_GROUP/SAMPLE2_PE/images/SAMPLE2_PE_NC_045512.2.png
+debuggroup summary 0.44s parsing karyotype and organizing ideograms
+debuggroup summary 0.44s karyotype has 1 chromosomes of total size 29,904
+debuggroup summary 0.44s applying global and local scaling
+debuggroup summary 0.45s allocating image, colors and brushes
+debuggroup summary 2.98s drawing 1 ideograms of total size 29,904
+debuggroup summary 2.98s drawing highlights and ideograms
 WARNING *** Track id [track_3] has no type definition. This is alright if you're using the track for side-effects like axes and backgrounds.
 WARNING *** Track id [track_3] of type [_undef_] has no file definition. This is alright if you're using the track for side-effects like axes and backgrounds.
 WARNING *** Track id [track_7] has no type definition. This is alright if you're using the track for side-effects like axes and backgrounds.
 WARNING *** Track id [track_7] of type [_undef_] has no file definition. This is alright if you're using the track for side-effects like axes and backgrounds.
-debuggroup summary 1.29s found conf file /home/svarona/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../etc/tracks/text.conf
-debuggroup summary 1.29s found conf file /home/svarona/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../etc/tracks/text.conf
-debuggroup summary 1.29s found conf file /home/svarona/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../etc/tracks/tile.conf
-debuggroup summary 1.29s found conf file /home/svarona/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../etc/tracks/tile.conf
-debuggroup summary 1.29s found conf file /home/svarona/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../etc/tracks/text.conf
-debuggroup summary 1.29s found conf file /home/svarona/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../etc/tracks/tile.conf
-debuggroup summary 1.30s found conf file /home/svarona/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../etc/tracks/tile.conf
-debuggroup summary 1.30s found conf file /home/svarona/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../etc/tracks/text.conf
-debuggroup summary 1.30s found conf file /home/svarona/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../etc/tracks/tile.conf
-debuggroup summary 1.30s found conf file /home/svarona/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../etc/tracks/text.conf
-debuggroup summary 1.30s found conf file /home/svarona/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../etc/tracks/tile.conf
-debuggroup summary 1.30s processing track_0 text /home/svarona/work/52/9979ac6443be705a2c25c4f9e7e1ec/NO_GROUP/SAMPLE2_PE/data/pID_text_annotation.coordinates
-debuggroup summary 1.30s processing track_1 text /home/svarona/work/52/9979ac6443be705a2c25c4f9e7e1ec/NO_GROUP/SAMPLE2_PE/data/SAMPLE2_PE.gff.coordinates
-debuggroup summary 1.31s processing track_2 tile /home/svarona/work/52/9979ac6443be705a2c25c4f9e7e1ec/NO_GROUP/SAMPLE2_PE/data/SAMPLE2_PE.gff.forward.coordinates
-debuggroup summary 1.31s processing track_4 tile /home/svarona/work/52/9979ac6443be705a2c25c4f9e7e1ec/NO_GROUP/SAMPLE2_PE/data/SAMPLE2_PE.gff.reverse.coordinates
-debuggroup summary 1.32s processing track_5 text /home/svarona/work/52/9979ac6443be705a2c25c4f9e7e1ec/NO_GROUP/SAMPLE2_PE/database/SAMPLE2_PE.gff.bed
-debuggroup summary 1.32s processing track_6 tile /home/svarona/work/52/9979ac6443be705a2c25c4f9e7e1ec/NO_GROUP/SAMPLE2_PE/database/SAMPLE2_PE.gff.forward.bed
-debuggroup summary 1.32s processing track_8 tile /home/svarona/work/52/9979ac6443be705a2c25c4f9e7e1ec/NO_GROUP/SAMPLE2_PE/database/SAMPLE2_PE.gff.reverse.bed
-debuggroup summary 1.32s processing track_9 text /home/svarona/work/52/9979ac6443be705a2c25c4f9e7e1ec/NO_GROUP/SAMPLE2_PE/data/SAMPLE2_PE.plasmids.bed
-debuggroup summary 1.33s processing track_10 tile /home/svarona/work/52/9979ac6443be705a2c25c4f9e7e1ec/NO_GROUP/SAMPLE2_PE/data/SAMPLE2_PE.plasmids.bed
-debuggroup summary 1.33s processing track_11 text /home/svarona/work/52/9979ac6443be705a2c25c4f9e7e1ec/NO_GROUP/SAMPLE2_PE/data/SAMPLE2_PE.plasmids.complete
-debuggroup summary 1.34s processing track_12 tile /home/svarona/work/52/9979ac6443be705a2c25c4f9e7e1ec/NO_GROUP/SAMPLE2_PE/data/SAMPLE2_PE.plasmids.complete
-debuggroup summary 1.34s drawing track_0 text z 0 pID_text_annotation.coordinates orient center
-debuggroup summary 1.34s placing text track ./NO_GROUP/SAMPLE2_PE/data/pID_text_annotation.coordinates
-debuggroup summary 1.34s ... see progress with -debug_group text
-debuggroup summary 1.34s ... see placement summary with -debug_group textplace
-debuggroup summary 1.38s found conf file /home/svarona/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../etc/tracks/axis.conf
-debuggroup summary 1.38s drawing track_1 text z 0 SAMPLE2_PE.gff.coordinates 
-debuggroup summary 1.38s placing text track ./NO_GROUP/SAMPLE2_PE/data/SAMPLE2_PE.gff.coordinates
-debuggroup summary 1.38s ... see progress with -debug_group text
-debuggroup summary 1.38s ... see placement summary with -debug_group textplace
-debuggroup summary 1.43s found conf file /home/svarona/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../etc/tracks/axis.conf
-debuggroup summary 1.44s drawing track_2 tile z 0 SAMPLE2_PE.gff.forward.coordinates orient out
-debuggroup summary 1.44s found conf file /home/svarona/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../etc/tracks/axis.conf
-debuggroup summary 1.45s drawing track_3 _undef_ z 0 no_file 
-debuggroup summary 1.45s found conf file /home/svarona/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../etc/tracks/axis.conf
-debuggroup summary 1.45s drawing track_4 tile z 0 SAMPLE2_PE.gff.reverse.coordinates orient in
-debuggroup summary 1.45s found conf file /home/svarona/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../etc/tracks/axis.conf
-debuggroup summary 1.45s drawing track_5 text z 0 SAMPLE2_PE.gff.bed orient center
-debuggroup summary 1.45s placing text track ./NO_GROUP/SAMPLE2_PE/database/SAMPLE2_PE.gff.bed
-debuggroup summary 1.45s ... see progress with -debug_group text
-debuggroup summary 1.45s ... see placement summary with -debug_group textplace
-debuggroup summary 1.49s found conf file /home/svarona/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../etc/tracks/axis.conf
-debuggroup summary 1.49s drawing track_6 tile z 0 SAMPLE2_PE.gff.forward.bed orient out
-debuggroup summary 1.49s found conf file /home/svarona/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../etc/tracks/axis.conf
-debuggroup summary 1.51s drawing track_7 _undef_ z 0 no_file 
-debuggroup summary 1.51s found conf file /home/svarona/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../etc/tracks/axis.conf
-debuggroup summary 1.51s drawing track_8 tile z 0 SAMPLE2_PE.gff.reverse.bed orient in
-debuggroup summary 1.51s found conf file /home/svarona/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../etc/tracks/axis.conf
-debuggroup summary 1.51s drawing track_9 text z 0 SAMPLE2_PE.plasmids.bed orient out
-debuggroup summary 1.51s placing text track ./NO_GROUP/SAMPLE2_PE/data/SAMPLE2_PE.plasmids.bed
-debuggroup summary 1.51s ... see progress with -debug_group text
-debuggroup summary 1.51s ... see placement summary with -debug_group textplace
-debuggroup summary 1.55s found conf file /home/svarona/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../etc/tracks/axis.conf
-debuggroup summary 1.55s drawing track_10 tile z 0 SAMPLE2_PE.plasmids.bed orient in
-debuggroup summary 1.56s found conf file /home/svarona/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../etc/tracks/axis.conf
-debuggroup summary 1.57s drawing track_11 text z 0 SAMPLE2_PE.plasmids.complete orient out
-debuggroup summary 1.57s placing text track ./NO_GROUP/SAMPLE2_PE/data/SAMPLE2_PE.plasmids.complete
-debuggroup summary 1.57s ... see progress with -debug_group text
-debuggroup summary 1.57s ... see placement summary with -debug_group textplace
-debuggroup summary 1.60s found conf file /home/svarona/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../etc/tracks/axis.conf
-debuggroup summary 1.60s drawing track_12 tile z 0 SAMPLE2_PE.plasmids.complete orient in
-debuggroup summary 1.60s found conf file /home/svarona/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../etc/tracks/axis.conf
-debuggroup output 1.61s generating output
-debuggroup output 2.04s created PNG image ./NO_GROUP/SAMPLE2_PE/images/SAMPLE2_PE_NC_045512.2.png (498 kb)
-Creating summary image for in sample SAMPLE2_PE from FILE /home/svarona/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/config_files/circos_summary_1_3_3.conf
-debuggroup summary 0.15s welcome to circos v0.69-8 15 Jun 2019 on Perl 5.026002
-Use of uninitialized value $track_type in hash element at /home/svarona/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../lib/Circos.pm line 2402.
-debuggroup summary 0.16s current working directory /home/svarona/work/52/9979ac6443be705a2c25c4f9e7e1ec
-debuggroup summary 0.16s command /home/svarona/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/circos -conf ./NO_GROUP/SAMPLE2_PE/images/SAMPLE2_PE_summary.circos.conf
-debuggroup summary 0.16s loading configuration from file ./NO_GROUP/SAMPLE2_PE/images/SAMPLE2_PE_summary.circos.conf
-debuggroup summary 0.16s found conf file ./NO_GROUP/SAMPLE2_PE/images/SAMPLE2_PE_summary.circos.conf
-debuggroup summary 0.26s debug will appear for these features: output,summary
-debuggroup summary 0.26s bitmap output image ./NO_GROUP/SAMPLE2_PE/images/SAMPLE2_PE_summary.png
-debuggroup summary 0.26s parsing karyotype and organizing ideograms
-debuggroup summary 0.26s karyotype has 1 chromosomes of total size 29,904
-debuggroup summary 0.26s applying global and local scaling
-debuggroup summary 0.26s allocating image, colors and brushes
-debuggroup summary 1.27s drawing 1 ideograms of total size 29,904
-debuggroup summary 1.27s drawing highlights and ideograms
-debuggroup summary 1.32s found conf file /home/svarona/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../etc/tracks/link.conf
-debuggroup summary 1.32s process track_0 link /home/svarona/work/52/9979ac6443be705a2c25c4f9e7e1ec/NO_GROUP/SAMPLE2_PE/data/SAMPLE2_PE.plasmids.links
-debuggroup summary 1.32s drawing link track_0 z 0
+debuggroup summary 3.10s found conf file /home/smonzon/test_training_viralrecon/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../etc/tracks/text.conf
+debuggroup summary 3.10s found conf file /home/smonzon/test_training_viralrecon/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../etc/tracks/text.conf
+debuggroup summary 3.10s found conf file /home/smonzon/test_training_viralrecon/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../etc/tracks/tile.conf
+debuggroup summary 3.11s found conf file /home/smonzon/test_training_viralrecon/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../etc/tracks/tile.conf
+debuggroup summary 3.11s found conf file /home/smonzon/test_training_viralrecon/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../etc/tracks/text.conf
+debuggroup summary 3.11s found conf file /home/smonzon/test_training_viralrecon/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../etc/tracks/tile.conf
+debuggroup summary 3.11s found conf file /home/smonzon/test_training_viralrecon/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../etc/tracks/tile.conf
+debuggroup summary 3.11s found conf file /home/smonzon/test_training_viralrecon/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../etc/tracks/text.conf
+debuggroup summary 3.11s found conf file /home/smonzon/test_training_viralrecon/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../etc/tracks/tile.conf
+debuggroup summary 3.11s found conf file /home/smonzon/test_training_viralrecon/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../etc/tracks/text.conf
+debuggroup summary 3.11s found conf file /home/smonzon/test_training_viralrecon/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../etc/tracks/tile.conf
+debuggroup summary 3.11s processing track_0 text /home/smonzon/test_training_viralrecon/work/ab/8d0f28afb27ac39da6779ee58d49a0/NO_GROUP/SAMPLE2_PE/data/pID_text_annotation.coordinates
+debuggroup summary 3.11s processing track_1 text /home/smonzon/test_training_viralrecon/work/ab/8d0f28afb27ac39da6779ee58d49a0/NO_GROUP/SAMPLE2_PE/data/SAMPLE2_PE.gff.coordinates
+debuggroup summary 3.12s processing track_2 tile /home/smonzon/test_training_viralrecon/work/ab/8d0f28afb27ac39da6779ee58d49a0/NO_GROUP/SAMPLE2_PE/data/SAMPLE2_PE.gff.forward.coordinates
+debuggroup summary 3.12s processing track_4 tile /home/smonzon/test_training_viralrecon/work/ab/8d0f28afb27ac39da6779ee58d49a0/NO_GROUP/SAMPLE2_PE/data/SAMPLE2_PE.gff.reverse.coordinates
+debuggroup summary 3.12s processing track_5 text /home/smonzon/test_training_viralrecon/work/ab/8d0f28afb27ac39da6779ee58d49a0/NO_GROUP/SAMPLE2_PE/database/SAMPLE2_PE.gff.bed
+debuggroup summary 3.12s processing track_6 tile /home/smonzon/test_training_viralrecon/work/ab/8d0f28afb27ac39da6779ee58d49a0/NO_GROUP/SAMPLE2_PE/database/SAMPLE2_PE.gff.forward.bed
+debuggroup summary 3.12s processing track_8 tile /home/smonzon/test_training_viralrecon/work/ab/8d0f28afb27ac39da6779ee58d49a0/NO_GROUP/SAMPLE2_PE/database/SAMPLE2_PE.gff.reverse.bed
+debuggroup summary 3.12s processing track_9 text /home/smonzon/test_training_viralrecon/work/ab/8d0f28afb27ac39da6779ee58d49a0/NO_GROUP/SAMPLE2_PE/data/SAMPLE2_PE.plasmids.bed
+debuggroup summary 3.13s processing track_10 tile /home/smonzon/test_training_viralrecon/work/ab/8d0f28afb27ac39da6779ee58d49a0/NO_GROUP/SAMPLE2_PE/data/SAMPLE2_PE.plasmids.bed
+debuggroup summary 3.13s processing track_11 text /home/smonzon/test_training_viralrecon/work/ab/8d0f28afb27ac39da6779ee58d49a0/NO_GROUP/SAMPLE2_PE/data/SAMPLE2_PE.plasmids.complete
+debuggroup summary 3.14s processing track_12 tile /home/smonzon/test_training_viralrecon/work/ab/8d0f28afb27ac39da6779ee58d49a0/NO_GROUP/SAMPLE2_PE/data/SAMPLE2_PE.plasmids.complete
+debuggroup summary 3.15s drawing track_0 text z 0 pID_text_annotation.coordinates orient center
+debuggroup summary 3.15s placing text track ./NO_GROUP/SAMPLE2_PE/data/pID_text_annotation.coordinates
+debuggroup summary 3.15s ... see progress with -debug_group text
+debuggroup summary 3.15s ... see placement summary with -debug_group textplace
+debuggroup summary 3.23s found conf file /home/smonzon/test_training_viralrecon/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../etc/tracks/axis.conf
+debuggroup summary 3.23s drawing track_1 text z 0 SAMPLE2_PE.gff.coordinates 
+debuggroup summary 3.23s placing text track ./NO_GROUP/SAMPLE2_PE/data/SAMPLE2_PE.gff.coordinates
+debuggroup summary 3.23s ... see progress with -debug_group text
+debuggroup summary 3.23s ... see placement summary with -debug_group textplace
+debuggroup summary 3.35s found conf file /home/smonzon/test_training_viralrecon/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../etc/tracks/axis.conf
+debuggroup summary 3.37s drawing track_2 tile z 0 SAMPLE2_PE.gff.forward.coordinates orient out
+debuggroup summary 3.38s found conf file /home/smonzon/test_training_viralrecon/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../etc/tracks/axis.conf
+debuggroup summary 3.40s drawing track_3 _undef_ z 0 no_file 
+debuggroup summary 3.40s found conf file /home/smonzon/test_training_viralrecon/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../etc/tracks/axis.conf
+debuggroup summary 3.41s drawing track_4 tile z 0 SAMPLE2_PE.gff.reverse.coordinates orient in
+debuggroup summary 3.41s found conf file /home/smonzon/test_training_viralrecon/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../etc/tracks/axis.conf
+debuggroup summary 3.41s drawing track_5 text z 0 SAMPLE2_PE.gff.bed orient center
+debuggroup summary 3.41s placing text track ./NO_GROUP/SAMPLE2_PE/database/SAMPLE2_PE.gff.bed
+debuggroup summary 3.41s ... see progress with -debug_group text
+debuggroup summary 3.41s ... see placement summary with -debug_group textplace
+debuggroup summary 3.49s found conf file /home/smonzon/test_training_viralrecon/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../etc/tracks/axis.conf
+debuggroup summary 3.51s drawing track_6 tile z 0 SAMPLE2_PE.gff.forward.bed orient out
+debuggroup summary 3.51s found coArgument "ymdB" isn't numeric in numeric lt (<) at /home/smonzon/test_training_viralrecon/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../lib/Circos.pm line 2598.
+Use of uninitialized value $track_type in hash element at /home/smonzon/test_training_viralrecon/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../lib/Circos.pm line 2402.
+nf file /home/smonzon/test_training_viralrecon/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../etc/tracks/axis.conf
+debuggroup summary 3.54s drawing track_7 _undef_ z 0 no_file 
+debuggroup summary 3.54s found conf file /home/smonzon/test_training_viralrecon/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../etc/tracks/axis.conf
+debuggroup summary 3.54s drawing track_8 tile z 0 SAMPLE2_PE.gff.reverse.bed orient in
+debuggroup summary 3.54s found conf file /home/smonzon/test_training_viralrecon/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../etc/tracks/axis.conf
+debuggroup summary 3.54s drawing track_9 text z 0 SAMPLE2_PE.plasmids.bed orient out
+debuggroup summary 3.55s placing text track ./NO_GROUP/SAMPLE2_PE/data/SAMPLE2_PE.plasmids.bed
+debuggroup summary 3.55s ... see progress with -debug_group text
+debuggroup summary 3.55s ... see placement summary with -debug_group textplace
+debuggroup summary 3.64s found conf file /home/smonzon/test_training_viralrecon/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../etc/tracks/axis.conf
+debuggroup summary 3.65s drawing track_10 tile z 0 SAMPLE2_PE.plasmids.bed orient in
+debuggroup summary 3.65s found conf file /home/smonzon/test_training_viralrecon/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../etc/tracks/axis.conf
+debuggroup summary 3.68s drawing track_11 text z 0 SAMPLE2_PE.plasmids.complete orient out
+debuggroup summary 3.68s placing text track ./NO_GROUP/SAMPLE2_PE/data/SAMPLE2_PE.plasmids.complete
+debuggroup summary 3.68s ... see progress with -debug_group text
+debuggroup summary 3.68s ... see placement summary with -debug_group textplace
+debuggroup summary 3.77s found conf file /home/smonzon/test_training_viralrecon/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../etc/tracks/axis.conf
+debuggroup summary 3.78s drawing track_12 tile z 0 SAMPLE2_PE.plasmids.complete orient in
+debuggroup summary 3.79s found conf file /home/smonzon/test_training_viralrecon/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../etc/tracks/axis.conf
+debuggroup output 3.80s generating output
+debuggroup output 4.63s created PNG image ./NO_GROUP/SAMPLE2_PE/images/SAMPLE2_PE_NC_045512.2.png (498 kb)
+Creating summary image for in sample SAMPLE2_PE from FILE /home/smonzon/test_training_viralrecon/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/config_files/circos_summary_1_3_3.conf
+debuggroup summary 0.23s welcome to circos v0.69-8 15 Jun 2019 on Perl 5.026002
+Use of uninitialized value $track_type in hash element at /home/smonzon/test_training_viralrecon/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../lib/Circos.pm line 2402.
+debuggroup summary 0.23s current working directory /home/smonzon/test_training_viralrecon/work/ab/8d0f28afb27ac39da6779ee58d49a0
+debuggroup summary 0.23s command /home/smonzon/test_training_viralrecon/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/circos -conf ./NO_GROUP/SAMPLE2_PE/images/SAMPLE2_PE_summary.circos.conf
+debuggroup summary 0.24s loading configuration from file ./NO_GROUP/SAMPLE2_PE/images/SAMPLE2_PE_summary.circos.conf
+debuggroup summary 0.24s found conf file ./NO_GROUP/SAMPLE2_PE/images/SAMPLE2_PE_summary.circos.conf
+debuggroup summary 0.44s debug will appear for these features: output,summary
+debuggroup summary 0.44s bitmap output image ./NO_GROUP/SAMPLE2_PE/images/SAMPLE2_PE_summary.png
+debuggroup summary 0.44s parsing karyotype and organizing ideograms
+debuggroup summary 0.44s karyotype has 1 chromosomes of total size 29,904
+debuggroup summary 0.44s applying global and local scaling
+debuggroup summary 0.45s allocating image, colors and brushes
+debuggroup summary 3.02s drawing 1 ideograms of total size 29,904
+debuggroup summary 3.02s drawing highlights and ideograms
+debuggroup summary 3.14s found conf file /home/smonzon/test_training_viralrecon/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../etc/tracks/link.conf
+debuggroup summary 3.14s process track_0 link /home/smonzon/test_training_viralrecon/work/ab/8d0f28afb27ac39da6779ee58d49a0/NO_GROUP/SAMPLE2_PE/data/SAMPLE2_PE.plasmids.links
+debuggroup summary 3.14s drawing link track_0 z 0
 WARNING *** Track id [track_4] has no type definition. This is alright if you're using the track for side-effects like axes and backgrounds.
 WARNING *** Track id [track_4] of type [_undef_] has no file definition. This is alright if you're using the track for side-effects like axes and backgrounds.
-debuggroup summary 1.32s found conf file /home/svarona/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../etc/tracks/histogram.conf
-debuggroup summary 1.32s found conf file /home/svarona/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../etc/tracks/text.conf
-debuggroup summary 1.32s found conf file /home/svarona/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../etc/tracks/text.conf
-debuggroup summary 1.32s found conf file /home/svarona/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../etc/tracks/tile.conf
-debuggroup summary 1.32s found conf file /home/svarona/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../etc/tracks/tile.conf
-debuggroup summary 1.32s found conf file /home/svarona/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../etc/tracks/text.conf
-debuggroup summary 1.32s found conf file /home/svarona/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../etc/tracks/tile.conf
-debuggroup summary 1.32s processing track_0 histogram /home/svarona/work/52/9979ac6443be705a2c25c4f9e7e1ec/NO_GROUP/SAMPLE2_PE/data/SAMPLE2_PE.bedgraph_term
-debuggroup summary 1.32s processing track_1 text /home/svarona/work/52/9979ac6443be705a2c25c4f9e7e1ec/NO_GROUP/SAMPLE2_PE/data/pID_text_annotation.coordinates
-debuggroup summary 1.32s processing track_2 text /home/svarona/work/52/9979ac6443be705a2c25c4f9e7e1ec/NO_GROUP/SAMPLE2_PE/data/SAMPLE2_PE.gff.coordinates
-debuggroup summary 1.32s processing track_3 tile /home/svarona/work/52/9979ac6443be705a2c25c4f9e7e1ec/NO_GROUP/SAMPLE2_PE/data/SAMPLE2_PE.gff.forward.coordinates
-debuggroup summary 1.33s processing track_5 tile /home/svarona/work/52/9979ac6443be705a2c25c4f9e7e1ec/NO_GROUP/SAMPLE2_PE/data/SAMPLE2_PE.gff.reverse.coordinates
-debuggroup summary 1.33s processing track_6 text /home/svarona/work/52/9979ac6443be705a2c25c4f9e7e1ec/NO_GROUP/SAMPLE2_PE/data/SAMPLE2_PE.plasmids.bed
-debuggroup summary 1.33s processing track_7 tile /home/svarona/work/52/9979ac6443be705a2c25c4f9e7e1ec/NO_GROUP/SAMPLE2_PE/data/SAMPLE2_PE.plasmids.bed
-debuggroup summary 1.33s drawing track_0 histogram z 0 SAMPLE2_PE.bedgraph_term orient out
-debuggroup summary 1.33s found conf file /home/svarona/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../etc/tracks/axis.conf
-debuggroup summary 1.36s drawing track_1 text z 0 pID_text_annotation.coordinates orient center
-debuggroup summary 1.36s placing text track ./NO_GROUP/SAMPLE2_PE/data/pID_text_annotation.coordinates
-debuggroup summary 1.36s ... see progress with -debug_group text
-debuggroup summary 1.36s ... see placement summary with -debug_group textplace
-debuggroup summary 1.39s found conf file /home/svarona/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../etc/tracks/axis.conf
-debuggroup summary 1.39s drawing track_2 text z 0 SAMPLE2_PE.gff.coordinates orient center
-debuggroup summary 1.39s placing text track ./NO_GROUP/SAMPLE2_PE/data/SAMPLE2_PE.gff.coordinates
-debuggroup summary 1.39s ... see progress with -debug_group text
-debuggroup summary 1.39s ... see placement summary with -debug_group textplace
-debuggroup summary 1.43s found conf file /home/svarona/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../etc/tracks/axis.conf
-debuggroup summary 1.44s drawing track_3 tile z 0 SAMPLE2_PE.gff.forward.coordinates orient out
-debuggroup summary 1.44s found conf file /home/svarona/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../etc/tracks/axis.conf
-debuggroup summary 1.44s drawing track_4 _undef_ z 0 no_file 
-debuggroup summary 1.44s found conf file /home/svarona/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../etc/tracks/axis.conf
-debuggroup summary 1.45s drawing track_5 tile z 0 SAMPLE2_PE.gff.reverse.coordinates orient in
-debuggroup summary 1.45s found conf file /home/svarona/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../etc/tracks/axis.conf
-debuggroup summary 1.45s drawing track_6 text z 0 SAMPLE2_PE.plasmids.bed orient out
-debuggroup summary 1.45s placing text track ./NO_GROUP/SAMPLE2_PE/data/SAMPLE2_PE.plasmids.bed
-debuggroup summary 1.45s ... see progress with -debug_group text
-debuggroup summary 1.45s ... see placement summary with -debug_group textplace
-debuggroup summary 1.48s found conf file /home/svarona/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../etc/tracks/axis.conf
-debuggroup summary 1.48s drawing track_7 tile z 0 SAMPLE2_PE.plasmids.bed orient out
-debuggroup summary 1.48s found conf file /home/svarona/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../etc/tracks/axis.conf
-debuggroup output 1.49s generating output
-debuggroup output 1.90s created PNG image ./NO_GROUP/SAMPLE2_PE/images/SAMPLE2_PE_summary.png (606 kb)
+debuggroup summary 3.14s found conf file /home/smonzon/test_training_viralrecon/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../etc/tracks/histogram.conf
+debuggroup summary 3.14s found conf file /home/smonzon/test_training_viralrecon/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../etc/tracks/text.conf
+debuggroup summary 3.14s found conf file /home/smonzon/test_training_viralrecon/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../etc/tracks/text.conf
+debuggroup summary 3.14s found conf file /home/smonzon/test_training_viralrecon/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../etc/tracks/tile.conf
+debuggroup summary 3.14s found conf file /home/smonzon/test_training_viralrecon/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../etc/tracks/tile.conf
+debuggroup summary 3.14s found conf file /home/smonzon/test_training_viralrecon/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../etc/tracks/text.conf
+debuggroup summary 3.14s found conf file /home/smonzon/test_training_viralrecon/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../etc/tracks/tile.conf
+debuggroup summary 3.14s processing track_0 histogram /home/smonzon/test_training_viralrecon/work/ab/8d0f28afb27ac39da6779ee58d49a0/NO_GROUP/SAMPLE2_PE/data/SAMPLE2_PE.bedgraph_term
+debuggroup summary 3.14s processing track_1 text /home/smonzon/test_training_viralrecon/work/ab/8d0f28afb27ac39da6779ee58d49a0/NO_GROUP/SAMPLE2_PE/data/pID_text_annotation.coordinates
+debuggroup summary 3.14s processing track_2 text /home/smonzon/test_training_viralrecon/work/ab/8d0f28afb27ac39da6779ee58d49a0/NO_GROUP/SAMPLE2_PE/data/SAMPLE2_PE.gff.coordinates
+debuggroup summary 3.15s processing track_3 tile /home/smonzon/test_training_viralrecon/work/ab/8d0f28afb27ac39da6779ee58d49a0/NO_GROUP/SAMPLE2_PE/data/SAMPLE2_PE.gff.forward.coordinates
+debuggroup summary 3.15s processing track_5 tile /home/smonzon/test_training_viralrecon/work/ab/8d0f28afb27ac39da6779ee58d49a0/NO_GROUP/SAMPLE2_PE/data/SAMPLE2_PE.gff.reverse.coordinates
+debuggroup summary 3.15s processing track_6 text /home/smonzon/test_training_viralrecon/work/ab/8d0f28afb27ac39da6779ee58d49a0/NO_GROUP/SAMPLE2_PE/data/SAMPLE2_PE.plasmids.bed
+debuggroup summary 3.16s processing track_7 tile /home/smonzon/test_training_viralrecon/work/ab/8d0f28afb27ac39da6779ee58d49a0/NO_GROUP/SAMPLE2_PE/data/SAMPLE2_PE.plasmids.bed
+debuggroup summary 3.16s drawing track_0 histogram z 0 SAMPLE2_PE.bedgraph_term orient out
+debuggroup summary 3.16s found conf file /home/smonzon/test_training_viralrecon/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../etc/tracks/axis.conf
+debuggroup summary 3.22s drawing track_1 text z 0 pID_text_annotation.coordinates orient center
+debuggroup summary 3.22s placing text track ./NO_GROUP/SAMPLE2_PE/data/pID_text_annotation.coordinates
+debuggroup summary 3.22s ... see progress with -debug_group text
+debuggroup summary 3.22s ... see placement summary with -debug_group textplace
+debuggroup summary 3.30s found conf file /home/smonzon/test_training_viralrecon/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../etc/tracks/axis.conf
+debuggroup summary 3.30s drawing track_2 text z 0 SAMPLE2_PE.gff.coordinates orient center
+debuggroup summary 3.30s placing text track ./NO_GROUP/SAMPLE2_PE/data/SAMPLE2_PE.gff.coordinates
+debuggroup summary 3.30s ... see progress with -debug_group text
+debuggroup summary 3.30s ... see placement summary with -debug_group textplace
+debuggroup summary 3.39s found conf file /home/smonzon/test_training_viralrecon/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../etc/tracks/axis.conf
+debuggroup summary 3.41s drawing track_3 tile z 0 SAMPLE2_PE.gff.forward.coordinates orient out
+debuggroup summary 3.41s found conf file /home/smonzon/test_training_viralrecon/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../etc/tracks/axis.conf
+debuggroup summary 3.43s drawing track_4 _undef_ z 0 no_file 
+debuggroup summary 3.43s found conf file /home/smonzon/test_training_viralrecon/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../etc/tracks/axis.conf
+debuggroup summary 3.44s drawing track_5 tile z 0 SAMPLE2_PE.gff.reverse.coordinates orient in
+debuggroup summary 3.44s found conf file /home/smonzon/test_training_viralrecon/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../etc/tracks/axis.conf
+debuggroup summary 3.44s drawing track_6 text z 0 SAMPLE2_PE.plasmids.bed orient out
+debuggroup summary 3.45s placing text track ./NO_GROUP/SAMPLE2_PE/data/SAMPLE2_PE.plasmids.bed
+debuggroup summary 3.45s ... see progress with -debug_group text
+debuggroup summary 3.45s ... see placement summary with -debug_group textplace
+debuggroup summary 3.51s found conf file /home/smonzon/test_training_viralrecon/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../etc/tracks/axis.conf
+debuggroup summary 3.52s drawing track_7 tile z 0 SAMPLE2_PE.plasmids.bed orient out
+debuggroup summary 3.52s found conf file /home/smonzon/test_training_viralrecon/work/conda/nf-core-viralrecon-1.2.0dev-3fb10bb8a332a0381f3a6f1a0bab1f62/bin/../etc/tracks/axis.conf
+debuggroup output 3.54s generating output
+debuggroup output 4.43s created PNG image ./NO_GROUP/SAMPLE2_PE/images/SAMPLE2_PE_summary.png (606 kb)

@@ -1,6 +1,6 @@
 All statistics are based on contigs of size >= 500 bp, unless otherwise noted (e.g., "# contigs (>= 0 bp)" and "Total length (>= 0 bp)" include all contigs).
 
-Assembly                     SAMPLE1_PE.scaffolds  SAMPLE2_PE.scaffolds
+Assembly                     SAMPLE2_PE.scaffolds  SAMPLE1_PE.scaffolds
 # misassemblies              0                     0                   
   # contig misassemblies     0                     0                   
     # c. relocations         0                     0                   
@@ -16,8 +16,8 @@ Misassembled contigs length  0                     0
 # scaffold gap ext. mis.     0                     0                   
 # scaffold gap loc. mis.     0                     0                   
 # unaligned mis. contigs     0                     0                   
-# mismatches                 7                     10                  
-# indels                     0                     1                   
-    # indels (<= 5 bp)       0                     1                   
+# mismatches                 10                    7                   
+# indels                     1                     0                   
+    # indels (<= 5 bp)       1                     0                   
     # indels (> 5 bp)        0                     0                   
-Indels length                0                     1                   
+Indels length                1                     0                   

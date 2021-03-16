@@ -1,4 +1,4 @@
-LOCUS       SAMPLE1_PE_1           20973 bp    DNA     linear       04-MAR-2021
+LOCUS       SAMPLE1_PE_1           20973 bp    DNA     linear       08-MAR-2021
 DEFINITION  --species species strain strain.
 ACCESSION   
 VERSION
@@ -567,7 +567,7 @@ ORIGIN
     20881 tgtactctat aagttttgat ggtgtgtaac agatgttacc aactgcacta aaaactctag
     20941 gtaagaaatg caaaaagtca ccattagttg tgc
 //
-LOCUS       SAMPLE1_PE_2            8704 bp    DNA     linear       04-MAR-2021
+LOCUS       SAMPLE1_PE_2            8704 bp    DNA     linear       08-MAR-2021
 DEFINITION  --species species strain strain.
 ACCESSION   
 VERSION
@@ -792,7 +792,7 @@ ORIGIN
      8641 ctgacttttc aagtgaagta tttatacttt attaaaggat taaacaacct aaatagaggt
      8701 atgg
 //
-LOCUS       SAMPLE1_PE_3            5474 bp    DNA     linear       04-MAR-2021
+LOCUS       SAMPLE1_PE_3            5474 bp    DNA     linear       08-MAR-2021
 DEFINITION  --species species strain strain.
 ACCESSION   
 VERSION
@@ -994,7 +994,7 @@ ORIGIN
      5401 cgaatcagat cggaagagcg gttcagcagg aatgccgaga ccgatctcgt atgccgtctt
      5461 ctgcttgaaa aaaa
 //
-LOCUS       SAMPLE1_PE_4             458 bp    DNA     linear       04-MAR-2021
+LOCUS       SAMPLE1_PE_4             458 bp    DNA     linear       08-MAR-2021
 DEFINITION  --species species strain strain.
 ACCESSION   
 VERSION
@@ -1019,7 +1019,7 @@ ORIGIN
       361 taaatctgag cacagagttc tagaaaagag gaaggaattt gatagaatta agagcttccc
       421 ttgaaaggag ggaggggatt tgcacttgta aataaggt
 //
-LOCUS       SAMPLE1_PE_5             400 bp    DNA     linear       04-MAR-2021
+LOCUS       SAMPLE1_PE_5             400 bp    DNA     linear       08-MAR-2021
 DEFINITION  --species species strain strain.
 ACCESSION   
 VERSION
@@ -1043,7 +1043,7 @@ ORIGIN
       301 ttagacattc tactactcct tttaaacaac tctttctcca ttcaatcttt gaaagccaaa
       361 gtgtgtgtgt gtgtgtgcgc gcacctgttg tctatgtgat
 //
-LOCUS       SAMPLE1_PE_6             379 bp    DNA     linear       04-MAR-2021
+LOCUS       SAMPLE1_PE_6             379 bp    DNA     linear       08-MAR-2021
 DEFINITION  --species species strain strain.
 ACCESSION   
 VERSION

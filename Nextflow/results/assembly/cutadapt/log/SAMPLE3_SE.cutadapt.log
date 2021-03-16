@@ -1,7 +1,7 @@
 This is cutadapt 3.0 with Python 3.6.11
 Command line parameters: --cores 2 --overlap 5 --minimum-length 30 --error-rate 0.1 -a file:primers.fasta -o SAMPLE3_SE.ptrim.fastq.gz SAMPLE3_SE.trim.fastq.gz
 Processing reads on 2 cores in single-end mode ...
-Finished in 7.30 s (156 µs/read; 0.38 M reads/minute).
+Finished in 12.56 s (269 µs/read; 0.22 M reads/minute).
 
 === Summary ===
 
