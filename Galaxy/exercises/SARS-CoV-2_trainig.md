@@ -49,22 +49,20 @@ https://zenodo.org/record/5718923/files/SARSCOV2-1_R2.fastq?download=1
 <img src="../docs/images/Upload_1.png" alt="Upload 1" width="700"/>
 <img src="../docs/images/Upload_2.png" alt="Upload 2" width="700"/>
 
-![upload_start](../docs/images/upload_start.png)
-
 Once files are uploaded we can close the window clicking on "_close_" button. Both files will appear in the right panel.
 
 ## Quality
 
 ### Quality Analysis (FastQC)
-Once we have the raw data, an important step is to analyze the quality of the reads, to know if the reads are worth it. To do this, we have to look for the program "_FastQC_" in the search bar, then select the program in the list and a new panel for FastQC will appear.
 
-In the panel we will have to select the fastq files R1 and R2 for both samples. To do this, in the "_Short read data from your current history_" header, we will click on "_Multiple datasets_"
+Once we have the raw data, an important step is to analyze the quality of the reads, to know if the reads are worth it. To do this, we have to:
 
-![fastqc](../docs/images/fastqc.png)
+1. Search for the **fastqc** tool and select **FastQC Read Quality reports** and set the following parameters:
+2. Select multiple file data set in Raw read data from your current history
+3. With the *Ctrl* key pressed, select the two datasets
+4. Then go down and select **Execute**
 
-and then in the new window select from our jobs the ones of the samples we want:
-
-![fastqc_samples](../docs/images/fastqc_samples.png)
+<p align="center"><img src="images/fastqc_run.png" alt="fastqc_run" width="900"></p>
 
 **This is for the case that you used two samples instead of one like in this training"***
 
