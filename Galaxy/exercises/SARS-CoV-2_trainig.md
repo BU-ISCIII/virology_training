@@ -421,9 +421,26 @@ The resulting file is the consensus genome generated previously but now only con
 
 ![bedtools_maskfasta_result](../docs/images/bedtools_maskfasta_result.png)
 
-You can download this fasta file and use it to upload it to any public repository such as [ENA]() or [GiSaid](). Also you can use it to perform phylogenetic trees or whatever else you want to do with the SARS-CoV-2 consensus fasta file.
+You can download this fasta file and use it to upload it to any public repository such as [ENA](https://www.ebi.ac.uk/ena/browser/) or [GiSaid](https://www.gisaid.org/). Also you can use it to perform phylogenetic trees or whatever else you want to do with the SARS-CoV-2 consensus fasta file.
 
 ![bedtools_maskfasta_download](../docs/images/bedtools_maskfasta_download.png)
+
+## Lineage
+Now we are going to determine the lineage of the samples. We will use a software called pangolin. We are going to use the masked consensus genomes generated in the previous steps as follows:
+
+1. Search for the **pangolin** tool
+2. Select **Pangolin Phylogenetic Assignment of Outbreak Lineages** and set the following parameters:
+3. Select the *bedtools MaskFasta* generated in the previous step as input fasta file.
+4. Set maximum proportion of Ns allowed to 0.3. This will filter all the consensus with more than 30% of Ns.
+5. **Execute**
+
+<p align="center"><img src="../docs/images/pangolin.png" alt="fastqc_run" width="900"></p>
+
+Now we are going to have a look to the results from pangolin:
+
+<p align="center"><img src="../docs/images/pangolin_results.png" alt="fastqc_run" width="900"></p>
+
+As you can see
 
 ## All results
 
