@@ -38,8 +38,8 @@ In order to do upload files from URL we have to follow these steps:
 3. Then copy the following block of text:
 
 ```
-https://zenodo.org/record/5718923/files/SARSCOV2-1_R1.fastq?download=1
-https://zenodo.org/record/5718923/files/SARSCOV2-1_R2.fastq?download=1
+https://zenodo.org/record/5718923/files/SARSCOV2-1_R1.fastq.gz?download=1
+https://zenodo.org/record/5718923/files/SARSCOV2-1_R2.fastq.gz?download=1
 ```
 
 4. Now, in the **Download data from the web by entering URLs (one per line) or directly paste content.** square, paste the text you copied before
@@ -227,7 +227,7 @@ In "_Select SAM/BAM dataset or dataset collection_" you can select more than one
 The you have to change the following parameters:
 
 6. Load reference genome from > History
-7. Select the fasta file we uploaded with the reference genome (https://github.com/nf-core/test-datasets/raw/viralrecon/genome/NC_045512.2GCF_009858895.2_ASM985889v3_genomic.200409.fna.gz).
+7. Select the fasta file we uploaded with the reference genome (https://github.com/nf-core/test-datasets/raw/viralrecon/genome/NC_045512.2/GCF_009858895.2_ASM985889v3_genomic.200409.fna.gz).
 8. Treat bases with coverage exceeding this value as if they had coverage at this value = 1000000
 9. Select validation stringency > Lenient
 10. Execute.
