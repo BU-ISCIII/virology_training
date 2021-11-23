@@ -24,7 +24,7 @@ You can do this analysis without creating a user, but your history will be saved
 
 Once you are registered we can start with the analysis workflow.
 
-**_From now on, each job we run in Galaxy will have a unique number for identifying each process. This numbers can differ depending on the number of samples and the times you run or delete any process. This training's snapshots were taken using two samples and some process were deleted for any reason, so numbers MAY DIFFER._**
+**_From now on, each job we run in Galaxy will have a unique number for identifying each process. This numbers can differ depending on the number of samples and the times you run or delete any process. This training's snapshots were taken using two samples and some process were deleted for any reason, so numbers MAY DIFFER. Also, this exercise's snapshots were taken with other dataset, so sample names may differ too._**
 
 ## Data
 
