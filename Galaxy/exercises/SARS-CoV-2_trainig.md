@@ -30,16 +30,24 @@ Once you are registered we can start with the analysis workflow.
 
 Before starting with any analysis we have to upload de data we want to analyze into galaxy. The are three different ways to upload data to Galaxy, from which we will explain you some of them along this training.
 
-### Uploading data from your local files
-In order to do upload files from our local machine to Galaxy, we have to click on the button shown in the image (_Download from URL or upload files from disk_)
+### Uploading data from URL
+In order to do upload files from URL we have to follow these steps:
 
-![upload_data](../docs/images/upload_data.png)
+1. In the left side panel, select **Upload Data**
+2. In the new panel select Paste/Fetch Data
+3. Then copy the following block of text:
 
-Then, in the "_Regular_" tab we have to choose "_Choose local files_" and select the files we want to upload, both R1 and R2 at the same time.
+```
+https://zenodo.org/record/5718923/files/SARSCOV2-1_R1.fastq?download=1
+https://zenodo.org/record/5718923/files/SARSCOV2-1_R2.fastq?download=1
+```
 
-![upload_local_files](../docs/images/upload_local_files.png)
+4. Now, in the **Download data from the web by entering URLs (one per line) or directly paste content.** square, paste the text you copied before
+5. Select **Start**
+6. When everything is green in the screen, select *Close*
 
-Once selected we just have to click in start button and files will start lo upload (this will take a while).
+<img src="../docs/images/Upload_1.png" alt="Upload 1" width="700"/>
+<img src="../docs/images/Upload_2.png" alt="Upload 2" width="700"/>
 
 ![upload_start](../docs/images/upload_start.png)
 
