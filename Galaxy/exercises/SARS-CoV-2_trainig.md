@@ -62,7 +62,7 @@ Once we have the raw data, an important step is to analyze the quality of the re
 3. With the *Ctrl* key pressed, select the two datasets
 4. Then go down and select **Execute**
 
-<p align="center"><img src="images/fastqc_run.png" alt="fastqc_run" width="900"></p>
+<p align="center"><img src="../docs/images/fastqc_run.png" alt="fastqc_run" width="900"></p>
 
 **This is for the case that you used two samples instead of one like in this training"***
 
