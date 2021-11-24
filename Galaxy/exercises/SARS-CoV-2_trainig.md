@@ -35,7 +35,7 @@ In order to do upload files from URL we have to follow these steps:
 
 1. In the left side panel, select **Upload Data**
 2. In the new panel select Paste/Fetch Data
-3. Then copy the following block of text:
+3. Then copy the following block of text for the samples:
 
 ```
 https://zenodo.org/record/5724464/files/SARSCOV2-1_R1.fastq.gz?download=1
@@ -44,7 +44,15 @@ https://zenodo.org/record/5724464/files/SARSCOV2-1_R2.fastq.gz?download=1
 
 4. Now, in the **Download data from the web by entering URLs (one per line) or directly paste content.** square, paste the text you copied before
 5. Select **Start**
-6. When everything is green in the screen, select *Close*
+
+Repeat steps 3 to 5 for the SARS-CoV-2 reference fasta genome and annotation files:
+
+```
+https://zenodo.org/record/5724970/files/GCF_009858895.2_ASM985889v3_genomic.200409.fna.gz?download=1
+https://zenodo.org/record/5724970/files/nCoV-2019.artic.V3.scheme.bed.txt?download=1
+```
+
+7. When everything is green in the screen, select *Close*
 
 <img src="../docs/images/Upload_1.png" alt="Upload 1" width="700"/>
 <img src="../docs/images/Upload_2.png" alt="Upload 2" width="700"/>
