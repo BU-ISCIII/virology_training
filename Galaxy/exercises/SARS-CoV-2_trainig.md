@@ -434,16 +434,20 @@ Now we are going to determine the lineage of the samples. We will use a software
 4. Set maximum proportion of Ns allowed to 0.3. This will filter all the consensus with more than 30% of Ns.
 5. **Execute**
 
-<p align="center"><img src="../docs/images/pangolin.png" alt="fastqc_run" width="900"></p>
+<p align="center"><img src="../docs/images/pangolin.png" alt="pangolin" width="900"></p>
 
 Now we are going to have a look to the results from pangolin:
 
-<p align="center"><img src="../docs/images/pangolin_results.png" alt="fastqc_run" width="900"></p>
+<p align="center"><img src="../docs/images/pangolin_results.png" alt="pangolin_results" width="900"></p>
 
-As you can see
+As you can see, results are in table format, where you have in first place the reference genome, then de lineage assingned, which seems to be [B.1.1.7 lineage](https://www.cdc.gov/coronavirus/2019-ncov/variants/variant-info.html). This lineage corresponds as you can see in the 5th column to the Alpha lineage.
 
 ## All results
 
 If you have any problem following this training and you want to visualize the resulting file you can access them through this URL:
 
-https://usegalaxy.org/u/svarona/h/sarscov-2training
+https://usegalaxy.org/u/svarona/h/viralrecon2021
+
+And viralrecon workflfow in:
+
+https://usegalaxy.org/u/svarona/w/viralrecon-emulator 
