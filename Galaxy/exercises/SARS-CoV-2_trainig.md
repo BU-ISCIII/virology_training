@@ -270,7 +270,7 @@ Once you have the bed file, you just have to search for "_ivar trim_" in the sea
 3. Bam file > Select the aligment bam file generated with Bowtie2.
 4. BED file with primer sequences and positions > Select the bed file you just upload.
 5. Minimum length of read to retain after trimming = 20
-6. Include reads with no primers > Yes.
+6. Include reads not ending in any primer binding sites? > Yes.
 
 ![ivar_trim1](../docs/images/ivar_trim1.png)
 
