@@ -174,7 +174,7 @@ Now we can start with the main mapping process. The first thing we have to do is
 5. asta/Q file #2: **fastp on data 2 and data 1: Read 2 output**
 6. Will you select a reference genome from your history or use a built-in index? > Use a genome from the history and create index
   - **This is very important because we haven't previously created the SARS-Cov2 genome index, si bowtie 2 will generate it automatically.**
-7. Select reference genome > https://github.com/nf-core/test-datasets/raw/viralrecon/genome/NC_045512.2/GCF_009858895.2_ASM985889v3_genomic.200409.fna.gz
+7. Select reference genome > GCF_009858895.2_ASM985889v3_genomic.200409.fna.gz
   - It's important to select the file we downloaded from URL.
 8. Do you want to use presets? > Very sensitive local
 9. Save the bowtie2 mapping statistics to the history > Yes
@@ -227,7 +227,7 @@ In "_Select SAM/BAM dataset or dataset collection_" you can select more than one
 The you have to change the following parameters:
 
 6. Load reference genome from > History
-7. Select the fasta file we uploaded with the reference genome (https://github.com/nf-core/test-datasets/raw/viralrecon/genome/NC_045512.2/GCF_009858895.2_ASM985889v3_genomic.200409.fna.gz).
+7. Select the fasta file we uploaded with the reference genome (GCF_009858895.2_ASM985889v3_genomic.200409.fna.gz).
 8. Treat bases with coverage exceeding this value as if they had coverage at this value = 1000000
 9. Select validation stringency > Lenient
 10. Execute.
