@@ -44,15 +44,7 @@ https://zenodo.org/record/5724464/files/SARSCOV2-1_R2.fastq.gz?download=1
 
 4. Now, in the **Download data from the web by entering URLs (one per line) or directly paste content.** square, paste the text you copied before
 5. Select **Start**
-
-Repeat steps 3 to 5 for the SARS-CoV-2 reference fasta genome and annotation files:
-
-```
-https://zenodo.org/record/5724970/files/GCF_009858895.2_ASM985889v3_genomic.200409.fna.gz?download=1
-https://zenodo.org/record/5724970/files/nCoV-2019.artic.V3.scheme.bed.txt?download=1
-```
-
-7. When everything is green in the screen, select *Close*
+6. When everything is green in the screen, select *Close*
 
 <img src="../docs/images/Upload_1.png" alt="Upload 1" width="700"/>
 <img src="../docs/images/Upload_2.png" alt="Upload 2" width="700"/>
@@ -166,7 +158,7 @@ In order to call for variants between the samples and the reference, it's mandat
 Prior to any analysis, we have to download the fasta reference genome, and we are going to do it using the following URL:
 
 ```
-https://github.com/nf-core/test-datasets/raw/viralrecon/genome/NC_045512.2/GCF_009858895.2_ASM985889v3_genomic.200409.fna.gz
+https://zenodo.org/record/5724970/files/GCF_009858895.2_ASM985889v3_genomic.200409.fna.gz?download=1
 ```
 
 So you have to copy the URL direction, and do then select "_Download from web or upload from disk_", the select "_Paste/Fetch data_" and in the new window that appears you should paste the URL above and finally select "_Start_". Now the fasta file of the reference is download.
@@ -265,7 +257,10 @@ After mapping the reads to the reference genome, we are interested in removing t
 ### Download amplicon bed file
 
 First you will download the bed file of the amplicon primers, which contains the positions in the reference genome of each of the amplicon primers. You have to click in "_Download from URL or upload files from disk_", then select "_Paste/Fetch data_" and then paste this URL in the window:
-https://raw.githubusercontent.com/nf-core/test-datasets/viralrecon/genome/NC_045512.2/amplicon/nCoV-2019.artic.V3.scheme.bed
+
+```
+https://zenodo.org/record/5724970/files/nCoV-2019.artic.V3.scheme.bed.txt?download=1
+```
 
 Finally, press "_Start_".
 
