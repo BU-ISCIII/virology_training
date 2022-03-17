@@ -82,7 +82,7 @@ One of the first results that appears is the Amplicon coverage heatmap, which ca
 ![amplicon_coverage](../docs/images/amplicon_coverage.png)
 
 
-Then you have a summary of the most important metrics in the analysis, that we will see later in the stastics results:
+Then you have a summary of the most important metrics in the analysis, that we will see later in the statistics results:
 
 ![multiqc2](../docs/images/multiqc_2.png)
 
