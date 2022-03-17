@@ -65,7 +65,7 @@ This is the pipeline overview:
 3. Mapping approach:
 	1. bowtie2: Mapping to the reference genome
 	2. ivar: Amplicon's adapter trimming by position
-	3. VarScan2: Variant calling
+	3. ivar: Variant calling
 	4. bcftools: Consensus generation
 
 ### Results
@@ -80,7 +80,6 @@ The first results consist in a summary of the samples that failed in the analysi
 One of the first results that appears is the Amplicon coverage heatmap, which can be used to see which amplicon primers performed better or worst than others.
 
 ![amplicon_coverage](../docs/images/amplicon_coverage.png)
-
 
 Then you have a summary of the most important metrics in the analysis, that we will see later in the statistics results:
 
