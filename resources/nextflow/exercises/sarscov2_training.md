@@ -85,6 +85,28 @@ You can interactively move across the report to see more results, such as the nu
 
 ![ivar_multiqc](../docs/images/ivar_multiqc.png)
 
+Another interesting result is a table that contains all the variants per sample with the variant annotation and the lineage assigned to that sample. The columns of the table are:
+
+- SAMPLE: Sample name
+- CHROM: Reference genome chromosome identifier
+- POS: Variant's position
+- REF: Reference allele
+- ALT: Alternative allele (variant)
+- FILTER: Column indicating if the variant passed the filters. If all filters are passed, PASS is written in the filter column. If not, the filter that wasn't passed will be indicated.
+- DP: Position depth.
+- REF_DP: Ref allele depth
+- ALT_DP: Alternative allele depth
+- AF: Allele Frequency
+- GENE: Gene name in annotation file​
+- EFFECT: Effect of the variant
+- HGVS_C: Position annotation at CDS level
+- HGVS_P: Position annotation at protein level
+- HGVS_P_1LETTER: Position annotation at protein level with the aminoacid annotation in 1 letter format
+- CALLER: Variant caller used
+- LINEAGE: Lineage assigned by pangolin.
+
+This table can be really helpful to filter variants by lineage, or by position, so you can see the realationship between linages and variants. Also this table includes all the called variants, so you can also see those low frequency variants that were not included in the consensus.
+
 ## Statistics
 The most important results of the MultiQC report can be found in a comma separated values (csv) file (summary_variants_metrics_mqc.csv) with the most important statistics. This file contains the following columns:
 
