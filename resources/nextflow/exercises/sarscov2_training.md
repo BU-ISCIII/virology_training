@@ -67,10 +67,6 @@ This is the pipeline overview:
 	2. ivar: Amplicon's adapter trimming by position
 	3. VarScan2: Variant calling
 	4. bcftools: Consensus generation
-4. Assembly approach:
-	1. cutadapt: Adapter trimming by sequence
-	2. MetaSpades: De Novo assebmly
-	3. ABACAS: Reference-based scaffold ordering
 
 ### Results
 Now we are going to see the most important results of the pipeline. In case you were not able to run the pipeline, you can see the [results in this folder](../results/).
