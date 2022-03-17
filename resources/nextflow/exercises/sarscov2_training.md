@@ -133,7 +133,7 @@ Now that we know which samples have less than 50% of Ns, we can use those consen
 conda install -c bioconda pangolin
 ```
 
-Now we need to concatenate de consensus files in a single fasta file like this:
+Now we need to concatenate the consensus files in a single fasta file like this:
 ```
 cat results/variants/varscan2/consensus/*.AF0.8.consensus.masked.fa >> consensus_masked.fasta
 ```
