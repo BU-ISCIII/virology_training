@@ -4,56 +4,35 @@ In this report you will find all the information necessary to follow the steps t
 
 ## Training overview
 During this training we will following these steps:
-* [Conda](#conda): Installation
-* [Nextflow](#nextflow): Overview and installation
+* [Dependencies](#dependencies): Installation
 * [Viralrecon](#viralrecon): Overview and download
 	* [Github](#github): Glance to main commands
 * [Pipeline](#pipeline): Running the pipeline with command line and main results.
 	* [Results](#results): Most important results.
-* [Statistics](#statistics): Parse resulting files to obtain statistics.
-* [Lineage](#Lineage): Lineage classification with Pangolin
 
-## Conda
-In case you haven't install conda yet, follow the instructions in [this link](https://docs.conda.io/en/latest/miniconda.html)
+## Dependencies
 
-## Nextflow
-[Nextflow](https://www.nextflow.io/) is a bioinformatics workflow manager that enables the development of portable and reproducible workflows. It supports deploying workflows on a variety of execution platforms including local, HPC schedulers, AWS Batch, Google Cloud Life Sciences, and Kubernetes. Additionally, it provides support for manage your workflow dependencies through built-in support for Conda, Docker, Singularity, and Modules.
+We will need the following dependencies to run this tutorial:
 
-### Installation
-We will install Nextflow using conda running the following commands:
+- [conda](https://docs.conda.io/en/latest/miniconda.html): In case you haven't install conda yet, follow the instructions in [this link](https://docs.conda.io/en/latest/miniconda.html)
+- [nf-core tools](https://github.com/nf-core/tools) A python package with helper tools for the nf-core community.
+- [singularity](https://sylabs.io/guides/3.5/user-guide/introduction.html) is a container platform. It allows you to create and run containers that package up pieces of software in a way that is portable and reproducible.
+- [Nextflow](https://www.nextflow.io/) is a bioinformatics workflow manager that enables the development of portable and reproducible workflows. It supports deploying workflows on a variety of execution platforms including local, HPC schedulers, AWS Batch, Google Cloud Life Sciences, and Kubernetes. Additionally, it provides support for manage your workflow dependencies through built-in support for Conda, Docker, Singularity, and Modules.
 
-Create an environment
+We will install them using a conda environment:
 ```
-conda create --name nextflow
-```
-
-proceed ([y]/n)?
-```
-y
-```
-
-Activate the environment:
-```
-conda activate nextflow
-```
-
-Install nextflow in the environment through bioconda channel:
-```
-conda install -c bioconda nextflow==20.10.0
-```
-
-proceed ([y]/n)?
-```
-y
+conda create --name nf-core python=3.7 nf-core==2.3 nextflow==21.10.6 singularity==3.8.4
+conda activate nf-core
 ```
 
 Test if it's correctly installed:
 ```
 nextflow -v
-```
-Output:
-```
-nextflow version 20.10.0.5430
+# nextflow version 21.10.6.5660
+singularity --version
+# singularity version 3.8.4
+nf-core --version
+nf-core, version 2.3
 ```
 
 ## Viralrecon
@@ -62,45 +41,23 @@ nextflow version 20.10.0.5430
 
 The pipeline is built using Nextflow, a workflow tool to run tasks across multiple compute infrastructures in a very portable manner. It comes with Docker containers making installation trivial and results highly reproducible. Furthermore, automated continuous integration tests that run the pipeline on a full-sized data set using AWS cloud ensure that the code is stable.
 
-
-### GitHub
-To download and run viralrecon locally first you have to learn a little bit about github in command line (git). If you need more information about how to manage GitHub repositories, read our [Wiki documentation](https://github.com/BU-ISCIII/BU-ISCIII/wiki/Github--gitflow). You need to follow these steps:
-
-In case you don't have git installed run:
+First of all go to somewhere in your home and create a directory for this training exercise
 ```
-sudo apt update
-sudo apt install git libtbb2
+mkdir viralrecon_tutorial
+cd viralrecon_tutorial
 ```
-
-Download the repo from github:
+We are going to use nf-core tools for downloading the pipeline and the singularity images:
 ```
-git clone https://github.com/BU-ISCIII/viralrecon.git
+nf-core download --container singularity --revision 2.4.1 --compress none viralrecon
+# Define $NXF_SINGULARITY_CACHEDIR for a shared Singularity image download folder? [y/n]: -> n
 ```
-
-Moving inside the repo:
-```
-cd viralrecon
-```
-
-Moving to another branch:
-```
-git checkout dev
-```
-
-Leave repo's folder:
-```
-cd ..
-```
-
-Now you have your repo (viralrecon) installed and the program to run it (Nextflow), the next step is to run the pipeline.
 
 ## Pipeline
 To run the pipeline you have to type in your terminal:
 
 ```
-nextflow run viralrecon/main.nf -profile conda,test --skip_markduplicates --max_allele_freq 0.80 --assemblers metaspades --callers varscan2 -resume
+nextflow run ./nf-core-viralrecon-2.4.1/workflow/main.nf -profile singularity,test --skip_assembly --skip_asciigenome
 ```
-With this command line you are going to run the default test data set with all the default parameters, unless the max_allele_freq which we are going to set to 0.80, which means that we will select only those variants with a minimum allele frequency of 80% to be included in the consensus. This data is a subset of amplicon based sequenced SARS-CoV2 samples. This means that during the pipeline the sequences/positions corresponding to the amplicon's primers are going to be removed.
 
 This is the pipeline overview:
 1. FastQC: Quality control
