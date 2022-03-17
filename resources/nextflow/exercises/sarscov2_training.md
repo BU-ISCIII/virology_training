@@ -77,13 +77,18 @@ Now we are going to see the most important results of the pipeline. In case you 
 
 One of the most interesting results is the [MultiQC report](../results/multiqc/multiqc_report.html). In this report you have an overview of all the steps of the pipeline and their results.
 
-The first results consist in a summary of both approaches performed by viralrecon (mapping and assembly). It gives different statistical measures such as *the number of input reads*, *the number of reads remaining after trimming*, *the percentage of mapped reads* and more.
+The first results consist in a summary of the samples that failed in the analysis.
 
 ![multiqc](../docs/images/multiqc_1.png)
 
 One of the first results that appears is the Amplicon coverage heatmap, which can be used to see which amplicon primers performed better or worst than others.
 
 ![amplicon_coverage](../docs/images/amplicon_coverage.png)
+
+
+Then you have a summary of the most important metrics in the analysis, that we will see later in the stastics results:
+
+![multiqc2](../docs/images/multiqc_2.png)
 
 You can interactively move across the report to see more results, such as the number of variants called by iVar for each sample in a barplot.
 
