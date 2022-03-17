@@ -86,7 +86,7 @@ You can interactively move across the report to see more results, such as the nu
 ![ivar_multiqc](../docs/images/ivar_multiqc.png)
 
 ## Statistics
-The most important results of the MultiQC report can be found in a comma separated values (csv) file (summary_variants_metrics_mqc.csv) with the most important statistics. This file contains the followitn columns:
+The most important results of the MultiQC report can be found in a comma separated values (csv) file (summary_variants_metrics_mqc.csv) with the most important statistics. This file contains the following columns:
 
 - Sample: Sample name
 - # Input reads: Number of raw reads before trimming
