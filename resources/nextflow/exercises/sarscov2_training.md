@@ -81,6 +81,10 @@ The first results consist in a summary of both approaches performed by viralreco
 
 ![multiqc](../docs/images/multiqc_1.png)
 
+One of the first results that appears is the Amplicon coverage heatmap, which can be used to see which amplicon primers performed better or worst than others.
+
+![amplicon_coverage](../docs/images/amplicon_coverage.png)
+
 You can interactively move across the report to see more results, such as the number of variants called by iVar for each sample in a barplot.
 
 ![ivar_multiqc](../docs/images/ivar_multiqc.png)
