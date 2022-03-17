@@ -105,7 +105,7 @@ Another interesting result is a table that contains all the variants per sample 
 - CALLER: Variant caller used
 - LINEAGE: Lineage assigned by pangolin.
 
-This table can be really helpful to filter variants by lineage, or by position, so you can see the realationship between linages and variants. Also this table includes all the called variants, so you can also see those low frequency variants that were not included in the consensus.
+This table can be really helpful to filter variants by lineage, or by position, so you can see the relationship between lineages and variants. Also this table includes all the called variants, so you can also see those low frequency variants that were not included in the consensus.
 
 ## Statistics
 The most important results of the MultiQC report can be found in a comma separated values (csv) file (summary_variants_metrics_mqc.csv) with the most important statistics. This file contains the following columns:
@@ -121,7 +121,7 @@ The most important results of the MultiQC report can be found in a comma separat
 - % Coverage > 1x: Percentage of coverage of the reference genome with more than 1X depth
 - % Coverage > 10x: Percentage of coverage of the reference genome with more than 10X depth
 - # SNPs: Number of SNPs
-- # INDELs: Number of insertins and deletions
+- # INDELs: Number of insertions and deletions
 - # Missense variants: Number of variants that are missense variants
 - # Ns per 100kb consensus: Number of Ns (masked bases) per 100k bases in the consensus genome
 - Pangolin lineage: Pangolin lineage assignment
