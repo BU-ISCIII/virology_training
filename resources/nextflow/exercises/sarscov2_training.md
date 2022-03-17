@@ -89,6 +89,10 @@ You can interactively move across the report to see more results, such as the nu
 
 ![ivar_multiqc](../docs/images/ivar_multiqc.png)
 
+Also, this report shows the lineage assigned to the samples, and you can sort the columns as you wish:
+
+![lineage](../docs/images/pango_lineages.png)
+
 Another interesting result is a table that contains all the variants per sample with the variant annotation and the lineage assigned to that sample. The columns of the table are:
 
 - SAMPLE: Sample name
