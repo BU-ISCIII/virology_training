@@ -1,3 +1,5 @@
-# Virology Training Course
+# Virology Training
 
-This repository contains all the resources needed to follow the virology training to analyze viral sequencing data with both [Galaxy](./Galaxy) or in a WorkStation with [Nextflow](./Nextflow).
+- [Master Med. Per - ISCIII](master_medper_isciii/README.md)
+- [Master Microbiology - Public Health - UAH](master_microbiology_uah/README.md)
+- [Master Virology - UCM](master_virology_ucm/README.md)
