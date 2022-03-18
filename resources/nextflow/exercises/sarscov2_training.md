@@ -56,7 +56,7 @@ nf-core download --container singularity --revision 2.4.1 --compress none viralr
 To run the pipeline you have to type in your terminal:
 
 ```
-nextflow run ./nf-core-viralrecon-2.4.1/workflow/main.nf -profile singularity,test --skip_assembly --skip_asciigenome
+nextflow run ./nf-core-viralrecon-2.4.1/workflow/main.nf -profile singularity,test --outdir viralrecon_results --skip_assembly --skip_asciigenome
 ```
 
 This is the pipeline overview:
