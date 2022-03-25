@@ -97,30 +97,30 @@ Once we have check the quality of our reads, it's important to trim low quality 
 4.Input 1 > Browse datasets (right folder icon) > Select 201569_S59_R1_001.fastq.gz
 
   Input 2 > Browse datasets > Select 201569_S59_R2_001.fastq.gz
- 
+  
 5.Display Filter Options
 
-   5.Quality Filtering options
-   
-      6.Qualified Quality Phred = 20
-      
-      7.Unqualified percent limit = 10
-      
-8.Length Filtering Options
+Quality Filtering options
+  
+6.Qualified Quality Phred = 20
+    
+7.Unqualified percent limit = 10
+    
+Length Filtering Options
 
-   8.Length required = 50
+8.Length required = 50
    
 9.Read modification options
 
-   10.PoliX tail trimming > Enable polyX tail trimming
+10.PoliX tail trimming > Enable polyX tail trimming
    
-11.Per read cutting by quality options
+Per read cutting by quality options
 
-   11.Cut by quality in front (5') > Yes
+11.Cut by quality in front (5') > Yes
    
-   12.Cut by quality in tail (3') > Yes
+12.Cut by quality in tail (3') > Yes
    
-   13.Cutting mean quality = 20
+13.Cutting mean quality = 20
    
 14."_Execute_"
 
