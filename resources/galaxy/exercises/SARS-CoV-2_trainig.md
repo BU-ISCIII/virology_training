@@ -97,7 +97,7 @@ Once we have check the quality of our reads, it's important to trim low quality 
     Input 2 > Browse datasets > Select 201569_S59_R2_001.fastq.gz
 6. Display Filter Options
   6. Quality Filtering options
-    7. Qualified Quality Phred = 30
+    7. Qualified Quality Phred = 20
     8. Unqualified percent limit = 10
   9. Length Filtering Options
     10. Length required = 50
@@ -106,7 +106,7 @@ Once we have check the quality of our reads, it's important to trim low quality 
   13. Per read cutting by quality options
     14. Cut by quality in front (5') > Yes
     15. Cut by quality in tail (3') > Yes
-    16. Cutting mean quality = 30
+    16. Cutting mean quality = 20
 17. Output options
   18. Output HTML report > Yes
   19. Output JSON report > Yes
