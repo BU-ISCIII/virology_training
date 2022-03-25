@@ -95,23 +95,19 @@ Once we have check the quality of our reads, it's important to trim low quality 
 3. Single-end or paired reads > Paired
 4. Input 1 > Browse datasets (right folder icon) > Select 201569_S59_R1_001.fastq.gz
     Input 2 > Browse datasets > Select 201569_S59_R2_001.fastq.gz
-6. Display Filter Options
-  6. Quality Filtering options
-    7. Qualified Quality Phred = 20
-    8. Unqualified percent limit = 10
-  9. Length Filtering Options
-    10. Length required = 50
-11. Read modification options
-  12. PoliX tail trimming > Enable polyX tail trimming
-  13. Per read cutting by quality options
-    14. Cut by quality in front (5') > Yes
-    15. Cut by quality in tail (3') > Yes
-    16. Cutting mean quality = 20
-17. Output options
-  18. Output HTML report > Yes
-  19. Output JSON report > Yes
-
-Finally, click on "_Execute_"
+5. Display Filter Options
+  5. Quality Filtering options
+    6. Qualified Quality Phred = 20
+    7. Unqualified percent limit = 10
+  8. Length Filtering Options
+    8. Length required = 50
+10. Read modification options
+  10. PoliX tail trimming > Enable polyX tail trimming
+11. Per read cutting by quality options
+  11. Cut by quality in front (5') > Yes
+  12. Cut by quality in tail (3') > Yes
+  13. Cutting mean quality = 20
+  14. "_Execute_"
 
 ![fastp1](../docs/images/fastp1.png)
 ![fastp2](../docs/images/fastp2.png)
