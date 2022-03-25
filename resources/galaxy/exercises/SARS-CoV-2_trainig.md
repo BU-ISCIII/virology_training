@@ -93,21 +93,35 @@ So the central panel with the results we want to visualize will bee better seen.
 Once we have check the quality of our reads, it's important to trim low quality nucleotides from those reads, for which we will use _Fastp_. So, in the search bar you look for fastp and then select "_fastp - fast all-in-one preprocessing for FASTQ files_". There, we will have to change some parameters ensure the trimming accuracy for this amplicon data. First of all we are going to do the analysis for the sample we gave to you (201569). These are the field we will have to change:
 
 3.Single-end or paired reads > Paired
+
 4.Input 1 > Browse datasets (right folder icon) > Select 201569_S59_R1_001.fastq.gz
+
   Input 2 > Browse datasets > Select 201569_S59_R2_001.fastq.gz
  
 5.Display Filter Options
+
    5.Quality Filtering options
+   
       6.Qualified Quality Phred = 20
+      
       7.Unqualified percent limit = 10
+      
 8.Length Filtering Options
+
    8.Length required = 50
+   
 9.Read modification options
+
    10.PoliX tail trimming > Enable polyX tail trimming
+   
 11.Per read cutting by quality options
+
    11.Cut by quality in front (5') > Yes
+   
    12.Cut by quality in tail (3') > Yes
+   
    13.Cutting mean quality = 20
+   
 14."_Execute_"
 
 ![fastp1](../docs/images/fastp1.png)
