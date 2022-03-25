@@ -40,6 +40,8 @@ In order to do upload files from URL we have to follow these steps:
 ```
 https://zenodo.org/record/5724464/files/SARSCOV2-1_R1.fastq.gz?download=1
 https://zenodo.org/record/5724464/files/SARSCOV2-1_R2.fastq.gz?download=1
+https://zenodo.org/record/5724464/files/SARSCOV2-2_R1.fastq.gz?download=1
+https://zenodo.org/record/5724464/files/SARSCOV2-2_R2.fastq.gz?download=1
 ```
 
 4. Now, in the **Download data from the web by entering URLs (one per line) or directly paste content.** square, paste the text you copied before
