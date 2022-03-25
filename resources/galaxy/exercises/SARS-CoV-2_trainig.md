@@ -16,7 +16,7 @@ During this training we will following these steps:
 
 ## Register/Login
 
-First of all, you have to create a user (or login into your user if you already have one) in the [Galaxy website](https://usegalaxy.org/) by clicking in the button indicated in the image:
+First of all, you have to create a user (or login into your user if you already have one) in the [European Galaxy website](https://usegalaxy.eu/) by clicking in the button indicated in the image:
 
 ![galaxy_login](../docs/images/galaxy_login.png)
 
