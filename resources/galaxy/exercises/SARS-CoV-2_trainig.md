@@ -360,9 +360,10 @@ Now we are going to determine the lineage of the samples. We will use a software
 
 1. Search for the **pangolin** tool
 2. Select **Pangolin Phylogenetic Assignment of Outbreak Lineages** and set the following parameters:
-3. Select the *bedtools MaskFasta* generated in the previous step as input fasta file.
-4. Set maximum proportion of Ns allowed to 0.3. This will filter all the consensus with more than 30% of Ns.
-5. **Execute**
+3. In "Input FASTA File(s)" you can select more than one fasta file by selecting the batch mode input field (two sheets icon)
+4. Then select both *ivar consensus* generated in the previous step as input fasta files.
+5. Set maximum proportion of Ns allowed to 0.3. This will filter all the consensus with more than 30% of Ns.
+6. **Execute**
 
 <p align="center"><img src="../docs/images/pangolin.png" alt="pangolin" width="900"></p>
 
