@@ -266,12 +266,15 @@ Finally, press "_Start_".
 
 Once you have the bed file, you just have to search for "_ivar trim_" in the search bar and select "_ivar trim Trim reads in aligned BAM_". Then follow these steps:
 
-3. Bam file > Select the aligment bam file generated with Bowtie2.
-4. BED file with primer sequences and positions > Select the bed file you just upload.
-5. Minimum length of read to retain after trimming = 20
-6. Include reads not ending in any primer binding sites? > Yes.
+3. In "Bam file" you can select more than one .bam alignment file by selecting the batch mode input field (two sheets icon)
+4. Then select both Bowtie2 alignments with ctrl
+5. Include reads not ending in any primer binding sites? > Yes.
+6. Minimum length of read to retain after trimming = 20
+7. Execute
 
 ![ivar_trim1](../docs/images/ivar_trim1.png)
+
+![ivar_trim2](../docs/images/ivar_trim2.png)
 
 ### iVar results
 
