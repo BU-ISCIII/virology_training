@@ -288,7 +288,7 @@ Once we have the alingment statistics and files with amplicon primers trimmed, w
 
 The first step in variant calling is generate a pileup file. For that you just have to search for "_mpileup_" in the search bar and select "_samtools mpileup multi-way pileup of variants_". Then select the following parameters:
 
-3. In BAM file(s) you can select more than one ivar trimmed .bam file by selecting both alignments with ctrl
+3. In BAM file(s) select only one ivar Trimmed bam file
 4. Set advanced options > Advanced
 5. Disable read-pair overlap detection > Yes
 6. Do not discard anomalous read pairs > Yes
