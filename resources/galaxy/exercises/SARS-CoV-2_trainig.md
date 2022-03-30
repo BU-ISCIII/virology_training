@@ -319,8 +319,9 @@ This variants have passed a filter for the minimum quality of the variant, which
 
 Once we have the variants called, it's interesting to annotate those variants, for which you will use SnpEff. Search for "_snpeff_" in the searh bar and select "_SnpEff eff: annotate variants for SARS-CoV-2_", then change the following parameters:
 
-3. Sequence changes (SNPs, MNPs, InDels) > Select Bcftools filter output VCF.
-4. Create CSV report, useful for downstream analysis (-csvStats) > Yes
+3. In "Sequence changes (SNPs, MNPs, InDels)" you can select more than one ivar variants VCF file file by selecting the batch mode input field (two sheets icon)
+4. With `ctrl` select both ivar variants VCF files.
+5. Create CSV report, useful for downstream analysis (-csvStats) > Yes
 
 ![snpeff](../docs/images/snpeff.png)
 
