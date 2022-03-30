@@ -72,7 +72,7 @@ This program will generate a message like this one, were we can read that, each 
 
 ![fastqc_message](../docs/images/fastqc_message.png)
 
-### FastQC results visualization
+#### FastQC results visualization
 To visualize the information coming from FastQC we just have to select the job of interest. In this case we are interested in the "_Web page results_" so for the sample we want to see the results we have to click in the _eye_ to visualize galaxy results:
 
 ![fastqc_results](../docs/images/fastqc_results.png)
@@ -136,7 +136,7 @@ A message like this one will appear, which means that 4 results will be generate
 
 ![fastp_message](../docs/images/fastp_message.png)
 
-### Fastp results
+#### Fastp results
 
 Once fastp analysis is done, you can see the results by clicking in the eye ("_View Data_") in the fatp HTML results. We will see a report like this one:
 
@@ -202,7 +202,7 @@ We will see a message like this one:
 
 ![bowtie_message](../docs/images/bowtie_message.png)
 
-### Mapping results
+#### Mapping results
 
 Now we can see the mapping results for the samples. The bowtie2 resulting file is a .bam file, which is not easy to read by humans. This .bam file can be downloaded by clicking in the alignment file and then into download. Then, the resulting .gz file will contain the alignment .bam file that can be introduced in a software such as [IGV](http://software.broadinstitute.org/software/igv/) with the reference genome fasta file.
 
@@ -234,7 +234,7 @@ This process will generate one output file per .bam alignment file selected as i
 
 ![picard_wgsmetrics_message](../docs/images/picard_wgsmetrics_message.png)
 
-### Picard results
+#### Picard results
 
 Picard results consist in quite long files, so the best is to download those results and visualize them in your computer. Yo you have to click in the CollectWgsMetrics job you want to download, and then click in the save button:
 
@@ -279,7 +279,7 @@ Once you have the bed file, you just have to search for "_ivar trim_" in the sea
 
 ![ivar_trim3](../docs/images/ivar_trim3.png)
 
-### iVar results
+#### iVar trimming results
 
 The resulting file from iVar will be a new BAM file where amplicon primer positions will be removed, so there's no result to visualize.
 
@@ -287,39 +287,24 @@ The resulting file from iVar will be a new BAM file where amplicon primer positi
 
 Once we have the alingment statistics and files with amplicon primers trimmed, we can start with the variant calling process.
 
-### Mpileup
+### iVar
 
-The first step in variant calling is generate a pileup file. For that you just have to search for "_mpileup_" in the search bar and select "_samtools mpileup multi-way pileup of variants_". Then select the following parameters:
+To call for variants between the sample and the reference we are going to use iVar variants, so you have to search for "_ivar_" in the search bar and select "_ivar variants Call variants from aligned BAM file_". Then select the following parameters:
 
-3. In BAM file(s) select only one ivar Trimmed bam file
-4. Set advanced options > Advanced
-5. Disable read-pair overlap detection > Yes
-6. Do not discard anomalous read pairs > Yes
-7. Disable BAQ (per-Base Alignment Quality), see below > Yes
-8. max per-file depth; avoids excessive memory usage = 0
-9. Minimum base quality for a base to be considered = 20
-10. Execute
+3. In "Bam file" you can select more than one .bam alignment file by selecting the batch mode input field (two sheets icon)
+4. With `ctrl` select both ivar Trimmed bam files
+5. Minimum frequency threshold > 0.25
+6. Excute
 
-![samtools_mpileup1](../docs/images/samtools_mpileup1.png)
-![samtools_mpileup2](../docs/images/samtools_mpileup2.png)
-![samtools_mpileup3](../docs/images/samtools_mpileup3.png)
+![ivar_variants1](../docs/images/ivar_variants1.png)
 
-:warning: If you are working with two samples, don't forget to run [samtools mileup](#mpileup) steps with the other sample.
+iVar will create one output file per each bam file uploaded:
 
-### VarScan
+![ivar_variants_message](../docs/images/ivar_variants_message.png)
 
-Now, with the mpileup file you can start the variant calling process. You will use a program called VarScan, so you have to search for "_varscan_" in the search bar and select "_VarScan for variant detection_". Then select the following parameters:
+#### iVar results
 
-3. Pileup dataset > Select the mpilup file generated in the previous process.
-4. Minimum read depth = 10
-5. Minimum supporting reads = 5
-6. Minimum base quality at a position to count a read = 20
-
-![varscan1](../docs/images/varscan1.png)
-
-### VarScan results
-
-VarScan results consist in a VCF file containing all the variants found between the reference and the sample. Each line represents a variant the columns give information about that variant, such as the position in the reference genome, the reference allele, the alternate allele, if that variant passed the filters, and so on.
+iVar results consist in a Tab separated file containing all the variants found between the reference and the sample. Each line represents a variant the columns give information about that variant, such as the position in the reference genome, the reference allele, the alternate allele, if that variant passed the filters, and so on.
 
 ![varscan2_results](../docs/images/varscan2_results.png)
 
