@@ -184,8 +184,8 @@ So you have to copy the URL direction, and do then select "_Download from web or
 Now we can start with the main mapping process. The first thing we have to do is look for the program "_Bowtie2_" in the search bar and then select "_Bowtie2 - map reads against reference genome_". Here we will have to set the following parameters, for the first sample:
 
 3. Is this single or paired library > Paired-end
-4. Fasta/Q file #1: **fastp on data 2 and data 1: Read 1 output**
-5. asta/Q file #2: **fastp on data 2 and data 1: Read 2 output**
+4. `Fasta/Q file #1`: **fastp on data 2 and data 1: Read 1 output**
+5. `Fasta/Q file #2`: **fastp on data 2 and data 1: Read 2 output**
 6. Will you select a reference genome from your history or use a built-in index? > Use a genome from the history and create index
   - **This is very important because we haven't previously created the SARS-Cov2 genome index, si bowtie 2 will generate it automatically.**
 7. Select reference genome > GCF_009858895.2_ASM985889v3_genomic.200409.fna.gz
