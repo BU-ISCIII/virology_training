@@ -4,19 +4,19 @@ In this report you will find all the information necessary to follow the steps t
 
 ## Training overview
 During this training we will following these steps:
-* [Register/Login](#register/login): Register or login into Galaxy website.
-* [Data](#data): Upload data for the analysis.
-* [Quality](#quality): Analysis of the quality of the raw reads.
+* [Register/Login](#register/login): Register or login into Galaxy website
+* [Data](#data): Upload data for the analysis
+* [Quality](#quality): Analysis of the quality of the raw reads
 * [Trimming](#trimming): Quality trimming using fastp
 * [Mapping](#mapping): Mapping reads to reference genome with Bowtie2
-* [Stats](#stats): Mapping statistics with samtools and picard.
-* [Amplicons](#amplicons): Preprocessing steps mandatory for amplicon sequencing data.
-* [Variants](#variants): Variant calling and filtering.
+* [Stats](#stats): Mapping statistics with picard
+* [Amplicons](#amplicons): Preprocessing steps mandatory for amplicon sequencing data
+* [Variants](#variants): Variant calling and annotation
 * [Consensus](#consensus): Consensus genome generation
 
 ## Register/Login
 
-First of all, you have to create a user (or login into your user if you already have one) in the [Galaxy website](https://usegalaxy.org/) by clicking in the button indicated in the image:
+First of all, you have to create a user (or login into your user if you already have one) in the [European Galaxy website](https://usegalaxy.eu/) by clicking in the button indicated in the image:
 
 ![galaxy_login](../docs/images/galaxy_login.png)
 
@@ -40,6 +40,8 @@ In order to do upload files from URL we have to follow these steps:
 ```
 https://zenodo.org/record/5724464/files/SARSCOV2-1_R1.fastq.gz?download=1
 https://zenodo.org/record/5724464/files/SARSCOV2-1_R2.fastq.gz?download=1
+https://zenodo.org/record/5724464/files/SARSCOV2-2_R1.fastq.gz?download=1
+https://zenodo.org/record/5724464/files/SARSCOV2-2_R2.fastq.gz?download=1
 ```
 
 4. Now, in the **Download data from the web by entering URLs (one per line) or directly paste content.** square, paste the text you copied before
@@ -70,7 +72,7 @@ This program will generate a message like this one, were we can read that, each 
 
 ![fastqc_message](../docs/images/fastqc_message.png)
 
-### FastQC results visualization
+#### FastQC results visualization
 To visualize the information coming from FastQC we just have to select the job of interest. In this case we are interested in the "_Web page results_" so for the sample we want to see the results we have to click in the _eye_ to visualize galaxy results:
 
 ![fastqc_results](../docs/images/fastqc_results.png)
@@ -90,26 +92,37 @@ So the central panel with the results we want to visualize will bee better seen.
 ### Quality trimming (Fastp)
 Once we have check the quality of our reads, it's important to trim low quality nucleotides from those reads, for which we will use _Fastp_. So, in the search bar you look for fastp and then select "_fastp - fast all-in-one preprocessing for FASTQ files_". There, we will have to change some parameters ensure the trimming accuracy for this amplicon data. First of all we are going to do the analysis for the sample we gave to you (201569). These are the field we will have to change:
 
-3. Single-end or paired reads > Paired
-4. Input 1 > Browse datasets (right folder icon) > Select 201569_S59_R1_001.fastq.gz
-    Input 2 > Browse datasets > Select 201569_S59_R2_001.fastq.gz
-6. Display Filter Options
-  6. Quality Filtering options
-    7. Qualified Quality Phred = 30
-    8. Unqualified percent limit = 10
-  9. Length Filtering Options
-    10. Length required = 50
-11. Read modification options
-  12. PoliX tail trimming > Enable polyX tail trimming
-  13. Per read cutting by quality options
-    14. Cut by quality in front (5') > Yes
-    15. Cut by quality in tail (3') > Yes
-    16. Cutting mean quality = 30
-17. Output options
-  18. Output HTML report > Yes
-  19. Output JSON report > Yes
+3.Single-end or paired reads > Paired
 
-Finally, click on "_Execute_"
+4.Input 1 > Browse datasets (right folder icon) > Select 201569_S59_R1_001.fastq.gz
+
+  Input 2 > Browse datasets > Select 201569_S59_R2_001.fastq.gz
+  
+5.Display Filter Options
+
+Quality Filtering options
+  
+6.Qualified Quality Phred = 20
+    
+7.Unqualified percent limit = 10
+    
+Length Filtering Options
+
+8.Length required = 50
+   
+9.Read modification options
+
+10.PoliX tail trimming > Enable polyX tail trimming
+   
+Per read cutting by quality options
+
+11.Cut by quality in front (5') > Yes
+   
+12.Cut by quality in tail (3') > Yes
+   
+13.Cutting mean quality = 20
+   
+14."_Execute_"
 
 ![fastp1](../docs/images/fastp1.png)
 ![fastp2](../docs/images/fastp2.png)
@@ -120,11 +133,10 @@ A message like this one will appear, which means that 4 results will be generate
   1. One with the R1 trimmed reads
   2. Another one with the R2 trimmed reads
   3. Another one with the HTML results
-  4. A last one with the JSON results
 
 ![fastp_message](../docs/images/fastp_message.png)
 
-### Fastp results
+#### Fastp results
 
 Once fastp analysis is done, you can see the results by clicking in the eye ("_View Data_") in the fatp HTML results. We will see a report like this one:
 
@@ -149,6 +161,8 @@ Among the most relevant results, you have the:
 
 **_For more information about FastQC output visit [Fastp github](https://github.com/OpenGene/fastp)_**
 
+*:warning: If you are working with two samples, don't forget to run [trimming steps](#quality-trimming-fastp) with the other sample.*
+
 ## Mapping
 
 In order to call for variants between the samples and the reference, it's mandatory to map the sample reads to the reference genome. To do this we need the fasta file of the reference and the Bowtie2 index of that fasta file.
@@ -170,8 +184,8 @@ So you have to copy the URL direction, and do then select "_Download from web or
 Now we can start with the main mapping process. The first thing we have to do is look for the program "_Bowtie2_" in the search bar and then select "_Bowtie2 - map reads against reference genome_". Here we will have to set the following parameters, for the first sample:
 
 3. Is this single or paired library > Paired-end
-4. Fasta/Q file #1: **fastp on data 2 and data 1: Read 1 output**
-5. asta/Q file #2: **fastp on data 2 and data 1: Read 2 output**
+4. `Fasta/Q file #1`: **fastp on data 2 and data 1: Read 1 output**
+5. `Fasta/Q file #2`: **fastp on data 2 and data 1: Read 2 output**
 6. Will you select a reference genome from your history or use a built-in index? > Use a genome from the history and create index
   - **This is very important because we haven't previously created the SARS-Cov2 genome index, si bowtie 2 will generate it automatically.**
 7. Select reference genome > GCF_009858895.2_ASM985889v3_genomic.200409.fna.gz
@@ -188,7 +202,7 @@ We will see a message like this one:
 
 ![bowtie_message](../docs/images/bowtie_message.png)
 
-### Mapping results
+#### Mapping results
 
 Now we can see the mapping results for the samples. The bowtie2 resulting file is a .bam file, which is not easy to read by humans. This .bam file can be downloaded by clicking in the alignment file and then into download. Then, the resulting .gz file will contain the alignment .bam file that can be introduced in a software such as [IGV](http://software.broadinstitute.org/software/igv/) with the reference genome fasta file.
 
@@ -198,47 +212,29 @@ In our case, the file that can be visualize is the statistics file, which contai
 
 ![bowtie2_results](../docs/images/bowtie2_results.png)
 
+*:warning: If you are working with two samples, don't forget to run [trimming steps](#quality-trimming-fastp) with the other sample.*
+
 ## Stats
 
 The previously shown files give few human readable information, because mapping files are supposed to be used by other programs. In this sense, we can use some programs to extract relevant statistical information about the mapping process.
-
-### Samtools flagstat
-
-The first program is Samtools, from which we will use the module samtools flagstat. To do this, we have to look in the search bar for "_samtools flagstat_" and then select "_Samtools flagstat tabulate descriptive stats for BAM datset_". There, we just have to select the samples we want to perform the mapping stats (in the example there are two samples, you just have to use one): _Bowtie2 on data X, data X and data X: alingment_. You can select the samples from the list in _Multiple datasets_ or select the folder icon (_Browse datasets_) to select the file from the history. Finally, select _Execute_
-
-![samtools_flagstat_1](../docs/images/samtools_flagstat_1.png)
-
-### Samtools results
-
-The results of the samtools program gives information about the number and percentage of reads that mapped with the reference genome.
-
-![samtools_results](../docs/images/samtools_results.png)
 
 ### Picard CollectWgsMetrics
 
 Another program that gives statistical information about the mapping process is Picard. To run this program you just have to search "_Collect Wgs Metrics_" and then select "_CollectWgsMetrics compute metrics for evaluating of whole genome sequencing experiments_".
 
+3. In "_Select SAM/BAM dataset or dataset collection_" you can select more than one .bam alignment file by selecting the batch mode input field (two sheets icon) and then selecting both Bowtie2 alignments with `ctrl`
+4. Load reference genome from > History
+5. Use the folloing dataset as the reference sequence > Select the reference genome used for [Bowtie2](#mapping-reads-with-reference-genome-bowtie2) (GCF_009858895.2_ASM985889v3_genomic.200409.fna.gz).
+6. Treat bases with coverage exceeding this value as if they had coverage at this value = 1000000
+7. Execute.
+
 ![picard_wgsmetrics1](../docs/images/picard_wgsmetrics1.png)
-
-In "_Select SAM/BAM dataset or dataset collection_" you can select more than one .bam alignment file by clicking in the folder icon "_Browse dataset_"(4).
-
-![picard_wgsmetrics_select2](../docs/images/picard_wgsmetrics_select2.png)
-
-The you have to change the following parameters:
-
-6. Load reference genome from > History
-7. Select the fasta file we uploaded with the reference genome (GCF_009858895.2_ASM985889v3_genomic.200409.fna.gz).
-8. Treat bases with coverage exceeding this value as if they had coverage at this value = 1000000
-9. Select validation stringency > Lenient
-10. Execute.
-
-![picard_wgsmetrics2](../docs/images/picard_wgsmetrics2.png)
 
 This process will generate one output file per .bam alignment file selected as input.
 
 ![picard_wgsmetrics_message](../docs/images/picard_wgsmetrics_message.png)
 
-### Picard results
+#### Picard results
 
 Picard results consist in quite long files, so the best is to download those results and visualize them in your computer. Yo you have to click in the CollectWgsMetrics job you want to download, and then click in the save button:
 
@@ -270,14 +266,20 @@ Finally, press "_Start_".
 
 Once you have the bed file, you just have to search for "_ivar trim_" in the search bar and select "_ivar trim Trim reads in aligned BAM_". Then follow these steps:
 
-3. Bam file > Select the aligment bam file generated with Bowtie2.
-4. BED file with primer sequences and positions > Select the bed file you just upload.
-5. Minimum length of read to retain after trimming = 20
+3. Select the versions option (three boxes)
+4. Select the `Galaxy Version 1.3.1+galaxy1` option
+5. In "Bam file" you can select more than one .bam alignment file by selecting the batch mode input field (two sheets icon) and then select both Bowtie2 alignments with ctrl
 6. Include reads not ending in any primer binding sites? > Yes.
+7. Minimum length of read to retain after trimming = 20
+8. Execute
 
 ![ivar_trim1](../docs/images/ivar_trim1.png)
 
-### iVar results
+![ivar_trim2](../docs/images/ivar_trim2.png)
+
+![ivar_trim3](../docs/images/ivar_trim3.png)
+
+#### iVar trimming results
 
 The resulting file from iVar will be a new BAM file where amplicon primer positions will be removed, so there's no result to visualize.
 
@@ -285,68 +287,41 @@ The resulting file from iVar will be a new BAM file where amplicon primer positi
 
 Once we have the alingment statistics and files with amplicon primers trimmed, we can start with the variant calling process.
 
-### Mpileup
+### iVar
 
-The first step in variant calling is generated a pileup file. For that you just have to search for "_mpileup_" in the search bar and select "_samtools mpileup multi-way pileup of variants_". Then select the following parameters:
+To call for variants between the sample and the reference we are going to use iVar variants, so you have to search for "_ivar_" in the search bar and select "_ivar variants Call variants from aligned BAM file_". Then select the following parameters:
 
-3. Choose the source for the reference genome > Use a genome from the history.
-4. BAM file(s) > Select the ivar bam file
-5. Using reference genome > Select the reference fasta file.
-- Set advanced options > Advanced
-6. Disable read-pair overlap detection > Yes
-7. Do not discard anomalous read pairs > Yes
-8. Disable BAQ (per-Base Alignment Quality), see below > Yes
-9. max per-file depth; avoids excessive memory usage = 0
-10. Minimum base quality for a base to be considered = 20
-11. Execute
+3. In "Bam file" you can select more than one .bam alignment file by selecting the batch mode input field (two sheets icon)
+4. With `ctrl` select both ivar Trimmed bam files
+5. Minimum frequency threshold > 0.25
+6. Output format > Both Tabular and VCF
+7. Excute
 
-![samtools_mpileup1](../docs/images/samtools_mpileup1.png)
-![samtools_mpileup2](../docs/images/samtools_mpileup2.png)
-![samtools_mpileup3](../docs/images/samtools_mpileup3.png)
+![ivar_variants1](../docs/images/ivar_variants1.png)
 
-### VarScan
+iVar will create two output files per each bam file uploaded, one with the tabular results, and another one with the vcf files.
 
-Now, with the mpileup file you can start the variant calling process. You will use a program called VarScan, so you have to search for "_varscan_" in the search bar and select "_VarScan for variant detection_". Then select the following parameters:
+![ivar_variants_message](../docs/images/ivar_variants_message.png)
 
-3. Pileup dataset > Select the mpilup file generated in the previous process.
-4. Minimum read depth = 10
-5. Minimum supporting reads = 5
-6. Minimum base quality at a position to count a read = 20
+#### iVar results
 
-![varscan1](../docs/images/varscan1.png)
+To display iVar variants results, select the :eye: icon in the right pannel of the Tabular results and then extend the central panel by clicking in the arrows in the bottom.
 
-### VarScan results
+![ivar_variants_results1](../docs/images/ivar_variants_results1.png)
 
-VarScan results consist in a VCF file containing all the variants found between the reference and the sample. Each line represents a variant the columns give information about that variant, such as the position in the reference genome, the reference allele, the alternate allele, if that variant passed the filters, and so on.
+iVar results consist in a Tab separated file containing all the variants found between the reference and the sample with an Alle Frequency higher than threshold (0.25). Each line represents a variant and the columns give information about that variant, such as the position in the reference genome, the reference allele, the alternate allele, if that variant passed the filters, and so on.
 
-![varscan2_results](../docs/images/varscan2_results.png)
+![ivar_variants_results2](../docs/images/ivar_variants_results2.png)
 
-This variants have only passed a filter for the minimum quality if the variant, which we set as 20, but we need to filter these variants more.
-
-### Variant Filtering with Bcftools
-
-To filter the variants called by VarScan you will use a program called bcftools. You have to search for "_bcftools filter_", then select "_bcftools filter Apply fixed-threshold filters_" and then select the following parameters:
-
-3. VCF/BCF Data > VCF file from VarScan
-4. Restrict to > Select this to display more options:
-  5. Include -> Write: **FORMAT/AD / (FORMAT/AD + FORMAT/RD) >= 0.8**
-    - This is to select only those variants with an allele frequency higher than 80% which are the ones that can be considered as valid for the consensus genome.
-6. output_type > Uncompressed VCF
-
-![bcftools_filter](../docs/images/bcftools_filter.png)
-
-### Bcftools filter results
-
-The main difference between the VCF file from VarScan and the VCF from Bcftools is that this last one is shorter because it will only contain those variants with an allele frequency higher than 80%.
-
-![bcftools_filter_results](../docs/images/bcftools_filter_results.png)
+This variants have passed a filter for the minimum quality of the variant, which we set as 20, and the allele frequency threshold. However, we will have a closer look only to those variants present in an allele frequency higher than 0.75 which are the ones that are going to be included in the consensus.
 
 ### Annotation with SnpEff
 
 Once we have the variants called, it's interesting to annotate those variants, for which you will use SnpEff. Search for "_snpeff_" in the searh bar and select "_SnpEff eff: annotate variants for SARS-CoV-2_", then change the following parameters:
 
-3. Sequence changes (SNPs, MNPs, InDels) > Select Bcftools filter output VCF.
-4. Create CSV report, useful for downstream analysis (-csvStats) > Yes
+3. In "Sequence changes (SNPs, MNPs, InDels)" you can select more than one ivar variants VCF file file by selecting the batch mode input field (two sheets icon)
+4. With `ctrl` select both ivar variants VCF files.
+5. Create CSV report, useful for downstream analysis (-csvStats) > Yes
 
 ![snpeff](../docs/images/snpeff.png)
 
@@ -365,77 +340,30 @@ The SnpEff gives three different results, from which the most interesting ones a
 ## Consensus
 Once we have the most relevant variants that can be considered to include in the consensus genome, you can start with the consensus genome generation.
 
-### Bcftools consensus
+### iVar consensus
 
-The first step consist in including the called variants into the reference genome, for which you will search for "_bcftools consensus_" in the search bar and then select "_bcftools consensus Create consensus sequence by applying VCF variants to a reference fasta file_". In this module you have to select:
+Now we are going to generate the consensus genome using iVar. We are going to search for _ivar_ and the select "_ivar consensus Call consensus from aligned BAM file_". Now follow these steps:
 
-3. VCF/BCF Data > VCF resulting from bcftools filter.
-4. Reference genome > Fasta file uploaded at the begining.
+1. In "BAM fle" you can select more than one .bam alignment file by selecting the batch mode input field (two sheets icon)
+2. Then selecting both iVar Trimmed bam files with ctrl
+3. Minimum frequency threshold > 0.75
+4. Use N instead of - for regions with less than minimum coverage > Yes
 
-![bcftools_consensus](../docs/images/bcftools_consensus.png)
+![ivar_consensus](../docs/images/ivar_consensus.png)
 
 This will just generate a fasta file identical to the reference one, except for those nucleotides that are variants from the VCF file.
 
-![bcftools_consensus_results](../docs/images/bcftools_consensus_results.png)
-
-### Genome coverage calculation
-
-At this point, we have the consensus viral genome, but we know that we have filtered the variants based on the coverage, selecting only those that had a coverage depth higher than 10X. So we cannot ensure that the consensus genome doesn't have any variant that we have filter in those regions with a coverage lower than 10X. So the next step is to determine which regions of the reference genome have a coverage lower than 10X.
-
-To do that you will search for "_bedtools genomecov_" in the search bar and select "_bedtools Genome Coverage compute the coverage over an entire genome_", the you will have to select the following files:
-
-3. Input type > BAM
-  4. BAM file > Alignment file from bowtie2
-5. Output type > BedGraph coverage file
-6. Report regions with zero coverage > Yes
-
-![bedtools_genomecov](../docs/images/bedtools_genomecov.png)
-
-This process will generate a BED file where each genomic position range of the reference genome has the coverage calculated. In this example you can see that for the positions of the reference genome from the nucleotide 55 to 63 they have a coverage of 20X.
-
-![bedtools_genomecov_result](../docs/images/bedtools_genomecov_result.png)
-
-### Regions filtering
-
-From this resulting file from betdools genomecoverage you are going to select those regions with a coverage lower than 10X. Writing in the search bar "_awk_" and selecting "_Text reformatting with awk_", you are going to change:
-
-3. File to process > Bedtools genome coverage file with the coverage regions
-4. AWK Program = $4 < 10
-  - **This will filter all the lines (genomic regions) that have a value lower than 10 in the 4th column (coverage)**
-5. Execute
-
-![awk](../docs/images/awk.png)
-
-The resulting file is exactly the same as the one in Bedtools genomecoverage but only containing those lines with the genomic region coverage lower than 10X.
-
-![awk_result](../docs/images/awk_result.png)
-
-### Masking the consensus genome
-
-Now that you have the consensus genome and the regions with a sequencing depth lower than 10X, you are going to "mask" those regions in the consensus genome replacing the nucleotides in those regions with "N"s. You have to search for "_bedtools maskfasta_", select "_bedtools MaskFastaBed use intervals to mask sequences from a FASTA file_" and then select the following parameters:
-
-3. BED/bedGraph/GFF/VCF/EncodePeak file > Select the BED file resulting from AWK text filter.
-4. FASTA file > Select the consensus genome fasta file generated with Bcftools consensus.
-5. Execute
-
-![bedtools_maskfasta](../docs/images/bedtools_maskfasta.png)
-
-The resulting file is the consensus genome generated previously but now only contains Ns instead of A, T, G or C in the regions with less than 10X depth of coverage
-
-![bedtools_maskfasta_result](../docs/images/bedtools_maskfasta_result.png)
-
-You can download this fasta file and use it to upload it to any public repository such as [ENA](https://www.ebi.ac.uk/ena/browser/) or [GiSaid](https://www.gisaid.org/). Also you can use it to perform phylogenetic trees or whatever else you want to do with the SARS-CoV-2 consensus fasta file.
-
-![bedtools_maskfasta_download](../docs/images/bedtools_maskfasta_download.png)
+![ivar_consensus_results](../docs/images/ivar_consensus_results.png)
 
 ## Lineage
 Now we are going to determine the lineage of the samples. We will use a software called pangolin. We are going to use the masked consensus genomes generated in the previous steps as follows:
 
 1. Search for the **pangolin** tool
 2. Select **Pangolin Phylogenetic Assignment of Outbreak Lineages** and set the following parameters:
-3. Select the *bedtools MaskFasta* generated in the previous step as input fasta file.
-4. Set maximum proportion of Ns allowed to 0.3. This will filter all the consensus with more than 30% of Ns.
-5. **Execute**
+3. In "Input FASTA File(s)" you can select more than one fasta file by selecting the batch mode input field (two sheets icon)
+4. Then select both *ivar consensus* generated in the previous step as input fasta files.
+5. Set maximum proportion of Ns allowed to 0.3. This will filter all the consensus with more than 30% of Ns.
+6. **Execute**
 
 <p align="center"><img src="../docs/images/pangolin.png" alt="pangolin" width="900"></p>
 
