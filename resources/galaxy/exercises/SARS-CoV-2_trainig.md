@@ -340,68 +340,14 @@ The SnpEff gives three different results, from which the most interesting ones a
 ## Consensus
 Once we have the most relevant variants that can be considered to include in the consensus genome, you can start with the consensus genome generation.
 
-### Bcftools consensus
+### iVar consensus
 
-The first step consist in including the called variants into the reference genome, for which you will search for "_bcftools consensus_" in the search bar and then select "_bcftools consensus Create consensus sequence by applying VCF variants to a reference fasta file_". In this module you have to select:
 
-3. VCF/BCF Data > VCF resulting from bcftools filter.
-4. Reference genome > Fasta file uploaded at the begining.
-
-![bcftools_consensus](../docs/images/bcftools_consensus.png)
+![ivar_consensus](../docs/images/ivar_consensus.png)
 
 This will just generate a fasta file identical to the reference one, except for those nucleotides that are variants from the VCF file.
 
-![bcftools_consensus_results](../docs/images/bcftools_consensus_results.png)
-
-### Genome coverage calculation
-
-At this point, we have the consensus viral genome, but we know that we have filtered the variants based on the coverage, selecting only those that had a coverage depth higher than 10X. So we cannot ensure that the consensus genome doesn't have any variant that we have filter in those regions with a coverage lower than 10X. So the next step is to determine which regions of the reference genome have a coverage lower than 10X.
-
-To do that you will search for "_bedtools genomecov_" in the search bar and select "_bedtools Genome Coverage compute the coverage over an entire genome_", the you will have to select the following files:
-
-3. Input type > BAM
-  4. BAM file > Alignment file from bowtie2
-5. Output type > BedGraph coverage file
-6. Report regions with zero coverage > Yes
-
-![bedtools_genomecov](../docs/images/bedtools_genomecov.png)
-
-This process will generate a BED file where each genomic position range of the reference genome has the coverage calculated. In this example you can see that for the positions of the reference genome from the nucleotide 55 to 63 they have a coverage of 20X.
-
-![bedtools_genomecov_result](../docs/images/bedtools_genomecov_result.png)
-
-### Regions filtering
-
-From this resulting file from betdools genomecoverage you are going to select those regions with a coverage lower than 10X. Writing in the search bar "_awk_" and selecting "_Text reformatting with awk_", you are going to change:
-
-3. File to process > Bedtools genome coverage file with the coverage regions
-4. AWK Program = $4 < 10
-  - **This will filter all the lines (genomic regions) that have a value lower than 10 in the 4th column (coverage)**
-5. Execute
-
-![awk](../docs/images/awk.png)
-
-The resulting file is exactly the same as the one in Bedtools genomecoverage but only containing those lines with the genomic region coverage lower than 10X.
-
-![awk_result](../docs/images/awk_result.png)
-
-### Masking the consensus genome
-
-Now that you have the consensus genome and the regions with a sequencing depth lower than 10X, you are going to "mask" those regions in the consensus genome replacing the nucleotides in those regions with "N"s. You have to search for "_bedtools maskfasta_", select "_bedtools MaskFastaBed use intervals to mask sequences from a FASTA file_" and then select the following parameters:
-
-3. BED/bedGraph/GFF/VCF/EncodePeak file > Select the BED file resulting from AWK text filter.
-4. FASTA file > Select the consensus genome fasta file generated with Bcftools consensus.
-5. Execute
-
-![bedtools_maskfasta](../docs/images/bedtools_maskfasta.png)
-
-The resulting file is the consensus genome generated previously but now only contains Ns instead of A, T, G or C in the regions with less than 10X depth of coverage
-
-![bedtools_maskfasta_result](../docs/images/bedtools_maskfasta_result.png)
-
-You can download this fasta file and use it to upload it to any public repository such as [ENA](https://www.ebi.ac.uk/ena/browser/) or [GiSaid](https://www.gisaid.org/). Also you can use it to perform phylogenetic trees or whatever else you want to do with the SARS-CoV-2 consensus fasta file.
-
-![bedtools_maskfasta_download](../docs/images/bedtools_maskfasta_download.png)
+![ivar_consensus_results](../docs/images/ivar_consensus_results.png)
 
 ## Lineage
 Now we are going to determine the lineage of the samples. We will use a software called pangolin. We are going to use the masked consensus genomes generated in the previous steps as follows:
