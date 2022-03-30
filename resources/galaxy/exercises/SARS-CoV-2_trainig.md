@@ -294,39 +294,26 @@ To call for variants between the sample and the reference we are going to use iV
 3. In "Bam file" you can select more than one .bam alignment file by selecting the batch mode input field (two sheets icon)
 4. With `ctrl` select both ivar Trimmed bam files
 5. Minimum frequency threshold > 0.25
-6. Excute
+6. Output format > Both Tabular and VCF
+7. Excute
 
 ![ivar_variants1](../docs/images/ivar_variants1.png)
 
-iVar will create one output file per each bam file uploaded:
+iVar will create two output files per each bam file uploaded, one with the tabular results, and another one with the vcf files.
 
 ![ivar_variants_message](../docs/images/ivar_variants_message.png)
 
 #### iVar results
 
-iVar results consist in a Tab separated file containing all the variants found between the reference and the sample. Each line represents a variant the columns give information about that variant, such as the position in the reference genome, the reference allele, the alternate allele, if that variant passed the filters, and so on.
+To display iVar variants results, select the :eye: icon in the right pannel of the Tabular results and then extend the central panel by clicking in the arrows in the bottom.
 
-![varscan2_results](../docs/images/varscan2_results.png)
+![ivar_variants_results1](../docs/images/ivar_variants_results1.png)
 
-This variants have only passed a filter for the minimum quality if the variant, which we set as 20, but we need to filter these variants more.
+iVar results consist in a Tab separated file containing all the variants found between the reference and the sample with an Alle Frequency higher than threshold (0.25). Each line represents a variant and the columns give information about that variant, such as the position in the reference genome, the reference allele, the alternate allele, if that variant passed the filters, and so on.
 
-### Variant Filtering with Bcftools
+![ivar_variants_results2](../docs/images/ivar_variants_results2.png)
 
-To filter the variants called by VarScan you will use a program called bcftools. You have to search for "_bcftools filter_", then select "_bcftools filter Apply fixed-threshold filters_" and then select the following parameters:
-
-3. VCF/BCF Data > VCF file from VarScan
-4. Restrict to > Select this to display more options:
-  5. Include -> Write: **FORMAT/AD / (FORMAT/AD + FORMAT/RD) >= 0.8**
-    - This is to select only those variants with an allele frequency higher than 80% which are the ones that can be considered as valid for the consensus genome.
-6. output_type > Uncompressed VCF
-
-![bcftools_filter](../docs/images/bcftools_filter.png)
-
-### Bcftools filter results
-
-The main difference between the VCF file from VarScan and the VCF from Bcftools is that this last one is shorter because it will only contain those variants with an allele frequency higher than 80%.
-
-![bcftools_filter_results](../docs/images/bcftools_filter_results.png)
+This variants have passed a filter for the minimum quality of the variant, which we set as 20, and the allele frequency threshold. However, we will have a closer look only to those variants present in an allele frequency higher than 0.75 which are the ones that are going to be included in the consensus.
 
 ### Annotation with SnpEff
 
