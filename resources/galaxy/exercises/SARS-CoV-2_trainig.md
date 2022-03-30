@@ -342,6 +342,12 @@ Once we have the most relevant variants that can be considered to include in the
 
 ### iVar consensus
 
+Now we are going to generate the consensus genome using iVar. We are going to search for _ivar_ and the select "_ivar consensus Call consensus from aligned BAM file_". Now follow these steps:
+
+1. In "BAM fle" you can select more than one .bam alignment file by selecting the batch mode input field (two sheets icon)
+2. Then selecting both iVar Trimmed bam files with ctrl
+3. Minimum frequency threshold > 0.75
+4. Use N instead of - for regions with less than minimum coverage > Yes
 
 ![ivar_consensus](../docs/images/ivar_consensus.png)
 
