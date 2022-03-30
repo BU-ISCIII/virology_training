@@ -161,6 +161,8 @@ Among the most relevant results, you have the:
 
 **_For more information about FastQC output visit [Fastp github](https://github.com/OpenGene/fastp)_**
 
+*:warning: If you are working with two samples, don't forget to run [trimming steps](#quality-trimming-fastp) with the other sample.*
+
 ## Mapping
 
 In order to call for variants between the samples and the reference, it's mandatory to map the sample reads to the reference genome. To do this we need the fasta file of the reference and the Bowtie2 index of that fasta file.
