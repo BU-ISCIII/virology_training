@@ -301,6 +301,8 @@ The first step in variant calling is generate a pileup file. For that you just h
 ![samtools_mpileup2](../docs/images/samtools_mpileup2.png)
 ![samtools_mpileup3](../docs/images/samtools_mpileup3.png)
 
+:warning: If you are working with two samples, don't forget to run [samtools mileup](#mpileup) steps with the other sample.
+
 ### VarScan
 
 Now, with the mpileup file you can start the variant calling process. You will use a program called VarScan, so you have to search for "_varscan_" in the search bar and select "_VarScan for variant detection_". Then select the following parameters:
