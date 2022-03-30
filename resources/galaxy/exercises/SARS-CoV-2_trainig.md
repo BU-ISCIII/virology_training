@@ -4,14 +4,14 @@ In this report you will find all the information necessary to follow the steps t
 
 ## Training overview
 During this training we will following these steps:
-* [Register/Login](#register/login): Register or login into Galaxy website.
-* [Data](#data): Upload data for the analysis.
-* [Quality](#quality): Analysis of the quality of the raw reads.
+* [Register/Login](#register/login): Register or login into Galaxy website
+* [Data](#data): Upload data for the analysis
+* [Quality](#quality): Analysis of the quality of the raw reads
 * [Trimming](#trimming): Quality trimming using fastp
 * [Mapping](#mapping): Mapping reads to reference genome with Bowtie2
-* [Stats](#stats): Mapping statistics with samtools and picard.
-* [Amplicons](#amplicons): Preprocessing steps mandatory for amplicon sequencing data.
-* [Variants](#variants): Variant calling and filtering.
+* [Stats](#stats): Mapping statistics with picard
+* [Amplicons](#amplicons): Preprocessing steps mandatory for amplicon sequencing data
+* [Variants](#variants): Variant calling and annotation
 * [Consensus](#consensus): Consensus genome generation
 
 ## Register/Login
