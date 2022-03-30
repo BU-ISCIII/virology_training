@@ -133,7 +133,6 @@ A message like this one will appear, which means that 4 results will be generate
   1. One with the R1 trimmed reads
   2. Another one with the R2 trimmed reads
   3. Another one with the HTML results
-  4. A last one with the JSON results
 
 ![fastp_message](../docs/images/fastp_message.png)
 
