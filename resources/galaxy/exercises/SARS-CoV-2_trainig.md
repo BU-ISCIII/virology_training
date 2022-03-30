@@ -222,7 +222,7 @@ The previously shown files give few human readable information, because mapping 
 
 Another program that gives statistical information about the mapping process is Picard. To run this program you just have to search "_Collect Wgs Metrics_" and then select "_CollectWgsMetrics compute metrics for evaluating of whole genome sequencing experiments_".
 
-3. In "_Select SAM/BAM dataset or dataset collection_" you can select more than one .bam alignment file by select the both Bowtie2 alignments with `ctrl`
+3. In "_Select SAM/BAM dataset or dataset collection_" you can select more than one .bam alignment file by selecting the batch mode input field (two sheets icon) and then selecting both Bowtie2 alignments with `ctrl`
 4. Load reference genome from > History
 5. Use the folloing dataset as the reference sequence > Select the reference genome used for [Bowtie2](#mapping-reads-with-reference-genome-bowtie2) (GCF_009858895.2_ASM985889v3_genomic.200409.fna.gz).
 6. Treat bases with coverage exceeding this value as if they had coverage at this value = 1000000
