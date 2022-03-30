@@ -212,21 +212,11 @@ In our case, the file that can be visualize is the statistics file, which contai
 
 ![bowtie2_results](../docs/images/bowtie2_results.png)
 
+*:warning: If you are working with two samples, don't forget to run [trimming steps](#quality-trimming-fastp) with the other sample.*
+
 ## Stats
 
 The previously shown files give few human readable information, because mapping files are supposed to be used by other programs. In this sense, we can use some programs to extract relevant statistical information about the mapping process.
-
-### Samtools flagstat
-
-The first program is Samtools, from which we will use the module samtools flagstat. To do this, we have to look in the search bar for "_samtools flagstat_" and then select "_Samtools flagstat tabulate descriptive stats for BAM datset_". There, we just have to select the samples we want to perform the mapping stats (in the example there are two samples, you just have to use one): _Bowtie2 on data X, data X and data X: alingment_. You can select the samples from the list in _Multiple datasets_ or select the folder icon (_Browse datasets_) to select the file from the history. Finally, select _Execute_
-
-![samtools_flagstat_1](../docs/images/samtools_flagstat_1.png)
-
-### Samtools results
-
-The results of the samtools program gives information about the number and percentage of reads that mapped with the reference genome.
-
-![samtools_results](../docs/images/samtools_results.png)
 
 ### Picard CollectWgsMetrics
 
