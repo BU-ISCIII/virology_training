@@ -3,5 +3,5 @@
 
 - [Diapositivas]()
 - Ejercicios:
-  - [Ensamblado]()
+  - [Ensamblado](http://galaxyproject.github.io/training-material/topics/assembly/tutorials/general-introduction/tutorial.html)
   - [SARS-CoV-2 galaxy](https://github.com/svarona/virology_training_1/blob/main/resources/galaxy/exercises/SARS-CoV-2_trainig.md)
