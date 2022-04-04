@@ -381,4 +381,4 @@ https://usegalaxy.eu/u/svarona/h/sars-cov-2
 
 And viralrecon workflfow in:
 
-https://usegalaxy.org/u/svarona/w/viralrecon-emulator 
+https://usegalaxy.eu/u/svarona/w/viralrecon-ivar 
