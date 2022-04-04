@@ -377,7 +377,7 @@ As you can see, results are in table format, where you have in first place the r
 
 If you have any problem following this training and you want to visualize the resulting file you can access them through this URL:
 
-https://usegalaxy.org/u/svarona/h/viralrecon2021
+https://usegalaxy.eu/u/svarona/h/sars-cov-2
 
 And viralrecon workflfow in:
 
