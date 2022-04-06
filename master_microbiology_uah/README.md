@@ -4,7 +4,6 @@
 - Diapositivas:
   - [Isabel]()
   - [Consensus genome generation and assembly](./slides/master_UAH-ISCIII_QCAssembly.pdf)
-]  
 - Ejercicios:
   - [Ensamblado](http://galaxyproject.github.io/training-material/topics/assembly/tutorials/general-introduction/tutorial.html)
   - [SARS-CoV-2 galaxy](../resources/galaxy/exercises/SARS-CoV-2_trainig.md)
