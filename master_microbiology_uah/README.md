@@ -2,7 +2,7 @@
 ## Módulo Introducción al análisis de datos de secuenciación masiva y sus aplicaciones en microbiología.
 
 - Diapositivas:
-  - [Isabel]()
+  - [Introducción a la secuenciación masiva y análisis de datos genómicos](./slides/master_UAH-ISCIII_SecMasiva_ICuesta.pdf)
   - [Consensus genome generation and assembly](./slides/master_UAH-ISCIII_QCAssembly.pdf)
 - Ejercicios:
   - [Ensamblado](http://galaxyproject.github.io/training-material/topics/assembly/tutorials/general-introduction/tutorial.html)
