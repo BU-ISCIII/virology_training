@@ -13,6 +13,7 @@ During this training we will following these steps:
 * [Amplicons](#amplicons): Preprocessing steps mandatory for amplicon sequencing data
 * [Variants](#variants): Variant calling and annotation
 * [Consensus](#consensus): Consensus genome generation
+* [Additional info](#additional-info): Websites for additional info.
 
 ## Register/Login
 
@@ -382,3 +383,9 @@ https://usegalaxy.eu/u/svarona/h/sars-cov-2
 And viralrecon workflfow in:
 
 https://usegalaxy.eu/u/svarona/w/viralrecon-ivar 
+
+## Additional info
+- [GiSaid](https://gisaid.org/): The GISAID Initiative promotes the rapid sharing of data from all influenza viruses and the coronavirus causing COVID-19. This includes genetic sequence and related clinical and epidemiological data associated with human viruses, and geographical as well as species-specific data associated with avian and other animal viruses, to help researchers understand how viruses evolve and spread during epidemics and pandemics.
+- [ENA](https://www.ebi.ac.uk/ena/browser/): The European Nucleotide Archive (ENA) provides a comprehensive record of the world’s nucleotide sequencing information, covering raw sequencing data, sequence assembly information and functional annotation.
+- [Nextstrain](https://nextstrain.org/ncov/gisaid/global/6m): Nextstrain is a project to harness the scientific and public health potential of pathogen genome data. Our goal is to aid epidemiological understanding of pathogen spread and evolution and improve outbreak response.
+- [outbreak.info](https://outbreak.info/): Outbreak.info aggregates data across scientific sources, providing tools to meet three major aims: (1) Track daily developments in SARS-CoV-2 variants. (2) Integrate publications, preprints, clinical trials, datasets, protocols, and other resources into one searchable library of COVID-19 research. (3) Track trends in COVID-19 cases and deaths.
