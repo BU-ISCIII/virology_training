@@ -1,6 +1,6 @@
 # SARS-CoV-2 training with Nextflow
 
-In this report you will find all the information necessary to follow the steps to analyze SARS-CoV-2 data with Galaxy.
+In this report you will find all the information necessary to follow the steps to analyze SARS-CoV-2 data with Nextflow.
 
 ## Training overview
 During this training we will following these steps:
