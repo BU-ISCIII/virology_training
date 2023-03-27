@@ -74,14 +74,14 @@ mkdir data
 2. Download files manually or using wget.
 ```
 cd data
-curl --output GCA_009858895.3_ASM985889v3_genomic.gff.gz https://zenodo.org/record/7773842/files/GCA_009858895.3_ASM985889v3_genomic.gff.gz?download=1
-curl --output GCF_009858895.2_ASM985889v3_genomic.200409.fna.gz https://zenodo.org/record/7773842/files/GCF_009858895.2_ASM985889v3_genomic.200409.fna.gz?download=1
+curl --output NC_045512.2.fasta https://zenodo.org/record/7775317/files/NC_045512.2.fasta?download=1
+curl --output NC_045512.2.gff https://zenodo.org/record/7775317/files/NC_045512.2.gff?download=1
 curl --output kraken2_hs22.tar.gz https://raw.githubusercontent.com/nf-core/test-datasets/viralrecon/genome/kraken2/kraken2_hs22.tar.gz
-curl --output nCoV-2019.artic.V3.scheme.bed https://zenodo.org/record/7773842/files/nCoV-2019.artic.V3.scheme.bed.txt?download=1
-curl --output SARSCOV2-1_R1.fastq.gz https://zenodo.org/record/7773842/files/SARSCOV2-1_R1.fastq.gz?download=1
-curl --output SARSCOV2-1_R2.fastq.gz https://zenodo.org/record/7773842/files/SARSCOV2-1_R2.fastq.gz?download=1
-curl --output SARSCOV2-2_R1.fastq.gz https://zenodo.org/record/7773842/files/SARSCOV2-1_R1.fastq.gz?download=1
-curl --output SARSCOV2-2_R2.fastq.gz https://zenodo.org/record/7773842/files/SARSCOV2-1_R2.fastq.gz?download=1
+curl --output nCoV-2019.artic.V3.scheme.bed https://zenodo.org/record/7775317/files/nCoV-2019.artic.V3.scheme.bed?download=1
+curl --output SARSCOV2-1_R1.fastq.gz https://zenodo.org/record/7775317/files/SARSCOV2-1_R1.fastq.gz?download=1
+curl --output SARSCOV2-1_R2.fastq.gz https://zenodo.org/record/7775317/files/SARSCOV2-1_R2.fastq.gz?download=1
+curl --output SARSCOV2-2_R1.fastq.gz https://zenodo.org/record/7775317/files/SARSCOV2-1_R1.fastq.gz?download=1
+curl --output SARSCOV2-2_R2.fastq.gz https://zenodo.org/record/7775317/files/SARSCOV2-1_R2.fastq.gz?download=1
 ```
 
 ## Class exercise
@@ -98,14 +98,28 @@ The pipeline is built using Nextflow, a workflow tool to run tasks across multip
 
 ```
 ls data/*.fastq.gz | cut -d "/" -f 2 | cut -d "_" -f 1 | sort -u > samples_id.txt
-echo "sample,fastq_1,fastq_2"
-cat samples_id.txt | xargs -I % echo "%,data/%_R1.fastq.gz,data/%_R2.fastq.gz" > samplesheet.csv
+echo "sample,fastq_1,fastq_2" > samplesheet.csv
+cat samples_id.txt | xargs -I % echo "%,data/%_R1.fastq.gz,data/%_R2.fastq.gz" >> samplesheet.csv
  ```
-To run the pipeline you have to type in your terminal:
+
+2. Create config named `exercise.conf` with your favourite text editor with this lines:
+```
+params {
+	config_profile_name        = 'Test profile'
+	config_profile_description = 'Minimal test dataset to check pipeline function'
+
+	// Limit resources so that this can run on GitHub Actions
+	max_cpus   = 2
+	max_memory = '6.GB'
+	max_time   = '6.h'
+}
+```
+
+3. Run the pipeline:
 
 ```
 cd /path/to/viralrecon_tutorial
-nextflow run ./nf-core-viralrecon-2.6.0/workflow/main.nf -profile singularity --input samplesheet.csv --fasta data/GCF_009858895.2_ASM985889v3_genomic.200409.fna.gz --gff  data/GCA_009858895.3_ASM985889v3_genomic.gff.gz--outdir viralrecon_results --skip_assembly --skip_asciigenome
+nextflow run ./nf-core-viralrecon-2.6.0/workflow/main.nf -c exercise.conf -profile singularity --platform illumina --protocol amplicon --primer_bed "$PWD/data/nCoV-2019.artic.V3.scheme.bed" --input samplesheet.csv --fasta "$PWD/data/NC_045512.2.fasta" --gff  "$PWD/data/NC_045512.2.gff" --kraken2_db "$PWD/data/kraken2_hs22.tar.gz" --outdir viralrecon_results --skip_assembly --skip_asciigenome --skip_nextclade
 ```
 
 This is the pipeline overview:
