@@ -38,11 +38,11 @@ conda activate nf-core
 
 ```
 nextflow -v
-# nextflow version 22.10.1.5660
+# nextflow version 22.10.6.XXX
 singularity --version
 # singularity version 3.8.4
 nf-core --version
-nf-core, version 2.7.1
+nf-core, version 2.7.2
 ```
 
 ### Pipeline download
