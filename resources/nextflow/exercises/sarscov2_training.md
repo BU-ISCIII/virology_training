@@ -30,7 +30,7 @@ We will need the following dependencies to run this tutorial:
 1. We will install them using a conda environment:
 
 ```
-conda create --name nf-core python=3.7 nf-core==2.3 nextflow==21.10.6 singularity==3.8.4
+conda create --channel bioconda --channel conda-forge --name nf-core python=3.7 nf-core==2.7.2 nextflow==22.10.6 singularity==3.8.4
 conda activate nf-core
 ```
 
@@ -38,11 +38,11 @@ conda activate nf-core
 
 ```
 nextflow -v
-# nextflow version 21.10.6.5660
+# nextflow version 22.10.1.5660
 singularity --version
 # singularity version 3.8.4
 nf-core --version
-nf-core, version 2.3
+nf-core, version 2.7.1
 ```
 
 ### Pipeline download
@@ -57,7 +57,7 @@ cd viralrecon_tutorial
 2. We are going to use [nf-core tools](https://nf-co.re/tools/) for downloading the pipeline and the singularity images:
 
 ```
-nf-core download --container singularity --revision 2.4.1 --compress none viralrecon
+nf-core download --container singularity --revision 2.6.0 --compress none viralrecon
 # Define $NXF_SINGULARITY_CACHEDIR for a shared Singularity image download folder? [y/n]: -> n
 ```
 
@@ -76,7 +76,8 @@ mkdir data
 cd data
 curl --output GCA_009858895.3_ASM985889v3_genomic.gff.gz https://zenodo.org/record/7773842/files/GCA_009858895.3_ASM985889v3_genomic.gff.gz?download=1
 curl --output GCF_009858895.2_ASM985889v3_genomic.200409.fna.gz https://zenodo.org/record/7773842/files/GCF_009858895.2_ASM985889v3_genomic.200409.fna.gz?download=1
-curl --output nCoV-2019.artic.V3.scheme.bed.txt https://zenodo.org/record/7773842/files/nCoV-2019.artic.V3.scheme.bed.txt?download=1
+curl --output kraken2_hs22.tar.gz https://raw.githubusercontent.com/nf-core/test-datasets/viralrecon/genome/kraken2/kraken2_hs22.tar.gz
+curl --output nCoV-2019.artic.V3.scheme.bed https://zenodo.org/record/7773842/files/nCoV-2019.artic.V3.scheme.bed.txt?download=1
 curl --output SARSCOV2-1_R1.fastq.gz https://zenodo.org/record/7773842/files/SARSCOV2-1_R1.fastq.gz?download=1
 curl --output SARSCOV2-1_R2.fastq.gz https://zenodo.org/record/7773842/files/SARSCOV2-1_R2.fastq.gz?download=1
 curl --output SARSCOV2-2_R1.fastq.gz https://zenodo.org/record/7773842/files/SARSCOV2-1_R1.fastq.gz?download=1
@@ -94,11 +95,17 @@ The pipeline is built using Nextflow, a workflow tool to run tasks across multip
 ### Running the pipeline
 
 1. Create sample_sheet
+
+```
+ls data/*.fastq.gz | cut -d "/" -f 2 | cut -d "_" -f 1 | sort -u > samples_id.txt
+echo "sample,fastq_1,fastq_2"
+cat samples_id.txt | xargs -I % echo "%,data/%_R1.fastq.gz,data/%_R2.fastq.gz" > samplesheet.csv
+ ```
 To run the pipeline you have to type in your terminal:
 
 ```
 cd /path/to/viralrecon_tutorial
-nextflow run ./nf-core-viralrecon-2.4.1/workflow/main.nf -profile singularity,test --outdir viralrecon_results --skip_assembly --skip_asciigenome
+nextflow run ./nf-core-viralrecon-2.6.0/workflow/main.nf -profile singularity --input samplesheet.csv --fasta data/GCF_009858895.2_ASM985889v3_genomic.200409.fna.gz --gff  data/GCA_009858895.3_ASM985889v3_genomic.gff.gz--outdir viralrecon_results --skip_assembly --skip_asciigenome
 ```
 
 This is the pipeline overview:
