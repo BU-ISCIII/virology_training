@@ -4,13 +4,17 @@ In this tutorial you will find all the information necessary to analyze SARS-CoV
 
 ## Training overview
 During this training we will following these steps:
-* [Before class tasks](#before-class-tasks)
-    * [Dependencies](#dependencies)
-    * [Pipeline download](#pipeline-download)
-    * [Data download](#data-download)
-* [Class exercise](#class-exercise)
-	* [Overview](#overview)
-	* [Results](#results)
+- [SARS-CoV-2 training using Nextflow](#sars-cov-2-training-using-nextflow)
+	- [Training overview](#training-overview)
+	- [Before class tasks](#before-class-tasks)
+		- [Dependencies](#dependencies)
+		- [Pipeline download](#pipeline-download)
+		- [Data download](#data-download)
+	- [Class exercise](#class-exercise)
+		- [Overview](#overview)
+		- [Running the pipeline](#running-the-pipeline)
+		- [Results](#results)
+	- [Statistics](#statistics)
 
 ## Before class tasks
 
@@ -70,12 +74,13 @@ mkdir data
 2. Download files manually or using wget.
 ```
 cd data
-wget https://zenodo.org/record/5724970/files/GCF_009858895.2_ASM985889v3_genomic.200409.fna.gz?download=1
-wget https://zenodo.org/record/5724970/files/nCoV-2019.artic.V3.scheme.bed.txt?download=1
-wget https://zenodo.org/record/5724970/files/SARSCOV2-1_R1.fastq.gz?download=1
-wget https://zenodo.org/record/5724970/files/SARSCOV2-1_R2.fastq.gz?download=1
-wget https://zenodo.org/record/5724970/files/SARSCOV2-2_R1.fastq.gz?download=1
-wget https://zenodo.org/record/5724970/files/SARSCOV2-2_R2.fastq.gz?download=1
+curl --output GCA_009858895.3_ASM985889v3_genomic.gff.gz https://zenodo.org/record/7773842/files/GCA_009858895.3_ASM985889v3_genomic.gff.gz?download=1
+curl --output GCF_009858895.2_ASM985889v3_genomic.200409.fna.gz https://zenodo.org/record/7773842/files/GCF_009858895.2_ASM985889v3_genomic.200409.fna.gz?download=1
+curl --output nCoV-2019.artic.V3.scheme.bed.txt https://zenodo.org/record/7773842/files/nCoV-2019.artic.V3.scheme.bed.txt?download=1
+curl --output SARSCOV2-1_R1.fastq.gz https://zenodo.org/record/7773842/files/SARSCOV2-1_R1.fastq.gz?download=1
+curl --output SARSCOV2-1_R2.fastq.gz https://zenodo.org/record/7773842/files/SARSCOV2-1_R2.fastq.gz?download=1
+curl --output SARSCOV2-2_R1.fastq.gz https://zenodo.org/record/7773842/files/SARSCOV2-1_R1.fastq.gz?download=1
+curl --output SARSCOV2-2_R2.fastq.gz https://zenodo.org/record/7773842/files/SARSCOV2-1_R2.fastq.gz?download=1
 ```
 
 ## Class exercise
