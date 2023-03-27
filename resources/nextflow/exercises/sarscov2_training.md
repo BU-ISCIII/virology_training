@@ -1,16 +1,20 @@
-# SARS-CoV-2 training with Nextflow
+# SARS-CoV-2 training using Nextflow
 
-In this report you will find all the information necessary to follow the steps to analyze SARS-CoV-2 data with Nextflow.
+In this tutorial you will find all the information necessary to analyze SARS-CoV-2 data with Nextflow.
 
 ## Training overview
 During this training we will following these steps:
-* [Dependencies](#dependencies): Installation
-* [Viralrecon](#viralrecon): Overview and download
-	* [Github](#github): Glance to main commands
-* [Pipeline](#pipeline): Running the pipeline with command line and main results.
-	* [Results](#results): Most important results.
+* [Before class tasks](#before-class-tasks)
+    * [Dependencies](#dependencies)
+    * [Pipeline download](#pipeline-download)
+    * [Data download](#data-download)
+* [Class exercise](#class-exercise)
+	* [Overview](#overview)
+	* [Results](#results)
 
-## Dependencies
+## Before class tasks
+
+### Dependencies
 
 We will need the following dependencies to run this tutorial:
 
@@ -19,13 +23,15 @@ We will need the following dependencies to run this tutorial:
 - [singularity](https://sylabs.io/guides/3.5/user-guide/introduction.html) is a container platform. It allows you to create and run containers that package up pieces of software in a way that is portable and reproducible.
 - [Nextflow](https://www.nextflow.io/) is a bioinformatics workflow manager that enables the development of portable and reproducible workflows. It supports deploying workflows on a variety of execution platforms including local, HPC schedulers, AWS Batch, Google Cloud Life Sciences, and Kubernetes. Additionally, it provides support for manage your workflow dependencies through built-in support for Conda, Docker, Singularity, and Modules.
 
-We will install them using a conda environment:
+1. We will install them using a conda environment:
+
 ```
 conda create --name nf-core python=3.7 nf-core==2.3 nextflow==21.10.6 singularity==3.8.4
 conda activate nf-core
 ```
 
-Test if it's correctly installed:
+2. Test if it's correctly installed:
+
 ```
 nextflow -v
 # nextflow version 21.10.6.5660
@@ -35,27 +41,58 @@ nf-core --version
 nf-core, version 2.3
 ```
 
-## Viralrecon
+### Pipeline download
 
-[viralrecon](https://github.com/BU-ISCIII/viralrecon) is a bioinformatics analysis pipeline used to perform assembly and intra-host/low-frequency variant calling for viral samples. The pipeline supports short-read Illumina sequencing data from both shotgun (e.g. sequencing directly from clinical samples) and enrichment-based library preparation methods (e.g. amplicon-based: ARTIC SARS-CoV-2 enrichment protocol; or probe-capture-based).
+1. First of all go to somewhere in your home and create a directory for this training exercise
 
-The pipeline is built using Nextflow, a workflow tool to run tasks across multiple compute infrastructures in a very portable manner. It comes with Docker containers making installation trivial and results highly reproducible. Furthermore, automated continuous integration tests that run the pipeline on a full-sized data set using AWS cloud ensure that the code is stable.
-
-First of all go to somewhere in your home and create a directory for this training exercise
 ```
 mkdir viralrecon_tutorial
 cd viralrecon_tutorial
 ```
-We are going to use nf-core tools for downloading the pipeline and the singularity images:
+
+2. We are going to use [nf-core tools](https://nf-co.re/tools/) for downloading the pipeline and the singularity images:
+
 ```
 nf-core download --container singularity --revision 2.4.1 --compress none viralrecon
 # Define $NXF_SINGULARITY_CACHEDIR for a shared Singularity image download folder? [y/n]: -> n
 ```
 
-## Pipeline
+### Data download
+
+We are using a training dataset from Zenodo: https://zenodo.org/record/5724970#.ZCFP83ZBxEY
+
+1. Create a folder for downloading the files.
+```
+cd /path/to/viralrecon_tutorial
+mkdir data
+```
+
+2. Download files manually or using wget.
+```
+cd data
+wget https://zenodo.org/record/5724970/files/GCF_009858895.2_ASM985889v3_genomic.200409.fna.gz?download=1
+wget https://zenodo.org/record/5724970/files/nCoV-2019.artic.V3.scheme.bed.txt?download=1
+wget https://zenodo.org/record/5724970/files/SARSCOV2-1_R1.fastq.gz?download=1
+wget https://zenodo.org/record/5724970/files/SARSCOV2-1_R2.fastq.gz?download=1
+wget https://zenodo.org/record/5724970/files/SARSCOV2-2_R1.fastq.gz?download=1
+wget https://zenodo.org/record/5724970/files/SARSCOV2-2_R2.fastq.gz?download=1
+```
+
+## Class exercise
+
+### Overview
+
+[viralrecon](https://github.com/BU-ISCIII/viralrecon) is a bioinformatics analysis pipeline used to perform assembly and intra-host/low-frequency variant calling for viral samples. The pipeline supports short-read Illumina sequencing data from both shotgun (e.g. sequencing directly from clinical samples) and enrichment-based library preparation methods (e.g. amplicon-based: ARTIC SARS-CoV-2 enrichment protocol; or probe-capture-based).
+
+The pipeline is built using Nextflow, a workflow tool to run tasks across multiple compute infrastructures in a very portable manner. It comes with Docker containers making installation trivial and results highly reproducible. Furthermore, automated continuous integration tests that run the pipeline on a full-sized data set using AWS cloud ensure that the code is stable.
+
+### Running the pipeline
+
+1. Create sample_sheet
 To run the pipeline you have to type in your terminal:
 
 ```
+cd /path/to/viralrecon_tutorial
 nextflow run ./nf-core-viralrecon-2.4.1/workflow/main.nf -profile singularity,test --outdir viralrecon_results --skip_assembly --skip_asciigenome
 ```
 
