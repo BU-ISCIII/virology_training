@@ -151,6 +151,11 @@ Go to `/path/to/viralrecon_tutorial/viralrecon_results/fastqc` using your folder
 2. fastp results
 Go to `/path/to/viralrecon_tutorial/viralrecon_results/fastp` using your folder explorer and open the html files.
 
+3. Kraken2 results
+```
+cat kraken2/SARSCOV2-1.kraken2.report.txt
+```
+
 #### Mapping results
 
 1. bam files 
@@ -179,8 +184,18 @@ cat mosdepth/amplicon/all_samples.mosdepth.coverage.tsv
 
 #### Variant calling results
 
+1. Check vcf files
+
+2. Check annotation files
+
 
 #### Consensus and lineage results
+
+1. Check consensus files
+
+2. Quality control: number of Ns
+
+3. Lineage results: pangolin
 
 ### Running the pipeline: Assembly
 We already have our configuration file and the samplesheet so we just need to run the pipeline again changing parameters. Also we are using the `-resume` parameter. Thanks to this parameters common steps between both analysis paths are not run again, the results are just cached.
