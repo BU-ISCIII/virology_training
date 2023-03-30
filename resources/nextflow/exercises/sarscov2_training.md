@@ -201,9 +201,22 @@ cat snpeff/SARSCOV2-1.snpsift.txt
 
 1. Check consensus files
 
+```
+head consensus/bcftools/SARSCOV2-1.consensus.fa
+```
+
 2. Quality control: number of Ns
 
+```
+cat consensus/bcftools/quast/report.tsv | grep "N's per 100 kbp"
+```
+
 3. Lineage results: pangolin
+
+```
+cat consensus/bcftools/pangolin/SARSCOV2-1.pangolin.csv
+## open the file with libreoffice calc or similar
+```
 
 ### Running the pipeline: Assembly
 We already have our configuration file and the samplesheet so we just need to run the pipeline again changing parameters. Also we are using the `-resume` parameter. Thanks to this parameters common steps between both analysis paths are not run again, the results are just cached.
