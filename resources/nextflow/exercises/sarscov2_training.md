@@ -116,7 +116,9 @@ cat samples_id.txt | xargs -I % echo "%,data/%_R1.fastq.gz,data/%_R2.fastq.gz" >
 params {
 	config_profile_name        = 'Test profile'
 	config_profile_description = 'Minimal test dataset to check pipeline function'
-
+        
+	skip_plasmidid = false
+	
 	// Limit resources so that this can run on GitHub Actions
 	max_cpus   = 2
 	max_memory = '6.GB'
