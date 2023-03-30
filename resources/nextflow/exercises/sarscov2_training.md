@@ -92,7 +92,7 @@ curl --output SARSCOV2-2_R2.fastq.gz https://zenodo.org/record/7775317/files/SAR
 
 The pipeline is built using Nextflow, a workflow tool to run tasks across multiple compute infrastructures in a very portable manner. It comes with Docker containers making installation trivial and results highly reproducible. Furthermore, automated continuous integration tests that run the pipeline on a full-sized data set using AWS cloud ensure that the code is stable.
 
-### Running the pipeline
+### Running the pipeline: Mapping and variant calling
 1. Check input files files
 ```
 cd data
@@ -124,7 +124,7 @@ params {
 }
 ```
 
-3. Run the pipeline:
+3. Run the pipeline for the mapping and variant calling steps:
 
 ```
 cd /path/to/viralrecon_tutorial
@@ -140,20 +140,68 @@ This is the pipeline overview:
 	3. ivar: Variant calling
 	4. bcftools: Consensus generation
 
-### Results
-
-#### Quality control results
+### Results mapping and variant calling steps
 Now we are going to see the most important results of the pipeline. In case you were not able to run the pipeline, you can see the [results in this folder](../results/).
 
+#### Preprocessing and QC results
+
+1. fastQC 
+Go to `/path/to/viralrecon_tutorial/viralrecon_results/fastqc` using your folder explorer and open the html files.
+
+2. fastp results
+Go to `/path/to/viralrecon_tutorial/viralrecon_results/fastp` using your folder explorer and open the html files.
+
+#### Mapping results
+
+1. bam files 
+
+```
+cd viralrecon_results/variants/bowtie2
+# if you don't have samtools installed install it with conda
+# conda create -c bioconda -n samtools samtools
+samtools view SARSCOV2-1.sorted.bam | more
+```
+
+2. mapping quality results
+```
+cat samtools_stats/SARSCOV2-1.sorted.bam.flagstat
+cat ../../../samples_id.txt | xargs -I % echo -e "printf '%\t' ;cat samtools_stats/%.sorted.bam.flagstat | grep '+ 0 mapped' | cut -d ' ' -f 1" | bash
+```
+
+3. Amplicon quality results
+The Amplicon coverage heatmap can be used to see which amplicon primers performed better or worst than others.
+```
+cat mosdepth/amplicon/all_samples.mosdepth.coverage.tsv 
+# See pdfs in mosdepth/amplicon/
+```
+
+![amplicon_coverage](../docs/images/amplicon_coverage.png)
+
+#### Variant calling results
+
+
+#### Consensus and lineage results
+
+### Running the pipeline: Assembly
+We already have our configuration file and the samplesheet so we just need to run the pipeline again changing parameters. Also we are using the `-resume` parameter. Thanks to this parameters common steps between both analysis paths are not run again, the results are just cached.
+
+```
+cd /path/to/viralrecon_tutorial
+nextflow run ./nf-core-viralrecon-2.6.0/workflow/main.nf -c exercise.conf -profile singularity --platform illumina --protocol amplicon --primer_bed "$PWD/data/nCoV-2019.artic.V3.scheme.bed" --input samplesheet.csv --fasta "$PWD/data/NC_045512.2.fasta" --gff  "$PWD/data/NC_045512.2.gff" --kraken2_db "$PWD/data/kraken2_hs22.tar.gz" --outdir viralrecon_results --skip_assembly --skip_asciigenome --skip_nextclade
+```
+
+#### Assembly quality control
+
+
+#### Circos results
+
+
+# Results summary
 One of the most interesting results is the [MultiQC report](../results/multiqc/multiqc_report.html). In this report you have an overview of all the steps of the pipeline and their results.
 
 The first results consist in a summary of the samples that failed in the analysis.
 
 ![multiqc](../docs/images/multiqc_1.png)
-
-One of the first results that appears is the Amplicon coverage heatmap, which can be used to see which amplicon primers performed better or worst than others.
-
-![amplicon_coverage](../docs/images/amplicon_coverage.png)
 
 Then you have a summary of the most important metrics in the analysis, that we will see later in the statistics results:
 
@@ -189,7 +237,6 @@ Another interesting result is a table that contains all the variants per sample 
 
 This table can be really helpful to filter variants by lineage, or by position, so you can see the relationship between lineages and variants. Also this table includes all the called variants, so you can also see those low frequency variants that were not included in the consensus.
 
-## Statistics
 The most important results of the MultiQC report can be found in a comma separated values (csv) file (summary_variants_metrics_mqc.csv) with the most important statistics. This file contains the following columns:
 
 - Sample: Sample name
