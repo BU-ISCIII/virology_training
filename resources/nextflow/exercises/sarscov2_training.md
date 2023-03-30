@@ -93,16 +93,25 @@ curl --output SARSCOV2-2_R2.fastq.gz https://zenodo.org/record/7775317/files/SAR
 The pipeline is built using Nextflow, a workflow tool to run tasks across multiple compute infrastructures in a very portable manner. It comes with Docker containers making installation trivial and results highly reproducible. Furthermore, automated continuous integration tests that run the pipeline on a full-sized data set using AWS cloud ensure that the code is stable.
 
 ### Running the pipeline
+1. Check input files files
+```
+cd data
+head NC_045512.2.fasta
+head NC_045512.2.gff 
+head nCoV-2019.artic.V3.scheme.bed
+zcat SARSCOV2-1_R1.fastq.gz | head
+zcat SARSCOV2-1_R2.fastq.gz | head
+cd ..
+```
 
-1. Create sample_sheet
-
+2. Create sample_sheet
 ```
 ls data/*.fastq.gz | cut -d "/" -f 2 | cut -d "_" -f 1 | sort -u > samples_id.txt
 echo "sample,fastq_1,fastq_2" > samplesheet.csv
 cat samples_id.txt | xargs -I % echo "%,data/%_R1.fastq.gz,data/%_R2.fastq.gz" >> samplesheet.csv
  ```
 
-2. Create config named `exercise.conf` with your favourite text editor with this lines:
+3. Create config named `exercise.conf` with your favourite text editor with this lines:
 ```
 params {
 	config_profile_name        = 'Test profile'
@@ -132,6 +141,8 @@ This is the pipeline overview:
 	4. bcftools: Consensus generation
 
 ### Results
+
+#### Quality control results
 Now we are going to see the most important results of the pipeline. In case you were not able to run the pipeline, you can see the [results in this folder](../results/).
 
 One of the most interesting results is the [MultiQC report](../results/multiqc/multiqc_report.html). In this report you have an overview of all the steps of the pipeline and their results.
