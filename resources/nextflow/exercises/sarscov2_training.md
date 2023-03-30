@@ -185,9 +185,17 @@ cat mosdepth/amplicon/all_samples.mosdepth.coverage.tsv
 #### Variant calling results
 
 1. Check vcf files
+```
+## you must be located in /path/to/viralrecon_tutorial
+cd viralrecon_results/variants/ivar
+zcat SARSCOV2-1.vcf.gz | more 
+```
 
 2. Check annotation files
-
+```
+cat snpeff/SARSCOV2-1.snpsift.txt
+## open the file with libreoffice calc or similar.
+```
 
 #### Consensus and lineage results
 
