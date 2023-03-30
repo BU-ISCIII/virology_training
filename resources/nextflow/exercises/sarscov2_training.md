@@ -227,10 +227,29 @@ nextflow run ./nf-core-viralrecon-2.6.0/workflow/main.nf -c exercise.conf -profi
 ```
 
 #### Assembly quality control
+1. Check assemblies
 
+```
+## you must be located in /path/to/viralrecon_tutorial
+cd viralrecon_results/assembly/spades/rnaviral
+zcat SARSCOV2-1.scaffolds.fa.gz | grep "^>"
+```
+
+2. Check quast results
+
+```
+cat quast/report.tsv 
+## open quast/report.html with your favourite explorer.
+```
 
 #### Circos results
 
+1. Check plasmidID results.
+
+```
+## you must be located in /path/to/viralrecon_tutorial
+# open plasmidid/SARSCOV2-1/SARSCOV2-1_final_results.html and the png files in plasmidid/SARSCOV2-1/images
+```
 
 # Results summary
 One of the most interesting results is the [MultiQC report](../results/multiqc/multiqc_report.html). In this report you have an overview of all the steps of the pipeline and their results.
