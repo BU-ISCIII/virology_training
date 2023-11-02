@@ -5,3 +5,5 @@
 - [Reconstrucción de genomas virales](slides/bioinfo_analysis_sars-cov-2.pdf)
 ### Ejercicios:
 - [SARS-CoV-2 galaxy](../resources/galaxy/exercises/SARS-CoV-2_trainig.md)
+### Para hacer en casa:
+- [SARS-CoV-2 galaxy y preguntas](../resources/galaxy/exercises/homeworks.md)
