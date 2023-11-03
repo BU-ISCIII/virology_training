@@ -224,7 +224,7 @@ Another program that gives statistical information about the mapping process is 
 3. In "_Select SAM/BAM dataset or dataset collection_" you can select more than one .bam alignment file by selecting the batch mode input field (two sheets icon) and then selecting both Bowtie2 alignments with `ctrl`
 4. Load reference genome from > History
 5. Use the folloing dataset as the reference sequence > Select the reference genome used for [Bowtie2](#mapping-reads-with-reference-genome-bowtie2) (GCF_009858895.2_ASM985889v3_genomic.200409.fna.gz).
-6. Treat bases with coverage exceeding this value as if they had coverage at this value = 1000000
+6. Treat bases with coverage exceeding this value as if they had coverage at this value = 1000
 7. Execute.
 
 ![picard_wgsmetrics1](../docs/images/picard_wgsmetrics1.png)
