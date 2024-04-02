@@ -75,14 +75,8 @@ mkdir data
 2. Download files manually or using wget.
 ```
 cd data
-curl --output NC_045512.2.fasta https://zenodo.org/record/7775317/files/NC_045512.2.fasta?download=1
-curl --output NC_045512.2.gff https://zenodo.org/record/7775317/files/NC_045512.2.gff?download=1
-curl --output kraken2_hs22.tar.gz https://raw.githubusercontent.com/nf-core/test-datasets/viralrecon/genome/kraken2/kraken2_hs22.tar.gz
-curl --output nCoV-2019.artic.V3.scheme.bed https://zenodo.org/record/7775317/files/nCoV-2019.artic.V3.scheme.bed?download=1
-curl --output SARSCOV2-1_R1.fastq.gz https://zenodo.org/record/7775317/files/SARSCOV2-1_R1.fastq.gz?download=1
-curl --output SARSCOV2-1_R2.fastq.gz https://zenodo.org/record/7775317/files/SARSCOV2-1_R2.fastq.gz?download=1
-curl --output SARSCOV2-2_R1.fastq.gz https://zenodo.org/record/7775317/files/SARSCOV2-2_R1.fastq.gz?download=1
-curl --output SARSCOV2-2_R2.fastq.gz https://zenodo.org/record/7775317/files/SARSCOV2-2_R2.fastq.gz?download=1
+curl --output test_data.zip https://zenodo.org/api/records/7775317/files-archive
+unzip test_data.zip
 ```
 
 ## Class exercise
