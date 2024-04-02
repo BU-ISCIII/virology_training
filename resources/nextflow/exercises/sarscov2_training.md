@@ -108,25 +108,25 @@ cat samples_id.txt | xargs -I % echo "%,data/%_R1.fastq.gz,data/%_R2.fastq.gz" >
  ```
 
 3. Create config named `exercise.conf` with your favourite text editor with this lines:
+
 ```
-params {
-	config_profile_name        = 'Test profile'
-	config_profile_description = 'Minimal test dataset to check pipeline function'
-        
-	skip_plasmidid = false
-	
-	// Limit resources so that this can run on GitHub Actions
-	max_cpus   = 2
-	max_memory = '6.GB'
-	max_time   = '6.h'
-}
+singularity.cacheDir = "${projectDir}/../singularity-images/"
 ```
 
-3. Run the pipeline for the mapping and variant calling steps:
+4. Create a params yml `params.yml` with your favourite text editor with this lines:
+
+```
+skip_plasmidid: false
+max_cpus: 2
+max_memory: '6.GB'
+max_time: '6h'
+```
+
+5. Run the pipeline for the mapping and variant calling steps:
 
 ```
 cd /path/to/viralrecon_tutorial
-nextflow run ./nf-core-viralrecon_2.6.0/2_6_0/main.nf -c exercise.conf -profile singularity --platform illumina --protocol amplicon --primer_bed "$PWD/data/nCoV-2019.artic.V3.scheme.bed" --input samplesheet.csv --fasta "$PWD/data/NC_045512.2.fasta" --gff  "$PWD/data/NC_045512.2.gff" --kraken2_db "$PWD/data/kraken2_hs22.tar.gz" --outdir viralrecon_results --skip_assembly --skip_asciigenome --skip_nextclade
+nextflow run ./nf-core-viralrecon_2.6.0/2_6_0/main.nf -c exercise.conf -params-file params.yml -profile singularity --platform illumina --protocol amplicon --primer_bed "$PWD/data/nCoV-2019.artic.V3.scheme.bed" --input samplesheet.csv --fasta "$PWD/data/NC_045512.2.fasta" --gff  "$PWD/data/NC_045512.2.gff" --kraken2_db "$PWD/data/kraken2_hs22.tar.gz" --outdir viralrecon_results --skip_assembly --skip_asciigenome --skip_nextclade
 ```
 
 This is the pipeline overview:
@@ -221,7 +221,7 @@ We already have our configuration file and the samplesheet so we just need to ru
 
 ```
 cd /path/to/viralrecon_tutorial
-nextflow run ./nf-core-viralrecon_2.6.0/2_6_0/main.nf -c exercise.conf -profile singularity --platform illumina --protocol amplicon --primer_bed "$PWD/data/nCoV-2019.artic.V3.scheme.bed" --input samplesheet.csv --fasta "$PWD/data/NC_045512.2.fasta" --gff  "$PWD/data/NC_045512.2.gff" --kraken2_db "$PWD/data/kraken2_hs22.tar.gz" --outdir viralrecon_results --skip_variants --skip_asciigenome --skip_nextclade
+nextflow run ./nf-core-viralrecon_2.6.0/2_6_0/main.nf -c exercise.conf -params-file params.yml -profile singularity --platform illumina --protocol amplicon --primer_bed "$PWD/data/nCoV-2019.artic.V3.scheme.bed" --input samplesheet.csv --fasta "$PWD/data/NC_045512.2.fasta" --gff  "$PWD/data/NC_045512.2.gff" --kraken2_db "$PWD/data/kraken2_hs22.tar.gz" --outdir viralrecon_results --skip_variants --skip_asciigenome --skip_nextclade
 ```
 
 #### Assembly quality control
