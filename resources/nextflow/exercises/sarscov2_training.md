@@ -30,7 +30,7 @@ We will need the following dependencies to run this tutorial:
 1. We will install them using a conda environment:
 
 ```
-conda create --channel bioconda --channel conda-forge --name nf-core python=3.7 nf-core==2.7.2 nextflow==22.10.6 singularity==3.8.4
+conda create --channel bioconda --channel conda-forge --name nf-core python==3.12.2 nf-core==2.13.1 nextflow==23.10.1 singularity==3.8.4
 conda activate nf-core
 ```
 
@@ -38,11 +38,11 @@ conda activate nf-core
 
 ```
 nextflow -v
-# nextflow version 22.10.6.XXX
+# nextflow version 23.10.1.XXXX
 singularity --version
 # singularity version 3.8.4
 nf-core --version
-nf-core, version 2.7.2
+nf-core, version 2.13.1
 ```
 
 ### Pipeline download
@@ -58,6 +58,7 @@ cd viralrecon_tutorial
 
 ```
 nf-core download --container singularity --revision 2.6.0 --compress none viralrecon
+# Include the nf-core's default institutional configuration files into the download? Yes
 # Define $NXF_SINGULARITY_CACHEDIR for a shared Singularity image download folder? [y/n]: -> n
 ```
 
