@@ -77,6 +77,7 @@ mkdir data
 cd data
 curl --output test_data.zip https://zenodo.org/api/records/7775317/files-archive
 unzip test_data.zip
+curl --output kraken2_hs22.tar.gz https://raw.githubusercontent.com/nf-core/test-datasets/viralrecon/genome/kraken2/kraken2_hs22.tar.gz
 ```
 
 ## Class exercise
