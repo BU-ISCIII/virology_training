@@ -126,7 +126,7 @@ params {
 
 ```
 cd /path/to/viralrecon_tutorial
-nextflow run ./nf-core-viralrecon_2.6.0/2_6_0/main.nf -c exercise.conf -profile singularity --platform illumina --protocol amplicon --primer_bed "$PWD/data/nCoV-2019.artic.V3.scheme.bed" --input samplesheet.csv --fasta "$PWD/data/NC_045512.2.fasta" --gff  "$PWD/data/NC_045512.2.gff" --kraken2_db "$PWD/data/kraken2_hs22.tar.gz" --outdir viralrecon_results --skip_assembly --skip_asciigenome --skip_nextclade
+nextflow run ./nf-core-viralrecon_2.6.0/2_6_0/main.nf -c exercise.conf -profile singularity --platform illumina --protocol amplicon --primer_bed "$PWD/data/nCoV-2019.artic.V3.scheme.bed" --input samplesheet.csv --fasta "$PWD/data/NC_045512.2.fasta" --gff  "$PWD/data/NC_045512.2.gff" --kraken2_db "$PWD/data/kraken2_hs22.tar.gz" --outdir viralrecon_results --skip_variant --skip_asciigenome --skip_nextclade
 ```
 
 This is the pipeline overview:
