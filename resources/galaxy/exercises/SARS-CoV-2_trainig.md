@@ -57,7 +57,7 @@ Once files are uploaded we can close the window clicking on "_close_" button. Bo
 
 If we select the "eye" in the datasets from the history, we can see the content of the data:
 
-<img src="../docs/images/fastq.png" alt="fastq" width="700"/>
+<img src="../docs/images/fastq.png" alt="fastq" width="200"/>
 
 ## Quality
 
