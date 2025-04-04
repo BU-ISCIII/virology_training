@@ -30,19 +30,27 @@ We will need the following dependencies to run this tutorial:
 1. We will install them using a conda environment:
 
 ```
-conda create --channel bioconda --channel conda-forge --name nf-core python==3.12.2 nf-core==2.13.1 nextflow==23.10.1 singularity==3.8.4
-conda activate nf-core
+micromamba create --channel conda-forge --channel bioconda --channel defaults --name nf-core python==3.12  nf-core nextflow
+micromamba activate nf-core
+```
+
+2. Install singularity
+
+```
+wget https://github.com/sylabs/singularity/releases/download/v4.3.0/singularity-ce_4.3.0-jammy_amd64.deb
+sudo apt install ./singularity-ce_4.3.0-jammy_amd64.deb
+# ignore this error: N: Download is performed unsandboxed as root as file '/home/smonzon/master_practica/singularity-ce_4.3.0-jammy_amd64.deb' couldn't be accessed by user '_apt'. - pkgAcquire::Run (13: Permission denied)
 ```
 
 2. Test if it's correctly installed:
 
 ```
 nextflow -v
-# nextflow version 23.10.1.XXXX
+# nextflow version 24.10.5.5935
 singularity --version
-# singularity version 3.8.4
+# singularity-ce version 4.1.1
 nf-core --version
-nf-core, version 2.13.1
+nf-core, version 3.2.0
 ```
 
 ### Pipeline download
@@ -58,7 +66,6 @@ cd viralrecon_tutorial
 
 ```
 nf-core download --container singularity --revision 2.6.0 --compress none viralrecon
-# Include the nf-core's default institutional configuration files into the download? Yes
 # Define $NXF_SINGULARITY_CACHEDIR for a shared Singularity image download folder? [y/n]: -> n
 ```
 
