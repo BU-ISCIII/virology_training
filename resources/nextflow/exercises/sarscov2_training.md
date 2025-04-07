@@ -22,7 +22,7 @@ During this training we will following these steps:
 
 We will need the following dependencies to run this tutorial:
 
-- [micromamba]([https://docs.conda.io/en/latest/miniconda.html](https://mamba.readthedocs.io/en/latest/installation/micromamba-installation.html): In case you haven't install conda yet, follow the instructions in [this link]([https://docs.conda.io/en/latest/miniconda.html](https://mamba.readthedocs.io/en/latest/user_guide/micromamba.html)
+- [micromamba](https://mamba.readthedocs.io/en/latest/installation/micromamba-installation.html): In case you haven't install conda yet, follow the instructions in [this link](https://mamba.readthedocs.io/en/latest/user_guide/micromamba.html)
 - [nf-core tools](https://github.com/nf-core/tools) A python package with helper tools for the nf-core community.
 - [singularity](https://sylabs.io/guides/3.5/user-guide/introduction.html) is a container platform. It allows you to create and run containers that package up pieces of software in a way that is portable and reproducible.
 - [Nextflow](https://www.nextflow.io/) is a bioinformatics workflow manager that enables the development of portable and reproducible workflows. It supports deploying workflows on a variety of execution platforms including local, HPC schedulers, AWS Batch, Google Cloud Life Sciences, and Kubernetes. Additionally, it provides support for manage your workflow dependencies through built-in support for Conda, Docker, Singularity, and Modules.
