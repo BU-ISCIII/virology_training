@@ -65,7 +65,7 @@ cd viralrecon_tutorial
 2. We are going to use [nf-core tools](https://nf-co.re/tools/) for downloading the pipeline and the singularity images:
 
 ```
-nf-core download --container singularity --revision 2.6.0 --compress none viralrecon
+nf-core pipelines download --container-system singularity --revision 2.6.0 --compress none viralrecon
 # Define $NXF_SINGULARITY_CACHEDIR for a shared Singularity image download folder? [y/n]: -> n
 ```
 
