@@ -83,13 +83,7 @@ To visualize the information resulting from the executiong of FastQC, we just ha
 
 ![fastqc_results](../docs/images/fastqc_results.png)
 
-This report provides different types of information about the sequencing quality of the reads. By clicking in the arrows in the bottom right/left corners of the page we can hide/show the side panels.
-
-![bottom_arrows_1](../docs/images/bottom_arrows_1.png)
-
-So the central panel with the results we want to visualize will be seen better.
-
-![bottom_arrows_2](../docs/images/bottom_arrows_2.png)
+This report provides different types of information about the sequencing quality of the reads.
 
 **_For more information about FastQC's output visit [**FastQC's website**](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/3%20Analysis%20Modules/)_**.
 
