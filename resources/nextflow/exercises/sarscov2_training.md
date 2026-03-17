@@ -46,11 +46,11 @@ sudo apt install ./singularity-ce_4.3.0-jammy_amd64.deb
 
 ```
 nextflow -v
-# nextflow version 24.10.5.5935
+# nextflow version 25.10.4.11173
 singularity --version
-# singularity-ce version 4.1.1
+# singularity-ce version 4.3-0-jammy
 nf-core --version
-nf-core, version 3.2.0
+nf-core, version 3.5.2
 ```
 
 ### Pipeline download
@@ -65,7 +65,7 @@ cd viralrecon_tutorial
 2. We are going to use [nf-core tools](https://nf-co.re/tools/) for downloading the pipeline and the singularity images:
 
 ```
-nf-core pipelines download --container-system singularity --revision 2.6.0 --compress none viralrecon
+nf-core pipelines download --container-system singularity --revision 3.0.0 --compress none viralrecon
 # Define $NXF_SINGULARITY_CACHEDIR for a shared Singularity image download folder? [y/n]: -> n
 ```
 
