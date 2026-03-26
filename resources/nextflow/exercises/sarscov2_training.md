@@ -118,15 +118,20 @@ cat samples_id.txt | xargs -I % echo "%,data/%_R1.fastq.gz,data/%_R2.fastq.gz" >
 
 ```
 singularity.cacheDir = "${projectDir}/../singularity-images/"
+process {
+    resourceLimits = [
+        cpus: 2,
+        memory: '6.GB',
+        time: '1.h'
+    ]
+}
 ```
 
 4. Create a params yml `params.yml` with your favourite text editor with this lines:
 
 ```
 skip_plasmidid: false
-max_cpus: 2
-max_memory: '6.GB'
-max_time: '6h'
+skip_nextclade: true
 ```
 
 5. Run the pipeline for the mapping and variant calling steps:
