@@ -11,10 +11,11 @@ During this training, we will be following these steps:
 * [**Quality**](#quality): Analysis of the quality of the raw reads.
 * [**Trimming**](#trimming): Quality trimming using fastp.
 * [**Mapping**](#mapping): Mapping reads to reference genome with Bowtie2.
-* [**Stats**](#stats): Mapping statistics with Picard
+* [**Stats**](#stats): Mapping statistics with Picard.
 * [**Amplicons**](#amplicons): Preprocessing steps mandatory for amplicon sequencing data.
 * [**Variants**](#variants): Variant calling and annotation.
 * [**Consensus**](#consensus): Consensus genome generation.
+* [**Lineage**](#lineage): Lineage assignment.
 * [**Additional info**](#additional-info): Websites for additional info.
 
 ## Register/Login
@@ -27,23 +28,24 @@ You can do this analysis without creating a user, but your history will be saved
 
 Once you are registered, we can start with the analysis workflow.
 
-***From now on, each job we run in Galaxy will have a unique number to identify each process. These numbers can differ depending on the number of samples and the times you run or delete a certain process. This training's snapshots were taken using two samples and some processes were deleted for any reason, so numbers MAY DIFFER. Additionally, this exercise's snapshots were taken with another dataset, so sample names may differ as well.***
+>[!IMPORTANT]
+>From now on, each job we run in Galaxy will have a unique number to identify each process. These numbers can differ depending on the number of samples and the times you run or delete a certain process. This training's snapshots were taken using the same sample as in this training, but some processes were deleted for any reason, so numbers MAY DIFFER. Do not expect to get exactly the same results or the same job messages shown in these snapshots!
 
 ## Data
 
-Before starting with the analysis, we need to **upload the data** we want to analyze with Galaxy. There are several ways to upload data into Galaxy. In this training, we will show you some of the most common ones.
+Before starting with the analysis, we need to **upload the data** we want to analyze with Galaxy. There are several ways to upload data into Galaxy. In this training, we will show you the most common one.
 
-### Uploading data given a URL
+### Uploading data given an URL
 
-In order to upload files from a URL, we should follow these steps:
+In order to upload files from an URL, we should follow these steps:
 
 1. In the left side panel, select **Upload**.
 2. In the new panel select **Paste/Fetch Data**.
 3. Then copy the following block of text for the samples:
 
 ```bash
-https://zenodo.org/record/5724464/files/SARSCOV2-1_R1.fastq.gz?download=1
-https://zenodo.org/record/5724464/files/SARSCOV2-1_R2.fastq.gz?download=1
+https://zenodo.org/record/5724464/files/SARSCOV2-1_R1.fastq.gz
+https://zenodo.org/record/5724464/files/SARSCOV2-1_R2.fastq.gz
 ```
 
 4. Now, in the **Download data from the web by entering URLs (one per line) or directly paste content** square, paste the text you copied before.
@@ -53,7 +55,7 @@ https://zenodo.org/record/5724464/files/SARSCOV2-1_R2.fastq.gz?download=1
 <img src="../docs/images/Upload_1.png" alt="Upload 1" width="700"/>
 <img src="../docs/images/Upload_2.png" alt="Upload 2" width="700"/>
 
-Once files have been uploaded, we can close the window by clicking on the *Close* button. Both files will then appear in the right panel.
+Once files have been uploaded, we can close the window by clicking on the *Close* button. Both files will then appear in the right panel (current history).
 
 If we select the "eye" symbol in the datasets from the history, we can see the content of the data:
 
@@ -79,7 +81,7 @@ This software will generate a message like the following, in which we can read t
 
 #### FastQC results visualization
 
-To visualize the information resulting from the executiong of FastQC, we just have to select the job of interest in the History tab. In this case, we are interested in the "_**Web page results**_", so for the sample we want to see the results we'll have to click in the _eye_ symbol to visualize Galaxy's results:
+To visualize the information resulting from the executiong of FastQC, we just have to select the job of interest in the History tab. In this case, we are interested in the "_**Web page results**_", so for the sample whose results we want to see we'll have to click in the _eye_ symbol to visualize Galaxy's results:
 
 ![fastqc_results](../docs/images/fastqc_results.png)
 
@@ -95,46 +97,70 @@ Once we have checked the quality of our reads, it's important to trim low qualit
 
 1. Single-end or paired reads > **Paired Collection**.
 
->[!WARNING]
-To use this option from Fastp, it is necessary to first create a **list of paired datasets**, given our .fastq files, which will then be used for the rest of the steps of this workshop. In order to do so, we must:
+> [!WARNING]
+> To use this option from Fastp, it is necessary to first create a **list of paired datasets**, given our .fastq files, which will then be used for the rest of the steps of this workshop. In order to do so, we must:
 >
->1. Select our fastqsanger.gz files that we uploaded in the beginning, and then click on _2 of X selected_.
->2. Select _Advanced Build List_.
->3. Select the _List of Paired Datasets_ box and click on *Next*.
->4. Check the auto-pairing configuration and click again on *Next*.
->5. Give a name to your list and finally click on *Build*.
+> 1. **Select our fastqsanger.gz files that we uploaded in the beginning, and then click on _2 of X selected_**.
 >
-> Once this is done, you'll be able to select your list as input of Fastp.
+>    <p align="left"><img src="../docs/images/select_items.png" alt="select_items" width="250"></p>
+>
+> 2. **Select _Advanced Build List_**.
+>
+>    <p align="left"><img src="../docs/images/advanced_build_list.png" alt="advanced_build_list" width="250"></p>
+>
+> 3. **Select the _List of Paired Datasets_ box and click on *Next***.
+>
+>    <p align="left"><img src="../docs/images/list_of_paired_datasets.png" alt="list_of_paired_datasets" width="400"></p>
+>
+> 4. **Check the auto-pairing configuration and click again on *Next***.
+>
+>    <p align="left"><img src="../docs/images/configure_auto_pairing.png" alt="configure_auto_pairing" width="500"></p>
+>
+> 5. **Give a name to your list and finally click on *Build***.
+>
+>    <p align="left"><img src="../docs/images/list_identifier.png" alt="list_identifier" width="500"></p>
+>
+> **After having done this, a list of datasets will have been generated:**
+>
+>    <p align="left"><img src="../docs/images/list_of_datasets.png" alt="list_identifier" width="300"></p>
+>    <p align="left"><img src="../docs/images/pair_of_datasets.png" alt="list_identifier" width="300"></p>
+>
+> **This list will have the forward and reverse reads:**
+>
+>    <p align="center"><img src="../docs/images/forward_reads.png" alt="list_identifier" width="900"></p>
+>    <p align="center"><img src="../docs/images/reverse_reads.png" alt="list_identifier" width="900"></p>
+>
+> **Once this is done, you'll be able to select your list as input of Fastp.**
 
-2. Select paired collection(s) > Select your list (`SARS-CoV-2`)
+2. Select paired collection(s) > Select your list (**`SARS-CoV-2`**)
   
-3. Display **Filter Options**
-   - Quality filtering options
+3. Display **Filter Options**:
+   - Quality filtering options:
      - Qualified Quality Phred = **20**
      - Unqualified percent limit = **10**
 
-   - Length Filtering Options
+   - Length Filtering Options:
      - Length required = **50**
 
-4. Read modification options
+4. Read modification options:
    * PoliX tail trimming > **Enable polyX tail trimming**
 
-5. Per read cutting by quality options
-   * Cut by quality in front (5') > **Yes**
-   * Cut by quality in tail (3') > **Yes**
+5. Per read cutting by quality options:
+   * Cut by quality in front (5') > **Yes** (default values)
+   * Cut by quality in tail (3') > **Yes** (default values)
 
 6. **Run Tool**
 
-![fastp1](../docs/images/fastp1.png)
-![fastp2](../docs/images/fastp2.png)
-![fastp3](../docs/images/fastp3.png)
+![fastp_1](../docs/images/fastp_1.png)
+![fastp_2](../docs/images/fastp_2.png)
+![fastp_3](../docs/images/fastp_3.png)
+![fastp_4](../docs/images/fastp_4.png)
 
-A message like this will appear, which means that 4 results will be generated:
+A message like this will appear, which means that 3 results will be generated:
 
-  1. One with the R1 trimmed reads: `fastp on data 2 and data 1: Read 1 output`.
-  2. Another one with the R2 trimmed reads: `fastp on data 2 and data 1: Read 2 output`.
-  3. Another one with the HTML results: `fastp on data 2 and data 1: HTML report`.
-  4. A last one which is not relevant for this training.
+  1. One with the trimmed reads for both forward and reverse reads, within a single element in the history: `fastp on collection XX: Paired-end output`
+  2. Another one with the HTML results: `fastp on collection XX: HTML report`.
+  3. A final JSON report file which is not relevant for this training.
 
 ![fastp_message](../docs/images/fastp_message.png)
 
@@ -144,26 +170,24 @@ Once the Fastp analysis is done, you can see the results by clicking in the eye 
 
 ![fastp_results](../docs/images/fastp_results.png)
 
-This report can be downloaded by clicking on the results name ("_fastp on data 2 and data 1: HTML report_") and then on the "_Download_" symbol.
+This report can be downloaded by clicking on the results name ("_fastp on collection XX: HTML report_") and then on the "_Download_" symbol, as shown in the image above.
 
-![fastp_download](../docs/images/fastp_download.png)
-
-This will download a .zip folder that contains the .html report, which can be visualized in your computer using any browser (such as Google Chrome). You can interactively scroll around the results as well.
+This process will download a .zip folder that contains the .html report, which can be visualized in your computer using any browser (such as Google Chrome). You can interactively scroll around the results as well.
 
 Among the most relevant results, you have the:
 
-- **Summary**: Stats summary.
+- **Summary**: Stats summary --> **Filtering result**
   - **After filtering**: Statistics of the reads after quality filtering.
     - reads passed filters: Reads remaining after quality filter trimming.
     - reads with low quality: Reads that were removed due to low quality.
     - reads too short: Reads that didn't pass the minimum length filter.
   - **After filtering**: Plots after filtering.
-    - After filtering: read1: quality: Plot with the evolution of R1 quality over read position. Usually it decays in the last nucleotides.
-    - After filtering: read2: quality: Same plot for R2.
+    - After filtering: read1: quality: Plot with the evolution of R1 quality over read position. Usually it decays in the last positions.
+    - After filtering: read2: quality: Same plot for R2 reads.
 
 **_For more information about Fastp output visit [Fastp GitHub's page](https://github.com/OpenGene/fastp)_**.
 
->If you are working with more samples, don't forget to run [trimming steps](#quality-trimming-fastp) with the rest.
+>If you are working with more samples, don't forget to run these [**trimming steps**](#quality-trimming-fastp) with the rest!
 
 ## Mapping
 
@@ -177,7 +201,7 @@ Now we can start with the main mapping process. The first thing we have to do is
 
 2. FASTQ Paired Dataset > **fastp on collection X: Paired-end output**
 
-3. Will you select a reference genome from your history or use a built-in index? > Use a built-in genome index > **SARS-CoV-2 isolate Wuhan-Hu-1, complete genome (NC_045512.2)**
+3. Will you select a reference genome from your history or use a built-in index? > **Use a built-in genome index** > **SARS-CoV-2 isolate Wuhan-Hu-1, complete genome (NC_045512.2)**
 
 4. Do you want to use presets? > **Very sensitive local**
 
@@ -188,17 +212,52 @@ Now we can start with the main mapping process. The first thing we have to do is
 ![bowtie1](../docs/images/bowtie1.png)
 ![bowtie2](../docs/images/bowtie2.png)
 
-We will see a message like this one:
+We will see a message like the following:
 
 ![bowtie_message](../docs/images/bowtie_message.png)
 
 #### Mapping results
 
-Now we can see the mapping results for the samples. The bowtie2 resulting file is a **.bam** file, which is not easy to read by humans. This .bam file can be downloaded by clicking on the alignment file and then on the *Download* symbol. Then, the resulting .gz file will contain the alignment .bam file that can then be introduced in a software such as [**Integrative Genomics Viewer**](http://software.broadinstitute.org/software/igv/) along with the reference genome FASTA file.
+Now we can see the mapping results for the samples. The bowtie2 resulting file is a **.bam** file, which is not easy to read by humans. This .bam file can be downloaded by clicking on the alignment file and then on the *Download* symbol. Then, the resulting .gz file will contain the alignment .bam file that can then be introduced in a software such as [**Integrative Genomics Viewer**](http://software.broadinstitute.org/software/igv/) (**IGV**) along with the reference genome FASTA file.
+
+The visualization of this .bam file can be done directly on Galaxy though, by clicking on the eye symbol in the history tab. IGV will be opened and we'll be able to see the following screen:
 
 ![bowtie2_bam](../docs/images/bowtie2_bam.png)
 
-In our case, the file that can be visualized is the statistics file, which contains information such as the percentage of reads that aligned to the reference genome.
+IGV displays the reads of the .bam file aligned against the reference genome we previously loaded. The main elements of the view are:
+
+- **Genome ruler (_1_)**: shows the position along the reference genome in kilobases (kb). In this case the whole genome is displayed (NC_045512.2:1-29,903), but you can zoom in or out depending on what you want to see.
+- **Reference sequence track (_2_)**: reference bases are displayed. They only become visible when zooming in to a small region.
+- **Coverage track (_3_)**: shows the number of reads that cover each position of the genome (*sequencing depth*). The scale on the left indicates the maximum coverage in the region (here, **3063x**) that is being visualized.
+>[!Important]
+>Note that the coverage is not homogeneous: some regions are covered by many more reads than others, and positions with a lower depth could be harder to analyse reliably.
+- **Alignment track (_4_)**: each horizontal grey bar is a **read** mapped to the reference. Reads are stacked, so that the vertical axis represents the depth at each position.
+  - **Colored bases**: positions where the read differs from the reference (**mismatches**) are highlighted in color (A, C, G, T each have their own color). Mismatches that are repeated in many reads at the same position are the potential **variants** of the sample with respect to the reference genome, which will be analysed in the following steps.
+  - **Gaps**: regions with no reads or with very low coverage appear as white gaps in the alignment track.
+
+This view is useful as a quality check of the mapping: it lets us verify that the reads align along the whole genome, that the coverage is reasonably uniform, and that there are no large uncovered regions. We can also zoom in on any region (using the search box or the zoom bar) to inspect individual positions and see which bases are present in the reads.
+
+**_Questions_**
+<details>
+<summary><b>Go to position 13,326 using the search bar. What do you see?</b></summary>
+
+We can see a position for which there is a variant supported by most reads. We can see that the reference base is C, while the vast majority of the reads have an alternative allele: T
+
+![homozygous_site](../docs/images/homozygous_site.png)
+</details>
+
+<details>
+<summary><b>Go now to position 13,386. Do you see something different?</b></summary>
+
+We can now see a position where reads support different alleles. While the reference base is G, 57% of the reads have a G (REF) and 41% have an A (ALT), so we have reads matching the reference and reads with another allele. 
+
+This indicates that, at this position, the sample contains a mixture of the reference and the alternative allele, which can arise from within-host evolution or from a co-infection. This, however, should be determined by taking into account the rest of detected variants, since this particular position might or might not be relevant for lineage assignment. Plus, read qualities for this position and possible contaminations ought to be assessed as well. 
+
+![heterozygous_site](../docs/images/heterozygous_site.png)
+
+</details>
+
+<br>We can also visualize the **statistics file**, which contains information such as the percentage of reads that aligned to the reference genome.
 
 ![bowtie2_results](../docs/images/bowtie2_results.png)
 
@@ -216,21 +275,17 @@ Another program that gives statistical information about the mapping process is 
 
 ![picard_wgsmetrics1](../docs/images/picard_wgsmetrics1.png)
 
-This process will generate one output file per .bam alignment file selected as input.
-
-![picard_wgsmetrics_message](../docs/images/picard_wgsmetrics_message.png)
-
 #### Picard results
 
-Picard results consist in quite long files, so the best thing to do is to download these results and visualize them in your computer. You have to click on the CollectWgsMetrics job you want to download, and then click on the *Save* button:
+Picard results consist in quite long files, so the best thing to do is to download these results and visualize them in your computer, even though Galaxy can also open them. You can click on the CollectWgsMetrics job you want to download, and then click on the *Save* button:
 
 ![download_picard](../docs/images/download_picard.png)
 
-Then you just have to open the file with Excel in your computer, and you will see a file with different columns with information about the percentage of the reference genome that is covered by the reads at a specific depth or the mean depth of coverage of the reference genome.
+Then you just have to open the file with Excel in your computer, and you will see a file with different columns with information about the **percentage** of the reference genome that is **covered** **by the reads at a specific depth** or the **mean depth of coverage** of the reference genome.
 
 ![picard_results](../docs/images/picard_results.png)
 
-Given this example, in the results table, you can see that the "Mean Coverage" is around 115, which means that each position in the reference genome is supported by 115 reads, by mean. The "PCT 10X" represents the percentage of the reference genome that is sequenced with a 10X depth, which represents the percentage of the reference genome that is at least sequenced 10 times (79,57%).
+Given this example, in the results table, you can see that the "Mean Coverage" is around **115**, which means that each position in the reference genome is supported by 115 reads, by mean. The "**PCT 10X**" represents the percentage of the reference genome that is sequenced with a **10X depth**, which represents the percentage of the reference genome that is at least sequenced 10 times (79,57%).
 
 ## Amplicons
 
@@ -252,24 +307,26 @@ You have to search for "_**ivar trim**_" in the search bar and then select "_**i
 
 ![ivar_trim2](../docs/images/ivar_trim2.png)
 
-![ivar_trim3](../docs/images/ivartrim_message.png)
+![ivar_message](../docs/images/ivartrim_message.png)
 
 #### iVar trimming results
 
-The resulting file from iVar will be a new **BAM** file in which amplicon primer positions will have been removed, so **there's no result to visualize**.
+The resulting file from iVar will be a new **BAM** file in which amplicon primer positions will have been removed. This file, as we did before, can be explored using IGV.
+
+![igv_trimmed_bam](../docs/images/igv_trimmed_bam.png)
 
 ## Variants
 
-Once we have the alingment statistics and files with amplicon primers trimmed, we can start with the **variant calling** process.
+Once we have the alignment statistics and files with amplicon primers trimmed, we can start with the **variant calling** process.
 
 ### iVar
 
 #### Reference genome to call for variants
 
-We have to upload the FASTA reference genome, and we will do it using the following URL:
+Now's the time to upload the FASTA reference genome, and we will do it using the following URL:
 
 ```bash
-https://zenodo.org/record/5724970/files/GCF_009858895.2_ASM985889v3_genomic.200409.fna.gz?download=1
+https://zenodo.org/record/5724970/files/GCF_009858895.2_ASM985889v3_genomic.200409.fna.gz
 ```
 
 You have to copy the previous URL direction, and then select "_**Download from web or upload from disk**_", then select "_**Paste/Fetch data**_" and in the new window that appears you should paste the URL above and finally select "_**Start**_". Now the FASTA file of the reference has been downloaded.
@@ -279,7 +336,7 @@ You have to copy the previous URL direction, and then select "_**Download from w
 In order to call for variants between the sample and the reference, we will use **iVar variants**, so you have to search for "_**ivar**_" in the search bar and select "_**ivar variants Call variants from aligned BAM file**_". Then, select the following parameters:
 
 1. In "**Bam file**", make sure you've selected ivar trim on collection X Trimmed bam
-2. **Reference** > `GCF_009858895.2_ASM985889v3_genomic.200409.fna.gz?download=1`
+2. **Reference** > `GCF_009858895.2_ASM985889v3_genomic.200409.fna.gz`
 3. **Minimum frequency threshold** > 0.25
 4. **Output format** > Both Tabular and VCF
 5. **Run tool**
@@ -296,40 +353,45 @@ To display iVar variants results, select the __eye__ icon in the right pannel of
 
 ![ivar_variants_results1](../docs/images/ivar_variants_results1.png)
 
-iVar results consist in a Tab separated file containing all the variants found between the reference and the sample with an Allele Frequency higher than the specified threshold (0.25 in our case). Each line represents a variant and the columns provide information about that variant, such as the position in the reference genome, the reference allele, the alternate allele, if that variant passed the filters, and so on.
+iVar results consist in a tab separated file containing all the variants found between the reference and the sample with an Allele Frequency (AF) higher than the specified threshold (0.25 in our case).
 
-These variants have passed a filter for the minimum quality, which we set as 20, as well as the allele frequency threshold. However, we will have a closer look only to those variants present with an allele frequency higher than 0.75, which are the ones that will be included later on in the consensus sequence.
+Each line represents a variant and the columns provide information about that variant, such as the position in the reference genome (POS), the reference allele (REF), the alternative allele (ALT), if that variant passed the filters (FILTER), and other information related to coverage depth and allele frequencies (INFO).
+
+These variants have passed a filter for the minimum quality, which we had set as 20, as well as the allele frequency threshold. However, we will have a closer look only at those variants present with an allele frequency higher than 0.75, which are the ones that will be included later on in the consensus sequence.
 
 ### Annotation with SnpEff
 
-Once we have called the variants, it's interesting to annotate those variants, for which we will use **SnpEff**. Search for "_**snpeff**_" in the searh bar and then select "_**SnpEff eff: annotate variants for SARS-CoV-2**_", then change the following parameters:
+Once we have called the variants, it's interesting to **annotate** them (to wit, to add biological context to each variant: which gene it affects and what its predicted consequence is).
 
-1. In "Sequence changes (SNPs, MNPs, InDels)", make sure to select: **ivar variants VCF on collection X**.
-2. Create CSV report, useful for downstream analysis (-csvStats) > **Yes**
-3. **Run tool**
+For this objective, we will use **SnpEff**. Search for "_**snpeff**_" in the searh bar and then select "_**SnpEff eff: annotate variants for SARS-CoV-2**_", then change the following parameters:
+
+1. In "Sequence changes (SNPs, MNPs, InDels)", make sure to select: **ivar variants VCF on collection XX**.
+2. **Run tool**
 
 ![snpeff](../docs/images/snpeff.png)
 ![snpeff_message](../docs/images/snpeff_message.png)
 
 ### SnpEff results
 
-SnpEff provides three different results, from which the most interesting ones are the following:
+SnpEff provides two different results, from which the most interesting ones are the following:
 
-1. **Snpeff eff**: This is a VCF file with the annotation results. It is a very similar file to the ones we saw before, but in this case with the last column being different, which contains relevant information about each variant.
+1\. **SnpEff eff**: This is a VCF file with the annotation results. It is very similar to the one we saw before, but SnpEff adds a new `ANN` field to the INFO column. This field packs, separated by `|`, the predicted effect of each variant: the type of consequence (e.g. missense, synonymous), its estimated impact (`HIGH`, `MODERATE`, `LOW` or `MODIFIER`), the affected gene and transcript, and the change at the DNA (`c.`) and protein (`p.`) level, along with its position within the gene and the protein.
+
+For example, `ANN=C|missense_variant|MODERATE|S|...|c.3352G>C|p.Asp1118His|...` tells us that this variant causes an amino acid change (Asp1118His) in the Spike gene.
 
 ![snpeff_results1](../docs/images/snpeff_results1.png)
 
-2. Snpeff eff **HTML stats**: This file is an HTML file that contains statistics about the variant annotation process, such as the percentage of variants annotated, the percentage of variants that are MISSENSE or SILENT, the percentage that have HIGH, MODERATE or LOW effect, and so on.
+2\. Snpeff eff **HTML stats**: This file is an HTML file that contains statistics about the variant annotation process, such as the percentage of variants annotated, the percentage of variants that are MISSENSE or SILENT, the percentage that have HIGH, MODERATE or LOW effect, and so on.
 
 ![snpeff_results2](../docs/images/snpeff_results2.png)
 
 ## Consensus
 
-Once we have the most relevant variants that can be considered to be included in the consensus genome, you can start with the **consensus genome generation**.
+Once we have the most relevant variants that can be considered to be included in the consensus genome, we can start with the **consensus genome generation**.
 
 ### iVar consensus
 
-Now we are going to generate the consensus genome using **iVar**. For this, we will look for _**ivar**_ and the select "_**ivar consensus Call consensus from aligned BAM file**_". Now, follow these steps:
+Now we will generate the consensus genome using **iVar**. For this, we will look for _**ivar**_ and the select "_**ivar consensus Call consensus from aligned BAM file**_". Now, follow these steps:
 
 1. In "BAM file", make sure you have selected: **ivar trim on collection X Trimmed bam**.
 2. **Minimum frequency threshold** > `0.75`
@@ -339,36 +401,44 @@ Now we are going to generate the consensus genome using **iVar**. For this, we w
 
 ![ivar_message](../docs/images/ivar_message.png)
 
-This process will just generate a FASTA file identical to the reference one, except for those positions that are variants given the corresponding VCF file.
+This process will just generate a FASTA file identical to the reference one, except for those positions that have variants according to the corresponding VCF files that we generated previously.
 
 ![ivar_consensus_results](../docs/images/ivar_consensus_results.png)
 
 ## Lineage
 
-Next, we will determine the **lineage** of the samples. We will use a software called **pangolin** for this purpose. We will use the masked consensus genome generated in the previous steps as follows:
+Finally, we will determine the **lineage** of the samples. We will use a software called **pangolin** for this purpose. We will use the masked consensus genome generated in the previous steps as follows:
 
 1. Search for the **pangolin** tool in the Tools panel.
 2. Select **Pangolin Phylogenetic Assignment of Outbreak Lineages**.
-3. In "Input FASTA File(s)", please select the consensus sequence generated in the previous step (ivar consensus on collection X Consensus).
-4. Version of pangolin-data to use > `Download latest pangolin-data version from web`.
-5. Version of constellations to use > `Download latest pangolin-data version from web`.
-6. **Run tool**
+3. In "Input FASTA File(s)", please select the **consensus sequence generated in the previous step** (ivar consensus on collection X Consensus).
+4. Version of pangolin-data to use > `Use pangolin-data version (v1.37) shipped with this version of the tool`.
+5. Version of constellations to use > `Use constellations version (v0.1.12) shipped with this version of the tool`.
+6. Include header line in output file > **Yes**.
+7. **Run tool**
+
+>[!NOTE]
+>**pangolin-data** is the database that pangolin uses to assign lineages. It contains lineage definitions, so that each sample is assigned, based on the detected mutations, to a specific lineage (with the help of [UShER](https://github.com/yatisht/usher)).
+>
+>**constellations**, on the other hand, are collections of mutations that are representative of certain lineages of interest (for example, Alpha or Omicron).
+>
+> It's highly recommended to keep both up to date, since new lineages are continuously being documented.
 
 <p align="center"><img src="../docs/images/pangolin.png" alt="pangolin" width="900"></p>
 
 <p align="center"><img src="../docs/images/pangolin_message.png" alt="pangolin_messasge" width="500"></p>
 
-Now let's have a look to the **results** from pangolin:
+Now let's have a look at the **results** from pangolin:
 
 <p align="center"><img src="../docs/images/pangolin_results.png" alt="pangolin_results" width="900"></p>
 
-As you can see, results are in table format, where you have in first place the reference genome, then the **lineage** assigned, which seems to be [**B.1.1.7 lineage**](https://www.cdc.gov/coronavirus/2019-ncov/variants/variant-info.html) in this case. This lineage corresponds, as you can see in the 5th column, to the **Alpha** lineage.
+As you can see, results are in tabular format, where you have in first place the consensus sequence name, and then the **lineage** assigned, which seems to be the [**B.1.1.7 lineage**](https://www.cdc.gov/covid/php/variants/variants-and-genomic-surveillance.html) in this case. This lineage corresponds, as you can see in the 4th column, to the **Alpha** lineage.
 
 ## All results
 
 If you have any issues following this training and you want to visualize the resulting files, you can access them through [**this URL**](https://usegalaxy.eu/u/svarona/h/sars-cov-2-1).
 
-And viralrecon workflow can be consulted in [**this URL**](https://usegalaxy.eu/u/svarona/w/viralreconupdated).
+And the viralrecon workflow can be consulted in [**this URL**](https://usegalaxy.eu/u/svarona/w/viralreconupdated) as well.
 
 ## Additional info
 
