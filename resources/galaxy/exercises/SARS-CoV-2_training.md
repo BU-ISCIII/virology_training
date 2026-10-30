@@ -220,6 +220,8 @@ We will see a message like the following:
 
 Now we can see the mapping results for the samples. The bowtie2 resulting file is a **.bam** file, which is not easy to read by humans. This .bam file can be downloaded by clicking on the alignment file and then on the *Download* symbol. Then, the resulting .gz file will contain the alignment .bam file that can then be introduced in a software such as [**Integrative Genomics Viewer**](http://software.broadinstitute.org/software/igv/) (**IGV**) along with the reference genome FASTA file.
 
+- You need to load: `https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/009/858/895/GCA_009858895.3_ASM985889v3/GCA_009858895.3_ASM985889v3_genomic.fna.gz`
+
 The visualization of this .bam file can be done directly on Galaxy though, by clicking on the eye symbol in the history tab. IGV will be opened and we'll be able to see the following screen:
 
 ![bowtie2_bam](../docs/images/bowtie2_bam.png)
